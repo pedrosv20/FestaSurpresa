@@ -92,9 +92,10 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     
     func joinSession(action: UIAlertAction) {
         let mcBrowser = MCBrowserViewController(serviceType: "festa-surpresa", session: mcSession)
-        mcBrowser.delegate = self
         mcBrowser.maximumNumberOfPeers = 10
-        mcBrowser.minimumNumberOfPeers = 2
+        mcBrowser.minimumNumberOfPeers = 5
+        mcBrowser.delegate = self
+        
         present(mcBrowser, animated: true)
     }
     
@@ -108,6 +109,8 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
             print("Connecting: \(peerID.displayName)")
         case .notConnected:
             print("Not Connected: \(peerID.displayName)")
+            listaConvidados.remove(at: listaConvidados.firstIndex(of: peerID)!)
+            print("lista sem fodidods \(listaConvidados)")
         @unknown default:
             print("fatal error")
         }
