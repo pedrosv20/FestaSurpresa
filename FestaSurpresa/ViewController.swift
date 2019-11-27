@@ -160,4 +160,15 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     
 }
 
+extension MCPeerID{
+    var carta:Carta {
+        get {
+            return self.carta
+        }
+        set(newValue) {
+            self.carta = newValue
+        }
+    }
+    
+}
 
