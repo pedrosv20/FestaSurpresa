@@ -8,8 +8,26 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     @IBOutlet weak var chatView: UITextView!
     @IBOutlet weak var inputMessage: UITextField!
     
+    var peerID: MCPeerID!
+    var mcSession: MCSession!
+    var mcAdvertiserAssistant: MCAdvertiserAssistant!
+    var messageToSend: String!
+    var listaConvidados: [MCPeerID] = []
+    var cartas: [String] = ["Amigo","Namorado","Pai","Bebado","Penetra","Distraido","Palhaço"]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(showConnectionMenu))
+        
+        peerID = MCPeerID(displayName: UIDevice.current.name)
+        mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
+        mcSession.delegate = self
+        
+    }
+    //TODO: extension de MCPeerID com atributo do tipo da carta, enum
     @IBAction func tapSendButton(_ sender: Any) {
-        print(listaConvidados.count)
+        print(listaConvidados)
         messageToSend = "\(peerID.displayName): \(inputMessage.text!)\n"
         let message = messageToSend.data(using: String.Encoding.utf8, allowLossyConversion: false)
         
@@ -25,40 +43,26 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     
     @IBAction func SortCard(_ sender: Any) {
         var cont = 0
+        print(listaConvidados.count)
+        if !(listaConvidados.count >= 6 && listaConvidados.count < 11) {
+            return
+        }
         cartas.shuffle()
+        print(cartas)
         for convidado in listaConvidados{
-            sendMessage(messageToSend: "\(cartas[cont]) \n", convidado: convidado)
-            cont += 1
-            if cont == listaConvidados.count {
-                cont = 0
-                
+            print(convidado)
+            if convidado == peerID {
+                chatView.text = chatView.text + "\(cartas[cont]) \n"
+                cont += 1
+            } else {
+                sendMessage(messageToSend: "\(cartas[cont]) \n", convidado: convidado)
+                cont += 1
+                if cont == listaConvidados.count {
+                    cont = 0
+                    
+                }
             }
         }
-    }
-    
-    //Todo: fazer func sendMessage
-    
-    
-    var peerID: MCPeerID!
-    var mcSession: MCSession!
-    var mcAdvertiserAssistant: MCAdvertiserAssistant!
-    var messageToSend: String!
-    var listaConvidados: [MCPeerID] = []
-    var cartas: [String] = ["Amigo","Namorado","Pai","Bebado","Penetra","Distraido","Palhaço"]
-    
-
-    
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(showConnectionMenu))
-        
-        peerID = MCPeerID(displayName: UIDevice.current.name)
-        mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
-        mcSession.delegate = self
-        
     }
     
     func sendMessage(messageToSend: String, convidado: MCPeerID) {
@@ -66,15 +70,11 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         
         do {
             try self.mcSession.send(message!, toPeers: [convidado], with: .unreliable)
-            chatView.text = chatView.text + messageToSend
-            inputMessage.text = ""
         }
         catch {
             print("Error sending message")
         }
     }
-    
-    
     
     @objc func showConnectionMenu() {
         let ac = UIAlertController(title: "Connection Menu", message: nil, preferredStyle: .actionSheet)
@@ -86,6 +86,8 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     
     func hostSession(action: UIAlertAction) {
         print("Nome: \(UIDevice.current.name)")
+        listaConvidados.append(peerID)
+        
         mcAdvertiserAssistant = MCAdvertiserAssistant(serviceType: "festa-surpresa", discoveryInfo: nil, session: mcSession)
         mcAdvertiserAssistant.start()
     }
@@ -109,7 +111,11 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
             print("Connecting: \(peerID.displayName)")
         case .notConnected:
             print("Not Connected: \(peerID.displayName)")
-            listaConvidados.remove(at: listaConvidados.firstIndex(of: peerID)!)
+            
+            if listaConvidados.contains(peerID) {
+                listaConvidados.remove(at: listaConvidados.firstIndex(of: peerID)!)
+            }
+            
             print("lista sem fodidods \(listaConvidados)")
         @unknown default:
             print("fatal error")
