@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fDV-U6-wvf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="c0M-1J-g1f">
+            <objects>
+                <viewController id="fDV-U6-wvf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gCh-nN-SQg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HCY-dW-0cX">
+                                <rect key="frame" x="0.0" y="282" width="414" height="342"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2Tm-tu-dKS">
+                                    <size key="itemSize" width="143" height="108"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="playerCell" id="aTV-bH-zTx" customClass="SelecaoCollectionViewCell" customModule="FestaSurpresa" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="143" height="108"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bUq-hc-lma">
+                                            <rect key="frame" x="0.0" y="0.0" width="143" height="108"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYZ-Am-Sst">
+                                                    <rect key="frame" x="50.5" y="43.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="AYZ-Am-Sst" firstAttribute="centerX" secondItem="bUq-hc-lma" secondAttribute="centerX" id="ZNw-oB-cb4"/>
+                                                <constraint firstItem="AYZ-Am-Sst" firstAttribute="centerY" secondItem="bUq-hc-lma" secondAttribute="centerY" id="fa4-l9-Hgf"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="143" height="108"/>
+                                        <connections>
+                                            <outlet property="nomePlayer" destination="AYZ-Am-Sst" id="Snx-zc-Yf4"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HCY-dW-0cX" firstAttribute="height" secondItem="gCh-nN-SQg" secondAttribute="height" multiplier="0.381696" id="JcQ-Gs-fFP"/>
+                            <constraint firstItem="HCY-dW-0cX" firstAttribute="centerY" secondItem="k8y-G0-k1i" secondAttribute="centerY" id="Q75-LI-2nP"/>
+                            <constraint firstItem="HCY-dW-0cX" firstAttribute="width" secondItem="gCh-nN-SQg" secondAttribute="width" id="uFm-lU-pip"/>
+                            <constraint firstItem="HCY-dW-0cX" firstAttribute="centerX" secondItem="k8y-G0-k1i" secondAttribute="centerX" id="ytq-lz-zaX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="k8y-G0-k1i"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KBd-Tn-ieg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-379.71014492753625" y="-154.01785714285714"/>
+        </scene>
+    </scenes>
+</document>

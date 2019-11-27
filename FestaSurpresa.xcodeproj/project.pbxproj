@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		884C0EBC238DF9F4008B16C6 /* SelecaoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C0EBB238DF9F4008B16C6 /* SelecaoCollectionViewController.swift */; };
+		884C0EBE238DFEFD008B16C6 /* SelecaoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C0EBD238DFEFD008B16C6 /* SelecaoCollectionViewCell.swift */; };
+		88C2704F238DF634007915A1 /* SelecaoPlayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C2704E238DF634007915A1 /* SelecaoPlayers.storyboard */; };
 		A4898010228F49E700852716 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A489800F228F49E700852716 /* AppDelegate.swift */; };
 		A4898012228F49E700852716 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4898011228F49E700852716 /* ViewController.swift */; };
 		A4898015228F49E700852716 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4898013228F49E700852716 /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		884C0EBB238DF9F4008B16C6 /* SelecaoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelecaoCollectionViewController.swift; sourceTree = "<group>"; };
+		884C0EBD238DFEFD008B16C6 /* SelecaoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelecaoCollectionViewCell.swift; sourceTree = "<group>"; };
+		88C2704E238DF634007915A1 /* SelecaoPlayers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelecaoPlayers.storyboard; sourceTree = "<group>"; };
 		A489800C228F49E700852716 /* FestaSurpresa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FestaSurpresa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A489800F228F49E700852716 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4898011228F49E700852716 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,9 +62,12 @@
 			children = (
 				A489800F228F49E700852716 /* AppDelegate.swift */,
 				A4898011228F49E700852716 /* ViewController.swift */,
+				88C2704E238DF634007915A1 /* SelecaoPlayers.storyboard */,
 				A4898013228F49E700852716 /* Main.storyboard */,
 				A4898016228F49E800852716 /* Assets.xcassets */,
 				A4898018228F49E800852716 /* LaunchScreen.storyboard */,
+				884C0EBB238DF9F4008B16C6 /* SelecaoCollectionViewController.swift */,
+				884C0EBD238DFEFD008B16C6 /* SelecaoCollectionViewCell.swift */,
 				A489801B228F49E800852716 /* Info.plist */,
 			);
 			path = FestaSurpresa;
@@ -122,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88C2704F238DF634007915A1 /* SelecaoPlayers.storyboard in Resources */,
 				A489801A228F49E800852716 /* LaunchScreen.storyboard in Resources */,
 				A4898017228F49E800852716 /* Assets.xcassets in Resources */,
 				A4898015228F49E700852716 /* Main.storyboard in Resources */,
@@ -136,7 +146,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4898012228F49E700852716 /* ViewController.swift in Sources */,
+				884C0EBE238DFEFD008B16C6 /* SelecaoCollectionViewCell.swift in Sources */,
 				A4898010228F49E700852716 /* AppDelegate.swift in Sources */,
+				884C0EBC238DF9F4008B16C6 /* SelecaoCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +295,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZSLUMCNRNL;
+				DEVELOPMENT_TEAM = 8GN6S9CHL7;
 				INFOPLIST_FILE = FestaSurpresa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -301,7 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZSLUMCNRNL;
+				DEVELOPMENT_TEAM = 8GN6S9CHL7;
 				INFOPLIST_FILE = FestaSurpresa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
