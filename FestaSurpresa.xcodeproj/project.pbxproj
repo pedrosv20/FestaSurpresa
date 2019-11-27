@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01C9B8A1238D8DEC00C59346 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9B8A0238D8DEC00C59346 /* Model.swift */; };
+		01C9B8A3238D8E8F00C59346 /* Carta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9B8A2238D8E8F00C59346 /* Carta.swift */; };
 		A4898010228F49E700852716 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A489800F228F49E700852716 /* AppDelegate.swift */; };
 		A4898012228F49E700852716 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4898011228F49E700852716 /* ViewController.swift */; };
 		A4898015228F49E700852716 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4898013228F49E700852716 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01C9B8A0238D8DEC00C59346 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		01C9B8A2238D8E8F00C59346 /* Carta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carta.swift; sourceTree = "<group>"; };
 		A489800C228F49E700852716 /* FestaSurpresa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FestaSurpresa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A489800F228F49E700852716 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4898011228F49E700852716 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 				A4898016228F49E800852716 /* Assets.xcassets */,
 				A4898018228F49E800852716 /* LaunchScreen.storyboard */,
 				A489801B228F49E800852716 /* Info.plist */,
+				01C9B8A0238D8DEC00C59346 /* Model.swift */,
+				01C9B8A2238D8E8F00C59346 /* Carta.swift */,
 			);
 			path = FestaSurpresa;
 			sourceTree = "<group>";
@@ -135,6 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01C9B8A1238D8DEC00C59346 /* Model.swift in Sources */,
+				01C9B8A3238D8E8F00C59346 /* Carta.swift in Sources */,
 				A4898012228F49E700852716 /* ViewController.swift in Sources */,
 				A4898010228F49E700852716 /* AppDelegate.swift in Sources */,
 			);

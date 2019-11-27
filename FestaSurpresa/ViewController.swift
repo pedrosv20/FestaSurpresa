@@ -27,7 +27,10 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     }
     //TODO: extension de MCPeerID com atributo do tipo da carta, enum
     @IBAction func tapSendButton(_ sender: Any) {
+        
         print(listaConvidados)
+        print(listaConvidados.count)
+
         messageToSend = "\(peerID.displayName): \(inputMessage.text!)\n"
         let message = messageToSend.data(using: String.Encoding.utf8, allowLossyConversion: false)
         
