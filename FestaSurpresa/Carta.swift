@@ -1,9 +1,14 @@
-//
-//  Cartas.swift
-//  FestaSurpresa
-//
-//  Created by Mateus Nunes on 26/11/19.
-//  Copyright © 2019 Aoba. All rights reserved.
-//
-
 import Foundation
+class Carta {
+    
+    var nome:String
+    var descricao:String
+    var doBem:Bool
+    var poder:String
+    init(nome: String, descricao: String, doBem: Bool,poder:String) {
+        self.nome = nome
+        self.descricao = descricao
+        self.doBem = doBem
+        self.poder = poder
+    }
+}

@@ -9,6 +9,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     @IBOutlet weak var inputMessage: UITextField!
     
     @IBAction func tapSendButton(_ sender: Any) {
+    
         print(listaConvidados.count)
         messageToSend = "\(peerID.displayName): \(inputMessage.text!)\n"
         let message = messageToSend.data(using: String.Encoding.utf8, allowLossyConversion: false)
