@@ -13,7 +13,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     var mcAdvertiserAssistant: MCAdvertiserAssistant!
     var messageToSend: String!
     var listaConvidados: [MCPeerID] = []
-    var cartas: [String] = ["Amigo","Namorado","Pai","Bebado","Penetra","Distraido","Palhaço"]
+    var cartas: [String] = ["Amigo","Namorado","Pai","Bebado","Penetra","Distraido","Palhaço", "tio"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +44,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     @IBAction func SortCard(_ sender: Any) {
         var cont = 0
         print(listaConvidados.count)
-        if !(listaConvidados.count >= 6 && listaConvidados.count < 11) {
+        if !(listaConvidados.count >= 6 && listaConvidados.count < 9) {
             return
         }
         cartas.shuffle()
@@ -94,8 +94,6 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     
     func joinSession(action: UIAlertAction) {
         let mcBrowser = MCBrowserViewController(serviceType: "festa-surpresa", session: mcSession)
-        mcBrowser.maximumNumberOfPeers = 10
-        mcBrowser.minimumNumberOfPeers = 5
         mcBrowser.delegate = self
         
         present(mcBrowser, animated: true)
