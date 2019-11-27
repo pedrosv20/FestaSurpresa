@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		01C9B8A1238D8DEC00C59346 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9B8A0238D8DEC00C59346 /* Model.swift */; };
 		01C9B8A3238D8E8F00C59346 /* Carta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9B8A2238D8E8F00C59346 /* Carta.swift */; };
+		9D92C9E0238EA58A00B85A3D /* Card.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D92C9DF238EA58A00B85A3D /* Card.storyboard */; };
+		9D92C9E2238EA63500B85A3D /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D92C9E1238EA63500B85A3D /* CardViewController.swift */; };
 		A4898010228F49E700852716 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A489800F228F49E700852716 /* AppDelegate.swift */; };
 		A4898012228F49E700852716 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4898011228F49E700852716 /* ViewController.swift */; };
 		A4898015228F49E700852716 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4898013228F49E700852716 /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* Begin PBXFileReference section */
 		01C9B8A0238D8DEC00C59346 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		01C9B8A2238D8E8F00C59346 /* Carta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carta.swift; sourceTree = "<group>"; };
+		9D92C9DF238EA58A00B85A3D /* Card.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Card.storyboard; sourceTree = "<group>"; };
+		9D92C9E1238EA63500B85A3D /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		A489800C228F49E700852716 /* FestaSurpresa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FestaSurpresa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A489800F228F49E700852716 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4898011228F49E700852716 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				A489801B228F49E800852716 /* Info.plist */,
 				01C9B8A0238D8DEC00C59346 /* Model.swift */,
 				01C9B8A2238D8E8F00C59346 /* Carta.swift */,
+				9D92C9DF238EA58A00B85A3D /* Card.storyboard */,
+				9D92C9E1238EA63500B85A3D /* CardViewController.swift */,
 			);
 			path = FestaSurpresa;
 			sourceTree = "<group>";
@@ -128,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D92C9E0238EA58A00B85A3D /* Card.storyboard in Resources */,
 				A489801A228F49E800852716 /* LaunchScreen.storyboard in Resources */,
 				A4898017228F49E800852716 /* Assets.xcassets in Resources */,
 				A4898015228F49E700852716 /* Main.storyboard in Resources */,
@@ -144,6 +151,7 @@
 				01C9B8A1238D8DEC00C59346 /* Model.swift in Sources */,
 				01C9B8A3238D8E8F00C59346 /* Carta.swift in Sources */,
 				A4898012228F49E700852716 /* ViewController.swift in Sources */,
+				9D92C9E2238EA63500B85A3D /* CardViewController.swift in Sources */,
 				A4898010228F49E700852716 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZSLUMCNRNL;
+				DEVELOPMENT_TEAM = 725HB8W2V6;
 				INFOPLIST_FILE = FestaSurpresa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,7 +317,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZSLUMCNRNL;
+				DEVELOPMENT_TEAM = 725HB8W2V6;
 				INFOPLIST_FILE = FestaSurpresa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
