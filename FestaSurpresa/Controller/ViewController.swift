@@ -14,8 +14,8 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     var mcAdvertiserAssistant: MCAdvertiserAssistant!
     var messageToSend: String!
     //    var listaConvidados: [MCPeerID] = []
-    var cartas: [String] = ["Amigo","Namorado","Pai","Bebado","Penetra","Distraido","Palhaço", "tio"]
-    
+//    var cartas: [String] = ["Amigo","Namorado","Pai","Bebado","Penetra","Distraido","Palhaço", "tio"]
+    var cartas: [Carta] = Model.shared.cartas
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,8 +30,11 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     
     //TODO: extension de MCPeerID com atributo do tipo da carta, enum
     @IBAction func tapSendButton(_ sender: Any) {
-        
-        print(mcSession.connectedPeers)
+//        
+//        print(self.peerID.carta?.descricao ?? "n rolou")
+//        print(self.peerID.carta?.doBem ?? "n rolou")
+//        print(self.peerID.carta?.nome ?? "n rolou")
+//        print(self.peerID.carta?.poder ?? "n rolou")
         
         
         messageToSend = "\(peerID.displayName): \(inputMessage.text!)\n"
@@ -49,20 +52,21 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     
     @IBAction func SortCard(_ sender: Any) {
         var cont = 0
-        var minPlayers = 2
-        var maxPlayer = 8
+        let minPlayers = 2
+        let maxPlayer = 8
         print(mcSession.connectedPeers.count)
         if !(mcSession.connectedPeers.count >= minPlayers - 1 && mcSession.connectedPeers.count < maxPlayer ) {
             return
         }
         cartas.shuffle()
         print(cartas)
-        chatView.text = chatView.text + "\(cartas[cont]) \n"
+        chatView.text = chatView.text + "\(cartas[cont].nome) \n"
+//        peerID.carta = cartas[cont]
         cont += 1
         for convidado in mcSession.connectedPeers{
             print(convidado)
-            
-            sendMessage(messageToSend: "\(cartas[cont]) \n", convidado: convidado)
+//            convidado.carta = cartas[cont]
+            sendMessage(messageToSend: "\(cartas[cont].nome) \n", convidado: convidado)
             cont += 1
             if cont <= mcSession.connectedPeers.count {
                 cont = 0
@@ -75,6 +79,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         let message = messageToSend.data(using: String.Encoding.utf8, allowLossyConversion: false)
         
         do {
+            
             try self.mcSession.send(message!, toPeers: [convidado], with: .unreliable)
         }
         catch {
@@ -109,6 +114,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         switch state {
         case .connected:
             print("Connected: \(peerID.displayName)")
+            
             print("Adiciona no array")
             
         //            listaConvidados.append(peerID)
@@ -159,16 +165,16 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     
     
 }
-
-extension MCPeerID{
-    var carta:Carta {
-        get {
-            return self.carta
-        }
-        set(newValue) {
-            self.carta = newValue
-        }
-    }
-    
-}
+//TODO: Classe que contem peerID e carta
+//extension MCPeerID{
+//    var carta:Carta? {
+//        get {
+//            return self.carta
+//        }
+//        set(newValue) {
+//            self.carta = newValue
+//        }
+//    }
+//
+//}
 
