@@ -7,3 +7,17 @@
 //
 
 import Foundation
+import MultipeerConnectivity
+
+class Player {
+    
+    var peerID: MCPeerID
+    var nome: String
+    var carta: Carta
+    
+    init(peerID: MCPeerID, nome:String, carta:Carta) {
+        self.peerID = peerID
+        self.nome = nome
+        self.carta = carta
+    }
+}
