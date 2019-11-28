@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bG3-Ai-Vco">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Players View Controller-->
+        <scene sceneID="hbA-lh-9cr">
+            <objects>
+                <viewController id="bG3-Ai-Vco" customClass="PlayersViewController" customModule="FestaSurpresa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xq7-9F-3LI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8E7-l4-hmT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="179"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xB4-ma-Ap8">
+                                        <rect key="frame" x="41.5" y="77.5" width="331" height="71.5"/>
+                                        <string key="text">Ajude a engradar os
+barris de chop!</string>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="xB4-ma-Ap8" firstAttribute="height" secondItem="8E7-l4-hmT" secondAttribute="height" multiplier="0.4" id="0ZJ-AU-5nM"/>
+                                    <constraint firstItem="xB4-ma-Ap8" firstAttribute="centerX" secondItem="8E7-l4-hmT" secondAttribute="centerX" id="9ds-Sj-Bsg"/>
+                                    <constraint firstItem="xB4-ma-Ap8" firstAttribute="width" secondItem="8E7-l4-hmT" secondAttribute="width" multiplier="0.8" id="BXz-UG-jpp"/>
+                                    <constraint firstAttribute="bottom" secondItem="xB4-ma-Ap8" secondAttribute="bottom" constant="30" id="Sne-fA-Sla"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0v8-2p-VHO">
+                                <rect key="frame" x="0.0" y="179" width="414" height="627.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Op0-Gv-2nb">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="188.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2q-nC-fOJ">
+                                                <rect key="frame" x="45" y="39.5" width="110" height="110"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="110" id="fsl-yf-0bh"/>
+                                                    <constraint firstAttribute="height" constant="110" id="riK-o3-Aes"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                                <state key="normal" title="Mafê" backgroundImage="Oval Copy 10">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didPressPlayer1Button:" destination="bG3-Ai-Vco" eventType="touchUpInside" id="FhS-Yq-3Pt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAr-7S-X4q">
+                                                <rect key="frame" x="259" y="-15.5" width="110" height="110"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="110" id="048-X2-xfz"/>
+                                                    <constraint firstAttribute="width" constant="110" id="2Oy-c4-OHf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                                <state key="normal" title="Mateusinho" backgroundImage="Oval Copy 10">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didPressPlayer2Button:" destination="bG3-Ai-Vco" eventType="touchUpInside" id="rfk-TU-iPR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mna-5p-jDD">
+                                                <rect key="frame" x="182" y="123.5" width="110" height="110"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="110" id="coM-sL-j5e"/>
+                                                    <constraint firstAttribute="width" constant="110" id="nRb-Z8-gMX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                                <state key="normal" title="Pedrinho" backgroundImage="Oval Copy 10">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didPressPlayer3Button:" destination="bG3-Ai-Vco" eventType="touchUpInside" id="Mpt-3I-MFl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Z2q-nC-fOJ" firstAttribute="centerY" secondItem="Op0-Gv-2nb" secondAttribute="centerY" id="Jin-oM-mBi"/>
+                                            <constraint firstAttribute="trailing" secondItem="kAr-7S-X4q" secondAttribute="trailing" constant="45" id="LY3-yg-KNG"/>
+                                            <constraint firstAttribute="bottom" secondItem="mna-5p-jDD" secondAttribute="bottom" constant="-45" id="NIM-sX-4R0"/>
+                                            <constraint firstItem="mna-5p-jDD" firstAttribute="centerX" secondItem="Op0-Gv-2nb" secondAttribute="centerX" constant="30" id="a9d-lP-jpd"/>
+                                            <constraint firstItem="Z2q-nC-fOJ" firstAttribute="leading" secondItem="Op0-Gv-2nb" secondAttribute="leading" constant="45" id="jqX-QK-bID"/>
+                                            <constraint firstItem="kAr-7S-X4q" firstAttribute="centerY" secondItem="Z2q-nC-fOJ" secondAttribute="top" id="stM-bA-ec0"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wol-13-Dat">
+                                        <rect key="frame" x="0.0" y="188.5" width="414" height="188"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ooc-ia-Inz">
+                                                <rect key="frame" x="10" y="0.0" width="110" height="110"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="110" id="Eph-YZ-M1C"/>
+                                                    <constraint firstAttribute="width" constant="110" id="Hye-JG-xx8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                                <state key="normal" title="Leticinha" backgroundImage="Oval Copy 10">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didPressPlayer4Button:" destination="bG3-Ai-Vco" eventType="touchUpInside" id="Chu-HO-nXN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owj-1b-X4q">
+                                                <rect key="frame" x="296" y="39" width="110" height="110"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="110" id="6c5-xu-0Wc"/>
+                                                    <constraint firstAttribute="height" constant="110" id="Ahb-rw-wGR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                                <state key="normal" title="Cavasinho" backgroundImage="Oval Copy 10">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didPressPlayer5Button:" destination="bG3-Ai-Vco" eventType="touchUpInside" id="meX-bV-oZr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PxT-io-hW9">
+                                                <rect key="frame" x="152" y="133" width="110" height="110"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="110" id="079-BQ-8S3"/>
+                                                    <constraint firstAttribute="width" constant="110" id="2qm-AN-JBN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                                <state key="normal" title="Mafê" backgroundImage="Oval Copy 10">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didPressPlayer6Button:" destination="bG3-Ai-Vco" eventType="touchUpInside" id="wNz-Qp-lfW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="PxT-io-hW9" secondAttribute="centerY" id="Giw-KO-COW"/>
+                                            <constraint firstItem="Ooc-ia-Inz" firstAttribute="leading" secondItem="Wol-13-Dat" secondAttribute="leading" constant="10" id="SPx-6A-hb4"/>
+                                            <constraint firstItem="PxT-io-hW9" firstAttribute="centerX" secondItem="Wol-13-Dat" secondAttribute="centerX" id="TzH-Nv-TDM"/>
+                                            <constraint firstAttribute="trailing" secondItem="owj-1b-X4q" secondAttribute="trailing" constant="8" id="ejf-r2-cVc"/>
+                                            <constraint firstItem="owj-1b-X4q" firstAttribute="centerY" secondItem="Wol-13-Dat" secondAttribute="centerY" id="gfZ-Lr-Cb2"/>
+                                            <constraint firstItem="Ooc-ia-Inz" firstAttribute="top" secondItem="Wol-13-Dat" secondAttribute="top" id="ip4-17-eqN"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eY3-Os-HfW">
+                                        <rect key="frame" x="0.0" y="376.5" width="414" height="188"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cud-fP-KAw">
+                                                <rect key="frame" x="45" y="39" width="110" height="110"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="110" id="IHT-HD-yxT"/>
+                                                    <constraint firstAttribute="width" constant="110" id="Zh1-Bc-eq5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                                <state key="normal" title="Mafê" backgroundImage="Oval Copy 10">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didPressPlayer7Button:" destination="bG3-Ai-Vco" eventType="touchUpInside" id="HEO-rl-1IR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rt7-Ox-9cS">
+                                                <rect key="frame" x="296" y="78" width="110" height="110"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="110" id="dXk-o9-Y3c"/>
+                                                    <constraint firstAttribute="width" constant="110" id="h7e-EG-AvB"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                                <state key="normal" title="Mafê" backgroundImage="Oval Copy 10">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didPressPlayer8Button:" destination="bG3-Ai-Vco" eventType="touchUpInside" id="fRr-E1-0Oz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="cud-fP-KAw" firstAttribute="centerY" secondItem="eY3-Os-HfW" secondAttribute="centerY" id="CyQ-Dc-i96"/>
+                                            <constraint firstAttribute="bottom" secondItem="Rt7-Ox-9cS" secondAttribute="bottom" id="Uws-Ec-aJH"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Op0-Gv-2nb" secondAttribute="trailing" id="B4K-d7-2A7"/>
+                                    <constraint firstItem="Wol-13-Dat" firstAttribute="leading" secondItem="0v8-2p-VHO" secondAttribute="leading" id="CpR-e7-3d0"/>
+                                    <constraint firstItem="cud-fP-KAw" firstAttribute="leading" secondItem="Z2q-nC-fOJ" secondAttribute="leading" id="Nsa-hG-WXw"/>
+                                    <constraint firstItem="Wol-13-Dat" firstAttribute="top" secondItem="Op0-Gv-2nb" secondAttribute="bottom" id="XIj-bu-uq6"/>
+                                    <constraint firstItem="Op0-Gv-2nb" firstAttribute="top" secondItem="0v8-2p-VHO" secondAttribute="top" id="ZPN-Zm-2Mn"/>
+                                    <constraint firstItem="Rt7-Ox-9cS" firstAttribute="trailing" secondItem="owj-1b-X4q" secondAttribute="trailing" id="aEJ-UA-uKo"/>
+                                    <constraint firstItem="eY3-Os-HfW" firstAttribute="top" secondItem="Wol-13-Dat" secondAttribute="bottom" id="fQQ-zW-z5e"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wol-13-Dat" secondAttribute="trailing" id="gR2-fi-OzD"/>
+                                    <constraint firstItem="Wol-13-Dat" firstAttribute="height" secondItem="0v8-2p-VHO" secondAttribute="height" multiplier="0.3" id="hba-1A-TWX"/>
+                                    <constraint firstItem="eY3-Os-HfW" firstAttribute="leading" secondItem="0v8-2p-VHO" secondAttribute="leading" id="k2k-HP-kfu"/>
+                                    <constraint firstItem="eY3-Os-HfW" firstAttribute="height" secondItem="0v8-2p-VHO" secondAttribute="height" multiplier="0.3" id="mtx-Id-bNY"/>
+                                    <constraint firstAttribute="trailing" secondItem="eY3-Os-HfW" secondAttribute="trailing" id="r3V-TM-BfA"/>
+                                    <constraint firstItem="Op0-Gv-2nb" firstAttribute="height" secondItem="0v8-2p-VHO" secondAttribute="height" multiplier="0.3" id="ror-LK-2XS"/>
+                                    <constraint firstItem="Op0-Gv-2nb" firstAttribute="leading" secondItem="0v8-2p-VHO" secondAttribute="leading" id="t1F-c2-alh"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOI-Np-lJp">
+                                <rect key="frame" x="149.5" y="814" width="115" height="38"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="10" maxX="40" maxY="10"/>
+                                <state key="normal" title="Feito">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.92549019607843142" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0v8-2p-VHO" firstAttribute="top" secondItem="8E7-l4-hmT" secondAttribute="bottom" id="9zM-nU-dyN"/>
+                            <constraint firstItem="0v8-2p-VHO" firstAttribute="trailing" secondItem="B3e-hV-CcV" secondAttribute="trailing" id="CSe-Mb-d9j"/>
+                            <constraint firstItem="0v8-2p-VHO" firstAttribute="leading" secondItem="B3e-hV-CcV" secondAttribute="leading" id="EiA-Ao-dMm"/>
+                            <constraint firstItem="8E7-l4-hmT" firstAttribute="top" secondItem="xq7-9F-3LI" secondAttribute="top" id="FWJ-d3-g3q"/>
+                            <constraint firstItem="8E7-l4-hmT" firstAttribute="height" secondItem="xq7-9F-3LI" secondAttribute="height" multiplier="0.2" id="WLm-TX-Aev"/>
+                            <constraint firstItem="yOI-Np-lJp" firstAttribute="centerX" secondItem="B3e-hV-CcV" secondAttribute="centerX" id="XI9-LK-GoY"/>
+                            <constraint firstItem="B3e-hV-CcV" firstAttribute="bottom" secondItem="yOI-Np-lJp" secondAttribute="bottom" constant="10" id="bU1-Ed-s9O"/>
+                            <constraint firstItem="8E7-l4-hmT" firstAttribute="leading" secondItem="B3e-hV-CcV" secondAttribute="leading" id="gqq-eD-by0"/>
+                            <constraint firstItem="8E7-l4-hmT" firstAttribute="trailing" secondItem="B3e-hV-CcV" secondAttribute="trailing" id="q3j-sT-3wp"/>
+                            <constraint firstItem="0v8-2p-VHO" firstAttribute="height" secondItem="xq7-9F-3LI" secondAttribute="height" multiplier="0.7" id="qpi-en-KRh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="B3e-hV-CcV"/>
+                    </view>
+                    <connections>
+                        <outlet property="player1Button" destination="Z2q-nC-fOJ" id="OQH-oA-cxD"/>
+                        <outlet property="player2Button" destination="kAr-7S-X4q" id="jnh-4i-X7R"/>
+                        <outlet property="player3Button" destination="mna-5p-jDD" id="2Cz-aR-VWu"/>
+                        <outlet property="player4Button" destination="Ooc-ia-Inz" id="ue4-xG-ttu"/>
+                        <outlet property="player5Button" destination="owj-1b-X4q" id="VaT-fG-tgF"/>
+                        <outlet property="player6Button" destination="PxT-io-hW9" id="tf9-g8-DXK"/>
+                        <outlet property="player7Button" destination="cud-fP-KAw" id="mOy-Wb-cgy"/>
+                        <outlet property="player8Button" destination="Rt7-Ox-9cS" id="wIa-aV-Vnx"/>
+                        <outlet property="readyButton" destination="yOI-Np-lJp" id="BPX-jU-H7f"/>
+                        <outlet property="roundTitleLabel" destination="xB4-ma-Ap8" id="fXQ-fY-QM4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="897-2R-pw6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="847.82608695652175" y="871.875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Oval Copy 10" width="130" height="129"/>
+    </resources>
+</document>
