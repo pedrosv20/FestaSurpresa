@@ -32,5 +32,12 @@ class AllCardsViewController: UIViewController {
     }
     
 
+    @IBAction func didPressShowCardButton(_ sender: Any) {
+//        if let vc = storyboard?.instantiateViewController(withIdentifier: "card") as? CardViewController {
+//            self.navigationController?.pushViewController(vc, animated: true)
+//        }
+    }
+    
+    
 }
 

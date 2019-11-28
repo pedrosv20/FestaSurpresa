@@ -91,7 +91,7 @@ barris de chop!</string>
                                                     <constraint firstAttribute="height" constant="90" id="orV-CG-5Gu"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="friendCircle" translatesAutoresizingMaskIntoConstraints="NO" id="IrM-JG-pT6">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paiCardBranco" translatesAutoresizingMaskIntoConstraints="NO" id="IrM-JG-pT6">
                                                 <rect key="frame" x="179" y="115" width="90" height="90"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="90" id="Pqr-Zy-BLF"/>
@@ -153,16 +153,19 @@ barris de chop!</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rK9-HQ-27S">
-                                <rect key="frame" x="121.5" y="814" width="171" height="38"/>
+                                <rect key="frame" x="111.5" y="814" width="191" height="38"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <inset key="contentEdgeInsets" minX="30" minY="10" maxX="30" maxY="10"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="10" maxX="40" maxY="10"/>
                                 <state key="normal" title="Ver minha carta">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="didPressShowCardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="P6W-3c-LFD"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ztw-fQ-vwS" firstAttribute="leading" secondItem="NVr-pQ-bVx" secondAttribute="leading" id="03O-fZ-4Wj"/>
                             <constraint firstItem="NVr-pQ-bVx" firstAttribute="bottom" secondItem="rK9-HQ-27S" secondAttribute="bottom" constant="10" id="51P-vp-GtP"/>
@@ -192,6 +195,7 @@ barris de chop!</string>
         <image name="distraidoCardBranco" width="104" height="104"/>
         <image name="friendCircle" width="104" height="104"/>
         <image name="namoradoCardBranco" width="104" height="104"/>
+        <image name="paiCardBranco" width="104" height="104"/>
         <image name="parceiroCardBranco" width="104" height="104"/>
         <image name="penetraCardBranco" width="104" height="104"/>
     </resources>
