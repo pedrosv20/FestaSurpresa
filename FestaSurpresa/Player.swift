@@ -13,11 +13,13 @@ class Player {
     
     var peerID: MCPeerID
     var nome: String
-    var carta: Carta
+    var carta: Carta?
+    var selected: Bool
     
-    init(peerID: MCPeerID, nome:String, carta:Carta) {
+    init(peerID: MCPeerID, nome:String, carta:Carta?, selected: Bool) {
         self.peerID = peerID
         self.nome = nome
         self.carta = carta
+        self.selected = selected
     }
 }

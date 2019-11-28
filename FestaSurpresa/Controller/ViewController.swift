@@ -5,68 +5,77 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     
     
     
-    @IBOutlet weak var chatView: UITextView!
-    @IBOutlet weak var inputMessage: UITextField!
+    //    @IBOutlet weak var chatView: UITextView!
+    //    @IBOutlet weak var inputMessage: UITextField!
+    
+    @IBOutlet weak var nome: UITextField!
     
     var peerID: MCPeerID!
     var observer: NSObjectProtocol!
     var mcSession: MCSession!
     var mcAdvertiserAssistant: MCAdvertiserAssistant!
     var messageToSend: String!
-    //    var listaConvidados: [MCPeerID] = []
-//    var cartas: [String] = ["Amigo","Namorado","Pai","Bebado","Penetra","Distraido","Palhaço", "tio"]
+    var player: Player!
     var cartas: [Carta] = Model.shared.cartas
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(showConnectionMenu))
+        self.navigationController?.navigationBar.isHidden = true
         
         peerID = MCPeerID(displayName: UIDevice.current.name)
         mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
         mcSession.delegate = self
+        player = Player(peerID: peerID, nome: nome.text!, carta: nil, selected: false)
         //        listaConvidados = mcSession.connectedPeers
         
     }
     
     //TODO: extension de MCPeerID com atributo do tipo da carta, enum
+    @IBAction func regras(_ sender: Any) {
+        player.nome = nome.text!
+        print(player.carta?.nome)
+        print(player.nome)
+    }
+    
     @IBAction func tapSendButton(_ sender: Any) {
-//
-//        print(self.peerID.carta?.descricao ?? "n rolou")
-//        print(self.peerID.carta?.doBem ?? "n rolou")
-//        print(self.peerID.carta?.nome ?? "n rolou")
-//        print(self.peerID.carta?.poder ?? "n rolou")
+        showConnectionMenu()
+        //        print(self.peerID.carta?.descricao ?? "n rolou")
+        //        print(self.peerID.carta?.doBem ?? "n rolou")
+        //        print(self.peerID.carta?.nome ?? "n rolou")
+        //        print(self.peerID.carta?.poder ?? "n rolou")
         
         
-        messageToSend = "\(peerID.displayName): \(inputMessage.text!)\n"
-        let message = messageToSend.data(using: String.Encoding.utf8, allowLossyConversion: false)
-        
-        do {
-            try self.mcSession.send(message!, toPeers: self.mcSession.connectedPeers, with: .unreliable)
-            chatView.text = chatView.text + messageToSend
-            inputMessage.text = ""
-        }
-        catch {
-            print("Error sending message")
-        }
+        //        messageToSend = "\(peerID.displayName): \(inputMessage.text!) \n"
+        //        let message = messageToSend.data(using: String.Encoding.utf8, allowLossyConversion: false)
+        //
+        //        do {
+        //            try self.mcSession.send(message!, toPeers: self.mcSession.connectedPeers, with: .unreliable)
+        //            chatView.text = chatView.text + messageToSend
+        //            inputMessage.text = ""
+        //        }
+        //        catch {
+        //            print("Error sending message")
+        //        }
     }
     
     @IBAction func SortCard(_ sender: Any) {
         var cont = 0
         let minPlayers = 2
         let maxPlayer = 8
-        print(mcSession.connectedPeers.count)
+        
         if !(mcSession.connectedPeers.count >= minPlayers - 1 && mcSession.connectedPeers.count < maxPlayer ) {
             return
         }
         cartas.shuffle()
-        print(cartas)
-        chatView.text = chatView.text + "\(cartas[cont].nome) \n"
-//        peerID.carta = cartas[cont]
+        
+//        chatView.text = chatView.text + "\(cartas[cont].nome) \n"
+        player.carta = cartas[cont]
         cont += 1
         for convidado in mcSession.connectedPeers{
-            print(convidado)
-//            convidado.carta = cartas[cont]
-            sendMessage(messageToSend: "\(cartas[cont].nome) \n", convidado: convidado)
+            
+            sendMessage(messageToSend: "\(cartas[cont].nome)", convidado: convidado)
             cont += 1
             if cont <= mcSession.connectedPeers.count {
                 cont = 0
@@ -77,7 +86,6 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     
     func sendMessage(messageToSend: String, convidado: MCPeerID) {
         let message = messageToSend.data(using: String.Encoding.utf8, allowLossyConversion: false)
-        
         do {
             
             try self.mcSession.send(message!, toPeers: [convidado], with: .unreliable)
@@ -115,20 +123,13 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         case .connected:
             print("Connected: \(peerID.displayName)")
             
-            print("Adiciona no array")
             
-        //            listaConvidados.append(peerID)
         case .connecting:
             print("Connecting: \(peerID.displayName)")
+            
         case .notConnected:
             print("Not Connected: \(peerID.displayName)")
-            print("Desconnectou")
-            print(mcSession.connectedPeers)
-            //            if listaConvidados.contains(peerID) {
-            //                listaConvidados.remove(at: listaConvidados.firstIndex(of: peerID)!)
-            //            }
-            //
-        //            print("lista sem fodidods \(listaConvidados)")
+            
         @unknown default:
             print("fatal error")
         }
@@ -138,7 +139,14 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         DispatchQueue.main.async { [unowned self] in
             // send chat message
             let message = NSString(data: data as Data, encoding: String.Encoding.utf8.rawValue)! as String
-            self.chatView.text = self.chatView.text + message
+            for carta in Model.shared.cartas {
+                if carta.nome == message {
+                    self.player = Player(peerID: self.peerID, nome: self.nome.text!, carta: carta, selected: false)
+                }
+            }
+            
+            //TODO: Busca no singleton e referencia os roles do player
+//            self.chatView.text = self.chatView.text + message + " \n"
         }
     }
     
@@ -165,16 +173,3 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     
     
 }
-//TODO: Classe que contem peerID e carta
-//extension MCPeerID{
-//    var carta:Carta? {
-//        get {
-//            return self.carta
-//        }
-//        set(newValue) {
-//            self.carta = newValue
-//        }
-//    }
-//
-//}
-
