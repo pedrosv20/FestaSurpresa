@@ -9,10 +9,11 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     @IBOutlet weak var inputMessage: UITextField!
     
     var peerID: MCPeerID!
+    var observer: NSObjectProtocol!
     var mcSession: MCSession!
     var mcAdvertiserAssistant: MCAdvertiserAssistant!
     var messageToSend: String!
-    var listaConvidados: [MCPeerID] = []
+    //    var listaConvidados: [MCPeerID] = []
     var cartas: [String] = ["Amigo","Namorado","Pai","Bebado","Penetra","Distraido","Palhaço", "tio"]
     
     override func viewDidLoad() {
@@ -23,14 +24,16 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         peerID = MCPeerID(displayName: UIDevice.current.name)
         mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
         mcSession.delegate = self
+        //        listaConvidados = mcSession.connectedPeers
         
     }
+    
     //TODO: extension de MCPeerID com atributo do tipo da carta, enum
     @IBAction func tapSendButton(_ sender: Any) {
         
-        print(listaConvidados)
-        print(listaConvidados.count)
-
+        print(mcSession.connectedPeers)
+        
+        
         messageToSend = "\(peerID.displayName): \(inputMessage.text!)\n"
         let message = messageToSend.data(using: String.Encoding.utf8, allowLossyConversion: false)
         
@@ -46,25 +49,25 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     
     @IBAction func SortCard(_ sender: Any) {
         var cont = 0
-        print(listaConvidados.count)
-        if !(listaConvidados.count >= 6 && listaConvidados.count < 9) {
+        var minPlayers = 2
+        var maxPlayer = 8
+        print(mcSession.connectedPeers.count)
+        if !(mcSession.connectedPeers.count >= minPlayers - 1 && mcSession.connectedPeers.count < maxPlayer ) {
             return
         }
         cartas.shuffle()
         print(cartas)
-        for convidado in listaConvidados{
+        chatView.text = chatView.text + "\(cartas[cont]) \n"
+        cont += 1
+        for convidado in mcSession.connectedPeers{
             print(convidado)
-            if convidado == peerID {
-                chatView.text = chatView.text + "\(cartas[cont]) \n"
-                cont += 1
-            } else {
-                sendMessage(messageToSend: "\(cartas[cont]) \n", convidado: convidado)
-                cont += 1
-                if cont == listaConvidados.count {
-                    cont = 0
-                    
-                }
+            
+            sendMessage(messageToSend: "\(cartas[cont]) \n", convidado: convidado)
+            cont += 1
+            if cont <= mcSession.connectedPeers.count {
+                cont = 0
             }
+            
         }
     }
     
@@ -89,7 +92,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     
     func hostSession(action: UIAlertAction) {
         print("Nome: \(UIDevice.current.name)")
-        listaConvidados.append(peerID)
+        
         
         mcAdvertiserAssistant = MCAdvertiserAssistant(serviceType: "festa-surpresa", discoveryInfo: nil, session: mcSession)
         mcAdvertiserAssistant.start()
@@ -107,17 +110,19 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         case .connected:
             print("Connected: \(peerID.displayName)")
             print("Adiciona no array")
-            listaConvidados.append(peerID)
+            
+        //            listaConvidados.append(peerID)
         case .connecting:
             print("Connecting: \(peerID.displayName)")
         case .notConnected:
             print("Not Connected: \(peerID.displayName)")
-            
-            if listaConvidados.contains(peerID) {
-                listaConvidados.remove(at: listaConvidados.firstIndex(of: peerID)!)
-            }
-            
-            print("lista sem fodidods \(listaConvidados)")
+            print("Desconnectou")
+            print(mcSession.connectedPeers)
+            //            if listaConvidados.contains(peerID) {
+            //                listaConvidados.remove(at: listaConvidados.firstIndex(of: peerID)!)
+            //            }
+            //
+        //            print("lista sem fodidods \(listaConvidados)")
         @unknown default:
             print("fatal error")
         }
@@ -154,6 +159,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     
     
 }
+
 extension MCPeerID{
     var carta:Carta {
         get {
@@ -165,3 +171,4 @@ extension MCPeerID{
     }
     
 }
+
