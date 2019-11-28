@@ -47,6 +47,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		073521F9238EBF32003CB5AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		073521FA238EBF3A003CB5AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		073521FB238EBF4B003CB5AF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		A4898003228F49E700852716 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +87,9 @@
 		A489800E228F49E700852716 /* FestaSurpresa */ = {
 			isa = PBXGroup;
 			children = (
+				073521FB238EBF4B003CB5AF /* Controller */,
+				073521FA238EBF3A003CB5AF /* View */,
+				073521F9238EBF32003CB5AF /* Model */,
 				A489800F228F49E700852716 /* AppDelegate.swift */,
 				A4898011228F49E700852716 /* ViewController.swift */,
 				A4898013228F49E700852716 /* Main.storyboard */,
