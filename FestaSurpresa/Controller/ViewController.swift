@@ -30,7 +30,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     
     //TODO: extension de MCPeerID com atributo do tipo da carta, enum
     @IBAction func tapSendButton(_ sender: Any) {
-//        
+//
 //        print(self.peerID.carta?.descricao ?? "n rolou")
 //        print(self.peerID.carta?.doBem ?? "n rolou")
 //        print(self.peerID.carta?.nome ?? "n rolou")

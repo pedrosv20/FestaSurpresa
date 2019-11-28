@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		01C9B8A1238D8DEC00C59346 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9B8A0238D8DEC00C59346 /* Model.swift */; };
 		01C9B8A3238D8E8F00C59346 /* Carta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9B8A2238D8E8F00C59346 /* Carta.swift */; };
+		07A41B1C238FEDF00024AA60 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A41B1B238FEDF00024AA60 /* Player.swift */; };
 		9D92C9E0238EA58A00B85A3D /* Card.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D92C9DF238EA58A00B85A3D /* Card.storyboard */; };
 		9D92C9E2238EA63500B85A3D /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D92C9E1238EA63500B85A3D /* CardViewController.swift */; };
 		A4898010228F49E700852716 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A489800F228F49E700852716 /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		01C9B8A0238D8DEC00C59346 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		01C9B8A2238D8E8F00C59346 /* Carta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carta.swift; sourceTree = "<group>"; };
+		07A41B1B238FEDF00024AA60 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = FestaSurpresa/Player.swift; sourceTree = SOURCE_ROOT; };
 		9D92C9DF238EA58A00B85A3D /* Card.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Card.storyboard; sourceTree = "<group>"; };
 		9D92C9E1238EA63500B85A3D /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		A489800C228F49E700852716 /* FestaSurpresa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FestaSurpresa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +48,7 @@
 		073521F9238EBF32003CB5AF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				07A41B1B238FEDF00024AA60 /* Player.swift */,
 				01C9B8A0238D8DEC00C59346 /* Model.swift */,
 				01C9B8A2238D8E8F00C59346 /* Carta.swift */,
 			);
@@ -176,6 +179,7 @@
 				01C9B8A3238D8E8F00C59346 /* Carta.swift in Sources */,
 				A4898012228F49E700852716 /* ViewController.swift in Sources */,
 				9D92C9E2238EA63500B85A3D /* CardViewController.swift in Sources */,
+				07A41B1C238FEDF00024AA60 /* Player.swift in Sources */,
 				A4898010228F49E700852716 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
