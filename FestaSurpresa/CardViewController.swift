@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SpriteKit
 
 class CardViewController: UIViewController {
     
@@ -14,6 +15,7 @@ class CardViewController: UIViewController {
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var roleTitleLabel: UILabel!
     @IBOutlet weak var hideCardButton: UIButton!
+    @IBOutlet weak var skView: SKView!
     
     
     let colors = Colors()
@@ -37,6 +39,18 @@ class CardViewController: UIViewController {
         hideCardButton.layer.cornerRadius = 15.0
         
         cardView.layer.cornerRadius = 15.0
+        
+        if let scene = SKScene(fileNamed: "VerticalScene") {
+            // Set the scale mode to scale to fit the window
+            scene.scaleMode = .aspectFill
+            
+            // Present the scene
+            skView.presentScene(scene)
+        }
+        
+        skView.ignoresSiblingOrder = true
+        
+        
     }
     
 
