@@ -15,12 +15,19 @@ class VerticalScene: SKScene {
     
     override func didMove(to view: SKView) {
         
-        let vertical1 = childNode(withName: "ConfeteVert1") as? SKEmitterNode
-        let vertical2 = childNode(withName: "ConfeteVert2") as? SKEmitterNode
-        let vertical3 = childNode(withName: "ConfeteVert3") as? SKEmitterNode
-        vertical1?.advanceSimulationTime(60)
-        vertical2?.advanceSimulationTime(60)
-        vertical3?.advanceSimulationTime(60)
+        self.backgroundColor = UIColor.clear
+        let light_red =     childNode(withName: "light_red") as? SKEmitterNode
+        let light_tiffany = childNode(withName: "light_tiffany") as? SKEmitterNode
+        let light_purple =  childNode(withName: "light_purple") as? SKEmitterNode
+        let dark_red =      childNode(withName: "dark_red") as? SKEmitterNode
+        let dark_tiffany =  childNode(withName: "dark_tiffany") as? SKEmitterNode
+        let dark_purple =   childNode(withName: "dark_purple") as? SKEmitterNode
+        light_red?.advanceSimulationTime(60)
+        light_tiffany?.advanceSimulationTime(60)
+        light_purple?.advanceSimulationTime(60)
+        dark_red?.advanceSimulationTime(60)
+        dark_tiffany?.advanceSimulationTime(60)
+        dark_purple?.advanceSimulationTime(60)
         
     }
     
