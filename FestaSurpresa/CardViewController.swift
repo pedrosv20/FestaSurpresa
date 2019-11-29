@@ -11,7 +11,8 @@ import SpriteKit
 
 class CardViewController: UIViewController {
     
-    @IBOutlet weak var cardView: UIView!
+
+    @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet weak var roleTitleLabel: UILabel!
     @IBOutlet weak var hideCardButton: UIButton!
     @IBOutlet weak var cardIcon: UIImageView!
@@ -37,10 +38,14 @@ class CardViewController: UIViewController {
         
         hideCardButton.layer.cornerRadius = 15.0
         
-        cardView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        cardView.alpha = 0.55
+//        blurView.effect.
+//
+//        cardView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+//        cardView.alpha = 0
         
-        cardView.layer.cornerRadius = 15.0
+        
+        blurView.layer.cornerRadius = 15.0
+        blurView.alpha = 0.6
 //        cardView.layer.borderWidth = 2
 //        cardView.layer.borderColor = UIColor.black.cgColor
     }
