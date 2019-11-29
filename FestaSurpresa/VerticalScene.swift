@@ -29,6 +29,7 @@ class VerticalScene: SKScene {
         dark_tiffany?.advanceSimulationTime(60)
         dark_purple?.advanceSimulationTime(60)
         
+        //alterado
     }
     
     
