@@ -50,6 +50,10 @@ class CardViewController: UIViewController {
 //        cardView.layer.borderColor = UIColor.black.cgColor
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        print(SessionHandler.shared.carta?.nome)
+        roleTitleLabel.text = SessionHandler.shared.carta?.nome
+    }
     @IBAction func didPressHideCardButton(_ sender: Any) {
     }
     

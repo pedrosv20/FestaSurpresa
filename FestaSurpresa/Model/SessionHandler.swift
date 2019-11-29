@@ -52,6 +52,8 @@ class SessionHandler: NSObject, MCSessionDelegate {
                             print(carta.nome, "carta")
                             self.carta = carta
                             Model.shared.players.append(Player(peerID: peerID, nome: UIDevice.current.name, carta: carta, selected: false))
+                            
+                            
                         }
                     }
                     
