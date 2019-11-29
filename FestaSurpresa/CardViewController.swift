@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import SpriteKit
 
 class CardViewController: UIViewController {
     
-    @IBOutlet weak var cardView: UIView!
+
+    @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet weak var roleTitleLabel: UILabel!
     @IBOutlet weak var hideCardButton: UIButton!
     @IBOutlet weak var cardIcon: UIImageView!
+    @IBOutlet weak var skView: SKView!
     
     
     let colors = Colors()
@@ -21,6 +24,13 @@ class CardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let scene = SKScene(fileNamed: "VerticalScene") {
+            scene.scaleMode = .aspectFill
+            skView.presentScene(scene)
+        }
+        
+        
+        
         view.backgroundColor = UIColor.clear
         let backgroundLayer = colors.gl
         backgroundLayer!.frame = view.frame
@@ -28,9 +38,16 @@ class CardViewController: UIViewController {
         
         hideCardButton.layer.cornerRadius = 15.0
         
-        cardView.layer.cornerRadius = 15.0
-        cardView.layer.borderWidth = 2
-        cardView.layer.borderColor = UIColor.black.cgColor
+//        blurView.effect.
+//
+//        cardView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+//        cardView.alpha = 0
+        
+        
+        blurView.layer.cornerRadius = 15.0
+        blurView.alpha = 0.6
+//        cardView.layer.borderWidth = 2
+//        cardView.layer.borderColor = UIColor.black.cgColor
     }
     
     @IBAction func didPressHideCardButton(_ sender: Any) {

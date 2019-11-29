@@ -16,6 +16,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Cy-he-t4g" userLabel="skView" customClass="SKView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n2m-Ql-JsU">
+                                <rect key="frame" x="41.5" y="161.5" width="331" height="573"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.75" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="w1d-hh-8y5">
+                                    <rect key="frame" x="0.0" y="0.0" width="331" height="573"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMp-uc-PZN">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -125,24 +140,33 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="7Cy-he-t4g" firstAttribute="height" secondItem="5sQ-uM-im1" secondAttribute="height" id="5Af-gU-gi1"/>
                             <constraint firstItem="oMp-uc-PZN" firstAttribute="trailing" secondItem="RDm-Dl-LRq" secondAttribute="trailing" id="6sa-lB-fPf"/>
+                            <constraint firstItem="7Cy-he-t4g" firstAttribute="centerX" secondItem="5sQ-uM-im1" secondAttribute="centerX" id="8cF-L4-WlR"/>
                             <constraint firstItem="5OY-dq-GCv" firstAttribute="trailing" secondItem="RDm-Dl-LRq" secondAttribute="trailing" id="DwO-0L-knA"/>
                             <constraint firstItem="5OY-dq-GCv" firstAttribute="top" secondItem="oMp-uc-PZN" secondAttribute="bottom" id="Gzn-hP-t1L"/>
                             <constraint firstItem="5OY-dq-GCv" firstAttribute="height" secondItem="5sQ-uM-im1" secondAttribute="height" multiplier="0.8" id="OFf-Ha-R6P"/>
                             <constraint firstItem="oMp-uc-PZN" firstAttribute="height" secondItem="5sQ-uM-im1" secondAttribute="height" multiplier="0.1" id="Q1P-ZW-ijV"/>
                             <constraint firstItem="RDm-Dl-LRq" firstAttribute="bottom" secondItem="vPz-OT-uZS" secondAttribute="bottom" constant="10" id="Tew-Di-5Eo"/>
                             <constraint firstItem="vPz-OT-uZS" firstAttribute="centerX" secondItem="RDm-Dl-LRq" secondAttribute="centerX" id="XkF-su-1au"/>
+                            <constraint firstItem="n2m-Ql-JsU" firstAttribute="centerX" secondItem="5OY-dq-GCv" secondAttribute="centerX" id="aUd-fb-LvD"/>
                             <constraint firstItem="oMp-uc-PZN" firstAttribute="leading" secondItem="RDm-Dl-LRq" secondAttribute="leading" id="aWp-g1-twm"/>
+                            <constraint firstItem="7Cy-he-t4g" firstAttribute="centerY" secondItem="5sQ-uM-im1" secondAttribute="centerY" id="fWY-HE-v39"/>
+                            <constraint firstItem="n2m-Ql-JsU" firstAttribute="centerY" secondItem="5OY-dq-GCv" secondAttribute="centerY" id="hEz-T3-e7j"/>
                             <constraint firstItem="5OY-dq-GCv" firstAttribute="leading" secondItem="RDm-Dl-LRq" secondAttribute="leading" id="kNC-Rd-Glw"/>
+                            <constraint firstItem="n2m-Ql-JsU" firstAttribute="height" secondItem="5OY-dq-GCv" secondAttribute="height" multiplier="0.799163" id="m5r-2u-Nmp"/>
+                            <constraint firstItem="7Cy-he-t4g" firstAttribute="width" secondItem="5sQ-uM-im1" secondAttribute="width" id="qWC-m4-hHU"/>
                             <constraint firstItem="oMp-uc-PZN" firstAttribute="top" secondItem="5sQ-uM-im1" secondAttribute="top" id="siB-vb-O3C"/>
+                            <constraint firstItem="n2m-Ql-JsU" firstAttribute="width" secondItem="5OY-dq-GCv" secondAttribute="width" multiplier="0.799517" id="uce-vW-jcD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RDm-Dl-LRq"/>
                     </view>
                     <connections>
+                        <outlet property="blurView" destination="n2m-Ql-JsU" id="Btb-uI-9WX"/>
                         <outlet property="cardIcon" destination="fgv-jA-8R0" id="MEf-Yv-SxZ"/>
-                        <outlet property="cardView" destination="HGA-FQ-u68" id="uAS-J1-DG3"/>
                         <outlet property="hideCardButton" destination="vPz-OT-uZS" id="DE0-7a-nhK"/>
                         <outlet property="roleTitleLabel" destination="XYL-Fe-Xqt" id="R1H-qg-odO"/>
+                        <outlet property="skView" destination="7Cy-he-t4g" id="eTu-yP-sRy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSI-k8-VoL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
