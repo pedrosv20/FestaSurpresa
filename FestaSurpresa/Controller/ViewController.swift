@@ -24,22 +24,28 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         
         self.navigationController?.navigationBar.isHidden = true
         
-        peerID = MCPeerID(displayName: UIDevice.current.name)
-        mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
-        mcSession.delegate = self
-        player = Player(peerID: peerID, nome: nome.text!, carta: nil, selected: false)
+        SessionHandler.shared.peerID = MCPeerID(displayName: UIDevice.current.name)
+        SessionHandler.shared.mcSession = MCSession(peer: SessionHandler.shared.peerID, securityIdentity: nil, encryptionPreference: .required)
+        SessionHandler.shared.mcSession!.delegate = self
+        
+        
+//        player = Player(peerID: peerID, nome: nome.text!, carta: nil, selected: false)
         //        listaConvidados = mcSession.connectedPeers
         
     }
     
     //TODO: extension de MCPeerID com atributo do tipo da carta, enum
     @IBAction func regras(_ sender: Any) {
-        player.nome = nome.text!
-        print(player.carta?.nome)
-        print(player.nome)
+        SortCard()
+//        player.nome = nome.text!
+//        print(player.carta?.nome)
+//        print(player.nome)
     }
     
     @IBAction func tapSendButton(_ sender: Any) {
+//        print(SessionHandler.shared.mcSession?.connectedPeers)
+//        print(SessionHandler.shared.carta?.nome)
+        print(Model.shared.players)
         showConnectionMenu()
         //        print(self.peerID.carta?.descricao ?? "n rolou")
         //        print(self.peerID.carta?.doBem ?? "n rolou")
@@ -60,24 +66,27 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         //        }
     }
     
-    @IBAction func SortCard(_ sender: Any) {
+   func SortCard() {
         var cont = 0
         let minPlayers = 2
         let maxPlayer = 8
         
-        if !(mcSession.connectedPeers.count >= minPlayers - 1 && mcSession.connectedPeers.count < maxPlayer ) {
+    if !(SessionHandler.shared.mcSession!.connectedPeers.count >= minPlayers - 1 && SessionHandler.shared.mcSession!.connectedPeers.count < maxPlayer ) {
             return
         }
         cartas.shuffle()
         
 //        chatView.text = chatView.text + "\(cartas[cont].nome) \n"
-        player.carta = cartas[cont]
+//        player.carta = cartas[cont]
+        print(cartas[cont].nome)
+    Model.shared.players.append(Player(peerID: SessionHandler.shared.peerID, nome: nome.text!, carta: cartas[cont], selected: false))
+        SessionHandler.shared.carta = cartas[cont]
         cont += 1
-        for convidado in mcSession.connectedPeers{
+        for convidado in SessionHandler.shared.mcSession!.connectedPeers{
             
             sendMessage(messageToSend: "\(cartas[cont].nome)", convidado: convidado)
             cont += 1
-            if cont <= mcSession.connectedPeers.count {
+            if cont <= SessionHandler.shared.mcSession!.connectedPeers.count {
                 cont = 0
             }
             
@@ -88,7 +97,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         let message = messageToSend.data(using: String.Encoding.utf8, allowLossyConversion: false)
         do {
             
-            try self.mcSession.send(message!, toPeers: [convidado], with: .unreliable)
+            try SessionHandler.shared.mcSession!.send(message!, toPeers: [convidado], with: .unreliable)
         }
         catch {
             print("Error sending message")
@@ -106,13 +115,13 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     func hostSession(action: UIAlertAction) {
         print("Nome: \(UIDevice.current.name)")
         
-        
-        mcAdvertiserAssistant = MCAdvertiserAssistant(serviceType: "festa-surpresa", discoveryInfo: nil, session: mcSession)
-        mcAdvertiserAssistant.start()
+        SessionHandler.shared.mcAdvertiserAssistant = MCAdvertiserAssistant(serviceType: "festa-surpresa", discoveryInfo: nil, session: SessionHandler.shared.mcSession!)
+
+        SessionHandler.shared.mcAdvertiserAssistant!.start()
     }
     
     func joinSession(action: UIAlertAction) {
-        let mcBrowser = MCBrowserViewController(serviceType: "festa-surpresa", session: mcSession)
+        let mcBrowser = MCBrowserViewController(serviceType: "festa-surpresa", session: SessionHandler.shared.mcSession!)
         mcBrowser.delegate = self
         
         present(mcBrowser, animated: true)
@@ -121,14 +130,14 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
         switch state {
         case .connected:
-            print("Connected: \(peerID.displayName)")
+            print("Connected: \(SessionHandler.shared.peerID.displayName)")
             
             
         case .connecting:
-            print("Connecting: \(peerID.displayName)")
+            print("Connecting: \(SessionHandler.shared.peerID.displayName)")
             
         case .notConnected:
-            print("Not Connected: \(peerID.displayName)")
+            print("Not Connected: \(SessionHandler.shared.peerID.displayName)")
             
         @unknown default:
             print("fatal error")
@@ -136,18 +145,8 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     }
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
-        DispatchQueue.main.async { [unowned self] in
-            // send chat message
-            let message = NSString(data: data as Data, encoding: String.Encoding.utf8.rawValue)! as String
-            for carta in Model.shared.cartas {
-                if carta.nome == message {
-                    self.player = Player(peerID: self.peerID, nome: self.nome.text!, carta: carta, selected: false)
-                }
-            }
-            
-            //TODO: Busca no singleton e referencia os roles do player
-//            self.chatView.text = self.chatView.text + message + " \n"
-        }
+        print("recebeu algo mas deu bosta")
+        SessionHandler.shared.session(session, didReceive: data, fromPeer: peerID)
     }
     
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
