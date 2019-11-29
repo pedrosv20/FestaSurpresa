@@ -2,7 +2,7 @@ class Model
 {
     static let shared = Model()
     
-    
+    var players: [Player] = []
 //    var cartasMal = Model.shared.cartas.filter({$0.doBem == false})
 //    var cartasBem = Model.shared.cartas.filter({$0.doBem})
     var cartas = [
