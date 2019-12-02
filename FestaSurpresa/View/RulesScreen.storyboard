@@ -1,7 +1,171 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bgL-Jf-7td">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Rule Screen Controller-->
+        <scene sceneID="FWy-kE-5R8">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iw4-cs-EMs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="bgL-Jf-7td" customClass="RuleScreenController" customModule="FestaSurpresa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sv7-e8-ePh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UnC-Yi-H8F" userLabel="skView" customClass="SKView">
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGE-Z5-DgB" userLabel="ContentView">
+                                <rect key="frame" x="20.5" y="94.5" width="373" height="717"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmR-Q6-88v" userLabel="nomeJogador">
+                                        <rect key="frame" x="37.5" y="100" width="298" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lql-nT-rve" userLabel="descricaoJogador">
+                                        <rect key="frame" x="37.5" y="157" width="298" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0JV-z8-B2w" userLabel="lblPoder">
+                                        <rect key="frame" x="37.5" y="216" width="298" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efv-ZM-mP8" userLabel="lblDescricaoPoder">
+                                        <rect key="frame" x="37.5" y="288" width="298" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="0JV-z8-B2w" firstAttribute="top" secondItem="lql-nT-rve" secondAttribute="bottom" constant="29" id="5y0-9m-zaf"/>
+                                    <constraint firstItem="xmR-Q6-88v" firstAttribute="width" secondItem="yGE-Z5-DgB" secondAttribute="width" multiplier="0.8" id="APn-s2-vKF"/>
+                                    <constraint firstItem="efv-ZM-mP8" firstAttribute="width" secondItem="yGE-Z5-DgB" secondAttribute="width" multiplier="0.8" id="Bdr-VK-zQb"/>
+                                    <constraint firstItem="lql-nT-rve" firstAttribute="centerX" secondItem="xmR-Q6-88v" secondAttribute="centerX" id="Dw2-Z4-VHQ"/>
+                                    <constraint firstItem="efv-ZM-mP8" firstAttribute="centerX" secondItem="0JV-z8-B2w" secondAttribute="centerX" id="ILy-Ev-nmS"/>
+                                    <constraint firstItem="0JV-z8-B2w" firstAttribute="centerX" secondItem="lql-nT-rve" secondAttribute="centerX" id="Xrc-Jx-V7e"/>
+                                    <constraint firstItem="efv-ZM-mP8" firstAttribute="top" secondItem="0JV-z8-B2w" secondAttribute="bottom" constant="29" id="aF1-eb-Mbd"/>
+                                    <constraint firstItem="lql-nT-rve" firstAttribute="width" secondItem="yGE-Z5-DgB" secondAttribute="width" multiplier="0.8" id="ach-Yd-xiN"/>
+                                    <constraint firstItem="lql-nT-rve" firstAttribute="top" secondItem="xmR-Q6-88v" secondAttribute="bottom" constant="14" id="dzv-eY-Ieg"/>
+                                    <constraint firstItem="0JV-z8-B2w" firstAttribute="width" secondItem="yGE-Z5-DgB" secondAttribute="width" multiplier="0.8" id="uMG-re-LiJ"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PMQ-HA-blk">
+                                <rect key="frame" x="20.5" y="94.5" width="373" height="55"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwn-cw-atP" userLabel="btnPenetra">
+                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="55"/>
+                                        <state key="normal" title="Button" image="penetra"/>
+                                        <connections>
+                                            <action selector="actBtnPenetra:" destination="bgL-Jf-7td" eventType="touchUpInside" id="Ifq-ah-veK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C21-rH-9SZ" userLabel="btnBebado">
+                                        <rect key="frame" x="53.5" y="0.0" width="53" height="55"/>
+                                        <state key="normal" title="Button" image="bebado"/>
+                                        <connections>
+                                            <action selector="actBtnBebado:" destination="bgL-Jf-7td" eventType="touchUpInside" id="Qcv-v9-yLG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUK-CW-qOo" userLabel="btnDistraido">
+                                        <rect key="frame" x="106.5" y="0.0" width="53.5" height="55"/>
+                                        <state key="normal" title="Button" image="distraido"/>
+                                        <connections>
+                                            <action selector="actBtnDistraido:" destination="bgL-Jf-7td" eventType="touchUpInside" id="DSg-oI-4qd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWz-Va-wtt" userLabel="btnNamorado">
+                                        <rect key="frame" x="160" y="0.0" width="53" height="55"/>
+                                        <state key="normal" title="Button" image="namorado"/>
+                                        <connections>
+                                            <action selector="actBtnNamorado:" destination="bgL-Jf-7td" eventType="touchUpInside" id="MVY-N3-1DO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKJ-wx-JOi" userLabel="btnPai">
+                                        <rect key="frame" x="213" y="0.0" width="53.5" height="55"/>
+                                        <state key="normal" title="Button" image="pai"/>
+                                        <connections>
+                                            <action selector="actBtnPai:" destination="bgL-Jf-7td" eventType="touchUpInside" id="OmS-I5-sNv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Be-m9-tz5" userLabel="btnParceiro">
+                                        <rect key="frame" x="266.5" y="0.0" width="53" height="55"/>
+                                        <state key="normal" title="Button" image="melhorAmigo"/>
+                                        <connections>
+                                            <action selector="actBtnParceiro:" destination="bgL-Jf-7td" eventType="touchUpInside" id="AMp-a4-VDT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8h-nh-WNT" userLabel="btnPalhaco">
+                                        <rect key="frame" x="319.5" y="0.0" width="53.5" height="55"/>
+                                        <state key="normal" title="Button" image="palhaco"/>
+                                        <connections>
+                                            <action selector="actBtnPalhaco:" destination="bgL-Jf-7td" eventType="touchUpInside" id="DIg-iN-4er"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="e7C-t1-f7w"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="UnC-Yi-H8F" firstAttribute="height" secondItem="Sv7-e8-ePh" secondAttribute="height" id="4NJ-Lc-yzf"/>
+                            <constraint firstItem="PMQ-HA-blk" firstAttribute="width" secondItem="yGE-Z5-DgB" secondAttribute="width" id="90C-fb-sFs"/>
+                            <constraint firstItem="yGE-Z5-DgB" firstAttribute="height" secondItem="Sv7-e8-ePh" secondAttribute="height" multiplier="0.800223" id="93I-Qj-emd"/>
+                            <constraint firstItem="yGE-Z5-DgB" firstAttribute="centerX" secondItem="6CL-mF-15w" secondAttribute="centerX" id="CiF-0J-2OE"/>
+                            <constraint firstItem="PMQ-HA-blk" firstAttribute="centerX" secondItem="yGE-Z5-DgB" secondAttribute="centerX" id="IpG-mo-1W8"/>
+                            <constraint firstItem="PMQ-HA-blk" firstAttribute="top" secondItem="yGE-Z5-DgB" secondAttribute="top" id="bez-Jd-6Xg"/>
+                            <constraint firstItem="UnC-Yi-H8F" firstAttribute="centerY" secondItem="6CL-mF-15w" secondAttribute="centerY" id="hD5-kr-lEB"/>
+                            <constraint firstItem="yGE-Z5-DgB" firstAttribute="width" secondItem="Sv7-e8-ePh" secondAttribute="width" multiplier="0.900966" id="i6L-6K-zaW"/>
+                            <constraint firstItem="yGE-Z5-DgB" firstAttribute="centerY" secondItem="6CL-mF-15w" secondAttribute="centerY" id="kJX-Jv-MMi"/>
+                            <constraint firstItem="xmR-Q6-88v" firstAttribute="top" secondItem="PMQ-HA-blk" secondAttribute="top" constant="100" id="lN0-z5-BDK"/>
+                            <constraint firstItem="UnC-Yi-H8F" firstAttribute="centerX" secondItem="6CL-mF-15w" secondAttribute="centerX" id="n1G-3Q-Kpg"/>
+                            <constraint firstItem="xmR-Q6-88v" firstAttribute="centerX" secondItem="PMQ-HA-blk" secondAttribute="centerX" id="swD-LS-AKj"/>
+                            <constraint firstItem="UnC-Yi-H8F" firstAttribute="width" secondItem="Sv7-e8-ePh" secondAttribute="width" id="xS9-wM-zG4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6CL-mF-15w"/>
+                    </view>
+                    <connections>
+                        <outlet property="bntBebado" destination="C21-rH-9SZ" id="lIu-o4-2e6"/>
+                        <outlet property="btnDistraido" destination="xUK-CW-qOo" id="7vm-3S-QEV"/>
+                        <outlet property="btnNamorado" destination="DWz-Va-wtt" id="nio-Jl-ooX"/>
+                        <outlet property="btnPai" destination="IKJ-wx-JOi" id="Sbk-Tn-e0G"/>
+                        <outlet property="btnPalhaco" destination="R8h-nh-WNT" id="SrB-vc-vRh"/>
+                        <outlet property="btnParceiro" destination="9Be-m9-tz5" id="hCg-Pb-YMp"/>
+                        <outlet property="btnPenetra" destination="vwn-cw-atP" id="n9M-Wa-c4j"/>
+                        <outlet property="contentView" destination="yGE-Z5-DgB" id="Id2-6S-935"/>
+                        <outlet property="lblDescricao" destination="lql-nT-rve" id="bMw-Uy-mrO"/>
+                        <outlet property="lblNomeJogador" destination="xmR-Q6-88v" id="2cP-GA-fvM"/>
+                        <outlet property="lblPoder" destination="efv-ZM-mP8" id="Txa-jb-NSj"/>
+                        <outlet property="mainView" destination="Sv7-e8-ePh" id="JtQ-YO-ndZ"/>
+                        <outlet property="viewSk" destination="UnC-Yi-H8F" id="YmE-nq-aXO"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-255.07246376811597" y="-366.29464285714283"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bebado" width="100" height="100"/>
+        <image name="distraido" width="100" height="100"/>
+        <image name="melhorAmigo" width="103" height="103"/>
+        <image name="namorado" width="103" height="103"/>
+        <image name="pai" width="100" height="100"/>
+        <image name="palhaco" width="100" height="100"/>
+        <image name="penetra" width="100" height="100"/>
+    </resources>
 </document>

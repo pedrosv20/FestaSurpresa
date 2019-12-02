@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01AF2EE82394614900207522 /* RulesScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01AF2EE72394614900207522 /* RulesScreen.storyboard */; };
+		01AF2EEA239461D000207522 /* RuleScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AF2EE9239461D000207522 /* RuleScreenController.swift */; };
 		073C841B23914C8D00B02366 /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C841A23914C8D00B02366 /* SessionHandler.swift */; };
 		073C841D239158F600B02366 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C841C239158F500B02366 /* Model.swift */; };
 		073C841F2391590300B02366 /* Carta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C841E2391590300B02366 /* Carta.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01AF2EE72394614900207522 /* RulesScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RulesScreen.storyboard; sourceTree = "<group>"; };
+		01AF2EE9239461D000207522 /* RuleScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleScreenController.swift; sourceTree = "<group>"; };
 		073C841A23914C8D00B02366 /* SessionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHandler.swift; sourceTree = "<group>"; };
 		073C841C239158F500B02366 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Model/Model.swift; sourceTree = "<group>"; };
 		073C841E2391590300B02366 /* Carta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Carta.swift; path = Model/Carta.swift; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 			children = (
 				A4898013228F49E700852716 /* Main.storyboard */,
 				A4898018228F49E800852716 /* LaunchScreen.storyboard */,
+				01AF2EE72394614900207522 /* RulesScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -79,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				A4898011228F49E700852716 /* ViewController.swift */,
+				01AF2EE9239461D000207522 /* RuleScreenController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -179,6 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01AF2EE82394614900207522 /* RulesScreen.storyboard in Resources */,
 				A489801A228F49E800852716 /* LaunchScreen.storyboard in Resources */,
 				8879A1D1238EC2BF00890BA4 /* VerticalScene.sks in Resources */,
 				A4898017228F49E800852716 /* Assets.xcassets in Resources */,
@@ -203,6 +210,7 @@
 				9D92C9E8238EBAC300B85A3D /* AllCardsViewController.swift in Sources */,
 				073C841B23914C8D00B02366 /* SessionHandler.swift in Sources */,
 				073C842923915ED700B02366 /* CardViewController.swift in Sources */,
+				01AF2EEA239461D000207522 /* RuleScreenController.swift in Sources */,
 				A4898012228F49E700852716 /* ViewController.swift in Sources */,
 				07A41B1C238FEDF00024AA60 /* Player.swift in Sources */,
 				A4898010228F49E700852716 /* AppDelegate.swift in Sources */,
