@@ -164,7 +164,9 @@
                     <connections>
                         <outlet property="blurView" destination="n2m-Ql-JsU" id="Btb-uI-9WX"/>
                         <outlet property="cardIcon" destination="fgv-jA-8R0" id="MEf-Yv-SxZ"/>
+                        <outlet property="descricao" destination="zup-fF-G6J" id="Ux5-Tp-qaR"/>
                         <outlet property="hideCardButton" destination="vPz-OT-uZS" id="DE0-7a-nhK"/>
+                        <outlet property="poder" destination="NC8-BX-cqr" id="8iG-qE-G3R"/>
                         <outlet property="roleTitleLabel" destination="XYL-Fe-Xqt" id="R1H-qg-odO"/>
                         <outlet property="skView" destination="7Cy-he-t4g" id="eTu-yP-sRy"/>
                     </connections>

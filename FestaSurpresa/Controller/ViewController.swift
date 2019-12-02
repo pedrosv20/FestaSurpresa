@@ -7,7 +7,12 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     
     //    @IBOutlet weak var chatView: UITextView!
     //    @IBOutlet weak var inputMessage: UITextField!
+    //TODO botao de começar so funciona pro host que vai enviar carta para todos
+    // cada um ve sua carta e clica em esconder ou pronto!
+    // no model tem q ter todas tarefas para ir passando
+    // telas de discussao ou loading para carregar tudo
     
+    //TODO desconecta host todo mundo sai da sala
     @IBOutlet weak var nome: UITextField!
     
     var peerID: MCPeerID!
@@ -75,9 +80,6 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
             return
         }
         Model.shared.cartas.shuffle()
-        Model.shared.cartas.map({print($0.nome, "teste")})
-        //        chatView.text = chatView.text + "\(cartas[cont].nome) \n"
-        //        player.carta = cartas[cont]
         Model.shared.players.append(Player(peerID: SessionHandler.shared.peerID, nome: nome.text!, carta: Model.shared.cartas[cont], selected: false))
         SessionHandler.shared.carta = Model.shared.cartas[cont]
         cont += 1
@@ -86,6 +88,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
             sendMessage(messageToSend: "\(Model.shared.cartas[cont].nome)", convidado: convidado)
             print("mensagem enviada \(Model.shared.cartas[cont].nome)")
             print(SessionHandler.shared.mcSession!.connectedPeers.count)
+            Model.shared.players.append(Player(peerID: convidado, nome: UIDevice.current.name, carta: Model.shared.cartas[cont], selected: false))
             cont += 1
             if cont > maxPlayer - 1  {
                 cont = 0
