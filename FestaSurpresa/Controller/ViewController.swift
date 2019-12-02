@@ -1,5 +1,6 @@
 import UIKit
 import MultipeerConnectivity
+import SpriteKit
 
 class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControllerDelegate {
     
@@ -9,7 +10,9 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     //    @IBOutlet weak var inputMessage: UITextField!
     
     @IBOutlet weak var nome: UITextField!
+    @IBOutlet weak var skView: SKView!
     
+   
     var peerID: MCPeerID!
     var observer: NSObjectProtocol!
     var mcSession: MCSession!
@@ -22,6 +25,10 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let scene = SKScene(fileNamed: "HorizontalScene"){
+            scene.scaleMode = .aspectFill
+            skView.presentScene(scene)
+        }
         self.navigationController?.navigationBar.isHidden = true
         
         SessionHandler.shared.peerID = MCPeerID(displayName: UIDevice.current.name)

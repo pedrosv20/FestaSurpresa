@@ -7,18 +7,25 @@
 //
 
 import UIKit
+import SpriteKit
 
 class AllCardsViewController: UIViewController {
 
     
     @IBOutlet weak var showCardButton: UIButton!
     @IBOutlet weak var roundStoryLabel: UILabel!
+    @IBOutlet weak var skView: SKView!
     
     let colors = Colors()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if let scene = SKScene(fileNamed: "VerticalScene"){
+            scene.scaleMode = .aspectFill
+            skView.presentScene(scene)
+        }
+        
         view.backgroundColor = UIColor.clear
         let backgroundLayer = colors.gl
         backgroundLayer!.frame = view.frame
@@ -27,8 +34,9 @@ class AllCardsViewController: UIViewController {
         roundStoryLabel.layer.borderColor = UIColor.black.cgColor
         roundStoryLabel.layer.borderWidth = 2.0
         roundStoryLabel.layer.cornerRadius = 20.0
-        
         showCardButton.layer.cornerRadius = 15.0
+        
+        
     }
     
 
