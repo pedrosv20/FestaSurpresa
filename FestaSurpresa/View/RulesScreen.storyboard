@@ -84,6 +84,66 @@
                                             <constraint firstAttribute="height" constant="30" id="gyD-4y-kIN"/>
                                         </constraints>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="VoJ-gZ-5Wk" userLabel="stackMenu">
+                                        <rect key="frame" x="37.5" y="193" width="298" height="430"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hw-9v-N5V">
+                                                <rect key="frame" x="0.0" y="0.0" width="298" height="30"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Jogadores">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="actBtnMenuJogador:" destination="bgL-Jf-7td" eventType="touchUpInside" id="XUP-xx-1dB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfi-TC-eBd">
+                                                <rect key="frame" x="0.0" y="80" width="298" height="30"/>
+                                                <state key="normal" title="Etapas">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="actBtnMenuEtapa:" destination="bgL-Jf-7td" eventType="touchUpInside" id="fQo-i3-5x6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRA-af-qQa">
+                                                <rect key="frame" x="0.0" y="160" width="298" height="30"/>
+                                                <state key="normal" title="Rodadas">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="actBtnMenuRodadas:" destination="bgL-Jf-7td" eventType="touchUpInside" id="mCC-xr-JoK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsX-Cq-JU9">
+                                                <rect key="frame" x="0.0" y="240" width="298" height="30"/>
+                                                <state key="normal" title="Casos">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="actBtnMenuCasos:" destination="bgL-Jf-7td" eventType="touchUpInside" id="RrR-7J-BRp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6KE-cS-LUC">
+                                                <rect key="frame" x="0.0" y="320" width="298" height="30"/>
+                                                <state key="normal" title="Lider">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="actBtnMenuLider:" destination="bgL-Jf-7td" eventType="touchUpInside" id="nil-Ut-hbH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27C-Ic-bb0">
+                                                <rect key="frame" x="0.0" y="400" width="298" height="30"/>
+                                                <state key="normal" title="Final">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="actBtnMenuFinal:" destination="bgL-Jf-7td" eventType="touchUpInside" id="UnW-z9-d9t"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -92,15 +152,19 @@
                                     <constraint firstItem="efv-ZM-mP8" firstAttribute="width" secondItem="yGE-Z5-DgB" secondAttribute="width" multiplier="0.8" id="Bdr-VK-zQb"/>
                                     <constraint firstItem="CQL-dI-lSb" firstAttribute="top" secondItem="yGE-Z5-DgB" secondAttribute="top" constant="10" id="BpS-87-Ibc"/>
                                     <constraint firstItem="lql-nT-rve" firstAttribute="centerX" secondItem="xmR-Q6-88v" secondAttribute="centerX" id="Dw2-Z4-VHQ"/>
+                                    <constraint firstItem="VoJ-gZ-5Wk" firstAttribute="top" secondItem="xmR-Q6-88v" secondAttribute="bottom" constant="50" id="EMo-zG-R7U"/>
                                     <constraint firstItem="DBo-yc-bnG" firstAttribute="width" secondItem="yGE-Z5-DgB" secondAttribute="width" multiplier="0.536193" id="Hh9-Q6-iys"/>
                                     <constraint firstItem="efv-ZM-mP8" firstAttribute="centerX" secondItem="0JV-z8-B2w" secondAttribute="centerX" id="ILy-Ev-nmS"/>
+                                    <constraint firstItem="VoJ-gZ-5Wk" firstAttribute="height" secondItem="yGE-Z5-DgB" secondAttribute="height" multiplier="0.6" id="NR1-rk-jkx"/>
                                     <constraint firstItem="DBo-yc-bnG" firstAttribute="centerX" secondItem="yGE-Z5-DgB" secondAttribute="centerX" id="WXu-xs-HJ7"/>
                                     <constraint firstItem="0JV-z8-B2w" firstAttribute="centerX" secondItem="lql-nT-rve" secondAttribute="centerX" id="Xrc-Jx-V7e"/>
                                     <constraint firstItem="efv-ZM-mP8" firstAttribute="top" secondItem="0JV-z8-B2w" secondAttribute="bottom" constant="29" id="aF1-eb-Mbd"/>
                                     <constraint firstItem="lql-nT-rve" firstAttribute="width" secondItem="yGE-Z5-DgB" secondAttribute="width" multiplier="0.8" id="ach-Yd-xiN"/>
                                     <constraint firstItem="lql-nT-rve" firstAttribute="top" secondItem="xmR-Q6-88v" secondAttribute="bottom" constant="14" id="dzv-eY-Ieg"/>
+                                    <constraint firstItem="VoJ-gZ-5Wk" firstAttribute="centerX" secondItem="yGE-Z5-DgB" secondAttribute="centerX" id="lTy-r1-8V6"/>
                                     <constraint firstAttribute="bottom" secondItem="DBo-yc-bnG" secondAttribute="bottom" constant="20" id="tj6-4a-5hr"/>
                                     <constraint firstItem="0JV-z8-B2w" firstAttribute="width" secondItem="yGE-Z5-DgB" secondAttribute="width" multiplier="0.8" id="uMG-re-LiJ"/>
+                                    <constraint firstItem="VoJ-gZ-5Wk" firstAttribute="width" secondItem="yGE-Z5-DgB" secondAttribute="width" multiplier="0.8" id="vxG-3C-Pk7"/>
                                     <constraint firstAttribute="leading" secondItem="CQL-dI-lSb" secondAttribute="leading" constant="-10" id="yMh-S2-95v"/>
                                 </constraints>
                             </view>
@@ -184,6 +248,12 @@
                         <outlet property="bntBebado" destination="C21-rH-9SZ" id="lIu-o4-2e6"/>
                         <outlet property="btnDistraido" destination="xUK-CW-qOo" id="7vm-3S-QEV"/>
                         <outlet property="btnInstrucoes" destination="4Ex-c5-hYQ" id="sOH-qK-KgD"/>
+                        <outlet property="btnMenuCasos" destination="ZsX-Cq-JU9" id="xdg-vW-Wmt"/>
+                        <outlet property="btnMenuEtapas" destination="hfi-TC-eBd" id="5aw-BA-zpm"/>
+                        <outlet property="btnMenuFinal" destination="27C-Ic-bb0" id="pAT-e2-Wf9"/>
+                        <outlet property="btnMenuJogador" destination="8hw-9v-N5V" id="6JL-5n-qmk"/>
+                        <outlet property="btnMenuLider" destination="6KE-cS-LUC" id="yc6-wo-ABg"/>
+                        <outlet property="btnMenuRodadas" destination="eRA-af-qQa" id="fQe-q8-Zgw"/>
                         <outlet property="btnNamorado" destination="DWz-Va-wtt" id="nio-Jl-ooX"/>
                         <outlet property="btnPai" destination="IKJ-wx-JOi" id="Sbk-Tn-e0G"/>
                         <outlet property="btnPalhaco" destination="R8h-nh-WNT" id="SrB-vc-vRh"/>
@@ -197,6 +267,7 @@
                         <outlet property="lblPoder" destination="efv-ZM-mP8" id="Txa-jb-NSj"/>
                         <outlet property="llbTituloPoder" destination="0JV-z8-B2w" id="WMU-CS-K4A"/>
                         <outlet property="mainView" destination="Sv7-e8-ePh" id="JtQ-YO-ndZ"/>
+                        <outlet property="stackMenu" destination="VoJ-gZ-5Wk" id="WC7-XL-YhK"/>
                         <outlet property="stackView" destination="PMQ-HA-blk" id="BSi-qZ-iFO"/>
                         <outlet property="viewSk" destination="UnC-Yi-H8F" id="YmE-nq-aXO"/>
                     </connections>
