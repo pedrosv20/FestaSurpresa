@@ -11,7 +11,6 @@
         <!--Rule Screen Controller-->
         <scene sceneID="FWy-kE-5R8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Iw4-cs-EMs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="bgL-Jf-7td" customClass="RuleScreenController" customModule="FestaSurpresa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sv7-e8-ePh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -25,7 +24,7 @@
                                 <rect key="frame" x="20.5" y="94.5" width="373" height="717"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmR-Q6-88v" userLabel="nomeJogador">
-                                        <rect key="frame" x="37.5" y="100" width="298" height="43"/>
+                                        <rect key="frame" x="74.5" y="100" width="224" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -48,19 +47,61 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CQL-dI-lSb" userLabel="btnSair">
+                                        <rect key="frame" x="10" y="10" width="24" height="22"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="xot-Jf-VRZ"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="arrow.turn.up.left" catalog="system"/>
+                                        <connections>
+                                            <action selector="actBtnSair:" destination="bgL-Jf-7td" eventType="touchUpInside" id="lWe-Dd-aoq"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DBo-yc-bnG">
+                                        <rect key="frame" x="86.5" y="667" width="200" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scF-0d-zEU" userLabel="btnPersonagens">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Personagens"/>
+                                                <connections>
+                                                    <action selector="actBtnPersonagens:" destination="bgL-Jf-7td" eventType="touchUpInside" id="JsM-cP-8DB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ex-c5-hYQ" userLabel="btnInstrucoes">
+                                                <rect key="frame" x="100" y="0.0" width="100" height="30"/>
+                                                <state key="normal" title="Instruções">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="actBtnInstrucao:" destination="bgL-Jf-7td" eventType="touchUpInside" id="YBj-Uc-oPm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="gyD-4y-kIN"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="0JV-z8-B2w" firstAttribute="top" secondItem="lql-nT-rve" secondAttribute="bottom" constant="29" id="5y0-9m-zaf"/>
-                                    <constraint firstItem="xmR-Q6-88v" firstAttribute="width" secondItem="yGE-Z5-DgB" secondAttribute="width" multiplier="0.8" id="APn-s2-vKF"/>
+                                    <constraint firstItem="xmR-Q6-88v" firstAttribute="width" secondItem="yGE-Z5-DgB" secondAttribute="width" multiplier="0.6" id="APn-s2-vKF"/>
                                     <constraint firstItem="efv-ZM-mP8" firstAttribute="width" secondItem="yGE-Z5-DgB" secondAttribute="width" multiplier="0.8" id="Bdr-VK-zQb"/>
+                                    <constraint firstItem="CQL-dI-lSb" firstAttribute="top" secondItem="yGE-Z5-DgB" secondAttribute="top" constant="10" id="BpS-87-Ibc"/>
                                     <constraint firstItem="lql-nT-rve" firstAttribute="centerX" secondItem="xmR-Q6-88v" secondAttribute="centerX" id="Dw2-Z4-VHQ"/>
+                                    <constraint firstItem="DBo-yc-bnG" firstAttribute="width" secondItem="yGE-Z5-DgB" secondAttribute="width" multiplier="0.536193" id="Hh9-Q6-iys"/>
                                     <constraint firstItem="efv-ZM-mP8" firstAttribute="centerX" secondItem="0JV-z8-B2w" secondAttribute="centerX" id="ILy-Ev-nmS"/>
+                                    <constraint firstItem="DBo-yc-bnG" firstAttribute="centerX" secondItem="yGE-Z5-DgB" secondAttribute="centerX" id="WXu-xs-HJ7"/>
                                     <constraint firstItem="0JV-z8-B2w" firstAttribute="centerX" secondItem="lql-nT-rve" secondAttribute="centerX" id="Xrc-Jx-V7e"/>
                                     <constraint firstItem="efv-ZM-mP8" firstAttribute="top" secondItem="0JV-z8-B2w" secondAttribute="bottom" constant="29" id="aF1-eb-Mbd"/>
                                     <constraint firstItem="lql-nT-rve" firstAttribute="width" secondItem="yGE-Z5-DgB" secondAttribute="width" multiplier="0.8" id="ach-Yd-xiN"/>
                                     <constraint firstItem="lql-nT-rve" firstAttribute="top" secondItem="xmR-Q6-88v" secondAttribute="bottom" constant="14" id="dzv-eY-Ieg"/>
+                                    <constraint firstAttribute="bottom" secondItem="DBo-yc-bnG" secondAttribute="bottom" constant="20" id="tj6-4a-5hr"/>
                                     <constraint firstItem="0JV-z8-B2w" firstAttribute="width" secondItem="yGE-Z5-DgB" secondAttribute="width" multiplier="0.8" id="uMG-re-LiJ"/>
+                                    <constraint firstAttribute="leading" secondItem="CQL-dI-lSb" secondAttribute="leading" constant="-10" id="yMh-S2-95v"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PMQ-HA-blk">
@@ -142,24 +183,31 @@
                     <connections>
                         <outlet property="bntBebado" destination="C21-rH-9SZ" id="lIu-o4-2e6"/>
                         <outlet property="btnDistraido" destination="xUK-CW-qOo" id="7vm-3S-QEV"/>
+                        <outlet property="btnInstrucoes" destination="4Ex-c5-hYQ" id="sOH-qK-KgD"/>
                         <outlet property="btnNamorado" destination="DWz-Va-wtt" id="nio-Jl-ooX"/>
                         <outlet property="btnPai" destination="IKJ-wx-JOi" id="Sbk-Tn-e0G"/>
                         <outlet property="btnPalhaco" destination="R8h-nh-WNT" id="SrB-vc-vRh"/>
                         <outlet property="btnParceiro" destination="9Be-m9-tz5" id="hCg-Pb-YMp"/>
                         <outlet property="btnPenetra" destination="vwn-cw-atP" id="n9M-Wa-c4j"/>
+                        <outlet property="btnPersonagens" destination="scF-0d-zEU" id="Qdy-8U-J8g"/>
+                        <outlet property="btnSair" destination="CQL-dI-lSb" id="Ovi-Lx-L4Y"/>
                         <outlet property="contentView" destination="yGE-Z5-DgB" id="Id2-6S-935"/>
                         <outlet property="lblDescricao" destination="lql-nT-rve" id="bMw-Uy-mrO"/>
                         <outlet property="lblNomeJogador" destination="xmR-Q6-88v" id="2cP-GA-fvM"/>
                         <outlet property="lblPoder" destination="efv-ZM-mP8" id="Txa-jb-NSj"/>
+                        <outlet property="llbTituloPoder" destination="0JV-z8-B2w" id="WMU-CS-K4A"/>
                         <outlet property="mainView" destination="Sv7-e8-ePh" id="JtQ-YO-ndZ"/>
+                        <outlet property="stackView" destination="PMQ-HA-blk" id="BSi-qZ-iFO"/>
                         <outlet property="viewSk" destination="UnC-Yi-H8F" id="YmE-nq-aXO"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iw4-cs-EMs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-255.07246376811597" y="-366.29464285714283"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.turn.up.left" catalog="system" width="64" height="48"/>
         <image name="bebado" width="100" height="100"/>
         <image name="distraido" width="100" height="100"/>
         <image name="melhorAmigo" width="103" height="103"/>
