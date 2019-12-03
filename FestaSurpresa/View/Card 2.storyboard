@@ -137,14 +137,6 @@
                                     <action selector="didPressHideCardButton:" destination="hTN-65-J2A" eventType="touchUpInside" id="VgI-mE-UyS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPC-aG-eoD">
-                                <rect key="frame" x="184" y="433" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="J7D-bS-GIL" kind="show" id="ATd-1h-rFQ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -172,9 +164,7 @@
                     <connections>
                         <outlet property="blurView" destination="n2m-Ql-JsU" id="Btb-uI-9WX"/>
                         <outlet property="cardIcon" destination="fgv-jA-8R0" id="MEf-Yv-SxZ"/>
-                        <outlet property="descricao" destination="zup-fF-G6J" id="Ux5-Tp-qaR"/>
                         <outlet property="hideCardButton" destination="vPz-OT-uZS" id="DE0-7a-nhK"/>
-                        <outlet property="poder" destination="NC8-BX-cqr" id="8iG-qE-G3R"/>
                         <outlet property="roleTitleLabel" destination="XYL-Fe-Xqt" id="R1H-qg-odO"/>
                         <outlet property="skView" destination="7Cy-he-t4g" id="eTu-yP-sRy"/>
                     </connections>
@@ -182,16 +172,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSI-k8-VoL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="847.82608695652175" y="871.875"/>
-        </scene>
-        <!--Main-->
-        <scene sceneID="1kw-8K-rqS">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="J7D-bS-GIL" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="QSY-Uw-jEc"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oZX-Jq-zBu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1588" y="860"/>
         </scene>
     </scenes>
     <resources>

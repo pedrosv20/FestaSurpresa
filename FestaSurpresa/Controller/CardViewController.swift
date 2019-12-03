@@ -17,8 +17,6 @@ class CardViewController: UIViewController {
     @IBOutlet weak var hideCardButton: UIButton!
     @IBOutlet weak var cardIcon: UIImageView!
     @IBOutlet weak var skView: SKView!
-    @IBOutlet weak var descricao: UILabel!
-    @IBOutlet weak var poder: UILabel!
     
     
     let colors = Colors()
@@ -52,18 +50,7 @@ class CardViewController: UIViewController {
 //        cardView.layer.borderColor = UIColor.black.cgColor
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-        roleTitleLabel.text = SessionHandler.shared.carta?.nome
-        descricao.text = SessionHandler.shared.carta?.descricao
-        poder.text = SessionHandler.shared.carta?.poder
-    }
     @IBAction func didPressHideCardButton(_ sender: Any) {
-        print(Model.shared.players.first?.carta?.nome)
-        print(Model.shared.players.count)
-        for i in Model.shared.players {
-            print(i.nome)
-        }
     }
     
     

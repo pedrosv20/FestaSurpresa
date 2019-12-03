@@ -15,7 +15,6 @@ class Player {
     var nome: String
     var carta: Carta?
     var selected: Bool
-//    var estado: enum de estados
     
     init(peerID: MCPeerID, nome:String, carta:Carta?, selected: Bool) {
         self.peerID = peerID
@@ -24,4 +23,3 @@ class Player {
         self.selected = selected
     }
 }
-

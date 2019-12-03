@@ -16,10 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rr-ua-ffd" userLabel="skView" customClass="SKView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GGY-Kc-4BG">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
                                 <subviews>
@@ -168,28 +164,16 @@ barris de chop!</string>
                                     <action selector="didPressShowCardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="P6W-3c-LFD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6u-er-QPn">
-                                <rect key="frame" x="184" y="433" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="ZdV-D4-FfH" kind="show" id="IRT-hr-b3l"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ztw-fQ-vwS" firstAttribute="leading" secondItem="NVr-pQ-bVx" secondAttribute="leading" id="03O-fZ-4Wj"/>
-                            <constraint firstItem="5rr-ua-ffd" firstAttribute="height" secondItem="GEn-nw-myF" secondAttribute="height" id="2YO-pR-OwY"/>
                             <constraint firstItem="NVr-pQ-bVx" firstAttribute="bottom" secondItem="rK9-HQ-27S" secondAttribute="bottom" constant="10" id="51P-vp-GtP"/>
                             <constraint firstItem="ztw-fQ-vwS" firstAttribute="height" secondItem="GEn-nw-myF" secondAttribute="height" multiplier="0.65" id="DsM-gn-gVo"/>
                             <constraint firstItem="GGY-Kc-4BG" firstAttribute="top" secondItem="GEn-nw-myF" secondAttribute="top" id="FoX-8l-Zie"/>
-                            <constraint firstItem="5rr-ua-ffd" firstAttribute="width" secondItem="GEn-nw-myF" secondAttribute="width" id="GMh-GX-qFN"/>
-                            <constraint firstItem="5rr-ua-ffd" firstAttribute="centerX" secondItem="NVr-pQ-bVx" secondAttribute="centerX" id="TXR-BG-q0I"/>
                             <constraint firstItem="ztw-fQ-vwS" firstAttribute="top" secondItem="GGY-Kc-4BG" secondAttribute="bottom" id="abx-Vl-ASP"/>
                             <constraint firstItem="GGY-Kc-4BG" firstAttribute="height" secondItem="GEn-nw-myF" secondAttribute="height" multiplier="0.25" id="bVe-R1-naH"/>
                             <constraint firstItem="ztw-fQ-vwS" firstAttribute="trailing" secondItem="NVr-pQ-bVx" secondAttribute="trailing" id="dFl-lf-AuJ"/>
-                            <constraint firstItem="5rr-ua-ffd" firstAttribute="centerY" secondItem="GEn-nw-myF" secondAttribute="centerY" id="hnh-lq-EDr"/>
                             <constraint firstItem="GGY-Kc-4BG" firstAttribute="leading" secondItem="NVr-pQ-bVx" secondAttribute="leading" id="r0d-xu-Ssx"/>
                             <constraint firstItem="rK9-HQ-27S" firstAttribute="centerX" secondItem="NVr-pQ-bVx" secondAttribute="centerX" id="v0q-Fm-2CY"/>
                             <constraint firstItem="GGY-Kc-4BG" firstAttribute="trailing" secondItem="NVr-pQ-bVx" secondAttribute="trailing" id="wtZ-cf-h4b"/>
@@ -199,22 +183,11 @@ barris de chop!</string>
                     <connections>
                         <outlet property="roundStoryLabel" destination="TPY-ns-uKG" id="Ub0-4R-kze"/>
                         <outlet property="showCardButton" destination="rK9-HQ-27S" id="11T-fp-wog"/>
-                        <outlet property="skView" destination="5rr-ua-ffd" id="KEQ-3k-3yO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NVt-kM-E8h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="847.82608695652175" y="871.875"/>
-        </scene>
-        <!--Card 2-->
-        <scene sceneID="pDp-Xk-zab">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Card 2" id="ZdV-D4-FfH" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="HDJ-0d-qhp"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M6R-kz-Ujd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1519" y="1059"/>
         </scene>
     </scenes>
     <resources>

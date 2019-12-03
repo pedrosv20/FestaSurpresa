@@ -24,7 +24,7 @@ class SessionHandler: NSObject, MCSessionDelegate {
         
     }
     
-
+    
     
     func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
         switch state {
@@ -38,10 +38,6 @@ class SessionHandler: NSObject, MCSessionDelegate {
         case .notConnected:
             print("Not Connected: \(peerID.displayName)")
             
-            if Model.shared.players.first?.peerID.displayName == peerID.displayName {
-                session.disconnect()
-            }
-            
         @unknown default:
             print("fatal error")
         }
@@ -54,8 +50,8 @@ class SessionHandler: NSObject, MCSessionDelegate {
                     for carta in Model.shared.cartas {
                         if carta.nome == message {
                             print(carta.nome, "carta")
-                            self.carta = carta                          
-                            
+                            self.carta = carta
+                            Model.shared.players.append(Player(peerID: peerID, nome: UIDevice.current.name, carta: carta, selected: false))
                         }
                     }
                     
