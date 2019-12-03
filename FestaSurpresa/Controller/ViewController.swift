@@ -7,6 +7,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     
     //    @IBOutlet weak var chatView: UITextView!
     //    @IBOutlet weak var inputMessage: UITextField!
+    
     //TODO botao de começar so funciona pro host que vai enviar carta para todos
     // cada um ve sua carta e clica em esconder ou pronto!
     // no model tem q ter todas tarefas para ir passando
@@ -32,7 +33,11 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         SessionHandler.shared.peerID = MCPeerID(displayName: UIDevice.current.name)
         SessionHandler.shared.mcSession = MCSession(peer: SessionHandler.shared.peerID, securityIdentity: nil, encryptionPreference: .required)
         SessionHandler.shared.mcSession!.delegate = self
-        
+//        NotificationCenter.default.addObserver(forName: UIApplication.willTerminateNotification, object: nil, queue: nil) { (notification) in
+//            SessionHandler.shared.mcSession?.disconnect()
+//        }
+            
+
         
         //        player = Player(peerID: peerID, nome: nome.text!, carta: nil, selected: false)
         //        listaConvidados = mcSession.connectedPeers

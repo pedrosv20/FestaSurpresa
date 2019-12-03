@@ -24,7 +24,7 @@ class SessionHandler: NSObject, MCSessionDelegate {
         
     }
     
-    
+
     
     func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
         switch state {
