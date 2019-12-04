@@ -10,12 +10,14 @@ import UIKit
 import SpriteKit
 
 class AllCardsViewController: UIViewController {
-
+    
     
     @IBOutlet weak var showCardButton: UIButton!
     @IBOutlet weak var roundStoryLabel: UILabel!
     @IBOutlet weak var skView: SKView!
     
+    
+    var showClicked = false
     let colors = Colors()
     
     override func viewDidLoad() {
@@ -39,12 +41,34 @@ class AllCardsViewController: UIViewController {
         
     }
     
-
+    
     @IBAction func didPressShowCardButton(_ sender: Any) {
-//        if let vc = storyboard?.instantiateViewController(withIdentifier: "card") as? CardViewController {
-//            self.navigationController?.pushViewController(vc, animated: true)
-//        }
+        showClicked = true
+        //TODO:  transformar imagens da allcardsviewcontroller em botoes e quando clicar em cada um, instanciar cards controller passando a carta certa.
+        // após isso qunando este botao for clicado, aumentar e deixar do tamanho normao o botao da carta da pessoa
+        
     }
+    
+    @IBAction func cardButton(_ sender: UIButton) {
+        print(sender.titleLabel!.text)
+        
+        if showClicked == true && sender.titleLabel!.text == SessionHandler.shared.carta?.nome {
+            SessionHandler.shared.cardTouched = SessionHandler.shared.carta!
+            SessionHandler.shared.sawCard = true
+            self.performSegue(withIdentifier: "showCard", sender: Any?.self)
+            return
+        }
+        for carta in Model.shared.cartas {
+            if carta.nome == sender.titleLabel!.text {
+                SessionHandler.shared.cardTouched = carta
+                self.performSegue(withIdentifier: "showCard", sender: Any?.self)
+            }
+        }
+        
+        
+    }
+    
+    
     
     
 }

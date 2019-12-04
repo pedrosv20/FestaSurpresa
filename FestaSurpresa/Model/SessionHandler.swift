@@ -21,6 +21,10 @@ class SessionHandler: NSObject, MCSessionDelegate {
     var host = false
     var peerChuncho: String!
     var controller: UIViewController!
+    
+    var cardTouched: Carta!
+    var sawCard = false
+    
     private override init() {
         
     }
@@ -74,16 +78,16 @@ class SessionHandler: NSObject, MCSessionDelegate {
                 }
                 return
             }
-            else if message == "playerAvisaHostSaiu" {
+            if message == "playerAvisaHostSaiu" {
                 self.controller.dismiss(animated: false, completion: nil)
             }
                 
-            else if message == "novoConectado" {
+            if message == "novoConectado" {
                 NotificationCenter.default.post(Notification(name: Notification.Name("joinedPlayer")))
                 return
             }
                 
-            else if message == "conectei" {
+            if message == "conectei" {
                 NotificationCenter.default.post(Notification(name: Notification.Name("joinPlayer")))
                 return
             }

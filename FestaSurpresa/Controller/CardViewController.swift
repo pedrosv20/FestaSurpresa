@@ -54,16 +54,20 @@ class CardViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        roleTitleLabel.text = SessionHandler.shared.carta?.nome
-        descricao.text = SessionHandler.shared.carta?.descricao
-        poder.text = SessionHandler.shared.carta?.poder
+        roleTitleLabel.text = SessionHandler.shared.cardTouched!.nome
+        descricao.text = SessionHandler.shared.cardTouched!.descricao
+        poder.text = SessionHandler.shared.cardTouched!.poder
     }
     @IBAction func didPressHideCardButton(_ sender: Any) {
-        print(Model.shared.players.first?.carta?.nome)
-        print(Model.shared.players.count)
-        for i in Model.shared.players {
-            print(i.nome)
+        if SessionHandler.shared.sawCard == true {
+            //TODO: manda mensagfem de ok
         }
+        self.dismiss(animated: false, completion: nil)
+//        print(Model.shared.players.first?.carta?.nome)
+//        print(Model.shared.players.count)
+//        for i in Model.shared.players {
+//            print(i.nome)
+//        }
     }
     
     

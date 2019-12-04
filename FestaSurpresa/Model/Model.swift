@@ -26,5 +26,14 @@ class Model
         
             
     ]
+    
+    var tarefas = [
+        Tarefa(tituloTarefa: "O bolo precisa ser encomendado. Líder, escolha X jogadores para te ajudarem a escolher o sabor.", numeroTarefa: 1),
+        Tarefa(tituloTarefa: "Os 37 barris de chopp chegaram. Líder, escolha X pessoas para ajudar a descarregar a bebida sem derramar nem uma gota.", numeroTarefa: 2),
+        Tarefa(tituloTarefa: "A cama elástica é a principal atração. Líder, escolha X pessoas para te ajudarem a montar o brinquedo", numeroTarefa: 3),
+        Tarefa(tituloTarefa: "o ambiente tem que estar perfeito. Líder, escolha X jogadores para te ajudarem a encher os balões.", numeroTarefa: 4),
+        Tarefa(tituloTarefa: "Os vegetarianos também precisam comer. Líder, escolha X jogadores para te ajudem a lavar a  alface.", numeroTarefa: 5),
+        Tarefa(tituloTarefa: "As crianças precisam brincar, ajude a encher as piscina de bolinhas", numeroTarefa: 6)
+    ]
     private init(){}
 }

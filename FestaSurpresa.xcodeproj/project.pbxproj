@@ -10,6 +10,7 @@
 		073C841B23914C8D00B02366 /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C841A23914C8D00B02366 /* SessionHandler.swift */; };
 		073C841D239158F600B02366 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C841C239158F500B02366 /* Model.swift */; };
 		073C841F2391590300B02366 /* Carta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C841E2391590300B02366 /* Carta.swift */; };
+		076E5FF6239828FC0072A21D /* Tarefa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E5FF5239828FC0072A21D /* Tarefa.swift */; };
 		078B633A2396830800DB8472 /* WaitingPlayers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 078B63392396830800DB8472 /* WaitingPlayers.storyboard */; };
 		078B633C2396837600DB8472 /* WaitingPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B633B2396837600DB8472 /* WaitingPlayersViewController.swift */; };
 		079690552396AB13002DC8A9 /* AllCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079690542396AB13002DC8A9 /* AllCardsViewController.swift */; };
@@ -37,6 +38,7 @@
 		073C841A23914C8D00B02366 /* SessionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHandler.swift; sourceTree = "<group>"; };
 		073C841C239158F500B02366 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		073C841E2391590300B02366 /* Carta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carta.swift; sourceTree = "<group>"; };
+		076E5FF5239828FC0072A21D /* Tarefa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tarefa.swift; sourceTree = "<group>"; };
 		078B63392396830800DB8472 /* WaitingPlayers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WaitingPlayers.storyboard; sourceTree = "<group>"; };
 		078B633B2396837600DB8472 /* WaitingPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingPlayersViewController.swift; sourceTree = "<group>"; };
 		079690542396AB13002DC8A9 /* AllCardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllCardsViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				073C841A23914C8D00B02366 /* SessionHandler.swift */,
 				073C841E2391590300B02366 /* Carta.swift */,
 				073C841C239158F500B02366 /* Model.swift */,
+				076E5FF5239828FC0072A21D /* Tarefa.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			files = (
 				073C841F2391590300B02366 /* Carta.swift in Sources */,
 				88A83C45238EBEE200FA6468 /* VerticalScene.swift in Sources */,
+				076E5FF6239828FC0072A21D /* Tarefa.swift in Sources */,
 				073C841D239158F600B02366 /* Model.swift in Sources */,
 				9DB365472396855900D51835 /* RequestHelpPopUp.swift in Sources */,
 				A4898012228F49E700852716 /* ViewController.swift in Sources */,
