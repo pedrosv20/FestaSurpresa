@@ -49,9 +49,7 @@ class SessionHandler: NSObject, MCSessionDelegate {
         case .notConnected:
             print("Not Connected: \(peerID.displayName)")
             
-            if Model.shared.players.first?.peerID.displayName == peerID.displayName {
-                session.disconnect()
-            }
+
             
         @unknown default:
             print("fatal error")
@@ -64,14 +62,19 @@ class SessionHandler: NSObject, MCSessionDelegate {
             let message = NSString(data: data as Data, encoding: String.Encoding.utf8.rawValue)! as String
             
             
-            if message == "conectei" {
-                NotificationCenter.default.post(Notification(name: Notification.Name("joinPlayer")))
+            if message == "hostSaiu" {
+                self.controller.dismiss(animated: false, completion: nil)
                 return
             }
             
             
             if message == "novoConectado" {
                 NotificationCenter.default.post(Notification(name: Notification.Name("joinedPlayer")))
+                return
+            }
+            
+            if message == "conectei" {
+                NotificationCenter.default.post(Notification(name: Notification.Name("joinPlayer")))
                 return
             }
             //                    let mensagem = "novosConectados".data(using: String.Encoding.utf8, allowLossyConversion: false)

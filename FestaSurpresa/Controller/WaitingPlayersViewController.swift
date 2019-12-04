@@ -17,6 +17,7 @@ class WaitingPlayersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SessionHandler.shared.controller = self
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "joinPlayer"), object: nil, queue: nil) { (Notification) in
             print("funcionou")
@@ -29,6 +30,7 @@ class WaitingPlayersViewController: UIViewController {
                 
             }
             self.attNumberPlayers()
+            
         }
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "joinedPlayer"), object: nil, queue: nil) { (Notification) in
                    print("funcionou")
@@ -40,7 +42,13 @@ class WaitingPlayersViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        comecar.isHidden = false
+        if SessionHandler.shared.host {
+             comecar.isHidden = false
+             comecar.isEnabled = false
+        } else {
+            comecar.isHidden = true
+        }
+       
         let int = (SessionHandler.shared.mcSession?.connectedPeers.count)! + 1
 
         numeroPlayers.text = String(int)
@@ -55,7 +63,12 @@ class WaitingPlayersViewController: UIViewController {
     func attNumberPlayers() {
         self.numeroPlayers.text = String((SessionHandler.shared.mcSession?.connectedPeers.count)! + 1)
         if (SessionHandler.shared.mcSession?.connectedPeers.count)! + 1 >= minPlayers && (SessionHandler.shared.mcSession?.connectedPeers.count)! + 1 < maxPlayer {
-            comecar.isHidden = true
+            if SessionHandler.shared.host {
+                comecar.isEnabled = true
+                comecar.isHidden = false
+            }
+            
+            
         }
     }
     
