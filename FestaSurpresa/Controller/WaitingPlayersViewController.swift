@@ -31,6 +31,29 @@ class WaitingPlayersViewController: UIViewController {
             }
             self.attNumberPlayers()
             
+            NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification, object: nil, queue: nil) { (notification) in
+                if SessionHandler.shared.host {
+                    let message = "hostSaiu".data(using: String.Encoding.utf8, allowLossyConversion: false)
+                     DispatchQueue.main.async {
+                        do {
+                            
+                            try SessionHandler.shared.mcSession!.send(message!, toPeers: SessionHandler.shared.mcSession!.connectedPeers, with: .unreliable)
+                        }
+                        catch {
+                            print("Error sending message")
+                            }
+                        
+                    }
+//                    SessionHandler.shared.mcSession?.disconnect()
+//                    for peers in SessionHandler.shared.mcSession!.connectedPeers {
+//                        SessionHandler.shared.mcSession?.cancelConnectPeer(peers)
+//                    }
+                    
+                }
+                    
+                // run your code here (or whatever)
+            }
+            
         }
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "joinedPlayer"), object: nil, queue: nil) { (Notification) in
                    print("funcionou")
