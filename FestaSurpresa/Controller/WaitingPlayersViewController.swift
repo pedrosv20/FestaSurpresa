@@ -40,7 +40,7 @@ class WaitingPlayersViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        comecar.isEnabled = false
+        comecar.isHidden = false
         let int = (SessionHandler.shared.mcSession?.connectedPeers.count)! + 1
 
         numeroPlayers.text = String(int)
@@ -55,7 +55,7 @@ class WaitingPlayersViewController: UIViewController {
     func attNumberPlayers() {
         self.numeroPlayers.text = String((SessionHandler.shared.mcSession?.connectedPeers.count)! + 1)
         if (SessionHandler.shared.mcSession?.connectedPeers.count)! + 1 >= minPlayers && (SessionHandler.shared.mcSession?.connectedPeers.count)! + 1 < maxPlayer {
-            comecar.isEnabled = true
+            comecar.isHidden = true
         }
     }
     

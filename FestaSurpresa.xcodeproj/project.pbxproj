@@ -384,7 +384,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZSLUMCNRNL;
+				DEVELOPMENT_TEAM = 725HB8W2V6;
 				INFOPLIST_FILE = FestaSurpresa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

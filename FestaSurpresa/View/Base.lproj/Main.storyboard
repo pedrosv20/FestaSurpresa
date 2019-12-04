@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="309" width="414" height="216.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxL-Y1-eJf">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxL-Y1-eJf">
                                 <rect key="frame" x="157" y="683" width="100" height="100"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Send"/>
@@ -52,6 +52,10 @@
                                 <rect key="frame" x="109" y="597" width="196" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didEndEditingNome:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="wJg-uO-F16"/>
+                                    <action selector="didStartEdittingName:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="QGS-7c-3Xm"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZE-Kj-u4a">
                                 <rect key="frame" x="66" y="718" width="46" height="30"/>
@@ -86,6 +90,7 @@
                     <connections>
                         <outlet property="nome" destination="RRK-o2-gvY" id="vX6-On-ajQ"/>
                         <outlet property="skView" destination="Ntb-Hf-Rfw" id="n6P-8w-fqG"/>
+                        <outlet property="startSessionButton" destination="oxL-Y1-eJf" id="Fyw-u5-ATF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

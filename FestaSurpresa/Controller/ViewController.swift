@@ -2,7 +2,7 @@ import UIKit
 import MultipeerConnectivity
 import SpriteKit
 
-class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControllerDelegate {
+class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControllerDelegate, UITextFieldDelegate {
     
     
     
@@ -27,6 +27,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     var messageToSend: String!
     var player: Player!
     
+    @IBOutlet weak var startSessionButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -37,6 +38,11 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
             skView.presentScene(scene)
         }
         self.navigationController?.navigationBar.isHidden = true
+        
+        nome?.delegate = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         
 //        NotificationCenter.default.addObserver(forName: UIApplication.willTerminateNotification, object: nil, queue: nil) { (notification) in
@@ -49,6 +55,37 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         //        listaConvidados = mcSession.connectedPeers
         
     }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+            if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+                if self.view.frame.origin.y == 0 {
+                    self.view.frame.origin.y -= keyboardSize.height
+                }
+            }
+        }
+        
+        @objc func keyboardWillHide(notification: NSNotification) {
+            if self.view.frame.origin.y != 0 {
+                self.view.frame.origin.y = 0
+            }
+        }
+
+
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            view.endEditing(true)
+        
+        if nome != nil && nome.text != "" {
+            startSessionButton.isEnabled = true
+            SessionHandler.shared.nome = nome.text
+        }
+        else {
+            startSessionButton.isEnabled = false
+        }
+        
+            return false
+        }
+
     
     //TODO: extension de MCPeerID com atributo do tipo da carta, enum
     @IBAction func regras(_ sender: Any) {
@@ -91,6 +128,21 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
 //        controller.modalPresentationStyle = .overFullScreen
 //        self.present(controller, animated: false, completion: nil)
     
+    
+    
+    @IBAction func didEndEditingNome(_ sender: Any) {
+        if nome != nil {
+            
+            //startSessionButton.isEnabled  = true
+        }
+    }
+    
+    
+    @IBAction func didStartEdittingName(_ sender: Any) {
+        startSessionButton.isEnabled  = false
+    }
+    
+    
     func sendMessage(messageToSend: String, convidado: MCPeerID) {
         let message = messageToSend.data(using: String.Encoding.utf8, allowLossyConversion: false)
         do {
@@ -114,7 +166,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         
         SessionHandler.shared.host = true
         
-        SessionHandler.shared.peerID = MCPeerID(displayName: "AAAAA\(UIDevice.current.name)")
+        SessionHandler.shared.peerID = MCPeerID(displayName: "1 - " + SessionHandler.shared.nome)
         SessionHandler.shared.mcSession = MCSession(peer: SessionHandler.shared.peerID, securityIdentity: nil, encryptionPreference: .required)
         SessionHandler.shared.mcSession!.delegate = self
         SessionHandler.shared.mcAdvertiserAssistant = MCAdvertiserAssistant(serviceType: "festa-surpresa", discoveryInfo: nil, session: SessionHandler.shared.mcSession!)
@@ -131,7 +183,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     }
     
     func joinSession(action: UIAlertAction) {
-        SessionHandler.shared.peerID = MCPeerID(displayName: UIDevice.current.name)
+        SessionHandler.shared.peerID = MCPeerID(displayName: SessionHandler.shared.nome)
         SessionHandler.shared.mcSession = MCSession(peer: SessionHandler.shared.peerID, securityIdentity: nil, encryptionPreference: .required)
         SessionHandler.shared.mcSession!.delegate = self
         
