@@ -60,55 +60,50 @@ class SessionHandler: NSObject, MCSessionDelegate {
         DispatchQueue.main.async { [unowned self] in
             // send chat message
             let message = NSString(data: data as Data, encoding: String.Encoding.utf8.rawValue)! as String
-            
+            print(message)
             
             if message == "hostSaiu" {
                 self.controller.dismiss(animated: false, completion: nil)
+                let mensagem = "playerAvisaHostSaiu".data(using: String.Encoding.utf8, allowLossyConversion: false)
+                do {
+                    
+                    try SessionHandler.shared.mcSession!.send(mensagem!, toPeers: self.mcSession!.connectedPeers, with: .unreliable)
+                }
+                catch {
+                    print("Error sending message")
+                }
                 return
             }
-            
-            
-            if message == "novoConectado" {
+            else if message == "playerAvisaHostSaiu" {
+                self.controller.dismiss(animated: false, completion: nil)
+            }
+                
+            else if message == "novoConectado" {
                 NotificationCenter.default.post(Notification(name: Notification.Name("joinedPlayer")))
                 return
             }
-            
-            if message == "conectei" {
+                
+            else if message == "conectei" {
                 NotificationCenter.default.post(Notification(name: Notification.Name("joinPlayer")))
                 return
             }
-            //                    let mensagem = "novosConectados".data(using: String.Encoding.utf8, allowLossyConversion: false)
-                //                    do {
-                //
-                //                        try SessionHandler.shared.mcSession!.send(mensagem!, toPeers: self.mcSession!.connectedPeers, with: .unreliable)
-                //                    }
-                //                    catch {
-                //                        print("Error sending message")
-                //                    }
-                //                    return
-                //                }
-                //            }
-                //
-                //            else if message == "novosConectados" {
-                //
-                //            }
-                
-                for carta in Model.shared.cartas {
-                    if carta.nome == message {
-                        print(carta.nome, "carta")
-                        self.carta = carta
-                        
-                        
-                        let storyboard = UIStoryboard(name: "AllCards", bundle: nil)
-                        let controller  = storyboard.instantiateInitialViewController()!
-                        controller.modalPresentationStyle = .overFullScreen
-                        self.controller.present(controller, animated: false, completion: nil)
-                        
-                    }
+            
+            for carta in Model.shared.cartas {
+                if carta.nome == message {
+                    print(carta.nome, "carta")
+                    self.carta = carta
+                    
+                    
+                    let storyboard = UIStoryboard(name: "AllCards", bundle: nil)
+                    let controller  = storyboard.instantiateInitialViewController()!
+                    controller.modalPresentationStyle = .overFullScreen
+                    self.controller.present(controller, animated: false, completion: nil)
+                    
                 }
-                
-                //TODO: Busca no singleton e referencia os roles do player
-                //            self.chatView.text = self.chatView.text + message + " \n"
+            }
+            
+            //TODO: Busca no singleton e referencia os roles do player
+            //            self.chatView.text = self.chatView.text + message + " \n"
         }
     }
         
