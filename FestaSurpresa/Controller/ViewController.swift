@@ -191,7 +191,9 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         print("clicou done")
         
         SessionHandler.shared.mcSession?.connectedPeers.sorted{ $0.displayName < $1.displayName}
-        sendMessage(messageToSend: "conectei", convidado: (SessionHandler.shared.mcSession?.connectedPeers.first)!)
+        
+        sendMessage(messageToSend: "conectei", convidado: SessionHandler.shared.mcSession!.connectedPeers.first!)
+        
         dismiss(animated: true)
         let storyboard = UIStoryboard(name: "WaitingPlayers", bundle: nil)
         let controller  = storyboard.instantiateInitialViewController()!

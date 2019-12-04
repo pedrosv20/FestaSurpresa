@@ -11,22 +11,38 @@ import UIKit
 class WaitingPlayersViewController: UIViewController {
 
     @IBOutlet weak var numeroPlayers: UILabel!
+    @IBOutlet weak var comecar: UIButton!
+    let minPlayers = 2
+    let maxPlayer = 8
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "joinPlayer"), object: nil, queue: nil) { (Notification) in
             print("funcionou")
-            self.numeroPlayers.text = String((SessionHandler.shared.mcSession?.connectedPeers.count)! + 1)
-            print(SessionHandler.shared.mcSession?.connectedPeers.count)
-            SessionHandler.shared.mcSession?.connectedPeers.map{print($0.displayName)}
+            DispatchQueue.main.async {
+                do {
+                try SessionHandler.shared.mcSession?.send("novoConectado".data(using: .utf8)!, toPeers: SessionHandler.shared.mcSession!.connectedPeers, with: .unreliable)
+                } catch {
+                    print("error sending message")
+                }
+                
+            }
+            self.attNumberPlayers()
         }
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "joinedPlayer"), object: nil, queue: nil) { (Notification) in
+                   print("funcionou")
+                   
+                   self.attNumberPlayers()
+               }
+        
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
-        var int = (SessionHandler.shared.mcSession?.connectedPeers.count)! + 1
-        print(int)
+        comecar.isEnabled = false
+        let int = (SessionHandler.shared.mcSession?.connectedPeers.count)! + 1
+
         numeroPlayers.text = String(int)
         SessionHandler.shared.controller = self
     }
@@ -36,13 +52,18 @@ class WaitingPlayersViewController: UIViewController {
         
     }
     
+    func attNumberPlayers() {
+        self.numeroPlayers.text = String((SessionHandler.shared.mcSession?.connectedPeers.count)! + 1)
+        if (SessionHandler.shared.mcSession?.connectedPeers.count)! + 1 >= minPlayers && (SessionHandler.shared.mcSession?.connectedPeers.count)! + 1 < maxPlayer {
+            comecar.isEnabled = true
+        }
+    }
     
     func sortCard() {
         var cont = 0
-        let minPlayers = 2
-        let maxPlayer = 8
+       
         
-        if !(SessionHandler.shared.mcSession!.connectedPeers.count >= minPlayers - 1 && SessionHandler.shared.mcSession!.connectedPeers.count < maxPlayer ) {
+        if !(SessionHandler.shared.mcSession!.connectedPeers.count + 1 >= minPlayers  && SessionHandler.shared.mcSession!.connectedPeers.count < maxPlayer ) {
             return
         }
         Model.shared.cartas.shuffle()
