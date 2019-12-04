@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ndB-tb-9gH">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Waiting View Controller-->
+        <scene sceneID="yQ3-8V-X3s">
+            <objects>
+                <viewController id="ndB-tb-9gH" customClass="WaitingViewController" customModule="FestaSurpresa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sMs-Jk-Lzs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nMB-LC-Ovq" customClass="SKView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9J-Hy-j6o">
+                                        <rect key="frame" x="184" y="783.5" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="D9J-Hy-j6o" secondAttribute="trailing" constant="184" id="5VE-nZ-NeI"/>
+                                    <constraint firstAttribute="bottom" secondItem="D9J-Hy-j6o" secondAttribute="bottom" multiplier="1.1" constant="1" id="SQe-D5-Vdr"/>
+                                    <constraint firstItem="D9J-Hy-j6o" firstAttribute="centerX" secondItem="nMB-LC-Ovq" secondAttribute="centerX" id="akv-sz-OM1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nMB-LC-Ovq" firstAttribute="centerY" secondItem="sMs-Jk-Lzs" secondAttribute="centerY" id="8Cq-9G-D3G"/>
+                            <constraint firstItem="nMB-LC-Ovq" firstAttribute="height" secondItem="sMs-Jk-Lzs" secondAttribute="height" id="8dd-lW-ROf"/>
+                            <constraint firstItem="nMB-LC-Ovq" firstAttribute="centerX" secondItem="sMs-Jk-Lzs" secondAttribute="centerX" id="CV7-s6-RBo"/>
+                            <constraint firstItem="nMB-LC-Ovq" firstAttribute="width" secondItem="sMs-Jk-Lzs" secondAttribute="width" id="SX7-oa-9OU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6oE-Z0-A57"/>
+                    </view>
+                    <connections>
+                        <outlet property="skView" destination="nMB-LC-Ovq" id="lvS-kS-aDU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rcB-B4-PWJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-171.01449275362319" y="-10.044642857142856"/>
+        </scene>
+    </scenes>
+</document>
