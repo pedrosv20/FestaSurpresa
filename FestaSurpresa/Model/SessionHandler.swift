@@ -27,7 +27,7 @@ class SessionHandler: NSObject, MCSessionDelegate {
     
     var playersConfirmed = 0
     
-    var rodada = 1
+    var rodada = 0
     
     var lider = false
     
