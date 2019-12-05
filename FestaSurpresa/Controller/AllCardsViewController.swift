@@ -11,7 +11,7 @@ import SpriteKit
 
 class AllCardsViewController: UIViewController {
     
-    
+    //teste
     @IBOutlet weak var showCardButton: UIButton!
     @IBOutlet weak var roundStoryLabel: UILabel!
     @IBOutlet weak var skView: SKView!
