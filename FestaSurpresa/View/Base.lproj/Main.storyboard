@@ -41,6 +41,13 @@
                                     <action selector="tapSendButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s79-0z-4wy"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SKVIEW CAVASIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7S-WY-t0G">
+                                <rect key="frame" x="0.0" y="314" width="414" height="212"/>
+                                <color key="backgroundColor" red="0.91764705879999997" green="0.51372549020000002" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="49"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1x9-Tb-EB6">
                                 <rect key="frame" x="0.0" y="203" width="414" height="224"/>
                                 <subviews>

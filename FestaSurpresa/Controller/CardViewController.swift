@@ -17,8 +17,6 @@ class CardViewController: UIViewController {
     @IBOutlet weak var hideCardButton: UIButton!
     @IBOutlet weak var cardIcon: UIImageView!
     @IBOutlet weak var skView: SKView!
-    @IBOutlet weak var descricao: UILabel!
-    @IBOutlet weak var poder: UILabel!
     
     
     let colors = Colors()
