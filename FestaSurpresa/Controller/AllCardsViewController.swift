@@ -44,20 +44,19 @@ class AllCardsViewController: UIViewController {
         showCardButton.layer.cornerRadius = 15.0
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Inicia Jogo"), object: nil, queue: nil) { (Notification) in
             
-                if SessionHandler.shared.host {
-                    print("era pra ter começado")
+            if SessionHandler.shared.host {
+                print("era pra ter começado")
+                print(Model.shared.players[SessionHandler.shared.rodada].peerID)
+                if SessionHandler.shared.rodada == 0 {
                     DispatchQueue.main.async {
-                        do {
-                        try giSessionHandler.shared.sendMessage(messageToSend: "lider", convidado: Model.shared.players[SessionHandler.shared.rodada].peerID)
-                        } catch {
-                            print("deu pau")
-                        }
+                        NotificationCenter.default.post(name: NSNotification.Name("inicia lider"), object: nil)
                     }
                     
-                    // decide lider e enviar mensagem pra aparecer botao
-                    
                 }
+                SessionHandler.shared.sendMessage(messageToSend: "lider", convidado: Model.shared.players[SessionHandler.shared.rodada].peerID)
+                // decide lider e enviar mensagem pra aparecer botao
             }
+        }
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "inicia lider"), object: nil, queue: nil) { (Notification) in
             if SessionHandler.shared.lider {
