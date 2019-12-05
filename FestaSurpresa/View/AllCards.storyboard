@@ -16,6 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tf3-Sj-Kt2" userLabel="skView" customClass="SKView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GGY-Kc-4BG">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
                                 <subviews>
@@ -61,6 +65,9 @@
                                                     <constraint firstAttribute="width" constant="90" id="Gei-yc-bNk"/>
                                                 </constraints>
                                                 <state key="normal" title="Bêbado" image="bebado"/>
+                                                <connections>
+                                                    <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="Mce-ch-dA4"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZU-eM-F4A">
                                                 <rect key="frame" x="284" y="22.5" width="90" height="90"/>
@@ -69,6 +76,9 @@
                                                     <constraint firstAttribute="height" constant="90" id="0TL-8b-KKp"/>
                                                 </constraints>
                                                 <state key="normal" title="Namorado" image="namorado"/>
+                                                <connections>
+                                                    <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="zVQ-ut-p6U"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgE-N8-Vhu">
                                                 <rect key="frame" x="162" y="84.5" width="90" height="90"/>
@@ -77,6 +87,9 @@
                                                     <constraint firstAttribute="height" constant="90" id="rCR-eP-IYb"/>
                                                 </constraints>
                                                 <state key="normal" title="Melhor amigo" image="amigo"/>
+                                                <connections>
+                                                    <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="59J-I0-up2"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -99,6 +112,9 @@
                                                     <constraint firstAttribute="width" constant="90" id="STB-IT-dl4"/>
                                                 </constraints>
                                                 <state key="normal" title="Penetra" image="penetra"/>
+                                                <connections>
+                                                    <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="7pB-JV-Yvi"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44U-vg-MSN">
                                                 <rect key="frame" x="179" y="85" width="90" height="90"/>
@@ -107,6 +123,9 @@
                                                     <constraint firstAttribute="height" constant="90" id="be0-HE-4aC"/>
                                                 </constraints>
                                                 <state key="normal" title="Pai" image="pai"/>
+                                                <connections>
+                                                    <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="leI-uy-T2E"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXD-zb-JVA">
                                                 <rect key="frame" x="301" y="25" width="90" height="90"/>
@@ -115,6 +134,9 @@
                                                     <constraint firstAttribute="height" constant="90" id="OuH-A6-o77"/>
                                                 </constraints>
                                                 <state key="normal" title="Distraído" image="distraído"/>
+                                                <connections>
+                                                    <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="YKV-Oa-6XA"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -134,6 +156,9 @@
                                                     <constraint firstAttribute="width" constant="90" id="e13-7E-7Tv"/>
                                                 </constraints>
                                                 <state key="normal" title="Palhaço" image="palhaco copy 3"/>
+                                                <connections>
+                                                    <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="fo1-QL-jue"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxr-w4-SGh" userLabel="Mãe">
                                                 <rect key="frame" x="249" y="72.5" width="90" height="90"/>
@@ -142,6 +167,9 @@
                                                     <constraint firstAttribute="width" constant="90" id="d13-E7-5Ok"/>
                                                 </constraints>
                                                 <state key="normal" title="Mãe" image="mae"/>
+                                                <connections>
+                                                    <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="731-B3-agg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -188,9 +216,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ztw-fQ-vwS" firstAttribute="leading" secondItem="NVr-pQ-bVx" secondAttribute="leading" id="03O-fZ-4Wj"/>
+                            <constraint firstItem="tf3-Sj-Kt2" firstAttribute="centerY" secondItem="GEn-nw-myF" secondAttribute="centerY" id="0LD-mE-B4f"/>
+                            <constraint firstItem="tf3-Sj-Kt2" firstAttribute="width" secondItem="GEn-nw-myF" secondAttribute="width" id="4LM-cy-OW6"/>
                             <constraint firstItem="NVr-pQ-bVx" firstAttribute="bottom" secondItem="rK9-HQ-27S" secondAttribute="bottom" constant="10" id="51P-vp-GtP"/>
                             <constraint firstItem="ztw-fQ-vwS" firstAttribute="height" secondItem="GEn-nw-myF" secondAttribute="height" multiplier="0.65" id="DsM-gn-gVo"/>
                             <constraint firstItem="GGY-Kc-4BG" firstAttribute="top" secondItem="GEn-nw-myF" secondAttribute="top" id="FoX-8l-Zie"/>
+                            <constraint firstItem="tf3-Sj-Kt2" firstAttribute="centerX" secondItem="GEn-nw-myF" secondAttribute="centerX" id="GZa-Pa-4lr"/>
+                            <constraint firstItem="tf3-Sj-Kt2" firstAttribute="height" secondItem="GEn-nw-myF" secondAttribute="height" id="LDK-4y-5Xp"/>
                             <constraint firstItem="ztw-fQ-vwS" firstAttribute="top" secondItem="GGY-Kc-4BG" secondAttribute="bottom" id="abx-Vl-ASP"/>
                             <constraint firstItem="GGY-Kc-4BG" firstAttribute="height" secondItem="GEn-nw-myF" secondAttribute="height" multiplier="0.25" id="bVe-R1-naH"/>
                             <constraint firstItem="ztw-fQ-vwS" firstAttribute="trailing" secondItem="NVr-pQ-bVx" secondAttribute="trailing" id="dFl-lf-AuJ"/>
@@ -202,8 +234,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="kVo-1K-mVc"/>
                     <connections>
+                        <outlet property="iniciarRodadaButton" destination="miF-7A-PxI" id="5tl-B6-BMx"/>
                         <outlet property="roundStoryLabel" destination="TPY-ns-uKG" id="Ub0-4R-kze"/>
                         <outlet property="showCardButton" destination="rK9-HQ-27S" id="11T-fp-wog"/>
+                        <outlet property="skView" destination="tf3-Sj-Kt2" id="6YQ-SQ-9Ed"/>
+                        <outletCollection property="buttons" destination="f1l-AB-VLs" collectionClass="NSMutableArray" id="V61-Rx-cbF"/>
+                        <outletCollection property="buttons" destination="jgE-N8-Vhu" collectionClass="NSMutableArray" id="ZwP-8M-osi"/>
+                        <outletCollection property="buttons" destination="sZU-eM-F4A" collectionClass="NSMutableArray" id="jjb-kq-A5y"/>
+                        <outletCollection property="buttons" destination="3C1-tV-bWK" collectionClass="NSMutableArray" id="Bn7-zX-jbF"/>
+                        <outletCollection property="buttons" destination="44U-vg-MSN" collectionClass="NSMutableArray" id="W1p-tA-M7O"/>
+                        <outletCollection property="buttons" destination="aXD-zb-JVA" collectionClass="NSMutableArray" id="kXS-eO-CoP"/>
+                        <outletCollection property="buttons" destination="MLK-Rf-Q1S" collectionClass="NSMutableArray" id="5h2-h3-5FV"/>
+                        <outletCollection property="buttons" destination="Mxr-w4-SGh" collectionClass="NSMutableArray" id="mT9-u1-ETK"/>
                         <segue destination="ZdV-D4-FfH" kind="show" identifier="showCard" id="Tp4-Hc-Qdt"/>
                     </connections>
                 </viewController>
