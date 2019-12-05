@@ -23,21 +23,33 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GGY-Kc-4BG">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPY-ns-uKG">
-                                        <rect key="frame" x="41.5" y="114.5" width="331" height="89.5"/>
-                                        <string key="text">Ajude a engradar os
-barris de chop!</string>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aguarde o líder..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPY-ns-uKG">
+                                        <rect key="frame" x="52" y="70" width="310.5" height="67"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miF-7A-PxI">
+                                        <rect key="frame" x="119" y="152" width="176" height="38"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <inset key="contentEdgeInsets" minX="40" minY="10" maxX="40" maxY="10"/>
+                                        <state key="normal" title="Iniciar rodada">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressShowCardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="jVG-7j-mPs"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="TPY-ns-uKG" firstAttribute="height" secondItem="GGY-Kc-4BG" secondAttribute="height" multiplier="0.4" id="AUi-93-PQu"/>
-                                    <constraint firstItem="TPY-ns-uKG" firstAttribute="width" secondItem="GGY-Kc-4BG" secondAttribute="width" multiplier="0.8" id="ElS-lz-Ptn"/>
-                                    <constraint firstAttribute="bottom" secondItem="TPY-ns-uKG" secondAttribute="bottom" constant="20" id="Xj7-L9-jMe"/>
+                                    <constraint firstItem="TPY-ns-uKG" firstAttribute="height" secondItem="GGY-Kc-4BG" secondAttribute="height" multiplier="0.3" id="AUi-93-PQu"/>
+                                    <constraint firstItem="TPY-ns-uKG" firstAttribute="width" secondItem="GGY-Kc-4BG" secondAttribute="width" multiplier="0.75" id="ElS-lz-Ptn"/>
+                                    <constraint firstItem="TPY-ns-uKG" firstAttribute="top" secondItem="GGY-Kc-4BG" secondAttribute="top" constant="70" id="MCX-ga-aLx"/>
                                     <constraint firstItem="TPY-ns-uKG" firstAttribute="centerX" secondItem="GGY-Kc-4BG" secondAttribute="centerX" id="ZqW-Lf-jpb"/>
+                                    <constraint firstItem="miF-7A-PxI" firstAttribute="centerX" secondItem="GGY-Kc-4BG" secondAttribute="centerX" id="fqW-cH-lsi"/>
+                                    <constraint firstItem="miF-7A-PxI" firstAttribute="top" secondItem="TPY-ns-uKG" secondAttribute="bottom" constant="15" id="yAt-3V-nFK"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ztw-fQ-vwS">
@@ -68,13 +80,13 @@ barris de chop!</string>
                                                     <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="fGw-z7-xuC"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgE-N8-Vhu" userLabel="Melhor Amigo">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgE-N8-Vhu">
                                                 <rect key="frame" x="162" y="84.5" width="90" height="90"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="5La-e9-m0V"/>
                                                     <constraint firstAttribute="height" constant="90" id="rCR-eP-IYb"/>
                                                 </constraints>
-                                                <state key="normal" title="Melhor Amigo" image="amigo"/>
+                                                <state key="normal" title="Melhor amigo" image="amigo"/>
                                                 <connections>
                                                     <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="w55-Q9-tLS"/>
                                                 </connections>
@@ -221,6 +233,7 @@ barris de chop!</string>
                         <viewLayoutGuide key="safeArea" id="NVr-pQ-bVx"/>
                     </view>
                     <connections>
+                        <outlet property="iniciarRodadaButton" destination="miF-7A-PxI" id="QGP-fY-eei"/>
                         <outlet property="roundStoryLabel" destination="TPY-ns-uKG" id="Ub0-4R-kze"/>
                         <outlet property="showCardButton" destination="rK9-HQ-27S" id="11T-fp-wog"/>
                         <outlet property="skView" destination="5rr-ua-ffd" id="KEQ-3k-3yO"/>
