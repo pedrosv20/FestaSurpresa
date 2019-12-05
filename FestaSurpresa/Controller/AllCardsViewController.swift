@@ -24,6 +24,7 @@ class AllCardsViewController: UIViewController {
     var hostSend = false
     let colors = Colors()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,10 +43,22 @@ class AllCardsViewController: UIViewController {
         roundStoryLabel.layer.cornerRadius = 20.0
         showCardButton.layer.cornerRadius = 15.0
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Inicia Jogo"), object: nil, queue: nil) { (Notification) in
+            
                 if SessionHandler.shared.host {
                     print("era pra ter começado")
+                    SessionHandler.shared.sendMessage(messageToSend: "lider", convidado: Model.shared.players[SessionHandler.shared.rodada].peerID)
+                    // decide lider e enviar mensagem pra aparecer botao
+                    
                 }
             }
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "inicia lider"), object: nil, queue: nil) { (Notification) in
+            if SessionHandler.shared.lider {
+                // instancia view lider
+                print("voce é o lider")
+            }
+        }
+        
             
         }
         

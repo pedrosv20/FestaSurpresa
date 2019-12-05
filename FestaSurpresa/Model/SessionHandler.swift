@@ -27,6 +27,10 @@ class SessionHandler: NSObject, MCSessionDelegate {
     
     var playersConfirmed = 0
     
+    var rodada = 0
+    
+    var lider = false
+    
     private override init() {
         
     }
@@ -69,7 +73,10 @@ class SessionHandler: NSObject, MCSessionDelegate {
             print(message)
             
             
-            
+            if message == "lider" {
+                self.lider = true
+                NotificationCenter.default.post(Notification(name: Notification.Name("inicia lider")))
+            }
             if message == "hostSaiu" {
                 self.controller.dismiss(animated: false, completion: nil)
                 let mensagem = "playerAvisaHostSaiu".data(using: String.Encoding.utf8, allowLossyConversion: false)
