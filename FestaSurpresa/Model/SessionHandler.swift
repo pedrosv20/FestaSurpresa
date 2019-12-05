@@ -99,7 +99,10 @@ class SessionHandler: NSObject, MCSessionDelegate {
             if self.host {
                 if message == "visualizou carta" {
                     self.playersConfirmed += 1
-                    NotificationCenter.default.post(Notification(name: Notification.Name("Inicia Jogo")))
+                    print(self.playersConfirmed,  "confirmados")
+                    if self.playersConfirmed == (self.mcSession?.connectedPeers.count)! + 1 {
+                        NotificationCenter.default.post(Notification(name:Notification.Name("Inicia Jogo")))
+                        }
                 }
             }
             

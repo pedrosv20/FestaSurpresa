@@ -42,7 +42,6 @@ class AllCardsViewController: UIViewController {
         roundStoryLabel.layer.cornerRadius = 20.0
         showCardButton.layer.cornerRadius = 15.0
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Inicia Jogo"), object: nil, queue: nil) { (Notification) in
-            if (SessionHandler.shared.playersConfirmed == (SessionHandler.shared.mcSession?.connectedPeers.count)! + 1){
                 if SessionHandler.shared.host {
                     print("era pra ter começado")
                 }
@@ -50,7 +49,7 @@ class AllCardsViewController: UIViewController {
             
         }
         
-    }
+    
     
     
     @IBAction func didPressShowCardButton(_ sender: Any) {
@@ -79,18 +78,22 @@ class AllCardsViewController: UIViewController {
             if showClicked == true && sender.titleLabel!.text! == SessionHandler.shared.carta!.nome &&  hostSend == false{
                 SessionHandler.shared.playersConfirmed += 1
                 hostSend = true
-                NotificationCenter.default.post(Notification(name: Notification.Name("Inicia Jogo")))
+                if (SessionHandler.shared.mcSession?.connectedPeers.count)! + 1 == SessionHandler.shared.playersConfirmed {
+                    NotificationCenter.default.post(Notification(name: Notification.Name("Inicia Jogo")))
+                }
+                
                 return
             }
         }
         
         if showClicked == true && sender.titleLabel!.text! == SessionHandler.shared.carta!.nome  && messageSend == false{
+            
             SessionHandler.shared.cardTouched = SessionHandler.shared.carta!
             SessionHandler.shared.sawCard = true
             //manda mensagem pro host de ok
             print("visualizou carta", SessionHandler.shared.mcSession?.connectedPeers.first!.displayName)
             
-            let message = "visualizouCarta".data(using: .utf8)
+            let message = "visualizou carta".data(using: .utf8)
             DispatchQueue.main.async {
                 do {
                     try SessionHandler.shared.mcSession?.send(message!, toPeers: [(SessionHandler.shared.mcSession?.connectedPeers.first)!], with: .unreliable)
