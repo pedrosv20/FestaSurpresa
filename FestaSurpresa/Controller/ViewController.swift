@@ -276,6 +276,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         sendMessage(messageToSend: "conectei", convidado: SessionHandler.shared.mcSession!.connectedPeers.first!)
         
         dismiss(animated: true)
+        
         let storyboard = UIStoryboard(name: "WaitingPlayers", bundle: nil)
         let controller  = storyboard.instantiateInitialViewController()!
         controller.modalPresentationStyle = .overFullScreen

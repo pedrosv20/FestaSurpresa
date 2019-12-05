@@ -42,9 +42,12 @@ class AllCardsViewController: UIViewController {
         roundStoryLabel.layer.cornerRadius = 20.0
         showCardButton.layer.cornerRadius = 15.0
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Inicia Jogo"), object: nil, queue: nil) { (Notification) in
-            if SessionHandler.shared.host {
-                //botao aparece e começa jogo
+            if (SessionHandler.shared.playersConfirmed == (SessionHandler.shared.mcSession?.connectedPeers.count)! + 1){
+                if SessionHandler.shared.host {
+                    print("era pra ter começado")
+                }
             }
+            
         }
         
     }
@@ -76,6 +79,7 @@ class AllCardsViewController: UIViewController {
             if showClicked == true && sender.titleLabel!.text! == SessionHandler.shared.carta!.nome &&  hostSend == false{
                 SessionHandler.shared.playersConfirmed += 1
                 hostSend = true
+                NotificationCenter.default.post(Notification(name: Notification.Name("Inicia Jogo")))
                 return
             }
         }
