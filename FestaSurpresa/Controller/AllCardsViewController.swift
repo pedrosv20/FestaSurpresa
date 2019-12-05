@@ -16,6 +16,7 @@ class AllCardsViewController: UIViewController {
     @IBOutlet weak var roundStoryLabel: UILabel!
     @IBOutlet weak var skView: SKView!
     
+    @IBOutlet weak var iniciarRodadaButton: UIButton!
     @IBOutlet var buttons: [UIButton]!
     
     var showClicked = false
