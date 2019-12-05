@@ -49,6 +49,9 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         
+        nome.addTarget(self, action: #selector(ViewController.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
+
+        
 //        NotificationCenter.default.addObserver(forName: UIApplication.willTerminateNotification, object: nil, queue: nil) { (notification) in
 //            SessionHandler.shared.mcSession?.disconnect()
 //        }
@@ -57,6 +60,17 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         
         //        player = Player(peerID: peerID, nome: nome.text!, carta: nil, selected: false)
         //        listaConvidados = mcSession.connectedPeers
+        
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        if nome.text != "" {
+            startSessionButton.isEnabled  = true
+            startSessionButton.alpha = 1.0
+        } else {
+            startSessionButton.isEnabled  = false
+            startSessionButton.alpha = 0.7
+        }
         
     }
     
@@ -144,9 +158,16 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     }
     
     
+    
+
+    
     @IBAction func didStartEdittingName(_ sender: Any) {
         startSessionButton.isEnabled  = false
         startSessionButton.alpha = 0.7
+        if nome != nil && nome.text != "" {
+            startSessionButton.isEnabled  = true
+            startSessionButton.alpha = 1.0
+        }
     }
     
     

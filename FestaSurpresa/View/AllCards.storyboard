@@ -52,7 +52,7 @@ barris de chop!</string>
                                                     <constraint firstAttribute="height" constant="90" id="9UZ-a6-f0F"/>
                                                     <constraint firstAttribute="width" constant="90" id="Gei-yc-bNk"/>
                                                 </constraints>
-                                                <state key="normal" title="Bêbado" image="bebadoCardBranco"/>
+                                                <state key="normal" title="Bêbado" image="bebado"/>
                                                 <connections>
                                                     <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="cEG-sA-06A"/>
                                                 </connections>
@@ -63,7 +63,7 @@ barris de chop!</string>
                                                     <constraint firstAttribute="width" constant="90" id="02j-fK-jkI"/>
                                                     <constraint firstAttribute="height" constant="90" id="0TL-8b-KKp"/>
                                                 </constraints>
-                                                <state key="normal" title="Namorado" image="namoradoCardBranco"/>
+                                                <state key="normal" title="Namorado" image="namorado"/>
                                                 <connections>
                                                     <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="fGw-z7-xuC"/>
                                                 </connections>
@@ -74,15 +74,10 @@ barris de chop!</string>
                                                     <constraint firstAttribute="width" constant="90" id="5La-e9-m0V"/>
                                                     <constraint firstAttribute="height" constant="90" id="rCR-eP-IYb"/>
                                                 </constraints>
-                                                <state key="normal" title="Melhor Amigo" image="parceiroCardBranco"/>
+                                                <state key="normal" title="Melhor Amigo" image="amigo"/>
                                                 <connections>
                                                     <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="w55-Q9-tLS"/>
                                                 </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6u-er-QPn">
-                                                <rect key="frame" x="184" y="8" width="46" height="41"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -104,7 +99,7 @@ barris de chop!</string>
                                                     <constraint firstAttribute="height" constant="90" id="2t8-wR-6xQ"/>
                                                     <constraint firstAttribute="width" constant="90" id="STB-IT-dl4"/>
                                                 </constraints>
-                                                <state key="normal" title="Penetra" image="penetraCardBranco"/>
+                                                <state key="normal" title="Penetra" image="penetra"/>
                                                 <connections>
                                                     <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="R6T-RD-p4z"/>
                                                 </connections>
@@ -115,7 +110,7 @@ barris de chop!</string>
                                                     <constraint firstAttribute="width" constant="90" id="Nn7-Mt-tZg"/>
                                                     <constraint firstAttribute="height" constant="90" id="be0-HE-4aC"/>
                                                 </constraints>
-                                                <state key="normal" title="Pai" image="paiCardBranco"/>
+                                                <state key="normal" title="Pai" image="pai"/>
                                                 <connections>
                                                     <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="rPR-GX-AQm"/>
                                                 </connections>
@@ -126,7 +121,7 @@ barris de chop!</string>
                                                     <constraint firstAttribute="width" constant="90" id="6wT-nM-naz"/>
                                                     <constraint firstAttribute="height" constant="90" id="OuH-A6-o77"/>
                                                 </constraints>
-                                                <state key="normal" title="Distraído" image="distraidoCardBranco"/>
+                                                <state key="normal" title="Distraído" image="desatento"/>
                                                 <connections>
                                                     <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="Fbu-nC-O8R"/>
                                                 </connections>
@@ -148,7 +143,7 @@ barris de chop!</string>
                                                     <constraint firstAttribute="height" constant="90" id="NXM-VB-VOW"/>
                                                     <constraint firstAttribute="width" constant="90" id="e13-7E-7Tv"/>
                                                 </constraints>
-                                                <state key="normal" title="Palhaço" image="friendCircle"/>
+                                                <state key="normal" title="Palhaço" image="palhaco copy 3"/>
                                                 <connections>
                                                     <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="UL0-xp-pkN"/>
                                                 </connections>
@@ -159,7 +154,7 @@ barris de chop!</string>
                                                     <constraint firstAttribute="height" constant="90" id="Tg4-L0-qNj"/>
                                                     <constraint firstAttribute="width" constant="90" id="d13-E7-5Ok"/>
                                                 </constraints>
-                                                <state key="normal" title="Mãe" image="friendCircle"/>
+                                                <state key="normal" title="Mãe" image="mae"/>
                                                 <connections>
                                                     <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="CAi-kI-NkW"/>
                                                 </connections>
@@ -256,12 +251,13 @@ barris de chop!</string>
         </scene>
     </scenes>
     <resources>
-        <image name="bebadoCardBranco" width="104" height="104"/>
-        <image name="distraidoCardBranco" width="104" height="104"/>
-        <image name="friendCircle" width="104" height="104"/>
-        <image name="namoradoCardBranco" width="104" height="104"/>
-        <image name="paiCardBranco" width="104" height="104"/>
-        <image name="parceiroCardBranco" width="104" height="104"/>
-        <image name="penetraCardBranco" width="104" height="104"/>
+        <image name="amigo" width="100" height="100"/>
+        <image name="bebado" width="100" height="100"/>
+        <image name="desatento" width="100" height="100"/>
+        <image name="mae" width="100" height="100"/>
+        <image name="namorado" width="100" height="100"/>
+        <image name="pai" width="100" height="100"/>
+        <image name="palhaco copy 3" width="99" height="99"/>
+        <image name="penetra" width="100" height="100"/>
     </resources>
 </document>
