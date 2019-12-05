@@ -75,15 +75,18 @@ class AllCardsViewController: UIViewController {
     
     @IBAction func cardButton(_ sender: UIButton) {
         if SessionHandler.shared.host {
+            SessionHandler.shared.cardTouched = SessionHandler.shared.carta!
+            SessionHandler.shared.sawCard = true
+            
             if showClicked == true && sender.titleLabel!.text! == SessionHandler.shared.carta!.nome &&  hostSend == false{
                 SessionHandler.shared.playersConfirmed += 1
                 hostSend = true
                 if (SessionHandler.shared.mcSession?.connectedPeers.count)! + 1 == SessionHandler.shared.playersConfirmed {
                     NotificationCenter.default.post(Notification(name: Notification.Name("Inicia Jogo")))
                 }
-                
-                return
             }
+            self.performSegue(withIdentifier: "showCard", sender: Any?.self)
+            return
         }
         
         if showClicked == true && sender.titleLabel!.text! == SessionHandler.shared.carta!.nome  && messageSend == false{
@@ -107,6 +110,7 @@ class AllCardsViewController: UIViewController {
             self.performSegue(withIdentifier: "showCard", sender: Any?.self)
             return
         }
+        
         for carta in Model.shared.cartas {
             if carta.nome == sender.titleLabel!.text {
                 SessionHandler.shared.cardTouched = carta
