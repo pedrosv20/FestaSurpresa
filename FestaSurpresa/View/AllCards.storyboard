@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n3a-UX-6ON">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T04-gR-iLV">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -11,7 +11,7 @@
         <!--All Cards View Controller-->
         <scene sceneID="74G-dT-aSd">
             <objects>
-                <viewController id="n3a-UX-6ON" customClass="AllCardsViewController" customModule="FestaSurpresa" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overFullScreen" id="n3a-UX-6ON" customClass="AllCardsViewController" customModule="FestaSurpresa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GEn-nw-myF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,21 +19,33 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GGY-Kc-4BG">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPY-ns-uKG">
-                                        <rect key="frame" x="41.5" y="114.5" width="331" height="89.5"/>
-                                        <string key="text">Ajude a engradar os
-barris de chop!</string>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aguarde o líder..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPY-ns-uKG">
+                                        <rect key="frame" x="52" y="70" width="310.5" height="67"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miF-7A-PxI">
+                                        <rect key="frame" x="119" y="152" width="176" height="38"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <inset key="contentEdgeInsets" minX="40" minY="10" maxX="40" maxY="10"/>
+                                        <state key="normal" title="Iniciar rodada">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressShowCardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="jVG-7j-mPs"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="TPY-ns-uKG" firstAttribute="height" secondItem="GGY-Kc-4BG" secondAttribute="height" multiplier="0.4" id="AUi-93-PQu"/>
-                                    <constraint firstItem="TPY-ns-uKG" firstAttribute="width" secondItem="GGY-Kc-4BG" secondAttribute="width" multiplier="0.8" id="ElS-lz-Ptn"/>
-                                    <constraint firstAttribute="bottom" secondItem="TPY-ns-uKG" secondAttribute="bottom" constant="20" id="Xj7-L9-jMe"/>
+                                    <constraint firstItem="TPY-ns-uKG" firstAttribute="height" secondItem="GGY-Kc-4BG" secondAttribute="height" multiplier="0.3" id="AUi-93-PQu"/>
+                                    <constraint firstItem="TPY-ns-uKG" firstAttribute="width" secondItem="GGY-Kc-4BG" secondAttribute="width" multiplier="0.75" id="ElS-lz-Ptn"/>
+                                    <constraint firstItem="TPY-ns-uKG" firstAttribute="top" secondItem="GGY-Kc-4BG" secondAttribute="top" constant="70" id="MCX-ga-aLx"/>
                                     <constraint firstItem="TPY-ns-uKG" firstAttribute="centerX" secondItem="GGY-Kc-4BG" secondAttribute="centerX" id="ZqW-Lf-jpb"/>
+                                    <constraint firstItem="miF-7A-PxI" firstAttribute="centerX" secondItem="GGY-Kc-4BG" secondAttribute="centerX" id="fqW-cH-lsi"/>
+                                    <constraint firstItem="miF-7A-PxI" firstAttribute="top" secondItem="TPY-ns-uKG" secondAttribute="bottom" constant="15" id="yAt-3V-nFK"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ztw-fQ-vwS">
@@ -42,92 +54,124 @@ barris de chop!</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W9l-Rb-vJY">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="174.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bebadoCardBranco" translatesAutoresizingMaskIntoConstraints="NO" id="xj6-mk-O8x">
-                                                <rect key="frame" x="51" y="42.5" width="90" height="90"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1l-AB-VLs">
+                                                <rect key="frame" x="51" y="16" width="90" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="90" id="55s-PV-v8B"/>
-                                                    <constraint firstAttribute="height" constant="90" id="Hge-Cp-4A9"/>
+                                                    <constraint firstAttribute="height" constant="90" id="9UZ-a6-f0F"/>
+                                                    <constraint firstAttribute="width" constant="90" id="Gei-yc-bNk"/>
                                                 </constraints>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parceiroCardBranco" translatesAutoresizingMaskIntoConstraints="NO" id="5Pu-tv-xyB">
-                                                <rect key="frame" x="162" y="129.5" width="90" height="90"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="90" id="Fqj-h5-SF7"/>
-                                                    <constraint firstAttribute="height" constant="90" id="tYu-qj-9fE"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="namoradoCardBranco" translatesAutoresizingMaskIntoConstraints="NO" id="joL-hx-fI0">
+                                                <state key="normal" title="Bêbado" image="bebado"/>
+                                                <connections>
+                                                    <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="cEG-sA-06A"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZU-eM-F4A">
                                                 <rect key="frame" x="284" y="22.5" width="90" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="90" id="R6G-2P-zMg"/>
-                                                    <constraint firstAttribute="height" constant="90" id="mpB-Cd-gtR"/>
+                                                    <constraint firstAttribute="width" constant="90" id="02j-fK-jkI"/>
+                                                    <constraint firstAttribute="height" constant="90" id="0TL-8b-KKp"/>
                                                 </constraints>
-                                            </imageView>
+                                                <state key="normal" title="Namorado" image="namorado"/>
+                                                <connections>
+                                                    <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="fGw-z7-xuC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgE-N8-Vhu">
+                                                <rect key="frame" x="162" y="84.5" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="5La-e9-m0V"/>
+                                                    <constraint firstAttribute="height" constant="90" id="rCR-eP-IYb"/>
+                                                </constraints>
+                                                <state key="normal" title="Melhor amigo" image="amigo"/>
+                                                <connections>
+                                                    <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="w55-Q9-tLS"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="joL-hx-fI0" firstAttribute="centerY" secondItem="W9l-Rb-vJY" secondAttribute="centerY" constant="-20" id="9dl-7V-SCC"/>
-                                            <constraint firstItem="5Pu-tv-xyB" firstAttribute="centerX" secondItem="W9l-Rb-vJY" secondAttribute="centerX" id="9nT-oj-UpO"/>
-                                            <constraint firstAttribute="trailing" secondItem="joL-hx-fI0" secondAttribute="trailing" constant="40" id="SUA-9Q-fYO"/>
-                                            <constraint firstItem="xj6-mk-O8x" firstAttribute="leading" secondItem="W9l-Rb-vJY" secondAttribute="leading" constant="51" id="cXi-VZ-ZmQ"/>
-                                            <constraint firstItem="xj6-mk-O8x" firstAttribute="centerY" secondItem="W9l-Rb-vJY" secondAttribute="centerY" id="eF1-VO-ZOo"/>
-                                            <constraint firstAttribute="bottom" secondItem="5Pu-tv-xyB" secondAttribute="bottom" constant="-45" id="iqF-ZU-hLi"/>
+                                            <constraint firstItem="f1l-AB-VLs" firstAttribute="leading" secondItem="W9l-Rb-vJY" secondAttribute="leading" constant="51" id="8Wj-Lr-1St"/>
+                                            <constraint firstItem="f1l-AB-VLs" firstAttribute="centerY" secondItem="W9l-Rb-vJY" secondAttribute="centerY" multiplier="0.7" id="H5s-zN-PcS"/>
+                                            <constraint firstItem="sZU-eM-F4A" firstAttribute="centerY" secondItem="W9l-Rb-vJY" secondAttribute="centerY" constant="-20" id="TZN-iB-dmB"/>
+                                            <constraint firstAttribute="trailing" secondItem="sZU-eM-F4A" secondAttribute="trailing" constant="40" id="fAD-DA-SWW"/>
+                                            <constraint firstItem="jgE-N8-Vhu" firstAttribute="centerX" secondItem="W9l-Rb-vJY" secondAttribute="centerX" id="lff-gp-LVb"/>
+                                            <constraint firstAttribute="bottom" secondItem="jgE-N8-Vhu" secondAttribute="bottom" id="qoe-su-AhR"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwv-nO-bgh">
                                         <rect key="frame" x="0.0" y="174.5" width="414" height="175"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="penetraCardBranco" translatesAutoresizingMaskIntoConstraints="NO" id="VFI-UV-LCC">
-                                                <rect key="frame" x="41" y="42.5" width="90" height="90"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3C1-tV-bWK">
+                                                <rect key="frame" x="41" y="7.5" width="90" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="90" id="DUf-WJ-CGd"/>
-                                                    <constraint firstAttribute="height" constant="90" id="b5S-Zx-PSa"/>
+                                                    <constraint firstAttribute="height" constant="90" id="2t8-wR-6xQ"/>
+                                                    <constraint firstAttribute="width" constant="90" id="STB-IT-dl4"/>
                                                 </constraints>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="distraidoCardBranco" translatesAutoresizingMaskIntoConstraints="NO" id="Wsh-HN-dBq">
-                                                <rect key="frame" x="301" y="42.5" width="90" height="90"/>
+                                                <state key="normal" title="Penetra" image="penetra"/>
+                                                <connections>
+                                                    <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="R6T-RD-p4z"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44U-vg-MSN">
+                                                <rect key="frame" x="179" y="85" width="90" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="90" id="5mf-8K-onL"/>
-                                                    <constraint firstAttribute="height" constant="90" id="orV-CG-5Gu"/>
+                                                    <constraint firstAttribute="width" constant="90" id="Nn7-Mt-tZg"/>
+                                                    <constraint firstAttribute="height" constant="90" id="be0-HE-4aC"/>
                                                 </constraints>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paiCardBranco" translatesAutoresizingMaskIntoConstraints="NO" id="IrM-JG-pT6">
-                                                <rect key="frame" x="179" y="115" width="90" height="90"/>
+                                                <state key="normal" title="Pai" image="pai"/>
+                                                <connections>
+                                                    <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="rPR-GX-AQm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXD-zb-JVA">
+                                                <rect key="frame" x="301" y="25" width="90" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="Pqr-Zy-BLF"/>
-                                                    <constraint firstAttribute="width" constant="90" id="kKV-w9-nWZ"/>
+                                                    <constraint firstAttribute="width" constant="90" id="6wT-nM-naz"/>
+                                                    <constraint firstAttribute="height" constant="90" id="OuH-A6-o77"/>
                                                 </constraints>
-                                            </imageView>
+                                                <state key="normal" title="Distraído" image="desatento"/>
+                                                <connections>
+                                                    <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="Fbu-nC-O8R"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="VFI-UV-LCC" firstAttribute="centerY" secondItem="iwv-nO-bgh" secondAttribute="centerY" id="Bgw-eF-AJf"/>
-                                            <constraint firstItem="Wsh-HN-dBq" firstAttribute="centerY" secondItem="iwv-nO-bgh" secondAttribute="centerY" id="DTK-dG-ATY"/>
-                                            <constraint firstAttribute="bottom" secondItem="IrM-JG-pT6" secondAttribute="bottom" constant="-30" id="R2w-1V-THB"/>
+                                            <constraint firstItem="aXD-zb-JVA" firstAttribute="centerY" secondItem="iwv-nO-bgh" secondAttribute="centerY" multiplier="0.8" id="IJV-aH-Vtb"/>
+                                            <constraint firstItem="3C1-tV-bWK" firstAttribute="centerY" secondItem="iwv-nO-bgh" secondAttribute="centerY" multiplier="0.6" id="fSi-Td-B1M"/>
+                                            <constraint firstAttribute="bottom" secondItem="44U-vg-MSN" secondAttribute="bottom" id="sR8-QM-Eyf"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIq-in-nCR">
                                         <rect key="frame" x="0.0" y="349.5" width="414" height="174.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="friendCircle" translatesAutoresizingMaskIntoConstraints="NO" id="qKR-hV-TkT">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLK-Rf-Q1S" userLabel="Palhaço">
                                                 <rect key="frame" x="51" y="42.5" width="90" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="3NH-gK-U3f"/>
-                                                    <constraint firstAttribute="width" constant="90" id="Di5-fM-ydm"/>
+                                                    <constraint firstAttribute="height" constant="90" id="NXM-VB-VOW"/>
+                                                    <constraint firstAttribute="width" constant="90" id="e13-7E-7Tv"/>
                                                 </constraints>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="friendCircle" translatesAutoresizingMaskIntoConstraints="NO" id="Zx4-ba-GWW">
-                                                <rect key="frame" x="269" y="87.5" width="90" height="90"/>
+                                                <state key="normal" title="Palhaço" image="palhaco copy 3"/>
+                                                <connections>
+                                                    <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="UL0-xp-pkN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxr-w4-SGh" userLabel="Mãe">
+                                                <rect key="frame" x="249" y="72.5" width="90" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="Bfo-Jm-uvm"/>
-                                                    <constraint firstAttribute="width" constant="90" id="oB7-md-IV1"/>
+                                                    <constraint firstAttribute="height" constant="90" id="Tg4-L0-qNj"/>
+                                                    <constraint firstAttribute="width" constant="90" id="d13-E7-5Ok"/>
                                                 </constraints>
-                                            </imageView>
+                                                <state key="normal" title="Mãe" image="mae"/>
+                                                <connections>
+                                                    <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="CAi-kI-NkW"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="qKR-hV-TkT" firstAttribute="centerY" secondItem="bIq-in-nCR" secondAttribute="centerY" id="v8m-ZC-be5"/>
-                                            <constraint firstItem="Zx4-ba-GWW" firstAttribute="centerY" secondItem="qKR-hV-TkT" secondAttribute="bottom" id="yV7-hz-cHa"/>
+                                            <constraint firstItem="Mxr-w4-SGh" firstAttribute="top" secondItem="MLK-Rf-Q1S" secondAttribute="top" constant="30" id="9MD-Yf-Dr0"/>
+                                            <constraint firstItem="MLK-Rf-Q1S" firstAttribute="centerY" secondItem="bIq-in-nCR" secondAttribute="centerY" id="PpG-u2-Wkw"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -135,21 +179,21 @@ barris de chop!</string>
                                 <constraints>
                                     <constraint firstItem="bIq-in-nCR" firstAttribute="top" secondItem="iwv-nO-bgh" secondAttribute="bottom" id="0qA-8i-foZ"/>
                                     <constraint firstAttribute="trailing" secondItem="iwv-nO-bgh" secondAttribute="trailing" id="2YJ-gO-lDV"/>
+                                    <constraint firstItem="44U-vg-MSN" firstAttribute="leading" secondItem="jgE-N8-Vhu" secondAttribute="leading" constant="17" id="4AO-35-hJR"/>
+                                    <constraint firstItem="aXD-zb-JVA" firstAttribute="leading" secondItem="sZU-eM-F4A" secondAttribute="leading" constant="17" id="6jD-2Z-3TK"/>
                                     <constraint firstItem="iwv-nO-bgh" firstAttribute="top" secondItem="W9l-Rb-vJY" secondAttribute="bottom" id="7wu-KO-66v"/>
                                     <constraint firstItem="iwv-nO-bgh" firstAttribute="leading" secondItem="ztw-fQ-vwS" secondAttribute="leading" id="9hX-rr-bkw"/>
                                     <constraint firstItem="iwv-nO-bgh" firstAttribute="height" secondItem="ztw-fQ-vwS" secondAttribute="height" multiplier="0.3" id="Bgn-NA-r1a"/>
                                     <constraint firstItem="bIq-in-nCR" firstAttribute="leading" secondItem="ztw-fQ-vwS" secondAttribute="leading" id="C0d-Na-2YV"/>
-                                    <constraint firstItem="qKR-hV-TkT" firstAttribute="leading" secondItem="xj6-mk-O8x" secondAttribute="leading" id="J0o-5u-VVt"/>
                                     <constraint firstItem="bIq-in-nCR" firstAttribute="height" secondItem="ztw-fQ-vwS" secondAttribute="height" multiplier="0.3" id="KrB-06-Ngs"/>
-                                    <constraint firstItem="Zx4-ba-GWW" firstAttribute="leading" secondItem="IrM-JG-pT6" secondAttribute="trailing" id="MZM-MC-0es"/>
-                                    <constraint firstItem="Wsh-HN-dBq" firstAttribute="leading" secondItem="joL-hx-fI0" secondAttribute="leading" constant="17" id="QXR-rT-eWk"/>
+                                    <constraint firstItem="Mxr-w4-SGh" firstAttribute="leading" secondItem="44U-vg-MSN" secondAttribute="leading" constant="70" id="MVS-i5-Rm2"/>
                                     <constraint firstItem="W9l-Rb-vJY" firstAttribute="height" secondItem="ztw-fQ-vwS" secondAttribute="height" multiplier="0.3" id="Tgd-GN-Xm0"/>
+                                    <constraint firstItem="3C1-tV-bWK" firstAttribute="leading" secondItem="f1l-AB-VLs" secondAttribute="leading" constant="-10" id="U0E-ie-K5F"/>
                                     <constraint firstAttribute="trailing" secondItem="bIq-in-nCR" secondAttribute="trailing" id="WMm-9l-fv4"/>
                                     <constraint firstItem="W9l-Rb-vJY" firstAttribute="top" secondItem="ztw-fQ-vwS" secondAttribute="top" id="YYc-fC-D7j"/>
+                                    <constraint firstItem="MLK-Rf-Q1S" firstAttribute="leading" secondItem="f1l-AB-VLs" secondAttribute="leading" id="bSX-Kx-fhP"/>
                                     <constraint firstItem="W9l-Rb-vJY" firstAttribute="leading" secondItem="ztw-fQ-vwS" secondAttribute="leading" id="d4E-Gv-arW"/>
-                                    <constraint firstItem="IrM-JG-pT6" firstAttribute="leading" secondItem="5Pu-tv-xyB" secondAttribute="leading" constant="17" id="rOu-El-ABd"/>
                                     <constraint firstAttribute="trailing" secondItem="W9l-Rb-vJY" secondAttribute="trailing" id="u0F-5T-Mkl"/>
-                                    <constraint firstItem="VFI-UV-LCC" firstAttribute="leading" secondItem="xj6-mk-O8x" secondAttribute="leading" constant="-10" id="uaX-oX-rWt"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rK9-HQ-27S">
@@ -180,23 +224,70 @@ barris de chop!</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NVr-pQ-bVx"/>
                     </view>
+                    <navigationItem key="navigationItem" id="kVo-1K-mVc"/>
                     <connections>
+                        <outlet property="iniciarRodadaButton" destination="miF-7A-PxI" id="QGP-fY-eei"/>
                         <outlet property="roundStoryLabel" destination="TPY-ns-uKG" id="Ub0-4R-kze"/>
                         <outlet property="showCardButton" destination="rK9-HQ-27S" id="11T-fp-wog"/>
+<<<<<<< HEAD
+=======
+                        <outlet property="skView" destination="5rr-ua-ffd" id="KEQ-3k-3yO"/>
+                        <outletCollection property="buttons" destination="f1l-AB-VLs" collectionClass="NSMutableArray" id="c00-Ue-ofS"/>
+                        <outletCollection property="buttons" destination="jgE-N8-Vhu" collectionClass="NSMutableArray" id="RUp-lj-PP8"/>
+                        <outletCollection property="buttons" destination="sZU-eM-F4A" collectionClass="NSMutableArray" id="Cud-Sc-FSu"/>
+                        <outletCollection property="buttons" destination="3C1-tV-bWK" collectionClass="NSMutableArray" id="gv4-36-THq"/>
+                        <outletCollection property="buttons" destination="44U-vg-MSN" collectionClass="NSMutableArray" id="2iD-BT-uQ9"/>
+                        <outletCollection property="buttons" destination="aXD-zb-JVA" collectionClass="NSMutableArray" id="tEX-14-NOa"/>
+                        <outletCollection property="buttons" destination="MLK-Rf-Q1S" collectionClass="NSMutableArray" id="DWH-bj-NcS"/>
+                        <outletCollection property="buttons" destination="Mxr-w4-SGh" collectionClass="NSMutableArray" id="92D-cM-sR7"/>
+                        <segue destination="ZdV-D4-FfH" kind="show" identifier="showCard" id="Tp4-Hc-Qdt"/>
+>>>>>>> Mafe
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NVt-kM-E8h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="847.82608695652175" y="871.875"/>
+            <point key="canvasLocation" x="1671.0144927536232" y="906.69642857142856"/>
         </scene>
+<<<<<<< HEAD
+=======
+        <!--Card 2-->
+        <scene sceneID="pDp-Xk-zab">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Card 2" id="ZdV-D4-FfH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="HDJ-0d-qhp"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M6R-kz-Ujd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2428.985507246377" y="1058.7053571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5x4-Ti-jS6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T04-gR-iLV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wUn-qM-hXA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="n3a-UX-6ON" kind="relationship" relationship="rootViewController" id="OeC-Gx-9dn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V3R-67-c83" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760.86956521739137" y="906.69642857142856"/>
+        </scene>
+>>>>>>> Mafe
     </scenes>
     <resources>
-        <image name="bebadoCardBranco" width="104" height="104"/>
-        <image name="distraidoCardBranco" width="104" height="104"/>
-        <image name="friendCircle" width="104" height="104"/>
-        <image name="namoradoCardBranco" width="104" height="104"/>
-        <image name="paiCardBranco" width="104" height="104"/>
-        <image name="parceiroCardBranco" width="104" height="104"/>
-        <image name="penetraCardBranco" width="104" height="104"/>
+        <image name="amigo" width="100" height="100"/>
+        <image name="bebado" width="100" height="100"/>
+        <image name="desatento" width="100" height="100"/>
+        <image name="mae" width="100" height="100"/>
+        <image name="namorado" width="100" height="100"/>
+        <image name="pai" width="100" height="100"/>
+        <image name="palhaco copy 3" width="99" height="99"/>
+        <image name="penetra" width="100" height="100"/>
     </resources>
 </document>

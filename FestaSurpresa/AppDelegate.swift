@@ -30,6 +30,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
   func applicationWillTerminate(_ application: UIApplication) {
+    if SessionHandler.shared.host {
+        for peer in SessionHandler.shared.mcSession!.connectedPeers {
+            SessionHandler.shared.mcSession?.cancelConnectPeer(peer)
+        }
+        SessionHandler.shared.mcSession?.disconnect()
+        
+    } else {
+        SessionHandler.shared.mcSession?.disconnect()
+        //TODO: manda mensgem pro host q disconectou
+    }
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
 

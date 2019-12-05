@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "bebado.pdf",
+      "filename" : "Oval Copy 54.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Oval Copy 54@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Oval Copy 54@3x.png",
       "scale" : "3x"
     }
   ],

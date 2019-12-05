@@ -1,7 +1,7 @@
 import UIKit
 import MultipeerConnectivity
 
-class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControllerDelegate {
+class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControllerDelegate, UITextFieldDelegate {
     
     
     
@@ -16,7 +16,12 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     var mcAdvertiserAssistant: MCAdvertiserAssistant!
     var messageToSend: String!
     var player: Player!
+<<<<<<< HEAD
     var cartas: [Carta] = Model.shared.cartas
+=======
+    
+    @IBOutlet weak var startSessionButton: UIButton!
+>>>>>>> Mafe
     
     
     override func viewDidLoad() {
@@ -24,15 +29,75 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         
         self.navigationController?.navigationBar.isHidden = true
         
+<<<<<<< HEAD
         SessionHandler.shared.peerID = MCPeerID(displayName: UIDevice.current.name)
         SessionHandler.shared.mcSession = MCSession(peer: SessionHandler.shared.peerID, securityIdentity: nil, encryptionPreference: .required)
         SessionHandler.shared.mcSession!.delegate = self
+=======
+        nome?.delegate = self
+        
+        startSessionButton.layer.cornerRadius = 15.0
+        startSessionButton.isEnabled = false
+        startSessionButton.alpha = 0.7
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        
+        nome.addTarget(self, action: #selector(ViewController.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
+
+>>>>>>> Mafe
         
         
 //        player = Player(peerID: peerID, nome: nome.text!, carta: nil, selected: false)
         //        listaConvidados = mcSession.connectedPeers
         
     }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        if nome.text != "" {
+            startSessionButton.isEnabled  = true
+            startSessionButton.alpha = 1.0
+            SessionHandler.shared.nome = nome.text
+        } else {
+            startSessionButton.isEnabled  = false
+            startSessionButton.alpha = 0.7
+        }
+        
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+            if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+                if self.view.frame.origin.y == 0 {
+                    self.view.frame.origin.y -= keyboardSize.height
+                }
+            }
+        }
+        
+        @objc func keyboardWillHide(notification: NSNotification) {
+            if self.view.frame.origin.y != 0 {
+                self.view.frame.origin.y = 0
+            }
+        }
+
+
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            view.endEditing(true)
+        
+        if nome != nil && nome.text != "" {
+            startSessionButton.isEnabled = true
+            startSessionButton.alpha = 1.0
+            SessionHandler.shared.nome = nome.text
+        }
+        else {
+            startSessionButton.isEnabled = false
+            startSessionButton.alpha = 0.7
+        }
+        
+            return false
+        }
+
     
     //TODO: extension de MCPeerID com atributo do tipo da carta, enum
     @IBAction func regras(_ sender: Any) {
@@ -93,6 +158,29 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         }
     }
     
+    
+    
+    @IBAction func didEndEditingNome(_ sender: Any) {
+        if nome != nil {
+            
+            //startSessionButton.isEnabled  = true
+        }
+    }
+    
+    
+    
+
+    
+    @IBAction func didStartEdittingName(_ sender: Any) {
+        startSessionButton.isEnabled  = false
+        startSessionButton.alpha = 0.7
+        if nome != nil && nome.text != "" {
+            startSessionButton.isEnabled  = true
+            startSessionButton.alpha = 1.0
+        }
+    }
+    
+    
     func sendMessage(messageToSend: String, convidado: MCPeerID) {
         let message = messageToSend.data(using: String.Encoding.utf8, allowLossyConversion: false)
         do {
@@ -115,12 +203,27 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     func hostSession(action: UIAlertAction) {
         print("Nome: \(UIDevice.current.name)")
         
+<<<<<<< HEAD
+=======
+        SessionHandler.shared.host = true
+        
+        SessionHandler.shared.peerID = MCPeerID(displayName: "1 - " + SessionHandler.shared.nome)
+        SessionHandler.shared.mcSession = MCSession(peer: SessionHandler.shared.peerID, securityIdentity: nil, encryptionPreference: .required)
+        SessionHandler.shared.mcSession!.delegate = self
+>>>>>>> Mafe
         SessionHandler.shared.mcAdvertiserAssistant = MCAdvertiserAssistant(serviceType: "festa-surpresa", discoveryInfo: nil, session: SessionHandler.shared.mcSession!)
 
         SessionHandler.shared.mcAdvertiserAssistant!.start()
     }
     
     func joinSession(action: UIAlertAction) {
+<<<<<<< HEAD
+=======
+        SessionHandler.shared.peerID = MCPeerID(displayName: SessionHandler.shared.nome)
+        SessionHandler.shared.mcSession = MCSession(peer: SessionHandler.shared.peerID, securityIdentity: nil, encryptionPreference: .required)
+        SessionHandler.shared.mcSession!.delegate = self
+        
+>>>>>>> Mafe
         let mcBrowser = MCBrowserViewController(serviceType: "festa-surpresa", session: SessionHandler.shared.mcSession!)
         mcBrowser.delegate = self
         
@@ -163,6 +266,18 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     
     func browserViewControllerDidFinish(_ browserViewController: MCBrowserViewController) {
         dismiss(animated: true)
+<<<<<<< HEAD
+=======
+        
+        let storyboard = UIStoryboard(name: "WaitingPlayers", bundle: nil)
+        let controller  = storyboard.instantiateInitialViewController()!
+        controller.modalPresentationStyle = .overFullScreen
+        
+        DispatchQueue.main.async {
+            
+            self.present(controller, animated: false, completion: nil)
+        }
+>>>>>>> Mafe
     }
     
     func browserViewControllerWasCancelled(_ browserViewController: MCBrowserViewController) {
