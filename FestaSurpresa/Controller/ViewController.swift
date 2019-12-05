@@ -1,6 +1,5 @@
 import UIKit
 import MultipeerConnectivity
-import SpriteKit
 
 class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControllerDelegate {
     
@@ -9,58 +8,43 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     //    @IBOutlet weak var chatView: UITextView!
     //    @IBOutlet weak var inputMessage: UITextField!
     
-    //TODO botao de começar so funciona pro host que vai enviar carta para todos
-    // cada um ve sua carta e clica em esconder ou pronto!
-    // no model tem q ter todas tarefas para ir passando
-    // telas de discussao ou loading para carregar tudo
-    
-    //TODO desconecta host todo mundo sai da sala
-    //TODO  desconecta outro se mata da sessao
     @IBOutlet weak var nome: UITextField!
-    @IBOutlet weak var skView: SKView!
     
-   
     var peerID: MCPeerID!
     var observer: NSObjectProtocol!
     var mcSession: MCSession!
     var mcAdvertiserAssistant: MCAdvertiserAssistant!
     var messageToSend: String!
     var player: Player!
-    
+    var cartas: [Carta] = Model.shared.cartas
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let scene = SKScene(fileNamed: "HorizontalScene"){
-            scene.scaleMode = .aspectFill
-            skView.presentScene(scene)
-        }
         self.navigationController?.navigationBar.isHidden = true
         
+        SessionHandler.shared.peerID = MCPeerID(displayName: UIDevice.current.name)
+        SessionHandler.shared.mcSession = MCSession(peer: SessionHandler.shared.peerID, securityIdentity: nil, encryptionPreference: .required)
+        SessionHandler.shared.mcSession!.delegate = self
         
-//        NotificationCenter.default.addObserver(forName: UIApplication.willTerminateNotification, object: nil, queue: nil) { (notification) in
-//            SessionHandler.shared.mcSession?.disconnect()
-//        }
-            
-
         
-        //        player = Player(peerID: peerID, nome: nome.text!, carta: nil, selected: false)
+//        player = Player(peerID: peerID, nome: nome.text!, carta: nil, selected: false)
         //        listaConvidados = mcSession.connectedPeers
         
     }
     
     //TODO: extension de MCPeerID com atributo do tipo da carta, enum
     @IBAction func regras(_ sender: Any) {
-//        SortCard()
-        //        player.nome = nome.text!
-        //        print(player.carta?.nome)
-        //        print(player.nome)
+        SortCard()
+//        player.nome = nome.text!
+//        print(player.carta?.nome)
+//        print(player.nome)
     }
     
     @IBAction func tapSendButton(_ sender: Any) {
-        //        print(SessionHandler.shared.mcSession?.connectedPeers)
-        //        print(SessionHandler.shared.carta?.nome)
+//        print(SessionHandler.shared.mcSession?.connectedPeers)
+//        print(SessionHandler.shared.carta?.nome)
         print(Model.shared.players)
         showConnectionMenu()
         //        print(self.peerID.carta?.descricao ?? "n rolou")
@@ -82,14 +66,32 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         //        }
     }
     
-    
+   func SortCard() {
+        var cont = 0
+        let minPlayers = 2
+        let maxPlayer = 8
         
-//        let controller = CardViewController()
-
-//        let storyboard = UIStoryboard(name: "Card 2", bundle: nil)
-//        let controller  = storyboard.instantiateInitialViewController()!
-//        controller.modalPresentationStyle = .overFullScreen
-//        self.present(controller, animated: false, completion: nil)
+    if !(SessionHandler.shared.mcSession!.connectedPeers.count >= minPlayers - 1 && SessionHandler.shared.mcSession!.connectedPeers.count < maxPlayer ) {
+            return
+        }
+        cartas.shuffle()
+        
+//        chatView.text = chatView.text + "\(cartas[cont].nome) \n"
+//        player.carta = cartas[cont]
+        print(cartas[cont].nome)
+    Model.shared.players.append(Player(peerID: SessionHandler.shared.peerID, nome: nome.text!, carta: cartas[cont], selected: false))
+        SessionHandler.shared.carta = cartas[cont]
+        cont += 1
+        for convidado in SessionHandler.shared.mcSession!.connectedPeers{
+            
+            sendMessage(messageToSend: "\(cartas[cont].nome)", convidado: convidado)
+            cont += 1
+            if cont <= SessionHandler.shared.mcSession!.connectedPeers.count {
+                cont = 0
+            }
+            
+        }
+    }
     
     func sendMessage(messageToSend: String, convidado: MCPeerID) {
         let message = messageToSend.data(using: String.Encoding.utf8, allowLossyConversion: false)
@@ -104,57 +106,38 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     
     @objc func showConnectionMenu() {
         let ac = UIAlertController(title: "Connection Menu", message: nil, preferredStyle: .actionSheet)
-        ac.addAction(UIAlertAction(title: "Criar sala", style: .default, handler: hostSession))
-        ac.addAction(UIAlertAction(title: "Entrar em uma sala", style: .default, handler: joinSession))
-        ac.addAction(UIAlertAction(title: "Cancelar", style: .cancel))
+        ac.addAction(UIAlertAction(title: "Host a session", style: .default, handler: hostSession))
+        ac.addAction(UIAlertAction(title: "Join a session", style: .default, handler: joinSession))
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         present(ac, animated: true)
     }
     
     func hostSession(action: UIAlertAction) {
+        print("Nome: \(UIDevice.current.name)")
         
-        SessionHandler.shared.host = true
-        
-        SessionHandler.shared.peerID = MCPeerID(displayName: "AAAAA\(UIDevice.current.name)")
-        SessionHandler.shared.mcSession = MCSession(peer: SessionHandler.shared.peerID, securityIdentity: nil, encryptionPreference: .required)
-        SessionHandler.shared.mcSession!.delegate = self
         SessionHandler.shared.mcAdvertiserAssistant = MCAdvertiserAssistant(serviceType: "festa-surpresa", discoveryInfo: nil, session: SessionHandler.shared.mcSession!)
+
         SessionHandler.shared.mcAdvertiserAssistant!.start()
-        
-        let storyboard = UIStoryboard(name: "WaitingPlayers", bundle: nil)
-        let controller  = storyboard.instantiateInitialViewController()!
-        controller.modalPresentationStyle = .overFullScreen
-        
-        DispatchQueue.main.async {
-            
-            self.present(controller, animated: false, completion: nil)
-        }
     }
     
     func joinSession(action: UIAlertAction) {
-        SessionHandler.shared.peerID = MCPeerID(displayName: UIDevice.current.name)
-        SessionHandler.shared.mcSession = MCSession(peer: SessionHandler.shared.peerID, securityIdentity: nil, encryptionPreference: .required)
-        SessionHandler.shared.mcSession!.delegate = self
-        
         let mcBrowser = MCBrowserViewController(serviceType: "festa-surpresa", session: SessionHandler.shared.mcSession!)
         mcBrowser.delegate = self
         
-        DispatchQueue.main.async {
-            
-            self.present(mcBrowser, animated: false, completion: nil)
-        }
+        present(mcBrowser, animated: true)
     }
     
     func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
         switch state {
         case .connected:
-            print("Connected: \(peerID.displayName)")
+            print("Connected: \(SessionHandler.shared.peerID.displayName)")
             
             
         case .connecting:
-            print("Connecting: \(peerID.displayName)")
+            print("Connecting: \(SessionHandler.shared.peerID.displayName)")
             
         case .notConnected:
-            print("Not Connected: \(peerID.displayName)")
+            print("Not Connected: \(SessionHandler.shared.peerID.displayName)")
             
         @unknown default:
             print("fatal error")
@@ -162,17 +145,8 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     }
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
-        
+        print("recebeu algo mas deu bosta")
         SessionHandler.shared.session(session, didReceive: data, fromPeer: peerID)
-        
-//        let storyboard = UIStoryboard(name: "Card 2", bundle: nil)
-//        let controller  = storyboard.instantiateInitialViewController()!
-//        controller.modalPresentationStyle = .overFullScreen
-//
-//        DispatchQueue.main.async {
-//
-//            self.present(controller, animated: false, completion: nil)
-//        }
     }
     
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
@@ -188,21 +162,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     }
     
     func browserViewControllerDidFinish(_ browserViewController: MCBrowserViewController) {
-        print("clicou done")
-        
-        SessionHandler.shared.mcSession?.connectedPeers.sorted{ $0.displayName < $1.displayName}
-        
-        sendMessage(messageToSend: "conectei", convidado: SessionHandler.shared.mcSession!.connectedPeers.first!)
-        
         dismiss(animated: true)
-        let storyboard = UIStoryboard(name: "WaitingPlayers", bundle: nil)
-        let controller  = storyboard.instantiateInitialViewController()!
-        controller.modalPresentationStyle = .overFullScreen
-        
-        DispatchQueue.main.async {
-            
-            self.present(controller, animated: false, completion: nil)
-        }
     }
     
     func browserViewControllerWasCancelled(_ browserViewController: MCBrowserViewController) {
