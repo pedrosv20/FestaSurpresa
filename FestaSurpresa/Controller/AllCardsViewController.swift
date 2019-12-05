@@ -46,7 +46,14 @@ class AllCardsViewController: UIViewController {
             
                 if SessionHandler.shared.host {
                     print("era pra ter começado")
-                    SessionHandler.shared.sendMessage(messageToSend: "lider", convidado: Model.shared.players[SessionHandler.shared.rodada].peerID)
+                    DispatchQueue.main.async {
+                        do {
+                        try giSessionHandler.shared.sendMessage(messageToSend: "lider", convidado: Model.shared.players[SessionHandler.shared.rodada].peerID)
+                        } catch {
+                            print("deu pau")
+                        }
+                    }
+                    
                     // decide lider e enviar mensagem pra aparecer botao
                     
                 }
