@@ -24,7 +24,7 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ntb-Hf-Rfw" customClass="SKView">
                                 <rect key="frame" x="0.0" y="427" width="414" height="157"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxL-Y1-eJf">
                                 <rect key="frame" x="122" y="739" width="170" height="31"/>
@@ -41,13 +41,6 @@
                                     <action selector="tapSendButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s79-0z-4wy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SKVIEW CAVASIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7S-WY-t0G">
-                                <rect key="frame" x="0.0" y="314" width="414" height="212"/>
-                                <color key="backgroundColor" red="0.91764705879999997" green="0.51372549020000002" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="49"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1x9-Tb-EB6">
                                 <rect key="frame" x="0.0" y="203" width="414" height="224"/>
                                 <subviews>
