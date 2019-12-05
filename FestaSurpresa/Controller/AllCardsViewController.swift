@@ -10,7 +10,6 @@ import UIKit
 
 class AllCardsViewController: UIViewController {
 
-    
     @IBOutlet weak var showCardButton: UIButton!
     @IBOutlet weak var roundStoryLabel: UILabel!
     
