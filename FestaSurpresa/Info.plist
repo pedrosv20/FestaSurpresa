@@ -23,11 +23,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-<<<<<<< HEAD
 	<string>RulesScreen</string>
-=======
-	<string>Main</string>
->>>>>>> Mafe
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
