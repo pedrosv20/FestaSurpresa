@@ -50,25 +50,11 @@ class AllCardsViewController: UIViewController {
             
             if i.titleLabel!.text! == SessionHandler.shared.carta!.nome {
                 UIView.animate(withDuration: 1, animations: {
-                        i.transform = CGAffineTransform(scaleX: 2, y: 2)
+                    i.transform = CGAffineTransform(scaleX: 1.6, y: 1.6)
                 }) { (true) in
                     UIView.animate(withDuration: 0.5, animations: {
-
+                        i.transform = .identity
                     })
-//                let originalFrame = i.frame
-//                UIView.animate(withDuration: 3.0, animations: {
-//                   i.frame.size.height = i.frame.size.height * 2
-//                   i.frame.size.width = i.frame.size.width * 2
-//
-//                    // adjust the button's x,y coordinates so it appears to stay in place
-//                   i.frame.origin.x = i.frame.origin.x - (i.frame.size.width / 4)
-//                   i.frame.origin.y = i.frame.origin.y - (i.frame.size.height / 4)
-//
-//                }) { (Bool) in
-//                    UIView.animate(withDuration: 1.0, animations: {
-//                        i.frame = originalFrame
-//
-//                    })
                 }
             }
         }
@@ -79,9 +65,9 @@ class AllCardsViewController: UIViewController {
     }
     
     @IBAction func cardButton(_ sender: UIButton) {
-        print(sender.titleLabel!.text)
         
-        if showClicked == true && sender.titleLabel!.text == SessionHandler.shared.carta?.nome {
+        
+        if showClicked == true && sender.titleLabel!.text! == SessionHandler.shared.carta!.nome {
             SessionHandler.shared.cardTouched = SessionHandler.shared.carta!
             SessionHandler.shared.sawCard = true
             //manda mensagem pro host de ok
