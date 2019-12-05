@@ -14,6 +14,8 @@
 		0781C31D239971CD00D0C9E0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C841C239158F500B02366 /* Model.swift */; };
 		0781C31E239971DB00D0C9E0 /* Instrucao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C2BCED23992B6200D13927 /* Instrucao.swift */; };
 		0781C320239971F100D0C9E0 /* Tarefa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781C31F239971F100D0C9E0 /* Tarefa.swift */; };
+		0781C3212399739100D0C9E0 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C842823915ED700B02366 /* CardViewController.swift */; };
+		0781C322239973BD00D0C9E0 /* Card 2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073C842423915E3D00B02366 /* Card 2.storyboard */; };
 		079690572396AB21002DC8A9 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		07A41B1C238FEDF00024AA60 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A41B1B238FEDF00024AA60 /* Player.swift */; };
 		07B0DF82239953AF00BF267B /* ConfeteVert.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07B0DF7A239953AE00BF267B /* ConfeteVert.sks */; };
@@ -233,6 +235,7 @@
 				07B0DF88239953AF00BF267B /* RequestHelpPopUp.xib in Resources */,
 				07B0DF83239953AF00BF267B /* WaitingRoom.sks in Resources */,
 				07B0DF84239953AF00BF267B /* ResultPopUp.xib in Resources */,
+				0781C322239973BD00D0C9E0 /* Card 2.storyboard in Resources */,
 				07B0DF89239953AF00BF267B /* WaitingPlayers.storyboard in Resources */,
 				A489801A228F49E800852716 /* LaunchScreen.storyboard in Resources */,
 				A4898017228F49E800852716 /* Assets.xcassets in Resources */,
@@ -263,6 +266,7 @@
 				07B0DF93239953EA00BF267B /* VerticalScene.swift in Sources */,
 				07B0DF95239953EA00BF267B /* RequestHelpPopUp.swift in Sources */,
 				07A41B1C238FEDF00024AA60 /* Player.swift in Sources */,
+				0781C3212399739100D0C9E0 /* CardViewController.swift in Sources */,
 				01AF2EEA239461D000207522 /* RuleScreenController.swift in Sources */,
 				A4898010228F49E700852716 /* AppDelegate.swift in Sources */,
 				07B0DF94239953EA00BF267B /* ResultPopUp.swift in Sources */,
