@@ -27,7 +27,7 @@ class SessionHandler: NSObject, MCSessionDelegate {
     
     var playersConfirmed = 0
     
-    var rodada = 0
+    var rodada = 1
     
     var lider = false
     
@@ -38,12 +38,15 @@ class SessionHandler: NSObject, MCSessionDelegate {
     func sendMessage(messageToSend: String, convidado: MCPeerID) {
         
         let message = messageToSend.data(using: String.Encoding.utf8, allowLossyConversion: false)
-        do {
+        DispatchQueue.main.async {
             
-            try SessionHandler.shared.mcSession!.send(message!, toPeers: [convidado], with: .unreliable)
-        }
-        catch {
-            print("Error sending message")
+            do {
+                
+                try SessionHandler.shared.mcSession!.send(message!, toPeers: [convidado], with: .unreliable)
+            }
+            catch {
+                print("Error sending message")
+            }
         }
     }
     
@@ -72,6 +75,20 @@ class SessionHandler: NSObject, MCSessionDelegate {
             let message = NSString(data: data as Data, encoding: String.Encoding.utf8.rawValue)! as String
             print(message)
             
+            for carta in Model.shared.cartas {
+                if carta.nome == message {
+                    print(carta.nome, "carta")
+                    self.carta = carta
+                    
+                    
+                    let storyboard = UIStoryboard(name: "AllCards", bundle: nil)
+                    let controller  = storyboard.instantiateInitialViewController()!
+                    controller.modalPresentationStyle = .overFullScreen
+                    self.controller.present(controller, animated: false, completion: nil)
+                    
+                }
+            }
+
             
             if message == "lider" {
                 self.lider = true
@@ -113,19 +130,6 @@ class SessionHandler: NSObject, MCSessionDelegate {
                 }
             }
             
-            for carta in Model.shared.cartas {
-                if carta.nome == message {
-                    print(carta.nome, "carta")
-                    self.carta = carta
-                    
-                    
-                    let storyboard = UIStoryboard(name: "AllCards", bundle: nil)
-                    let controller  = storyboard.instantiateInitialViewController()!
-                    controller.modalPresentationStyle = .overFullScreen
-                    self.controller.present(controller, animated: false, completion: nil)
-                    
-                }
-            }
             
             //TODO: Busca no singleton e referencia os roles do player
             //            self.chatView.text = self.chatView.text + message + " \n"
