@@ -67,6 +67,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         if nome.text != "" {
             startSessionButton.isEnabled  = true
             startSessionButton.alpha = 1.0
+            SessionHandler.shared.nome = nome.text
         } else {
             startSessionButton.isEnabled  = false
             startSessionButton.alpha = 0.7
