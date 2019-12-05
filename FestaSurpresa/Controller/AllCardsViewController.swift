@@ -38,7 +38,11 @@ class AllCardsViewController: UIViewController {
         roundStoryLabel.layer.borderWidth = 2.0
         roundStoryLabel.layer.cornerRadius = 20.0
         showCardButton.layer.cornerRadius = 15.0
-        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Inicia Jogo"), object: nil, queue: nil) { (Notification) in
+            if SessionHandler.shared.host {
+                //botao aparece e começa jogo
+            }
+        }
         
     }
     
@@ -71,6 +75,18 @@ class AllCardsViewController: UIViewController {
             SessionHandler.shared.cardTouched = SessionHandler.shared.carta!
             SessionHandler.shared.sawCard = true
             //manda mensagem pro host de ok
+            print("visualizou carta", SessionHandler.shared.mcSession?.connectedPeers.first!.displayName)
+            
+            let message = "visualizouCarta".data(using: .utf8)
+            DispatchQueue.main.async {
+                do {
+                    try SessionHandler.shared.mcSession?.send(message!, toPeers: [(SessionHandler.shared.mcSession?.connectedPeers.first)!], with: .unreliable)
+                } catch {
+                    print("error sending visualizou message")
+                }
+            }
+            
+            
             self.performSegue(withIdentifier: "showCard", sender: Any?.self)
             return
         }
