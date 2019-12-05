@@ -9,13 +9,12 @@
 /* Begin PBXBuildFile section */
 		01AF2EE82394614900207522 /* RulesScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01AF2EE72394614900207522 /* RulesScreen.storyboard */; };
 		01AF2EEA239461D000207522 /* RuleScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AF2EE9239461D000207522 /* RuleScreenController.swift */; };
-		01C2BCEC2397F02B00D13927 /* Tarefa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C2BCEB2397F02B00D13927 /* Tarefa.swift */; };
-		01C2BCEE23992B6200D13927 /* Instrucao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C2BCED23992B6200D13927 /* Instrucao.swift */; };
 		073C841B23914C8D00B02366 /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C841A23914C8D00B02366 /* SessionHandler.swift */; };
-		073C841D239158F600B02366 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C841C239158F500B02366 /* Model.swift */; };
 		073C841F2391590300B02366 /* Carta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C841E2391590300B02366 /* Carta.swift */; };
-		073C842523915E3D00B02366 /* Card 2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073C842423915E3D00B02366 /* Card 2.storyboard */; };
-		073C842923915ED700B02366 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C842823915ED700B02366 /* CardViewController.swift */; };
+		0781C31D239971CD00D0C9E0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C841C239158F500B02366 /* Model.swift */; };
+		0781C31E239971DB00D0C9E0 /* Instrucao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C2BCED23992B6200D13927 /* Instrucao.swift */; };
+		0781C320239971F100D0C9E0 /* Tarefa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781C31F239971F100D0C9E0 /* Tarefa.swift */; };
+		079690572396AB21002DC8A9 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		07A41B1C238FEDF00024AA60 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A41B1B238FEDF00024AA60 /* Player.swift */; };
 		07B0DF82239953AF00BF267B /* ConfeteVert.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07B0DF7A239953AE00BF267B /* ConfeteVert.sks */; };
 		07B0DF83239953AF00BF267B /* WaitingRoom.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07B0DF7B239953AE00BF267B /* WaitingRoom.sks */; };
@@ -39,15 +38,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		019C60D023995B7A006237C7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		01AF2EE72394614900207522 /* RulesScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RulesScreen.storyboard; sourceTree = "<group>"; };
 		01AF2EE9239461D000207522 /* RuleScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleScreenController.swift; sourceTree = "<group>"; };
-		01C2BCEB2397F02B00D13927 /* Tarefa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tarefa.swift; sourceTree = "<group>"; };
 		01C2BCED23992B6200D13927 /* Instrucao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrucao.swift; sourceTree = "<group>"; };
 		073C841A23914C8D00B02366 /* SessionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHandler.swift; sourceTree = "<group>"; };
 		073C841C239158F500B02366 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		073C841E2391590300B02366 /* Carta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carta.swift; sourceTree = "<group>"; };
 		073C842423915E3D00B02366 /* Card 2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Card 2.storyboard"; sourceTree = "<group>"; };
 		073C842823915ED700B02366 /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		0781C31F239971F100D0C9E0 /* Tarefa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tarefa.swift; sourceTree = "<group>"; };
 		07A41B1B238FEDF00024AA60 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = FestaSurpresa/Player.swift; sourceTree = SOURCE_ROOT; };
 		07B0DF7A239953AE00BF267B /* ConfeteVert.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ConfeteVert.sks; sourceTree = "<group>"; };
 		07B0DF7B239953AE00BF267B /* WaitingRoom.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WaitingRoom.sks; sourceTree = "<group>"; };
@@ -88,11 +88,11 @@
 			children = (
 				07A41B1B238FEDF00024AA60 /* Player.swift */,
 				073C841A23914C8D00B02366 /* SessionHandler.swift */,
-				01C2BCEB2397F02B00D13927 /* Tarefa.swift */,
 				07B0DF8A239953BC00BF267B /* Colors.swift */,
 				01C2BCED23992B6200D13927 /* Instrucao.swift */,
 				073C841E2391590300B02366 /* Carta.swift */,
 				073C841C239158F500B02366 /* Model.swift */,
+				0781C31F239971F100D0C9E0 /* Tarefa.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -131,11 +131,20 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		0781C31C2399712300D0C9E0 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				019C60D023995B7A006237C7 /* Model.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		A4898003228F49E700852716 = {
 			isa = PBXGroup;
 			children = (
 				A489800E228F49E700852716 /* FestaSurpresa */,
 				A489800D228F49E700852716 /* Products */,
+				0781C31C2399712300D0C9E0 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -227,7 +236,6 @@
 				07B0DF89239953AF00BF267B /* WaitingPlayers.storyboard in Resources */,
 				A489801A228F49E800852716 /* LaunchScreen.storyboard in Resources */,
 				A4898017228F49E800852716 /* Assets.xcassets in Resources */,
-				073C842523915E3D00B02366 /* Card 2.storyboard in Resources */,
 				A4898015228F49E700852716 /* Main.storyboard in Resources */,
 				07B0DF85239953AF00BF267B /* VerticalScene.sks in Resources */,
 				07B0DF87239953AF00BF267B /* AllCards.storyboard in Resources */,
@@ -241,21 +249,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0781C31D239971CD00D0C9E0 /* Model.swift in Sources */,
 				073C841F2391590300B02366 /* Carta.swift in Sources */,
+				0781C31E239971DB00D0C9E0 /* Instrucao.swift in Sources */,
 				07B0DF92239953EA00BF267B /* WaitingPlayersViewController.swift in Sources */,
 				07B0DF8B239953BC00BF267B /* Colors.swift in Sources */,
-				073C841D239158F600B02366 /* Model.swift in Sources */,
 				A4898012228F49E700852716 /* ViewController.swift in Sources */,
-				01C2BCEE23992B6200D13927 /* Instrucao.swift in Sources */,
 				07B0DF91239953EA00BF267B /* AllCardsViewController.swift in Sources */,
+				0781C320239971F100D0C9E0 /* Tarefa.swift in Sources */,
 				073C841B23914C8D00B02366 /* SessionHandler.swift in Sources */,
-				073C842923915ED700B02366 /* CardViewController.swift in Sources */,
-				01AF2EEA239461D000207522 /* RuleScreenController.swift in Sources */,
+				079690572396AB21002DC8A9 /* (null) in Sources */,
 				A4898012228F49E700852716 /* ViewController.swift in Sources */,
 				07B0DF93239953EA00BF267B /* VerticalScene.swift in Sources */,
 				07B0DF95239953EA00BF267B /* RequestHelpPopUp.swift in Sources */,
 				07A41B1C238FEDF00024AA60 /* Player.swift in Sources */,
-				01C2BCEC2397F02B00D13927 /* Tarefa.swift in Sources */,
+				01AF2EEA239461D000207522 /* RuleScreenController.swift in Sources */,
 				A4898010228F49E700852716 /* AppDelegate.swift in Sources */,
 				07B0DF94239953EA00BF267B /* ResultPopUp.swift in Sources */,
 			);

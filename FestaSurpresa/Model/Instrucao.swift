@@ -7,7 +7,8 @@
 //
 
 import Foundation
-class Instrucao{
+
+class Instrucao {
     init(nome: String, instrucao: String) {
         self.nome = nome
         self.instrucao = instrucao

@@ -44,6 +44,10 @@ class PlayersViewController: UIViewController {
         roundTitleLabel.layer.cornerRadius = 20.0
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        SessionHandler.shared.controller = self
+    }
+    
     
     @IBAction func didPressPlayer1Button(_ sender: Any) {
         if selectedPlayers < 3 {
