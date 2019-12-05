@@ -51,6 +51,7 @@ class AllCardsViewController: UIViewController {
                     DispatchQueue.main.async {
                         NotificationCenter.default.post(name: NSNotification.Name("inicia lider"), object: nil)
                     }
+                    return
                     
                 }
                 SessionHandler.shared.sendMessage(messageToSend: "lider", convidado: Model.shared.players[SessionHandler.shared.rodada].peerID)
@@ -62,6 +63,10 @@ class AllCardsViewController: UIViewController {
             if SessionHandler.shared.lider {
                 // instancia view lider
                 print("voce é o lider")
+                let storyboard = UIStoryboard(name: "Players", bundle: nil)
+                let controller  = storyboard.instantiateInitialViewController()!
+                controller.modalPresentationStyle = .overCurrentContext
+                self.present(controller, animated: false, completion: nil)
             }
         }
         
