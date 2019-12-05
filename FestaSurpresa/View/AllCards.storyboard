@@ -46,7 +46,7 @@ barris de chop!</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W9l-Rb-vJY">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="174.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1l-AB-VLs" userLabel="bebadoButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1l-AB-VLs">
                                                 <rect key="frame" x="51" y="16" width="90" height="90"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="90" id="9UZ-a6-f0F"/>
@@ -57,7 +57,7 @@ barris de chop!</string>
                                                     <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="cEG-sA-06A"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZU-eM-F4A" userLabel="namorado">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZU-eM-F4A">
                                                 <rect key="frame" x="284" y="22.5" width="90" height="90"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="02j-fK-jkI"/>
@@ -68,13 +68,13 @@ barris de chop!</string>
                                                     <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="fGw-z7-xuC"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgE-N8-Vhu" userLabel="parceiro">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgE-N8-Vhu" userLabel="Melhor Amigo">
                                                 <rect key="frame" x="162" y="84.5" width="90" height="90"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="5La-e9-m0V"/>
                                                     <constraint firstAttribute="height" constant="90" id="rCR-eP-IYb"/>
                                                 </constraints>
-                                                <state key="normal" title="Parceiro" image="parceiroCardBranco"/>
+                                                <state key="normal" title="Melhor Amigo" image="parceiroCardBranco"/>
                                                 <connections>
                                                     <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="w55-Q9-tLS"/>
                                                 </connections>
@@ -98,7 +98,7 @@ barris de chop!</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwv-nO-bgh">
                                         <rect key="frame" x="0.0" y="174.5" width="414" height="175"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3C1-tV-bWK" userLabel="penetra">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3C1-tV-bWK">
                                                 <rect key="frame" x="41" y="7.5" width="90" height="90"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="90" id="2t8-wR-6xQ"/>
@@ -109,7 +109,7 @@ barris de chop!</string>
                                                     <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="R6T-RD-p4z"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44U-vg-MSN" userLabel="pai">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44U-vg-MSN">
                                                 <rect key="frame" x="179" y="85" width="90" height="90"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="Nn7-Mt-tZg"/>
@@ -120,7 +120,7 @@ barris de chop!</string>
                                                     <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="rPR-GX-AQm"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXD-zb-JVA" userLabel="distraido">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXD-zb-JVA">
                                                 <rect key="frame" x="301" y="25" width="90" height="90"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="6wT-nM-naz"/>
@@ -142,24 +142,24 @@ barris de chop!</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIq-in-nCR">
                                         <rect key="frame" x="0.0" y="349.5" width="414" height="174.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLK-Rf-Q1S" userLabel="amigo">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLK-Rf-Q1S" userLabel="Palhaço">
                                                 <rect key="frame" x="51" y="42.5" width="90" height="90"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="90" id="NXM-VB-VOW"/>
                                                     <constraint firstAttribute="width" constant="90" id="e13-7E-7Tv"/>
                                                 </constraints>
-                                                <state key="normal" title="Amigo" image="friendCircle"/>
+                                                <state key="normal" title="Palhaço" image="friendCircle"/>
                                                 <connections>
                                                     <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="UL0-xp-pkN"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxr-w4-SGh">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxr-w4-SGh" userLabel="Mãe">
                                                 <rect key="frame" x="249" y="72.5" width="90" height="90"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="90" id="Tg4-L0-qNj"/>
                                                     <constraint firstAttribute="width" constant="90" id="d13-E7-5Ok"/>
                                                 </constraints>
-                                                <state key="normal" title="Amigo" image="friendCircle"/>
+                                                <state key="normal" title="Mãe" image="friendCircle"/>
                                                 <connections>
                                                     <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="CAi-kI-NkW"/>
                                                 </connections>
@@ -229,6 +229,14 @@ barris de chop!</string>
                         <outlet property="roundStoryLabel" destination="TPY-ns-uKG" id="Ub0-4R-kze"/>
                         <outlet property="showCardButton" destination="rK9-HQ-27S" id="11T-fp-wog"/>
                         <outlet property="skView" destination="5rr-ua-ffd" id="KEQ-3k-3yO"/>
+                        <outletCollection property="buttons" destination="f1l-AB-VLs" collectionClass="NSMutableArray" id="c00-Ue-ofS"/>
+                        <outletCollection property="buttons" destination="jgE-N8-Vhu" collectionClass="NSMutableArray" id="RUp-lj-PP8"/>
+                        <outletCollection property="buttons" destination="sZU-eM-F4A" collectionClass="NSMutableArray" id="Cud-Sc-FSu"/>
+                        <outletCollection property="buttons" destination="3C1-tV-bWK" collectionClass="NSMutableArray" id="gv4-36-THq"/>
+                        <outletCollection property="buttons" destination="44U-vg-MSN" collectionClass="NSMutableArray" id="2iD-BT-uQ9"/>
+                        <outletCollection property="buttons" destination="aXD-zb-JVA" collectionClass="NSMutableArray" id="tEX-14-NOa"/>
+                        <outletCollection property="buttons" destination="MLK-Rf-Q1S" collectionClass="NSMutableArray" id="DWH-bj-NcS"/>
+                        <outletCollection property="buttons" destination="Mxr-w4-SGh" collectionClass="NSMutableArray" id="92D-cM-sR7"/>
                         <segue destination="ZdV-D4-FfH" kind="show" identifier="showCard" id="Tp4-Hc-Qdt"/>
                     </connections>
                 </viewController>
