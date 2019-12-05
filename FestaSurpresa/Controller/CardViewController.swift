@@ -57,6 +57,7 @@ class CardViewController: UIViewController {
         roleTitleLabel.text = SessionHandler.shared.cardTouched!.nome
         descricao.text = SessionHandler.shared.cardTouched!.descricao
         poder.text = SessionHandler.shared.cardTouched!.poder
+        cardIcon.image = SessionHandler.shared.cardTouched!.icone
     }
     @IBAction func didPressHideCardButton(_ sender: Any) {
         if SessionHandler.shared.sawCard == true {
