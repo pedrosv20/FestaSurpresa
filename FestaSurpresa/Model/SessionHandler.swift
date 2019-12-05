@@ -67,14 +67,7 @@ class SessionHandler: NSObject, MCSessionDelegate {
             // send chat message
             let message = NSString(data: data as Data, encoding: String.Encoding.utf8.rawValue)! as String
             print(message)
-            if self.host {
-                if message == "visualizou carta" {
-                    self.playersConfirmed += 1
-                    if self.playersConfirmed == (self.mcSession?.connectedPeers.count)! + 1 && ((self.mcSession?.connectedPeers.count)! + 1 <= 6 && (self.mcSession?.connectedPeers.count)! + 1 < 8 ){
-                        NotificationCenter.default.post(Notification(name: Notification.Name("Inicia Jogo")))
-                    }
-                }
-            }
+            
             
             
             if message == "hostSaiu" {
@@ -101,6 +94,15 @@ class SessionHandler: NSObject, MCSessionDelegate {
             if message == "conectei" {
                 NotificationCenter.default.post(Notification(name: Notification.Name("joinPlayer")))
                 return
+            }
+            
+            if self.host {
+                if message == "visualizou carta" {
+                    self.playersConfirmed += 1
+                    if (self.playersConfirmed == (self.mcSession?.connectedPeers.count)! + 1) && ((self.mcSession?.connectedPeers.count)! + 1 <= 6 && (self.mcSession?.connectedPeers.count)! + 1 < 8 ){
+                        NotificationCenter.default.post(Notification(name: Notification.Name("Inicia Jogo")))
+                    }
+                }
             }
             
             for carta in Model.shared.cartas {

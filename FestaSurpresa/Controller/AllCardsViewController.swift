@@ -19,6 +19,7 @@ class AllCardsViewController: UIViewController {
     @IBOutlet var buttons: [UIButton]!
     
     var showClicked = false
+    var messageSend = false
     let colors = Colors()
     
     override func viewDidLoad() {
@@ -71,7 +72,7 @@ class AllCardsViewController: UIViewController {
     @IBAction func cardButton(_ sender: UIButton) {
         
         
-        if showClicked == true && sender.titleLabel!.text! == SessionHandler.shared.carta!.nome {
+        if showClicked == true && sender.titleLabel!.text! == SessionHandler.shared.carta!.nome  && messageSend == false{
             SessionHandler.shared.cardTouched = SessionHandler.shared.carta!
             SessionHandler.shared.sawCard = true
             //manda mensagem pro host de ok
@@ -81,6 +82,7 @@ class AllCardsViewController: UIViewController {
             DispatchQueue.main.async {
                 do {
                     try SessionHandler.shared.mcSession?.send(message!, toPeers: [(SessionHandler.shared.mcSession?.connectedPeers.first)!], with: .unreliable)
+                    self.messageSend = true
                 } catch {
                     print("error sending visualizou message")
                 }
