@@ -47,11 +47,9 @@ class AllCardsViewController: UIViewController {
                 if SessionHandler.shared.host {
                     print("era pra ter começado")
                     DispatchQueue.main.async {
-                        do {
-                        try giSessionHandler.shared.sendMessage(messageToSend: "lider", convidado: Model.shared.players[SessionHandler.shared.rodada].peerID)
-                        } catch {
-                            print("deu pau")
-                        }
+                        
+                        SessionHandler.shared.sendMessage(messageToSend: "lider", convidado: Model.shared.players[SessionHandler.shared.rodada].peerID)
+                        
                     }
                     
                     // decide lider e enviar mensagem pra aparecer botao
@@ -62,7 +60,10 @@ class AllCardsViewController: UIViewController {
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "inicia lider"), object: nil, queue: nil) { (Notification) in
             if SessionHandler.shared.lider {
                 // instancia view lider
+                iniciarRodadaButton.isHidden = false
+                iniciarRodadaButton.isEnabled = true
                 print("voce é o lider")
+                
             }
         }
         
