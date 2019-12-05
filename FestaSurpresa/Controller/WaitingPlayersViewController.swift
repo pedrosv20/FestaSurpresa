@@ -31,7 +31,7 @@ class WaitingPlayersViewController: UIViewController {
             }
             self.attNumberPlayers()
             
-            NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification, object: nil, queue: nil) { (notification) in
+            NotificationCenter.default.addObserver(forName: UIApplication.willTerminateNotification, object: nil, queue: nil) { (notification) in
             
                     let message = "hostSaiu".data(using: String.Encoding.utf8, allowLossyConversion: false)
                      DispatchQueue.main.async {
