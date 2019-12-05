@@ -41,6 +41,10 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         
         nome?.delegate = self
         
+        startSessionButton.layer.cornerRadius = 15.0
+        startSessionButton.isEnabled = false
+        startSessionButton.alpha = 0.7
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
@@ -77,10 +81,12 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         
         if nome != nil && nome.text != "" {
             startSessionButton.isEnabled = true
+            startSessionButton.alpha = 1.0
             SessionHandler.shared.nome = nome.text
         }
         else {
             startSessionButton.isEnabled = false
+            startSessionButton.alpha = 0.7
         }
         
             return false
@@ -140,6 +146,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     
     @IBAction func didStartEdittingName(_ sender: Any) {
         startSessionButton.isEnabled  = false
+        startSessionButton.alpha = 0.7
     }
     
     
