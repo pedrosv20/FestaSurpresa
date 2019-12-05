@@ -75,6 +75,9 @@ class AllCardsViewController: UIViewController {
         
             
         }
+    override func viewWillAppear(_ animated: Bool) {
+        SessionHandler.shared.controller = self
+    }
         
     
     
