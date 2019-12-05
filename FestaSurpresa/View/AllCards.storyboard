@@ -246,7 +246,7 @@
                         <outletCollection property="buttons" destination="aXD-zb-JVA" collectionClass="NSMutableArray" id="tEX-14-NOa"/>
                         <outletCollection property="buttons" destination="MLK-Rf-Q1S" collectionClass="NSMutableArray" id="DWH-bj-NcS"/>
                         <outletCollection property="buttons" destination="Mxr-w4-SGh" collectionClass="NSMutableArray" id="92D-cM-sR7"/>
-                        <segue destination="ZdV-D4-FfH" kind="show" identifier="showCard" id="Tp4-Hc-Qdt"/>
+                        <segue destination="ZdV-D4-FfH" kind="presentation" identifier="showCard" modalPresentationStyle="fullScreen" id="Tp4-Hc-Qdt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NVt-kM-E8h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
