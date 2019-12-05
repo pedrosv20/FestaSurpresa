@@ -68,13 +68,13 @@ barris de chop!</string>
                                                     <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="fGw-z7-xuC"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgE-N8-Vhu" userLabel="Melhor Amigo">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgE-N8-Vhu">
                                                 <rect key="frame" x="162" y="84.5" width="90" height="90"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="5La-e9-m0V"/>
                                                     <constraint firstAttribute="height" constant="90" id="rCR-eP-IYb"/>
                                                 </constraints>
-                                                <state key="normal" title="Melhor Amigo" image="amigo"/>
+                                                <state key="normal" title="Melhor amigo" image="amigo"/>
                                                 <connections>
                                                     <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="w55-Q9-tLS"/>
                                                 </connections>

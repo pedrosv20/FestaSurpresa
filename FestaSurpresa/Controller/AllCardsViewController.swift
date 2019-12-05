@@ -20,6 +20,7 @@ class AllCardsViewController: UIViewController {
     
     var showClicked = false
     var messageSend = false
+    var hostSend = false
     let colors = Colors()
     
     override func viewDidLoad() {
@@ -70,7 +71,13 @@ class AllCardsViewController: UIViewController {
     }
     
     @IBAction func cardButton(_ sender: UIButton) {
-        
+        if SessionHandler.shared.host {
+            if showClicked == true && sender.titleLabel!.text! == SessionHandler.shared.carta!.nome &&  hostSend == false{
+                SessionHandler.shared.playersConfirmed += 1
+                hostSend = true
+                return
+            }
+        }
         
         if showClicked == true && sender.titleLabel!.text! == SessionHandler.shared.carta!.nome  && messageSend == false{
             SessionHandler.shared.cardTouched = SessionHandler.shared.carta!
