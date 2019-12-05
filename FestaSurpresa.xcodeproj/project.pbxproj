@@ -20,6 +20,7 @@
 		0796905D2396AB5B002DC8A9 /* WaitingRoom.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0796905C2396AB5B002DC8A9 /* WaitingRoom.sks */; };
 		0796905F2396ABA3002DC8A9 /* Players.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0796905E2396ABA3002DC8A9 /* Players.storyboard */; };
 		07A41B1C238FEDF00024AA60 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A41B1B238FEDF00024AA60 /* Player.swift */; };
+		07E831712399467C00112903 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E831702399467C00112903 /* PlayersViewController.swift */; };
 		8879A1D1238EC2BF00890BA4 /* VerticalScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8879A1D0238EC2BF00890BA4 /* VerticalScene.sks */; };
 		88A83C41238EBBBD00FA6468 /* ConfeteVert.sks in Resources */ = {isa = PBXBuildFile; fileRef = 88A83C40238EBBBD00FA6468 /* ConfeteVert.sks */; };
 		88A83C45238EBEE200FA6468 /* VerticalScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A83C44238EBEE200FA6468 /* VerticalScene.swift */; };
@@ -48,6 +49,7 @@
 		0796905C2396AB5B002DC8A9 /* WaitingRoom.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WaitingRoom.sks; sourceTree = "<group>"; };
 		0796905E2396ABA3002DC8A9 /* Players.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Players.storyboard; path = FestaSurpresa/Players.storyboard; sourceTree = SOURCE_ROOT; };
 		07A41B1B238FEDF00024AA60 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = FestaSurpresa/Player.swift; sourceTree = SOURCE_ROOT; };
+		07E831702399467C00112903 /* PlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayersViewController.swift; path = FestaSurpresa/PlayersViewController.swift; sourceTree = SOURCE_ROOT; };
 		8879A1D0238EC2BF00890BA4 /* VerticalScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = VerticalScene.sks; sourceTree = "<group>"; };
 		88A83C40238EBBBD00FA6468 /* ConfeteVert.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ConfeteVert.sks; sourceTree = "<group>"; };
 		88A83C44238EBEE200FA6468 /* VerticalScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalScene.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				079690562396AB21002DC8A9 /* CardViewController.swift */,
 				88A83C44238EBEE200FA6468 /* VerticalScene.swift */,
 				9DB365452396855900D51835 /* RequestHelpPopUp.swift */,
+				07E831702399467C00112903 /* PlayersViewController.swift */,
 				9DB3654923968A1800D51835 /* ResultPopUp.swift */,
 			);
 			path = Controller;
@@ -236,6 +239,7 @@
 				A4898012228F49E700852716 /* ViewController.swift in Sources */,
 				079690552396AB13002DC8A9 /* AllCardsViewController.swift in Sources */,
 				073C841B23914C8D00B02366 /* SessionHandler.swift in Sources */,
+				07E831712399467C00112903 /* PlayersViewController.swift in Sources */,
 				9DB3654B23968A1800D51835 /* ResultPopUp.swift in Sources */,
 				079690572396AB21002DC8A9 /* CardViewController.swift in Sources */,
 				A4898012228F49E700852716 /* ViewController.swift in Sources */,

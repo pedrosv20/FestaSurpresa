@@ -27,7 +27,7 @@ class AllCardsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.isHidden = true
         if let scene = SKScene(fileNamed: "VerticalScene"){
             scene.scaleMode = .aspectFill
             skView.presentScene(scene)
@@ -48,6 +48,7 @@ class AllCardsViewController: UIViewController {
                 print("era pra ter começado")
                 print(Model.shared.players[SessionHandler.shared.rodada].peerID)
                 if SessionHandler.shared.rodada == 0 {
+                    SessionHandler.shared.lider = true
                     DispatchQueue.main.async {
                         NotificationCenter.default.post(name: NSNotification.Name("inicia lider"), object: nil)
                     }
