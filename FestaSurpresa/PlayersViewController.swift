@@ -48,6 +48,9 @@ class PlayersViewController: UIViewController {
         SessionHandler.shared.controller = self
     }
     
+    @IBAction func feitoButton(_ sender: Any) {
+        self.dismiss(animated: false, completion: nil)
+    }
     
     @IBAction func didPressPlayer1Button(_ sender: Any) {
         if selectedPlayers < 3 {
