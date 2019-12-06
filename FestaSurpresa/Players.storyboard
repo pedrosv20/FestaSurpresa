@@ -40,10 +40,10 @@ barris de chop!</string>
                                 <rect key="frame" x="0.0" y="179" width="414" height="627.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Op0-Gv-2nb">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="188.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="219.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2q-nC-fOJ">
-                                                <rect key="frame" x="45" y="39.5" width="110" height="110"/>
+                                                <rect key="frame" x="45" y="35" width="110" height="110"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="110" id="fsl-yf-0bh"/>
@@ -59,7 +59,7 @@ barris de chop!</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAr-7S-X4q">
-                                                <rect key="frame" x="259" y="-15.5" width="110" height="110"/>
+                                                <rect key="frame" x="259" y="0.0" width="110" height="110"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="110" id="048-X2-xfz"/>
@@ -75,7 +75,7 @@ barris de chop!</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mna-5p-jDD">
-                                                <rect key="frame" x="182" y="123.5" width="110" height="110"/>
+                                                <rect key="frame" x="182" y="129.5" width="110" height="110"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="110" id="coM-sL-j5e"/>
@@ -93,16 +93,16 @@ barris de chop!</string>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="Z2q-nC-fOJ" firstAttribute="centerY" secondItem="Op0-Gv-2nb" secondAttribute="centerY" id="Jin-oM-mBi"/>
+                                            <constraint firstItem="Z2q-nC-fOJ" firstAttribute="centerY" secondItem="Op0-Gv-2nb" secondAttribute="centerY" constant="-20" id="Jin-oM-mBi"/>
                                             <constraint firstAttribute="trailing" secondItem="kAr-7S-X4q" secondAttribute="trailing" constant="45" id="LY3-yg-KNG"/>
-                                            <constraint firstAttribute="bottom" secondItem="mna-5p-jDD" secondAttribute="bottom" constant="-45" id="NIM-sX-4R0"/>
+                                            <constraint firstAttribute="bottom" secondItem="mna-5p-jDD" secondAttribute="bottom" constant="-20" id="NIM-sX-4R0"/>
                                             <constraint firstItem="mna-5p-jDD" firstAttribute="centerX" secondItem="Op0-Gv-2nb" secondAttribute="centerX" constant="30" id="a9d-lP-jpd"/>
                                             <constraint firstItem="Z2q-nC-fOJ" firstAttribute="leading" secondItem="Op0-Gv-2nb" secondAttribute="leading" constant="45" id="jqX-QK-bID"/>
-                                            <constraint firstItem="kAr-7S-X4q" firstAttribute="centerY" secondItem="Z2q-nC-fOJ" secondAttribute="top" id="stM-bA-ec0"/>
+                                            <constraint firstItem="kAr-7S-X4q" firstAttribute="centerY" secondItem="Z2q-nC-fOJ" secondAttribute="top" constant="20" id="stM-bA-ec0"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wol-13-Dat">
-                                        <rect key="frame" x="0.0" y="188.5" width="414" height="188"/>
+                                        <rect key="frame" x="0.0" y="219.5" width="414" height="219.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ooc-ia-Inz">
                                                 <rect key="frame" x="10" y="0.0" width="110" height="110"/>
@@ -121,7 +121,7 @@ barris de chop!</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owj-1b-X4q">
-                                                <rect key="frame" x="296" y="39" width="110" height="110"/>
+                                                <rect key="frame" x="296" y="55" width="110" height="110"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="110" id="6c5-xu-0Wc"/>
@@ -137,7 +137,7 @@ barris de chop!</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PxT-io-hW9">
-                                                <rect key="frame" x="152" y="133" width="110" height="110"/>
+                                                <rect key="frame" x="152" y="110" width="110" height="110"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="110" id="079-BQ-8S3"/>
@@ -155,7 +155,7 @@ barris de chop!</string>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="PxT-io-hW9" secondAttribute="centerY" id="Giw-KO-COW"/>
+                                            <constraint firstItem="PxT-io-hW9" firstAttribute="centerY" secondItem="owj-1b-X4q" secondAttribute="bottom" id="QXJ-M5-RlV"/>
                                             <constraint firstItem="Ooc-ia-Inz" firstAttribute="leading" secondItem="Wol-13-Dat" secondAttribute="leading" constant="10" id="SPx-6A-hb4"/>
                                             <constraint firstItem="PxT-io-hW9" firstAttribute="centerX" secondItem="Wol-13-Dat" secondAttribute="centerX" id="TzH-Nv-TDM"/>
                                             <constraint firstAttribute="trailing" secondItem="owj-1b-X4q" secondAttribute="trailing" constant="8" id="ejf-r2-cVc"/>
@@ -164,10 +164,10 @@ barris de chop!</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eY3-Os-HfW">
-                                        <rect key="frame" x="0.0" y="376.5" width="414" height="188"/>
+                                        <rect key="frame" x="0.0" y="439" width="414" height="176"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cud-fP-KAw">
-                                                <rect key="frame" x="45" y="39" width="110" height="110"/>
+                                                <rect key="frame" x="45" y="33" width="110" height="110"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="110" id="IHT-HD-yxT"/>
@@ -183,7 +183,7 @@ barris de chop!</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rt7-Ox-9cS">
-                                                <rect key="frame" x="296" y="78" width="110" height="110"/>
+                                                <rect key="frame" x="296" y="66" width="110" height="110"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="110" id="dXk-o9-Y3c"/>
@@ -216,11 +216,11 @@ barris de chop!</string>
                                     <constraint firstItem="Rt7-Ox-9cS" firstAttribute="trailing" secondItem="owj-1b-X4q" secondAttribute="trailing" id="aEJ-UA-uKo"/>
                                     <constraint firstItem="eY3-Os-HfW" firstAttribute="top" secondItem="Wol-13-Dat" secondAttribute="bottom" id="fQQ-zW-z5e"/>
                                     <constraint firstAttribute="trailing" secondItem="Wol-13-Dat" secondAttribute="trailing" id="gR2-fi-OzD"/>
-                                    <constraint firstItem="Wol-13-Dat" firstAttribute="height" secondItem="0v8-2p-VHO" secondAttribute="height" multiplier="0.3" id="hba-1A-TWX"/>
+                                    <constraint firstItem="Wol-13-Dat" firstAttribute="height" secondItem="0v8-2p-VHO" secondAttribute="height" multiplier="0.35" id="hba-1A-TWX"/>
                                     <constraint firstItem="eY3-Os-HfW" firstAttribute="leading" secondItem="0v8-2p-VHO" secondAttribute="leading" id="k2k-HP-kfu"/>
-                                    <constraint firstItem="eY3-Os-HfW" firstAttribute="height" secondItem="0v8-2p-VHO" secondAttribute="height" multiplier="0.3" id="mtx-Id-bNY"/>
+                                    <constraint firstItem="eY3-Os-HfW" firstAttribute="height" secondItem="0v8-2p-VHO" secondAttribute="height" multiplier="0.28" id="mtx-Id-bNY"/>
                                     <constraint firstAttribute="trailing" secondItem="eY3-Os-HfW" secondAttribute="trailing" id="r3V-TM-BfA"/>
-                                    <constraint firstItem="Op0-Gv-2nb" firstAttribute="height" secondItem="0v8-2p-VHO" secondAttribute="height" multiplier="0.3" id="ror-LK-2XS"/>
+                                    <constraint firstItem="Op0-Gv-2nb" firstAttribute="height" secondItem="0v8-2p-VHO" secondAttribute="height" multiplier="0.35" id="ror-LK-2XS"/>
                                     <constraint firstItem="Op0-Gv-2nb" firstAttribute="leading" secondItem="0v8-2p-VHO" secondAttribute="leading" id="t1F-c2-alh"/>
                                 </constraints>
                             </view>
