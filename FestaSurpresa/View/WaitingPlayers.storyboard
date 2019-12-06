@@ -39,12 +39,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lI3-Xw-Aky">
+                                <rect key="frame" x="71" y="237" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="N2Z-du-8WK"/>
                     </view>
                     <connections>
                         <outlet property="comecar" destination="hp6-eS-9dz" id="y97-bn-FEv"/>
+                        <outlet property="nomePlayersd" destination="lI3-Xw-Aky" id="saF-rH-Zny"/>
                         <outlet property="numeroPlayers" destination="n2u-sj-8dB" id="lvr-Km-KOG"/>
                     </connections>
                 </viewController>

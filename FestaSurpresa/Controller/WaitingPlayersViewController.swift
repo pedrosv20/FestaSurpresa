@@ -10,10 +10,14 @@ import UIKit
 
 class WaitingPlayersViewController: UIViewController {
 
+    @IBOutlet weak var nomePlayersd: UITextView!
+    
     @IBOutlet weak var numeroPlayers: UILabel!
     @IBOutlet weak var comecar: UIButton!
     let minPlayers = 2
     let maxPlayer = 8
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,7 +83,13 @@ class WaitingPlayersViewController: UIViewController {
     }
     
     func attNumberPlayers() {
+        
+        nomePlayersd.text += SessionHandler.shared.nome + "\n"
+        SessionHandler.shared.mcSession?.connectedPeers.map{nomePlayersd.text += "\($0.displayName) \n"}
+        
+        // essas duas linhas de cima da pra criar um array
         self.numeroPlayers.text = String((SessionHandler.shared.mcSession?.connectedPeers.count)! + 1)
+        nomePlayersd.text += SessionHandler.shared.nome
         if (SessionHandler.shared.mcSession?.connectedPeers.count)! + 1 >= minPlayers && (SessionHandler.shared.mcSession?.connectedPeers.count)! + 1 < maxPlayer {
             if SessionHandler.shared.host {
                 comecar.isEnabled = true
@@ -104,9 +114,10 @@ class WaitingPlayersViewController: UIViewController {
         for convidado in SessionHandler.shared.mcSession!.connectedPeers{
             
             SessionHandler.shared.sendMessage(messageToSend: "\(Model.shared.cartas[cont].nome)", convidado: convidado)
+            
             print("mensagem enviada \(Model.shared.cartas[cont].nome)")
             print(SessionHandler.shared.mcSession!.connectedPeers.count)
-            Model.shared.players.append(Player(peerID: convidado, nome: UIDevice.current.name, carta: Model.shared.cartas[cont], selected: false))
+            Model.shared.players.append(Player(peerID: convidado, nome: convidado.displayName, carta: Model.shared.cartas[cont], selected: false))
             cont += 1
             if cont > maxPlayer - 1  {
                 cont = 0

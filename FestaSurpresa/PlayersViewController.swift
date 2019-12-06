@@ -37,6 +37,9 @@ class PlayersViewController: UIViewController {
         player7Button.titleLabel!.adjustsFontSizeToFitWidth = true
         player8Button.titleLabel!.adjustsFontSizeToFitWidth = true
         
+        player1Button.titleLabel?.text = SessionHandler.shared.nome
+        player2Button.titleLabel?.text = SessionHandler.shared.mcSession?.connectedPeers[0].displayName
+        
         readyButton.layer.cornerRadius = 15.0
         
         roundTitleLabel.layer.borderColor = UIColor.black.cgColor
@@ -48,6 +51,9 @@ class PlayersViewController: UIViewController {
         SessionHandler.shared.controller = self
     }
     
+    @IBAction func feitoButton(_ sender: Any) {
+        self.dismiss(animated: false, completion: nil)
+    }
     
     @IBAction func didPressPlayer1Button(_ sender: Any) {
         if selectedPlayers < 3 {
