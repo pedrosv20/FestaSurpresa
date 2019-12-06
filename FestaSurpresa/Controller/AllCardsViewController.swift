@@ -24,6 +24,7 @@ class AllCardsViewController: UIViewController {
     let colors = Colors()
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
@@ -65,10 +66,6 @@ class AllCardsViewController: UIViewController {
                 self.iniciarRodadaButton.isHidden = false
                 self.iniciarRodadaButton.isEnabled = true
                 print("voce é o lider")
-                let storyboard = UIStoryboard(name: "Players", bundle: nil)
-                let controller  = storyboard.instantiateInitialViewController()!
-                controller.modalPresentationStyle = .overCurrentContext
-                self.present(controller, animated: false, completion: nil)
             }
         }
         
@@ -76,8 +73,15 @@ class AllCardsViewController: UIViewController {
         }
     override func viewWillAppear(_ animated: Bool) {
         SessionHandler.shared.controller = self
+        Model.shared.players.map{print($0.nome)}
     }
         
+    @IBAction func iniciaRodada(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Players", bundle: nil)
+        let controller  = storyboard.instantiateInitialViewController()!
+        controller.modalPresentationStyle = .overCurrentContext
+        self.present(controller, animated: false, completion: nil)
+    }
     
     
     
