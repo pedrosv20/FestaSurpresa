@@ -32,6 +32,10 @@
 		07B0DF93239953EA00BF267B /* VerticalScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B0DF8E239953EA00BF267B /* VerticalScene.swift */; };
 		07B0DF94239953EA00BF267B /* ResultPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B0DF8F239953EA00BF267B /* ResultPopUp.swift */; };
 		07B0DF95239953EA00BF267B /* RequestHelpPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B0DF90239953EA00BF267B /* RequestHelpPopUp.swift */; };
+		88E7913E239A84B70056CEAF /* WinScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 88E7913C239A84B70056CEAF /* WinScene.sks */; };
+		88E7913F239A84B70056CEAF /* Win.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88E7913D239A84B70056CEAF /* Win.storyboard */; };
+		88E79142239A84C80056CEAF /* WinScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E79140239A84C80056CEAF /* WinScene.swift */; };
+		88E79143239A84C80056CEAF /* WinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E79141239A84C80056CEAF /* WinViewController.swift */; };
 		A4898010228F49E700852716 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A489800F228F49E700852716 /* AppDelegate.swift */; };
 		A4898012228F49E700852716 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4898011228F49E700852716 /* ViewController.swift */; };
 		A4898015228F49E700852716 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4898013228F49E700852716 /* Main.storyboard */; };
@@ -65,6 +69,10 @@
 		07B0DF8E239953EA00BF267B /* VerticalScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalScene.swift; sourceTree = "<group>"; };
 		07B0DF8F239953EA00BF267B /* ResultPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultPopUp.swift; sourceTree = "<group>"; };
 		07B0DF90239953EA00BF267B /* RequestHelpPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestHelpPopUp.swift; sourceTree = "<group>"; };
+		88E7913C239A84B70056CEAF /* WinScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WinScene.sks; sourceTree = "<group>"; };
+		88E7913D239A84B70056CEAF /* Win.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Win.storyboard; sourceTree = "<group>"; };
+		88E79140239A84C80056CEAF /* WinScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinScene.swift; sourceTree = "<group>"; };
+		88E79141239A84C80056CEAF /* WinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinViewController.swift; sourceTree = "<group>"; };
 		A489800C228F49E700852716 /* FestaSurpresa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FestaSurpresa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A489800F228F49E700852716 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4898011228F49E700852716 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +110,8 @@
 		073521FA238EBF3A003CB5AF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				88E7913D239A84B70056CEAF /* Win.storyboard */,
+				88E7913C239A84B70056CEAF /* WinScene.sks */,
 				A4898013228F49E700852716 /* Main.storyboard */,
 				A4898018228F49E800852716 /* LaunchScreen.storyboard */,
 				01AF2EE72394614900207522 /* RulesScreen.storyboard */,
@@ -121,6 +131,8 @@
 		073521FB238EBF4B003CB5AF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				88E79140239A84C80056CEAF /* WinScene.swift */,
+				88E79141239A84C80056CEAF /* WinViewController.swift */,
 				A4898011228F49E700852716 /* ViewController.swift */,
 				01AF2EE9239461D000207522 /* RuleScreenController.swift */,
 				073C842823915ED700B02366 /* CardViewController.swift */,
@@ -232,10 +244,12 @@
 				07B0DF86239953AF00BF267B /* HorizontalScene.sks in Resources */,
 				01AF2EE82394614900207522 /* RulesScreen.storyboard in Resources */,
 				07B0DF82239953AF00BF267B /* ConfeteVert.sks in Resources */,
+				88E7913E239A84B70056CEAF /* WinScene.sks in Resources */,
 				07B0DF88239953AF00BF267B /* RequestHelpPopUp.xib in Resources */,
 				07B0DF83239953AF00BF267B /* WaitingRoom.sks in Resources */,
 				07B0DF84239953AF00BF267B /* ResultPopUp.xib in Resources */,
 				0781C322239973BD00D0C9E0 /* Card 2.storyboard in Resources */,
+				88E7913F239A84B70056CEAF /* Win.storyboard in Resources */,
 				07B0DF89239953AF00BF267B /* WaitingPlayers.storyboard in Resources */,
 				A489801A228F49E800852716 /* LaunchScreen.storyboard in Resources */,
 				A4898017228F49E800852716 /* Assets.xcassets in Resources */,
@@ -253,11 +267,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0781C31D239971CD00D0C9E0 /* Model.swift in Sources */,
+				88E79142239A84C80056CEAF /* WinScene.swift in Sources */,
 				073C841F2391590300B02366 /* Carta.swift in Sources */,
 				0781C31E239971DB00D0C9E0 /* Instrucao.swift in Sources */,
 				07B0DF92239953EA00BF267B /* WaitingPlayersViewController.swift in Sources */,
 				07B0DF8B239953BC00BF267B /* Colors.swift in Sources */,
 				A4898012228F49E700852716 /* ViewController.swift in Sources */,
+				88E79143239A84C80056CEAF /* WinViewController.swift in Sources */,
 				07B0DF91239953EA00BF267B /* AllCardsViewController.swift in Sources */,
 				0781C320239971F100D0C9E0 /* Tarefa.swift in Sources */,
 				073C841B23914C8D00B02366 /* SessionHandler.swift in Sources */,
