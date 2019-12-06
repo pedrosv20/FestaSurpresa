@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,7 +11,7 @@
         <!--Rule Screen Controller-->
         <scene sceneID="FWy-kE-5R8">
             <objects>
-                <viewController id="bgL-Jf-7td" customClass="RuleScreenController" customModule="FestaSurpresa" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rulescreen" id="bgL-Jf-7td" customClass="RuleScreenController" customModule="FestaSurpresa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sv7-e8-ePh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,13 +34,13 @@
                                                             <rect key="frame" x="20.5" y="25" width="332" height="200"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="melhorAmigo" translatesAutoresizingMaskIntoConstraints="NO" id="jM7-Wi-1y1" userLabel="img">
-                                                                    <rect key="frame" x="10" y="10" width="66" height="206"/>
+                                                                    <rect key="frame" x="10" y="10" width="66.000000000000028" height="103.00000000000003"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="66" id="abZ-EI-tYl"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6O-gO-yCc" userLabel="nomeCarta">
-                                                                    <rect key="frame" x="86" y="102.5" width="162" height="21"/>
+                                                                    <rect key="frame" x="86" y="51" width="162" height="21"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="21" id="Kq1-o0-dCc"/>
                                                                     </constraints>
@@ -49,7 +49,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0S-r3-gLn" userLabel="descPoder">
-                                                                    <rect key="frame" x="20" y="243" width="300" height="18"/>
+                                                                    <rect key="frame" x="20" y="140" width="300" height="18"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="300" id="pX3-Ks-kaI"/>
                                                                     </constraints>
@@ -58,7 +58,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZB9-MC-3Gf" userLabel="descCarta">
-                                                                    <rect key="frame" x="20" y="226" width="300" height="17"/>
+                                                                    <rect key="frame" x="20" y="123" width="300" height="17"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="300" id="14V-hj-bZf"/>
                                                                     </constraints>
@@ -108,7 +108,7 @@
                                                             <rect key="frame" x="20.5" y="25" width="332" height="200"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="melhorAmigo" translatesAutoresizingMaskIntoConstraints="NO" id="W7p-C3-mvT" userLabel="img">
-                                                                    <rect key="frame" x="256" y="10" width="66" height="59"/>
+                                                                    <rect key="frame" x="256" y="10" width="66.000000000000028" height="59.000000000000028"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="66" id="5Bx-gI-4FA"/>
                                                                         <constraint firstAttribute="height" constant="58.999999999999972" id="WoF-sB-zkU"/>
@@ -220,8 +220,9 @@
                     <connections>
                         <outlet property="Instrucao" destination="gGe-8R-jZ4" id="Hzy-fy-oD9"/>
                         <outlet property="btnPersonagem" destination="OPI-Q3-GuS" id="Zby-bp-4CR"/>
-                        <outlet property="mainView" destination="Pxh-ke-iX9" id="UuM-4K-oA0"/>
+                        <outlet property="mainView" destination="Sv7-e8-ePh" id="OkC-0a-YWX"/>
                         <outlet property="tableView" destination="UPl-ps-JWg" id="nUV-G3-8iU"/>
+                        <outlet property="vieaTable" destination="Pxh-ke-iX9" id="3Sw-l2-3vr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iw4-cs-EMs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

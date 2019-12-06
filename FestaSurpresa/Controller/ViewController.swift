@@ -75,6 +75,8 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         
     }
     
+    
+    
     @objc func keyboardWillShow(notification: NSNotification) {
             if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
                 if self.view.frame.origin.y == 0 {
@@ -107,6 +109,17 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
             return false
         }
 
+    @IBAction func btnActionInstruction(_ sender: Any) {
+       
+        let storyboard = UIStoryboard(name: "RulesScreen", bundle: nil)
+        let controller  = storyboard.instantiateInitialViewController()!
+        controller.modalPresentationStyle = .overFullScreen
+        
+        DispatchQueue.main.async {
+            
+            self.present(controller, animated: false, completion: nil)
+        }
+    }
     
     //TODO: extension de MCPeerID com atributo do tipo da carta, enum
     @IBAction func regras(_ sender: Any) {

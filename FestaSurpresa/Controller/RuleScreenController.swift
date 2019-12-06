@@ -23,10 +23,13 @@ class RuleScreenController: UIViewController, UITableViewDelegate,UITableViewDat
             else {
                 celula = tableView.dequeueReusableCell(withIdentifier: "CelulaTipoDois", for: indexPath) as! Celula
             }
+            celula.img.isHidden = false
+
             celula.descPoder.isHidden = false
             celula.descCarta.text = Model.shared.cartas[indexPath.item].descricao
             celula.nomeCarta.text = Model.shared.cartas[indexPath.item].nome
             celula.descPoder.text = Model.shared.cartas[indexPath.item].poder
+            celula.img.image = Model.shared.cartas[indexPath.item].icone
             cont += 1
             if cont >= 8{
                 cont = 0
@@ -40,6 +43,7 @@ class RuleScreenController: UIViewController, UITableViewDelegate,UITableViewDat
                celula = tableView.dequeueReusableCell(withIdentifier: "CelulaTipoDois", for: indexPath) as! Celula
            }
            celula.descPoder.isHidden = true
+            celula.img.isHidden = true
             celula.descCarta.text = Model.shared.instrucao[indexPath.item].instrucao
             celula.nomeCarta.text =  Model.shared.instrucao[indexPath.item].nome
             cont += 1
@@ -50,6 +54,8 @@ class RuleScreenController: UIViewController, UITableViewDelegate,UITableViewDat
         
         return celula
     }
+    @IBOutlet weak var vieaTable: UIView!
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var Instrucao: UIButton!
     @IBOutlet weak var btnPersonagem: UIButton!
@@ -61,6 +67,7 @@ class RuleScreenController: UIViewController, UITableViewDelegate,UITableViewDat
     @IBAction func actBtnInstrucao(_ sender: Any) {
         
         self.escolhido = 2
+        
         self.tableView.reloadData()
         cont = 0
         btnPersonagem.backgroundColor = .clear
@@ -88,8 +95,11 @@ class RuleScreenController: UIViewController, UITableViewDelegate,UITableViewDat
         btnPersonagem.layer.borderWidth = 1
         Instrucao.layer.borderWidth = 1
         Instrucao.layer.cornerRadius = 5
-        mainView.layer.borderWidth = 2
-        mainView.layer.cornerRadius = 14
+        mainView.layer.backgroundColor = #colorLiteral(red: 0.9989697337, green: 0.901548326, blue: 0.627599597, alpha: 1)
+        vieaTable.layer.borderWidth = 2
+        vieaTable.layer.cornerRadius = 14
+        vieaTable.backgroundColor = .white
+        vieaTable.alpha = 0.8
     }
 }
 class Celula:UITableViewCell{
