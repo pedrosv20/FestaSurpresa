@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		01AF2EE82394614900207522 /* RulesScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01AF2EE72394614900207522 /* RulesScreen.storyboard */; };
 		01AF2EEA239461D000207522 /* RuleScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AF2EE9239461D000207522 /* RuleScreenController.swift */; };
+		07229F98239A9A7E00F8E251 /* Players.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0781C323239A770B00D0C9E0 /* Players.storyboard */; };
+		07229F99239A9A8F00F8E251 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781C327239A77E100D0C9E0 /* PlayersViewController.swift */; };
 		073C841B23914C8D00B02366 /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C841A23914C8D00B02366 /* SessionHandler.swift */; };
 		073C841F2391590300B02366 /* Carta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C841E2391590300B02366 /* Carta.swift */; };
 		0781C31D239971CD00D0C9E0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C841C239158F500B02366 /* Model.swift */; };
@@ -16,8 +18,6 @@
 		0781C320239971F100D0C9E0 /* Tarefa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781C31F239971F100D0C9E0 /* Tarefa.swift */; };
 		0781C3212399739100D0C9E0 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C842823915ED700B02366 /* CardViewController.swift */; };
 		0781C322239973BD00D0C9E0 /* Card 2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073C842423915E3D00B02366 /* Card 2.storyboard */; };
-		0781C324239A770B00D0C9E0 /* Players.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0781C323239A770B00D0C9E0 /* Players.storyboard */; };
-		0781C328239A77E100D0C9E0 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781C327239A77E100D0C9E0 /* PlayersViewController.swift */; };
 		079690572396AB21002DC8A9 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		07A41B1C238FEDF00024AA60 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A41B1B238FEDF00024AA60 /* Player.swift */; };
 		07B0DF82239953AF00BF267B /* ConfeteVert.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07B0DF7A239953AE00BF267B /* ConfeteVert.sks */; };
@@ -256,6 +256,7 @@
 				07B0DF84239953AF00BF267B /* ResultPopUp.xib in Resources */,
 				0781C322239973BD00D0C9E0 /* Card 2.storyboard in Resources */,
 				88E7913F239A84B70056CEAF /* Win.storyboard in Resources */,
+				07229F98239A9A7E00F8E251 /* Players.storyboard in Resources */,
 				07B0DF89239953AF00BF267B /* WaitingPlayers.storyboard in Resources */,
 				A489801A228F49E800852716 /* LaunchScreen.storyboard in Resources */,
 				A4898017228F49E800852716 /* Assets.xcassets in Resources */,
@@ -280,6 +281,7 @@
 				07B0DF8B239953BC00BF267B /* Colors.swift in Sources */,
 				A4898012228F49E700852716 /* ViewController.swift in Sources */,
 				88E79143239A84C80056CEAF /* WinViewController.swift in Sources */,
+				07229F99239A9A8F00F8E251 /* PlayersViewController.swift in Sources */,
 				07B0DF91239953EA00BF267B /* AllCardsViewController.swift in Sources */,
 				0781C320239971F100D0C9E0 /* Tarefa.swift in Sources */,
 				073C841B23914C8D00B02366 /* SessionHandler.swift in Sources */,
