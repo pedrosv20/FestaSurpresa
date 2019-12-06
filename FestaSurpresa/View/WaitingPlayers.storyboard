@@ -39,12 +39,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gkl-uW-OTg" customClass="SKView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Gkl-uW-OTg" firstAttribute="width" secondItem="8Z7-kW-0SZ" secondAttribute="width" id="65X-Eu-6cf"/>
+                            <constraint firstItem="Gkl-uW-OTg" firstAttribute="centerY" secondItem="8Z7-kW-0SZ" secondAttribute="centerY" id="6mF-Cq-RNs"/>
+                            <constraint firstItem="Gkl-uW-OTg" firstAttribute="height" secondItem="8Z7-kW-0SZ" secondAttribute="height" id="MCx-An-9LE"/>
+                            <constraint firstItem="Gkl-uW-OTg" firstAttribute="centerX" secondItem="8Z7-kW-0SZ" secondAttribute="centerX" id="lhD-B8-ppr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="N2Z-du-8WK"/>
                     </view>
                     <connections>
                         <outlet property="numeroPlayers" destination="n2u-sj-8dB" id="lvr-Km-KOG"/>
+                        <outlet property="skView" destination="Gkl-uW-OTg" id="Nu9-gm-4a7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mlA-aB-4F5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

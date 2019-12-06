@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import SpriteKit
 
 class WaitingPlayersViewController: UIViewController {
 
     @IBOutlet weak var numeroPlayers: UILabel!
+    @IBOutlet weak var skView: SKView!
+    
+    var scene = WaitingRoom()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +24,11 @@ class WaitingPlayersViewController: UIViewController {
             self.numeroPlayers.text = String((SessionHandler.shared.mcSession?.connectedPeers.count)! + 1)
             print(SessionHandler.shared.mcSession?.connectedPeers.count)
             SessionHandler.shared.mcSession?.connectedPeers.map{print($0.displayName)}
+        }
+        
+        if let scene = SKScene(fileNamed: "WaitingRoom"){
+            scene.scaleMode = .aspectFill
+            skView.presentScene(scene)
         }
         // Do any additional setup after loading the view.
     }
@@ -66,7 +76,7 @@ class WaitingPlayersViewController: UIViewController {
         controller.modalPresentationStyle = .overFullScreen
         self.present(controller, animated: false, completion: nil)
  
-
+        self.scene.foi(nome: "FOIIII\(cont)")
     /*
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -77,4 +87,7 @@ class WaitingPlayersViewController: UIViewController {
     */
 
 }
+    
+    
+    
 }

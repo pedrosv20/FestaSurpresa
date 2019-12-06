@@ -27,6 +27,7 @@
 		88E791002397FC0B0056CEAF /* WinScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E790FF2397FC0B0056CEAF /* WinScene.swift */; };
 		88E79102239869650056CEAF /* WinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E79101239869650056CEAF /* WinViewController.swift */; };
 		88E79104239869D20056CEAF /* Win.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88E79103239869D20056CEAF /* Win.storyboard */; };
+		88E791062399EF640056CEAF /* WaitingRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E791052399EF640056CEAF /* WaitingRoom.swift */; };
 		9DB365472396855900D51835 /* RequestHelpPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB365452396855900D51835 /* RequestHelpPopUp.swift */; };
 		9DB365482396855900D51835 /* RequestHelpPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DB365462396855900D51835 /* RequestHelpPopUp.xib */; };
 		9DB3654B23968A1800D51835 /* ResultPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3654923968A1800D51835 /* ResultPopUp.swift */; };
@@ -59,6 +60,7 @@
 		88E790FF2397FC0B0056CEAF /* WinScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinScene.swift; sourceTree = "<group>"; };
 		88E79101239869650056CEAF /* WinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinViewController.swift; sourceTree = "<group>"; };
 		88E79103239869D20056CEAF /* Win.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Win.storyboard; sourceTree = "<group>"; };
+		88E791052399EF640056CEAF /* WaitingRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingRoom.swift; sourceTree = "<group>"; };
 		9DB365452396855900D51835 /* RequestHelpPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHelpPopUp.swift; sourceTree = "<group>"; };
 		9DB365462396855900D51835 /* RequestHelpPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestHelpPopUp.xib; sourceTree = "<group>"; };
 		9DB3654923968A1800D51835 /* ResultPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPopUp.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				88A83C44238EBEE200FA6468 /* VerticalScene.swift */,
 				9DB365452396855900D51835 /* RequestHelpPopUp.swift */,
 				9DB3654923968A1800D51835 /* ResultPopUp.swift */,
+				88E791052399EF640056CEAF /* WaitingRoom.swift */,
 				88E790FF2397FC0B0056CEAF /* WinScene.swift */,
 				88E79101239869650056CEAF /* WinViewController.swift */,
 			);
@@ -255,6 +258,7 @@
 				079690572396AB21002DC8A9 /* CardViewController.swift in Sources */,
 				A4898012228F49E700852716 /* ViewController.swift in Sources */,
 				07A41B1C238FEDF00024AA60 /* Player.swift in Sources */,
+				88E791062399EF640056CEAF /* WaitingRoom.swift in Sources */,
 				88E79102239869650056CEAF /* WinViewController.swift in Sources */,
 				A4898010228F49E700852716 /* AppDelegate.swift in Sources */,
 				078B633C2396837600DB8472 /* WaitingPlayersViewController.swift in Sources */,
