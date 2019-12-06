@@ -73,6 +73,7 @@ class AllCardsViewController: UIViewController {
         }
     override func viewWillAppear(_ animated: Bool) {
         SessionHandler.shared.controller = self
+        Model.shared.players.map{print($0.nome)}
     }
         
     @IBAction func iniciaRodada(_ sender: Any) {

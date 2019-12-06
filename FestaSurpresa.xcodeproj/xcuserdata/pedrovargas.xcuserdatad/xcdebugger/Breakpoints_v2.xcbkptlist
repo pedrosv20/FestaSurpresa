@@ -20,5 +20,69 @@
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E93B3DD1-4A23-416E-8EC0-12BAA99D3C27"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FestaSurpresa/Controller/AllCardsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E93B3DD1-4A23-416E-8EC0-12BAA99D3C27 - b98105303ff6f1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FestaSurpresa.AllCardsViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "FestaSurpresa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pedrovargas/Desktop/Apple%20developer%20academy/FestaSurpresa/FestaSurpresa/Controller/AllCardsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "E93B3DD1-4A23-416E-8EC0-12BAA99D3C27 - db8f2a3bfdde3fcb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (FestaSurpresa.Player) -&gt; () in FestaSurpresa.AllCardsViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "FestaSurpresa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pedrovargas/Desktop/Apple%20developer%20academy/FestaSurpresa/FestaSurpresa/Controller/AllCardsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0B0C18FE-5E71-40A0-9E97-5E23AED6A2B3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FestaSurpresa/Controller/AllCardsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "didPressShowCardButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
