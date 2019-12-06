@@ -44,6 +44,7 @@
                         <viewLayoutGuide key="safeArea" id="N2Z-du-8WK"/>
                     </view>
                     <connections>
+                        <outlet property="comecar" destination="hp6-eS-9dz" id="y97-bn-FEv"/>
                         <outlet property="numeroPlayers" destination="n2u-sj-8dB" id="lvr-Km-KOG"/>
                     </connections>
                 </viewController>
