@@ -38,6 +38,7 @@
 		88E7913F239A84B70056CEAF /* Win.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88E7913D239A84B70056CEAF /* Win.storyboard */; };
 		88E79142239A84C80056CEAF /* WinScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E79140239A84C80056CEAF /* WinScene.swift */; };
 		88E79143239A84C80056CEAF /* WinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E79141239A84C80056CEAF /* WinViewController.swift */; };
+		88E79145239A9E380056CEAF /* HorizontalScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E79144239A9E380056CEAF /* HorizontalScene.swift */; };
 		A4898010228F49E700852716 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A489800F228F49E700852716 /* AppDelegate.swift */; };
 		A4898012228F49E700852716 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4898011228F49E700852716 /* ViewController.swift */; };
 		A4898015228F49E700852716 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4898013228F49E700852716 /* Main.storyboard */; };
@@ -77,6 +78,7 @@
 		88E7913D239A84B70056CEAF /* Win.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Win.storyboard; sourceTree = "<group>"; };
 		88E79140239A84C80056CEAF /* WinScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinScene.swift; sourceTree = "<group>"; };
 		88E79141239A84C80056CEAF /* WinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinViewController.swift; sourceTree = "<group>"; };
+		88E79144239A9E380056CEAF /* HorizontalScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScene.swift; sourceTree = "<group>"; };
 		A489800C228F49E700852716 /* FestaSurpresa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FestaSurpresa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A489800F228F49E700852716 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4898011228F49E700852716 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				07B0DF8E239953EA00BF267B /* VerticalScene.swift */,
 				0781C327239A77E100D0C9E0 /* PlayersViewController.swift */,
 				07B0DF8D239953EA00BF267B /* WaitingPlayersViewController.swift */,
+				88E79144239A9E380056CEAF /* HorizontalScene.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				0781C3212399739100D0C9E0 /* CardViewController.swift in Sources */,
 				01AF2EEA239461D000207522 /* RuleScreenController.swift in Sources */,
 				A4898010228F49E700852716 /* AppDelegate.swift in Sources */,
+				88E79145239A9E380056CEAF /* HorizontalScene.swift in Sources */,
 				07B0DF94239953EA00BF267B /* ResultPopUp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,7 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZSLUMCNRNL;
+				DEVELOPMENT_TEAM = 8GN6S9CHL7;
 				INFOPLIST_FILE = FestaSurpresa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -458,7 +462,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZSLUMCNRNL;
+				DEVELOPMENT_TEAM = 8GN6S9CHL7;
 				INFOPLIST_FILE = FestaSurpresa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
