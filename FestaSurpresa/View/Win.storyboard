@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eqt-8I-mA8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Win View Controller-->
+        <scene sceneID="GlP-PC-qcm">
+            <objects>
+                <viewController id="eqt-8I-mA8" customClass="WinViewController" customModule="FestaSurpresa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Il-MR-1ZP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oeg-Jh-nCp" customClass="SKView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7iI-sy-Ae3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O Palhaço venceu!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEN-dE-6jk">
+                                        <rect key="frame" x="83" y="101" width="248" height="112"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="TEN-dE-6jk" firstAttribute="height" secondItem="7iI-sy-Ae3" secondAttribute="height" multiplier="0.5" id="1in-2a-CT2"/>
+                                    <constraint firstItem="TEN-dE-6jk" firstAttribute="width" secondItem="7iI-sy-Ae3" secondAttribute="width" multiplier="0.599034" id="Adf-6r-EMu"/>
+                                    <constraint firstItem="TEN-dE-6jk" firstAttribute="centerX" secondItem="7iI-sy-Ae3" secondAttribute="centerX" id="W0m-k0-XHb"/>
+                                    <constraint firstItem="TEN-dE-6jk" firstAttribute="centerY" secondItem="7iI-sy-Ae3" secondAttribute="centerY" multiplier="1.4" id="sEy-P9-eny"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OR-YA-Xbp">
+                                <rect key="frame" x="145" y="430.5" width="124" height="45"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oeg-Jh-nCp" firstAttribute="width" secondItem="9Il-MR-1ZP" secondAttribute="width" id="0JY-IV-DQl"/>
+                            <constraint firstItem="6OR-YA-Xbp" firstAttribute="width" secondItem="9Il-MR-1ZP" secondAttribute="width" multiplier="0.3" id="89J-7P-LAW"/>
+                            <constraint firstItem="7iI-sy-Ae3" firstAttribute="top" secondItem="oeg-Jh-nCp" secondAttribute="top" id="BZz-jj-bNM"/>
+                            <constraint firstItem="7iI-sy-Ae3" firstAttribute="centerX" secondItem="oeg-Jh-nCp" secondAttribute="centerX" id="IZi-Z4-fnb"/>
+                            <constraint firstItem="6OR-YA-Xbp" firstAttribute="centerX" secondItem="9Il-MR-1ZP" secondAttribute="centerX" id="KFK-gk-aiT"/>
+                            <constraint firstItem="oeg-Jh-nCp" firstAttribute="centerY" secondItem="9Il-MR-1ZP" secondAttribute="centerY" id="LCX-5P-Ns9"/>
+                            <constraint firstItem="oeg-Jh-nCp" firstAttribute="centerX" secondItem="9Il-MR-1ZP" secondAttribute="centerX" id="MGh-UH-Sob"/>
+                            <constraint firstItem="6OR-YA-Xbp" firstAttribute="height" secondItem="9Il-MR-1ZP" secondAttribute="height" multiplier="0.05" id="Msw-dF-Bzc"/>
+                            <constraint firstItem="oeg-Jh-nCp" firstAttribute="height" secondItem="9Il-MR-1ZP" secondAttribute="height" id="ONW-JT-OXb"/>
+                            <constraint firstItem="7iI-sy-Ae3" firstAttribute="width" secondItem="oeg-Jh-nCp" secondAttribute="width" id="bid-A0-8bY"/>
+                            <constraint firstItem="7iI-sy-Ae3" firstAttribute="height" secondItem="oeg-Jh-nCp" secondAttribute="height" multiplier="0.25" id="oXy-g4-ZcW"/>
+                            <constraint firstItem="6OR-YA-Xbp" firstAttribute="centerY" secondItem="9Il-MR-1ZP" secondAttribute="centerY" constant="5" id="wKc-kw-Zlv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1BD-1T-Dke"/>
+                    </view>
+                    <connections>
+                        <outlet property="playAgain" destination="6OR-YA-Xbp" id="AZX-gr-6d7"/>
+                        <outlet property="roundStoryLabel" destination="TEN-dE-6jk" id="poI-it-luZ"/>
+                        <outlet property="skView" destination="oeg-Jh-nCp" id="FXN-1E-jUa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gfb-cn-4Ao" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3" y="-14"/>
+        </scene>
+    </scenes>
+</document>

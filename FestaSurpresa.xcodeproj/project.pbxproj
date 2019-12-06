@@ -19,9 +19,14 @@
 		0796905D2396AB5B002DC8A9 /* WaitingRoom.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0796905C2396AB5B002DC8A9 /* WaitingRoom.sks */; };
 		0796905F2396ABA3002DC8A9 /* Players.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0796905E2396ABA3002DC8A9 /* Players.storyboard */; };
 		07A41B1C238FEDF00024AA60 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A41B1B238FEDF00024AA60 /* Player.swift */; };
+		88522F3B2397ED8E00CEA9CE /* WinScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 88522F3A2397ED8E00CEA9CE /* WinScene.sks */; };
+		88522F3F2397F4E600CEA9CE /* assets.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 88522F3E2397F4E600CEA9CE /* assets.atlas */; };
 		8879A1D1238EC2BF00890BA4 /* VerticalScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8879A1D0238EC2BF00890BA4 /* VerticalScene.sks */; };
 		88A83C41238EBBBD00FA6468 /* ConfeteVert.sks in Resources */ = {isa = PBXBuildFile; fileRef = 88A83C40238EBBBD00FA6468 /* ConfeteVert.sks */; };
 		88A83C45238EBEE200FA6468 /* VerticalScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A83C44238EBEE200FA6468 /* VerticalScene.swift */; };
+		88E791002397FC0B0056CEAF /* WinScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E790FF2397FC0B0056CEAF /* WinScene.swift */; };
+		88E79102239869650056CEAF /* WinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E79101239869650056CEAF /* WinViewController.swift */; };
+		88E79104239869D20056CEAF /* Win.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88E79103239869D20056CEAF /* Win.storyboard */; };
 		9DB365472396855900D51835 /* RequestHelpPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB365452396855900D51835 /* RequestHelpPopUp.swift */; };
 		9DB365482396855900D51835 /* RequestHelpPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DB365462396855900D51835 /* RequestHelpPopUp.xib */; };
 		9DB3654B23968A1800D51835 /* ResultPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3654923968A1800D51835 /* ResultPopUp.swift */; };
@@ -46,9 +51,14 @@
 		0796905C2396AB5B002DC8A9 /* WaitingRoom.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WaitingRoom.sks; sourceTree = "<group>"; };
 		0796905E2396ABA3002DC8A9 /* Players.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Players.storyboard; path = FestaSurpresa/Players.storyboard; sourceTree = SOURCE_ROOT; };
 		07A41B1B238FEDF00024AA60 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = FestaSurpresa/Player.swift; sourceTree = SOURCE_ROOT; };
+		88522F3A2397ED8E00CEA9CE /* WinScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WinScene.sks; sourceTree = "<group>"; };
+		88522F3E2397F4E600CEA9CE /* assets.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = assets.atlas; sourceTree = "<group>"; };
 		8879A1D0238EC2BF00890BA4 /* VerticalScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = VerticalScene.sks; sourceTree = "<group>"; };
 		88A83C40238EBBBD00FA6468 /* ConfeteVert.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ConfeteVert.sks; sourceTree = "<group>"; };
 		88A83C44238EBEE200FA6468 /* VerticalScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalScene.swift; sourceTree = "<group>"; };
+		88E790FF2397FC0B0056CEAF /* WinScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinScene.swift; sourceTree = "<group>"; };
+		88E79101239869650056CEAF /* WinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinViewController.swift; sourceTree = "<group>"; };
+		88E79103239869D20056CEAF /* Win.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Win.storyboard; sourceTree = "<group>"; };
 		9DB365452396855900D51835 /* RequestHelpPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHelpPopUp.swift; sourceTree = "<group>"; };
 		9DB365462396855900D51835 /* RequestHelpPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestHelpPopUp.xib; sourceTree = "<group>"; };
 		9DB3654923968A1800D51835 /* ResultPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPopUp.swift; sourceTree = "<group>"; };
@@ -94,9 +104,11 @@
 				0796905A2396AB4A002DC8A9 /* AllCards.storyboard */,
 				0796905E2396ABA3002DC8A9 /* Players.storyboard */,
 				9DB365462396855900D51835 /* RequestHelpPopUp.xib */,
+				88E79103239869D20056CEAF /* Win.storyboard */,
 				9DB3654A23968A1800D51835 /* ResultPopUp.xib */,
 				8879A1D0238EC2BF00890BA4 /* VerticalScene.sks */,
 				0796905C2396AB5B002DC8A9 /* WaitingRoom.sks */,
+				88522F3A2397ED8E00CEA9CE /* WinScene.sks */,
 				88A83C40238EBBBD00FA6468 /* ConfeteVert.sks */,
 			);
 			path = View;
@@ -112,6 +124,8 @@
 				88A83C44238EBEE200FA6468 /* VerticalScene.swift */,
 				9DB365452396855900D51835 /* RequestHelpPopUp.swift */,
 				9DB3654923968A1800D51835 /* ResultPopUp.swift */,
+				88E790FF2397FC0B0056CEAF /* WinScene.swift */,
+				88E79101239869650056CEAF /* WinViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -119,6 +133,7 @@
 		A4898003228F49E700852716 = {
 			isa = PBXGroup;
 			children = (
+				88522F3E2397F4E600CEA9CE /* assets.atlas */,
 				A489800E228F49E700852716 /* FestaSurpresa */,
 				A489800D228F49E700852716 /* Products */,
 			);
@@ -206,9 +221,12 @@
 				A489801A228F49E800852716 /* LaunchScreen.storyboard in Resources */,
 				078B633A2396830800DB8472 /* WaitingPlayers.storyboard in Resources */,
 				8879A1D1238EC2BF00890BA4 /* VerticalScene.sks in Resources */,
+				88522F3B2397ED8E00CEA9CE /* WinScene.sks in Resources */,
 				079690592396AB38002DC8A9 /* Card 2.storyboard in Resources */,
 				0796905D2396AB5B002DC8A9 /* WaitingRoom.sks in Resources */,
 				0796905F2396ABA3002DC8A9 /* Players.storyboard in Resources */,
+				88522F3F2397F4E600CEA9CE /* assets.atlas in Resources */,
+				88E79104239869D20056CEAF /* Win.storyboard in Resources */,
 				A4898017228F49E800852716 /* Assets.xcassets in Resources */,
 				9DB365482396855900D51835 /* RequestHelpPopUp.xib in Resources */,
 				A4898015228F49E700852716 /* Main.storyboard in Resources */,
@@ -228,6 +246,7 @@
 				073C841F2391590300B02366 /* Carta.swift in Sources */,
 				88A83C45238EBEE200FA6468 /* VerticalScene.swift in Sources */,
 				073C841D239158F600B02366 /* Model.swift in Sources */,
+				88E791002397FC0B0056CEAF /* WinScene.swift in Sources */,
 				9DB365472396855900D51835 /* RequestHelpPopUp.swift in Sources */,
 				A4898012228F49E700852716 /* ViewController.swift in Sources */,
 				079690552396AB13002DC8A9 /* AllCardsViewController.swift in Sources */,
@@ -236,6 +255,7 @@
 				079690572396AB21002DC8A9 /* CardViewController.swift in Sources */,
 				A4898012228F49E700852716 /* ViewController.swift in Sources */,
 				07A41B1C238FEDF00024AA60 /* Player.swift in Sources */,
+				88E79102239869650056CEAF /* WinViewController.swift in Sources */,
 				A4898010228F49E700852716 /* AppDelegate.swift in Sources */,
 				078B633C2396837600DB8472 /* WaitingPlayersViewController.swift in Sources */,
 			);
@@ -384,7 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZSLUMCNRNL;
+				DEVELOPMENT_TEAM = 8GN6S9CHL7;
 				INFOPLIST_FILE = FestaSurpresa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -402,7 +422,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 725HB8W2V6;
+				DEVELOPMENT_TEAM = 8GN6S9CHL7;
 				INFOPLIST_FILE = FestaSurpresa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
