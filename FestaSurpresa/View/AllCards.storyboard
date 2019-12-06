@@ -39,6 +39,7 @@
                                         </state>
                                         <connections>
                                             <action selector="didPressShowCardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="jVG-7j-mPs"/>
+                                            <action selector="iniciaRodada:" destination="n3a-UX-6ON" eventType="touchUpInside" id="EvW-28-dQs"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -133,7 +134,7 @@
                                                     <constraint firstAttribute="width" constant="90" id="6wT-nM-naz"/>
                                                     <constraint firstAttribute="height" constant="90" id="OuH-A6-o77"/>
                                                 </constraints>
-                                                <state key="normal" title="Distraído" image="desatento"/>
+                                                <state key="normal" title="Distraído" image="distraído"/>
                                                 <connections>
                                                     <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="Fbu-nC-O8R"/>
                                                 </connections>
@@ -155,7 +156,7 @@
                                                     <constraint firstAttribute="height" constant="90" id="NXM-VB-VOW"/>
                                                     <constraint firstAttribute="width" constant="90" id="e13-7E-7Tv"/>
                                                 </constraints>
-                                                <state key="normal" title="Palhaço" image="palhaco copy 3"/>
+                                                <state key="normal" title="Palhaço" image="emojione-monotone:joker"/>
                                                 <connections>
                                                     <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="UL0-xp-pkN"/>
                                                 </connections>
@@ -285,11 +286,11 @@
     <resources>
         <image name="amigo" width="100" height="100"/>
         <image name="bebado" width="100" height="100"/>
-        <image name="desatento" width="100" height="100"/>
+        <image name="distraído" width="100" height="100"/>
+        <image name="emojione-monotone:joker" width="100" height="100"/>
         <image name="mae" width="100" height="100"/>
         <image name="namorado" width="103" height="103"/>
         <image name="pai" width="100" height="100"/>
-        <image name="palhaco copy 3" width="99" height="99"/>
         <image name="penetra" width="100" height="100"/>
     </resources>
 </document>
