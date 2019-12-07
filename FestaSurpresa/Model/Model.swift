@@ -32,7 +32,7 @@ class Model {
 
         Carta(nome: "Bêbado", descricao: "Você nem sabe o que está acontecendo, mas o importante é que estamos numa festa. Certo?", doBem: false, poder: "Você está tão bêbado que mal consegue andar. Quanto mais ter um poder.", icone: UIImage(named:"bebado")),
 
-        Carta(nome: "Palhaço", descricao: "Você foi contratado para animar a festa, mas quem disse que é isso que você vai fazer? Cada um por si.", doBem: false, poder: "Você não tem um poder, mas você não precisa disso", icone: UIImage(named:"palhaço") )
+        Carta(nome: "Palhaço", descricao: "Você foi contratado para animar a festa, mas quem disse que é isso que você vai fazer? Cada um por si.", doBem: false, poder: "Você não tem um poder, mas você não precisa disso", icone: UIImage(named:"emojione-monotone:joker") )
 
     ]
 
@@ -41,7 +41,7 @@ class Model {
         Instrucao(nome: "Etapas", instrucao: "O jogo é composto por etapas, os organizadores possuem o objetivo de fazer que essas etapas sejam realizadas com sucesso, enquanto os desorganizadores irão fazer de tudo para fazer com que as etapas falhem e a festa seja mal sucedida."),
         Instrucao(nome: "Líder", instrucao: "O jogador não sabe  o papel dos demais jogadores, criando uma desconfiança entre eles. A cada rodada é escolhido um líder, esse líder é responsável por escolher 3 jogadores para realizar a etapa, os jogadores escolhidos votarão secretamente se a etapa falhará ou será um sucesso."),
         Instrucao(nome: "Casos", instrucao:"Caso os organizadores façam 4 pontos, o Penetra poderá ver a identidade do bêbado. Caso os desorganizadores façam 3 pontos, o Distraído poderá trocar de papel com o palhaço. "),
-        Instrucao(nome: "Rodadas", instrucao: "O número de rodadas é a mesma quantidade de jogadores, possibilitando que cada jogadore se torne lider uma vez, assim que as rodadas acabarem, os organizadores devem apontar para quem eles acham que são os desorganizadores, lembrando que se o palhaço for o  mais votado ele ganha o jogo, e os desorganizadores devem apontar para os organizadores, tentando enganar todos e ganhar o jogo"),
+        Instrucao(nome: "Rodadas", instrucao: "O número de rodadas é a mesma quantidade de jogadores, possibilitando que cada jogador se torne lider uma vez, assim que as rodadas acabarem, os organizadores devem apontar para quem eles acham que são os desorganizadores, lembrando que se o palhaço for o  mais votado ele ganha o jogo, e os desorganizadores devem apontar para os organizadores, tentando enganar todos e ganhar o jogo"),
         Instrucao(nome: "Final", instrucao: "Os organizadores ganham se descobrirem quem são os desorganizadores. Os desorganizadores ganham se enganarem todos para que votem nos organizadores. O palhaço ganha a maioria dos votos sejam nele.")
     ]
     
