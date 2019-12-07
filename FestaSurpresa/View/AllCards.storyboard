@@ -24,8 +24,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aguarde o líder..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPY-ns-uKG">
-                                        <rect key="frame" x="52" y="70" width="310.5" height="67"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <rect key="frame" x="93" y="70" width="228" height="67"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -41,14 +41,26 @@
                                             <action selector="iniciaRodada:" destination="n3a-UX-6ON" eventType="touchUpInside" id="EvW-28-dQs"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meX-pV-x0U">
+                                        <rect key="frame" x="366" y="83" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="HMN-uw-wgk"/>
+                                            <constraint firstAttribute="width" constant="40" id="aZr-Vg-IOe"/>
+                                        </constraints>
+                                        <state key="normal" image="instrucao"/>
+                                        <connections>
+                                            <action selector="regras:" destination="n3a-UX-6ON" eventType="touchUpInside" id="a7i-Nb-rqK"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="TPY-ns-uKG" firstAttribute="height" secondItem="GGY-Kc-4BG" secondAttribute="height" multiplier="0.3" id="AUi-93-PQu"/>
-                                    <constraint firstItem="TPY-ns-uKG" firstAttribute="width" secondItem="GGY-Kc-4BG" secondAttribute="width" multiplier="0.75" id="ElS-lz-Ptn"/>
+                                    <constraint firstItem="TPY-ns-uKG" firstAttribute="width" secondItem="GGY-Kc-4BG" secondAttribute="width" multiplier="0.55" id="ElS-lz-Ptn"/>
                                     <constraint firstItem="TPY-ns-uKG" firstAttribute="top" secondItem="GGY-Kc-4BG" secondAttribute="top" constant="70" id="MCX-ga-aLx"/>
                                     <constraint firstItem="TPY-ns-uKG" firstAttribute="centerX" secondItem="GGY-Kc-4BG" secondAttribute="centerX" id="ZqW-Lf-jpb"/>
                                     <constraint firstItem="miF-7A-PxI" firstAttribute="centerX" secondItem="GGY-Kc-4BG" secondAttribute="centerX" id="fqW-cH-lsi"/>
+                                    <constraint firstAttribute="trailing" secondItem="meX-pV-x0U" secondAttribute="trailing" constant="8" id="srw-7H-ZYQ"/>
                                     <constraint firstItem="miF-7A-PxI" firstAttribute="top" secondItem="TPY-ns-uKG" secondAttribute="bottom" constant="15" id="yAt-3V-nFK"/>
                                 </constraints>
                             </view>
@@ -226,6 +238,7 @@
                             <constraint firstItem="ztw-fQ-vwS" firstAttribute="top" secondItem="GGY-Kc-4BG" secondAttribute="bottom" id="abx-Vl-ASP"/>
                             <constraint firstItem="GGY-Kc-4BG" firstAttribute="height" secondItem="GEn-nw-myF" secondAttribute="height" multiplier="0.25" id="bVe-R1-naH"/>
                             <constraint firstItem="ztw-fQ-vwS" firstAttribute="trailing" secondItem="NVr-pQ-bVx" secondAttribute="trailing" id="dFl-lf-AuJ"/>
+                            <constraint firstItem="NVr-pQ-bVx" firstAttribute="top" secondItem="meX-pV-x0U" secondAttribute="top" constant="5" id="f9Z-xd-8T2"/>
                             <constraint firstItem="5rr-ua-ffd" firstAttribute="centerY" secondItem="GEn-nw-myF" secondAttribute="centerY" id="hnh-lq-EDr"/>
                             <constraint firstItem="GGY-Kc-4BG" firstAttribute="leading" secondItem="NVr-pQ-bVx" secondAttribute="leading" id="r0d-xu-Ssx"/>
                             <constraint firstItem="rK9-HQ-27S" firstAttribute="centerX" secondItem="NVr-pQ-bVx" secondAttribute="centerX" id="v0q-Fm-2CY"/>
@@ -288,6 +301,7 @@
         <image name="bebado" width="100" height="100"/>
         <image name="distraído" width="100" height="100"/>
         <image name="emojione-monotone:joker" width="100" height="100"/>
+        <image name="instrucao" width="60" height="60"/>
         <image name="mae" width="100" height="100"/>
         <image name="namorado" width="103" height="103"/>
         <image name="pai" width="100" height="100"/>
