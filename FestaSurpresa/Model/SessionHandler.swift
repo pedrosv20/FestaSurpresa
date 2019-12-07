@@ -107,6 +107,7 @@ class SessionHandler: NSObject, MCSessionDelegate {
             
             if message == "comeca rodada" {
                 //load xib com o rolezao
+//                fatalError()
                 NotificationCenter.default.post(Notification(name: Notification.Name("comecando rodada")))
                 
                 
