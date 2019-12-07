@@ -37,12 +37,12 @@ class Model {
     ]
 
     var instrucao = [
-        Instrucao(nome: "Jogadores", instrucao: "O jogo poderá ser jogado entre 6 e 8 jogadores, o jogador poderá ser um organizador (simbolo rosa) ou um desorganizador (simbolo roxo) ou o palhaço, que possui o objetivo de atrapalhar os demais jogadores. "),
-        Instrucao(nome: "Etapas", instrucao: "O jogo é composto por etapas, os organizadores possuem o objetivo de fazer que essas etapas sejam realizadas com sucesso, enquanto os desorganizadores irão fazer de tudo para fazer com que as etapas falhem e a festa seja mal sucedida."),
-        Instrucao(nome: "Líder", instrucao: "O jogador não sabe  o papel dos demais jogadores, criando uma desconfiança entre eles. A cada rodada é escolhido um líder, esse líder é responsável por escolher 3 jogadores para realizar a etapa, os jogadores escolhidos votarão secretamente se a etapa falhará ou será um sucesso."),
-        Instrucao(nome: "Casos", instrucao:"Caso os organizadores façam 4 pontos, o Penetra poderá ver a identidade do bêbado. Caso os desorganizadores façam 3 pontos, o Distraído poderá trocar de papel com o palhaço. "),
-        Instrucao(nome: "Rodadas", instrucao: "O número de rodadas é a mesma quantidade de jogadores, possibilitando que cada jogador se torne lider uma vez, assim que as rodadas acabarem, os organizadores devem apontar para quem eles acham que são os desorganizadores, lembrando que se o palhaço for o  mais votado ele ganha o jogo, e os desorganizadores devem apontar para os organizadores, tentando enganar todos e ganhar o jogo"),
-        Instrucao(nome: "Final", instrucao: "Os organizadores ganham se descobrirem quem são os desorganizadores. Os desorganizadores ganham se enganarem todos para que votem nos organizadores. O palhaço ganha a maioria dos votos sejam nele.")
+        Instrucao(nome: "Jogadores", instrucao: "O número de jogadores é entre 6 e 8. Há duas equipes: os Organizadores (simbolo vermelho) e os Desorganizadores (simbolo roxo). Os jogadores não sabem o papel dos demais, criando uma desconfiança entre eles."),
+        Instrucao(nome: "Rodadas", instrucao: "A cada rodada, uma etapa da festa será organizada. 3 jogadores são escolhidos para auxiliar. Estes jogadores podem ajudar ou atarapalhar a rodada. Se houverem 3 votos de ajuda, a rodada terá sucesso e os Organizadores fazem 1 ponto. Caso contrário, o ponto vai para os Desorganizadores."),
+        Instrucao(nome: "Líder", instrucao: "Cada rodada possui líder, que é responsável por selecionar 3 jogadores para participar da rodada, votando secretamente se a etapa falhará ou será um sucesso."),
+        Instrucao(nome: "Bêbado", instrucao:"O bebado nunca consegue escolher seu voto. Assim, quando participa da rodada, seu voto é aleatório."),
+        Instrucao(nome: "Rodadas", instrucao: "Serão 7 rodadas ao todo para tentar preparar a festa."),
+        Instrucao(nome: "Final", instrucao: "Se 4 rodadas falharem, os Desorganizadores ganham. Se 4 rodadas forem bem sucedidas, os Organizadores ganham.")
     ]
     
     var tarefas = [

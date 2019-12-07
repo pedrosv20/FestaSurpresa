@@ -3,9 +3,7 @@ import SpriteKit
 
 
 class RuleScreenController: UIViewController, UITableViewDelegate,UITableViewDataSource{
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        self.indexCarregado = indexPath.item
-    }
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if escolhido == 1{
@@ -17,20 +15,13 @@ class RuleScreenController: UIViewController, UITableViewDelegate,UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("Index Carregado \(indexPath.item)\n Conteudo = \(Model.shared.cartas[indexPath.item].nome)")
         if escolhido == 1{
-            if ((indexCarregado % 2) == 0 && !primeiro){
+            if ((indexPath.row % 2) == 0){
                 print("esquerda \n")
                 celula = tableView.dequeueReusableCell(withIdentifier: "Celula", for: indexPath) as! Celula
-//                celula.descPoder.isHidden = false
-//                celula.img.isHidden = false
-//                celula.nomeCarta.leadingAnchor.constraint(equalTo:celula.img.trailingAnchor,constant: 10).isActive = true
             }
             else {
                 print("direita \n")
                 celula = tableView.dequeueReusableCell(withIdentifier: "CelulaTipoDois", for: indexPath) as! Celula
-//                celula.descPoder.isHidden = false
-//                celula.img.isHidden = false
-//                celula.nomeCarta.trailingAnchor.constraint(equalTo:celula.img.leadingAnchor,constant: -10).isActive = true
-                
             }
             celula.descPoder.isHidden = false
             celula.img.isHidden = false
@@ -40,19 +31,13 @@ class RuleScreenController: UIViewController, UITableViewDelegate,UITableViewDat
             celula.img.image = Model.shared.cartas[indexPath.item].icone
         }
         else{
-            if ((indexCarregado % 2) == 0 && !primeiro) {
+            if ((indexPath.row % 2) == 0) {
                 print("esquerda \n")
                 celula = tableView.dequeueReusableCell(withIdentifier: "Celula", for: indexPath) as! Celula
-//                celula.descPoder.isHidden = true
-//                celula.img.isHidden = true
-//                celula.nomeCarta.leadingAnchor.constraint(equalTo:celula.descCarta.leadingAnchor).isActive = true
            }
            else{
                 print("direita \n")
                celula = tableView.dequeueReusableCell(withIdentifier: "CelulaTipoDois", for: indexPath) as! Celula
-//                celula.descPoder.isHidden = true
-//                celula.img.isHidden = true
-//                celula.nomeCarta.trailingAnchor.constraint(equalTo:celula.descCarta.trailingAnchor).isActive = true
            }
             celula.descPoder.isHidden = true
             celula.img.isHidden = true
@@ -80,7 +65,6 @@ class RuleScreenController: UIViewController, UITableViewDelegate,UITableViewDat
             self.present(controller, animated: false, completion: nil)
         }
     }
-    var indexCarregado = 0
     @IBAction func actBtnInstrucao(_ sender: Any) {
         primeiro = true
         self.escolhido = 2
@@ -94,8 +78,8 @@ class RuleScreenController: UIViewController, UITableViewDelegate,UITableViewDat
     }
     @IBAction func actBtnPersonagem(_ sender: Any) {
         primeiro = true
-        self.tableView.reloadData()
         self.escolhido = 1
+        self.tableView.reloadData()
         Instrucao.backgroundColor = .clear
         Instrucao.setTitleColor(.black, for: .normal)
         btnPersonagem.backgroundColor = .black
