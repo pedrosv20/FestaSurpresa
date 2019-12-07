@@ -33,6 +33,16 @@ class SessionHandler: NSObject, MCSessionDelegate {
     
     var playersRodada: [MCPeerID] = []
     
+    var pessoasNaMissao = 0
+    
+    var rodadasArray: [Rodada] = [Rodada(numero: 1, sucesso: 0, ajuda: 0, falha: 0),
+                                   Rodada(numero: 2, sucesso: 0, ajuda: 0, falha: 0),
+                                   Rodada(numero: 3, sucesso: 0, ajuda: 0, falha: 0),
+                                   Rodada(numero: 4, sucesso: 0, ajuda: 0, falha: 0),
+                                   Rodada(numero: 5, sucesso: 0, ajuda: 0, falha: 0),
+                                   Rodada(numero: 6, sucesso: 0, ajuda: 0, falha: 0),
+                                   Rodada(numero: 7, sucesso: 0, ajuda: 0, falha: 0)]
+    
     private override init() {
         
     }
@@ -90,6 +100,11 @@ class SessionHandler: NSObject, MCSessionDelegate {
                     
                 }
             }
+            if self.host {
+                if message == "envia inico jogo host" {
+                    NotificationCenter.default.post(Notification(name: Notification.Name("Inicia Jogo")))
+                }
+            }
             
             if self.host {
                 for i in self.mcSession!.connectedPeers {
@@ -102,6 +117,28 @@ class SessionHandler: NSObject, MCSessionDelegate {
                             
                         }
                     }
+                }
+                
+                if message == "ajudou missao" {
+                    self.pessoasNaMissao += 1
+                    SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].ajuda += 1
+                    
+                    if SessionHandler.shared.pessoasNaMissao == 3 {
+                        NotificationCenter.default.post(Notification(name: Notification.Name("fim  rodada")))
+                    }
+                    //verificar ajudou e falhou da rodada atual e verifica se ja chegou em quatro
+                    
+                    
+                }
+                if message  == "falhou missao" {
+                    self.pessoasNaMissao += 1
+                    SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].falha += 1
+                    
+                    if SessionHandler.shared.pessoasNaMissao == 3 {
+                        //notificacao fim missao
+                        NotificationCenter.default.post(Notification(name: Notification.Name("fim  rodada")))
+                    }
+                    
                 }
             }
             

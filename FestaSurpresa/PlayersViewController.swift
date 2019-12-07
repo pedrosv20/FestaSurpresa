@@ -53,27 +53,38 @@ class PlayersViewController: UIViewController {
     @IBAction func feitoButton(_ sender: Any) {
         if selectedPlayersArray.count == 3 {
             //envia mensagem pro host com os 3 nomes
-            if SessionHandler.shared.host {
-                if SessionHandler.shared.lider {
-                    self.dismiss(animated: false, completion: nil)
+//            if SessionHandler.shared.host {
+            if SessionHandler.shared.lider {
+                self.dismiss(animated: false, completion: nil)
+                if selectedPlayersArray.contains(SessionHandler.shared.nome) {
                     NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "comecando rodada")))
-                    for i in 0 ..< selectedPlayersArray.count {
-                        for j in SessionHandler.shared.mcSession!.connectedPeers {
-                            if selectedPlayersArray[i] == j.displayName {
-                                SessionHandler.shared.sendMessage(messageToSend: "comeca rodada", convidado: j)
-                            }
+                }
+                for i in 0 ..< selectedPlayersArray.count {
+                    for j in SessionHandler.shared.mcSession!.connectedPeers {
+                        if selectedPlayersArray[i] == j.displayName {
+                            SessionHandler.shared.sendMessage(messageToSend: "comeca rodada", convidado: j)
                         }
-                        
                     }
                     
-                    return
                 }
-            } else {
-                for i in 0 ..< selectedPlayersArray.count {
-                    SessionHandler.shared.sendMessage(messageToSend: "\(selectedPlayersArray[i])", convidado: (SessionHandler.shared.mcSession?.connectedPeers.first)!)
-                }
+                
+                return
             }
-            self.dismiss(animated: false, completion: nil)
+//            }
+//            else {
+//
+//                for i in 0 ..< selectedPlayersArray.count {
+//                    for j in SessionHandler.shared.mcSession!.connectedPeers {
+//                        if selectedPlayersArray[i] == j.displayName {
+//                            SessionHandler.shared.sendMessage(messageToSend: "comeca rodada", convidado: j)
+//                        }
+//                    }
+//
+//                }
+//                self.dismiss(animated: false, completion: nil)
+//
+//            }
+           
         }
         
     }

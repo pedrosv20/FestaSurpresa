@@ -25,6 +25,9 @@
                                         <state key="normal" title="Ajudar">
                                             <color key="titleColor" red="0.39215686274509803" green="0.84313725490196079" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="ajudar:" destination="pFC-jo-ncC" eventType="touchUpInside" id="f67-sA-rG6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaL-bi-8HU">
                                         <rect key="frame" x="208" y="156" width="131" height="30"/>
@@ -32,6 +35,9 @@
                                         <state key="normal" title="Atrapalhar">
                                             <color key="titleColor" red="0.83137254901960778" green="0.36862745098039218" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="atrapalhar:" destination="pFC-jo-ncC" eventType="touchUpInside" id="TgL-z5-Xo9"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRc-Ha-vdg">
                                         <rect key="frame" x="37.5" y="40" width="299" height="61"/>

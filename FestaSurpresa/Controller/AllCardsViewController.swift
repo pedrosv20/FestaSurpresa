@@ -46,9 +46,9 @@ class AllCardsViewController: UIViewController {
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Inicia Jogo"), object: nil, queue: nil) { (Notification) in
             
             if SessionHandler.shared.host {
-                print("era pra ter começado")
-                print(Model.shared.players[SessionHandler.shared.rodada].peerID)
                 if SessionHandler.shared.rodada == 0 {
+                
+                
                     SessionHandler.shared.lider = true
                     DispatchQueue.main.async {
                         NotificationCenter.default.post(name: NSNotification.Name("inicia lider"), object: nil)
@@ -56,9 +56,11 @@ class AllCardsViewController: UIViewController {
                     return
                     
                 }
-                SessionHandler.shared.sendMessage(messageToSend: "lider", convidado: Model.shared.players[SessionHandler.shared.rodada].peerID)
+               
                 // decide lider e enviar mensagem pra aparecer botao
+                SessionHandler.shared.sendMessage(messageToSend: "lider", convidado: Model.shared.players[SessionHandler.shared.rodada].peerID)
             }
+             
         }
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "inicia lider"), object: nil, queue: nil) { (Notification) in
@@ -79,8 +81,24 @@ class AllCardsViewController: UIViewController {
             
         }
         
+        //Notification observer fim missao (selecionar novo lider, muda SessionHandler.shared.rodada e envia notificacao Inicia jogo)
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "fim  rodada"), object: nil, queue: nil) { (Notification) in
+            DispatchQueue.main.async {
+                SessionHandler.shared.rodada += 1
+                SessionHandler.shared.lider = false
+                SessionHandler.shared.pessoasNaMissao = 0
+                self.iniciarRodadaButton.isHidden = true
+                self.iniciarRodadaButton.isEnabled = false
+                if SessionHandler.shared.host {
+                    NotificationCenter.default.post(name: NSNotification.Name("Inicia Jogo"), object: nil)
+                } else {
+                    SessionHandler.shared.sendMessage(messageToSend: "envia inico jogo host", convidado: (SessionHandler.shared.mcSession?.connectedPeers.first!)!)
+                }
+            }
             
         }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         SessionHandler.shared.controller = self
         Model.shared.players.map{print($0.nome)}
@@ -98,11 +116,13 @@ class AllCardsViewController: UIViewController {
     @IBAction func touchDownButton(_ sender: Any) {
         if !showClicked {
             showClicked = true
+            if SessionHandler.shared.host{
             DispatchQueue.main.async {
                 print(SessionHandler.shared.host, "vai comecar o jogo")
                 NotificationCenter.default.post(Notification(name: Notification.Name("Inicia Jogo")))
-            }
+                }
             
+            }
         }
         //anima negocio
         for i in buttons {

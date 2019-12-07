@@ -15,6 +15,7 @@
 		07229F9F239BFB8D00F8E251 /* RequestHelpPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07229F9E239BFB8D00F8E251 /* RequestHelpPopUp.storyboard */; };
 		073C841B23914C8D00B02366 /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C841A23914C8D00B02366 /* SessionHandler.swift */; };
 		073C841F2391590300B02366 /* Carta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C841E2391590300B02366 /* Carta.swift */; };
+		07455DC9239C28C700BAA49A /* Rodada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07455DC8239C28C700BAA49A /* Rodada.swift */; };
 		0781C31D239971CD00D0C9E0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C841C239158F500B02366 /* Model.swift */; };
 		0781C31E239971DB00D0C9E0 /* Instrucao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C2BCED23992B6200D13927 /* Instrucao.swift */; };
 		0781C320239971F100D0C9E0 /* Tarefa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781C31F239971F100D0C9E0 /* Tarefa.swift */; };
@@ -59,6 +60,7 @@
 		073C841E2391590300B02366 /* Carta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carta.swift; sourceTree = "<group>"; };
 		073C842423915E3D00B02366 /* Card 2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Card 2.storyboard"; sourceTree = "<group>"; };
 		073C842823915ED700B02366 /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		07455DC8239C28C700BAA49A /* Rodada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rodada.swift; sourceTree = "<group>"; };
 		0781C31F239971F100D0C9E0 /* Tarefa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tarefa.swift; sourceTree = "<group>"; };
 		0781C323239A770B00D0C9E0 /* Players.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Players.storyboard; path = FestaSurpresa/Players.storyboard; sourceTree = SOURCE_ROOT; };
 		0781C327239A77E100D0C9E0 /* PlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayersViewController.swift; path = FestaSurpresa/PlayersViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -111,6 +113,7 @@
 				073C841E2391590300B02366 /* Carta.swift */,
 				073C841C239158F500B02366 /* Model.swift */,
 				0781C31F239971F100D0C9E0 /* Tarefa.swift */,
+				07455DC8239C28C700BAA49A /* Rodada.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			files = (
 				0781C31D239971CD00D0C9E0 /* Model.swift in Sources */,
 				88E79142239A84C80056CEAF /* WinScene.swift in Sources */,
+				07455DC9239C28C700BAA49A /* Rodada.swift in Sources */,
 				073C841F2391590300B02366 /* Carta.swift in Sources */,
 				0781C31E239971DB00D0C9E0 /* Instrucao.swift in Sources */,
 				07B0DF92239953EA00BF267B /* WaitingPlayersViewController.swift in Sources */,
