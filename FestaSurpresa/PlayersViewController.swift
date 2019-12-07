@@ -64,6 +64,7 @@ class PlayersViewController: UIViewController {
                         }
                         
                     }
+                    return
                 }
             } else {
                 for i in 0 ..< selectedPlayersArray.count {

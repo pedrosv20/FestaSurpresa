@@ -218,6 +218,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     }
     
     func joinSession(action: UIAlertAction) {
+        SessionHandler.shared.host = false
         SessionHandler.shared.peerID = MCPeerID(displayName: SessionHandler.shared.nome)
         SessionHandler.shared.mcSession = MCSession(peer: SessionHandler.shared.peerID, securityIdentity: nil, encryptionPreference: .required)
         SessionHandler.shared.mcSession!.delegate = self

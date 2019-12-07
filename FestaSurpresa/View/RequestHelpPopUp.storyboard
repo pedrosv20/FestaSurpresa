@@ -8,75 +8,47 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Request Help Pop Up-->
         <scene sceneID="iGn-HA-Cem">
             <objects>
-                <viewController id="pFC-jo-ncC" sceneMemberID="viewController">
+                <viewController id="pFC-jo-ncC" customClass="RequestHelpPopUp" customModule="FestaSurpresa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xhl-fo-gwr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="hyZ-8Q-WMX" customClass="RequestHelpPopUp" customModule="FestaSurpresa" customModuleProvider="target">
-                                <rect key="frame" x="7" y="341" width="400" height="214"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WYb-F9-z7c">
+                                <rect key="frame" x="20" y="229" width="374" height="233"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8k-DN-TaU">
-                                        <rect key="frame" x="15" y="5" width="360" height="75.5"/>
-                                        <string key="text">Os escolhidos para engradar os barris de chop foram 
-Matheus, Pedrinho e você.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vsa-rg-cMi">
+                                        <rect key="frame" x="44" y="156" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaL-bi-8HU">
+                                        <rect key="frame" x="294" y="156" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRc-Ha-vdg">
+                                        <rect key="frame" x="93" y="40" width="189" height="82"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">telinha q a mafe vai fazer cobstraibts!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksI-dh-gGy">
-                                        <rect key="frame" x="20" y="135.5" width="140" height="28"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <inset key="contentEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
-                                        <state key="normal" title="Ajudar">
-                                            <color key="titleColor" red="0.66666666669999997" green="0.98823529409999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <integer key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2v-gK-2S8">
-                                        <rect key="frame" x="240" y="135.5" width="140" height="28"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <inset key="contentEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
-                                        <state key="normal" title="Atrapalhar">
-                                            <color key="titleColor" red="0.83137254900000002" green="0.36862745099999999" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <integer key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.92549019610000005" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="S8k-DN-TaU" firstAttribute="leading" secondItem="gX9-f3-FtH" secondAttribute="leading" constant="15" id="A6S-K5-cVt"/>
-                                    <constraint firstItem="f2v-gK-2S8" firstAttribute="width" secondItem="hyZ-8Q-WMX" secondAttribute="width" multiplier="0.35" id="Dbn-cO-fjo"/>
-                                    <constraint firstItem="ksI-dh-gGy" firstAttribute="width" secondItem="hyZ-8Q-WMX" secondAttribute="width" multiplier="0.35" id="MTY-dy-l1z"/>
-                                    <constraint firstItem="S8k-DN-TaU" firstAttribute="width" secondItem="hyZ-8Q-WMX" secondAttribute="width" multiplier="0.9" id="Okj-V5-xbc"/>
-                                    <constraint firstItem="ksI-dh-gGy" firstAttribute="leading" secondItem="gX9-f3-FtH" secondAttribute="leading" constant="20" id="QH7-g2-SR7"/>
-                                    <constraint firstItem="gX9-f3-FtH" firstAttribute="trailing" secondItem="f2v-gK-2S8" secondAttribute="trailing" constant="20" id="hVU-aE-Hvb"/>
-                                    <constraint firstItem="S8k-DN-TaU" firstAttribute="top" secondItem="gX9-f3-FtH" secondAttribute="top" constant="5" id="j4e-UI-zst"/>
-                                    <constraint firstItem="ksI-dh-gGy" firstAttribute="top" secondItem="S8k-DN-TaU" secondAttribute="bottom" constant="55" id="nhX-qf-2sl"/>
-                                    <constraint firstItem="f2v-gK-2S8" firstAttribute="top" secondItem="S8k-DN-TaU" secondAttribute="bottom" constant="55" id="yUt-Ib-Dxl"/>
-                                </constraints>
-                                <viewLayoutGuide key="safeArea" id="gX9-f3-FtH"/>
-                                <connections>
-                                    <outlet property="atrapalharButton" destination="f2v-gK-2S8" id="k3l-Ba-9Vi"/>
-                                    <outlet property="helpButton" destination="ksI-dh-gGy" id="gCY-qv-OmD"/>
-                                </connections>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="y3f-Dn-66T"/>
                     </view>
+                    <connections>
+                        <outlet property="atrapalharButton" destination="DaL-bi-8HU" id="vfW-2P-SIh"/>
+                        <outlet property="helpButton" destination="Vsa-rg-cMi" id="6I2-e9-waQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kiA-nX-0Bl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
