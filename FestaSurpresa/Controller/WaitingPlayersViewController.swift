@@ -7,24 +7,40 @@
 //
 
 import UIKit
+import SpriteKit
 
 class WaitingPlayersViewController: UIViewController {
 
     @IBOutlet weak var nomePlayersd: UITextView!
+    @IBOutlet weak var skView: SKView!
+    @IBOutlet weak var skViewHorizontal: SKView!
+    @IBOutlet weak var roundStoryLabel: UILabel!
     
     @IBOutlet weak var numeroPlayers: UILabel!
     @IBOutlet weak var comecar: UIButton!
     let minPlayers = 2
     let maxPlayer = 8
-    
+//    var wait = WaitingRoom()
+    var wait:  WaitingRoom?
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.endEditing(true)
         
-        SessionHandler.shared.controller = self
+        if let scene = SKScene(fileNamed: "WaitingRoom"){
+            scene.scaleMode = .aspectFill
+            wait = scene as! WaitingRoom
+            skView.presentScene(scene)
+        }
         
+        if let scene = SKScene(fileNamed: "HorizontalScene"){
+            scene.scaleMode = .aspectFill
+            skViewHorizontal.presentScene(scene)
+        }
+        
+        SessionHandler.shared.controller = self
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "joinPlayer"), object: nil, queue: nil) { (Notification) in
             print("funcionou")
             DispatchQueue.main.async {
@@ -60,7 +76,18 @@ class WaitingPlayersViewController: UIViewController {
                    
                    self.attNumberPlayers()
                }
+        wait!.createCircle(name: SessionHandler.shared.nome)
+        if (SessionHandler.shared.mcSession?.connectedPeers.count)! > 0 {
+            for cont in SessionHandler.shared.mcSession!.connectedPeers {
+                wait!.createCircle(name: cont.displayName)
+            }
+        }
         
+        roundStoryLabel.layer.borderColor = UIColor.black.cgColor
+        roundStoryLabel.layer.borderWidth = 2.0
+        roundStoryLabel.layer.cornerRadius = 20.0
+
+         
         // Do any additional setup after loading the view.
     }
     
@@ -88,7 +115,10 @@ class WaitingPlayersViewController: UIViewController {
         
         nomePlayersd.text += SessionHandler.shared.nome + "\n"
         SessionHandler.shared.mcSession?.connectedPeers.map{nomePlayersd.text += "\($0.displayName) \n"}
-        
+        var cont = SessionHandler.shared.mcSession?.connectedPeers.count
+//        print(SessionHandler.shared.mcSession?.connectedPeers[cont! - 1].displayName)
+        print("FFOOOOOOI")
+        wait?.createCircle(name: (SessionHandler.shared.mcSession?.connectedPeers[cont! - 1].displayName)!)
         // essas duas linhas de cima da pra criar um array
         self.numeroPlayers.text = String((SessionHandler.shared.mcSession?.connectedPeers.count)! + 1)
         nomePlayersd.text += SessionHandler.shared.nome
