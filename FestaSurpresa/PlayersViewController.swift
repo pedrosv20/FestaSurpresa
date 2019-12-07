@@ -55,6 +55,7 @@ class PlayersViewController: UIViewController {
             //envia mensagem pro host com os 3 nomes
             if SessionHandler.shared.host {
                 if SessionHandler.shared.lider {
+                    self.dismiss(animated: false, completion: nil)
                     NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "comecando rodada")))
                     for i in 0 ..< selectedPlayersArray.count {
                         for j in SessionHandler.shared.mcSession!.connectedPeers {
@@ -64,6 +65,7 @@ class PlayersViewController: UIViewController {
                         }
                         
                     }
+                    
                     return
                 }
             } else {
