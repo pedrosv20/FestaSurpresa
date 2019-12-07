@@ -63,6 +63,10 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        self.view.endEditing(true)
+    }
+    
     @objc func textFieldDidChange(_ textField: UITextField) {
         if nome.text != "" {
             startSessionButton.isEnabled  = true

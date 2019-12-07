@@ -21,6 +21,8 @@ class WaitingPlayersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.endEditing(true)
+        
         SessionHandler.shared.controller = self
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "joinPlayer"), object: nil, queue: nil) { (Notification) in

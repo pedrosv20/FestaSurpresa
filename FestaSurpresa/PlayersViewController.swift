@@ -16,6 +16,7 @@ class PlayersViewController: UIViewController {
     
     @IBOutlet weak var roundTitleLabel: UILabel!
     
+    var selectedPlayersArray = [String] ()
     var selectedPlayers = 0
     
     override func viewDidLoad() {
@@ -53,10 +54,20 @@ class PlayersViewController: UIViewController {
     
     @IBAction func didPressPlayerButton(_ sender: UIButton) {
         if selectedPlayers < 3 {
-            //se nao esta cliado
-            sender.setTitleColor(UIColorFromRGB(rgbValue: 0xFFE677), for: .normal)
-            sender.setBackgroundImage(UIImage(named: "ovalBlack"), for: .normal)
-            selectedPlayers += 1
+            
+            let contains = selectedPlayersArray.contains(where: { $0 == sender.titleLabel!.text! }) //check if array contains button text, aka if button was already clicked
+            if !contains {
+                sender.setTitleColor(UIColorFromRGB(rgbValue: 0xFFE677), for: .normal)
+                sender.setBackgroundImage(UIImage(named: "ovalBlack"), for: .normal)
+                selectedPlayersArray.append(sender.titleLabel!.text!)
+                selectedPlayers += 1
+            }
+            else {
+                sender.setTitleColor(UIColorFromRGB(rgbValue: 0x000000), for: .normal)
+                sender.setBackgroundImage(UIImage(named: "Oval Copy 10"), for: .normal)
+                selectedPlayersArray.remove(at: selectedPlayersArray.firstIndex(of: sender.titleLabel!.text!)!)
+                selectedPlayers -= 1
+            }
             
         }
         
