@@ -95,7 +95,7 @@ class AllCardsViewController: UIViewController {
     
     
     
-    @IBAction func didPressShowCardButton(_ sender: Any) {
+    @IBAction func touchDownButton(_ sender: Any) {
         if !showClicked {
             showClicked = true
             DispatchQueue.main.async {
@@ -108,20 +108,23 @@ class AllCardsViewController: UIViewController {
         for i in buttons {
             
             if i.titleLabel!.text! == SessionHandler.shared.carta!.nome {
-                UIView.animate(withDuration: 1, animations: {
+                UIView.animate(withDuration: 0.2, animations: {
                     i.transform = CGAffineTransform(scaleX: 1.6, y: 1.6)
-                }) { (true) in
-                    UIView.animate(withDuration: 0.5, animations: {
-                        i.transform = .identity
-                    })
-                }
+                })
             }
         }
-    
-        //TODO:  transformar imagens da allcardsviewcontroller em botoes e quando clicar em cada um, instanciar cards controller passando a carta certa.
-        // após isso qunando este botao for clicado, aumentar e deixar do tamanho normao o botao da carta da pessoa
-        
     }
+    @IBAction func touchUpButton(_ sender: Any) {
+        for i in buttons {
+            
+            if i.titleLabel!.text! == SessionHandler.shared.carta!.nome {
+                UIView.animate(withDuration: 0.2, animations: {
+                    i.transform = .identity
+                })
+            }
+        }
+    }
+    
     
     @IBAction func cardButton(_ sender: UIButton) {
         

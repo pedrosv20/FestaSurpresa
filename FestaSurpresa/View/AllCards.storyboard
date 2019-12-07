@@ -38,7 +38,6 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="didPressShowCardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="jVG-7j-mPs"/>
                                             <action selector="iniciaRodada:" destination="n3a-UX-6ON" eventType="touchUpInside" id="EvW-28-dQs"/>
                                         </connections>
                                     </button>
@@ -210,7 +209,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="didPressShowCardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="P6W-3c-LFD"/>
+                                    <action selector="touchDownButton:" destination="n3a-UX-6ON" eventType="touchDown" id="32L-33-Mfd"/>
+                                    <action selector="touchUpButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="H8U-kv-icW"/>
                                 </connections>
                             </button>
                         </subviews>
