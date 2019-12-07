@@ -49,7 +49,7 @@
                                                                     <rect key="frame" x="10" y="5" width="332" height="60"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="melhorAmigo" translatesAutoresizingMaskIntoConstraints="NO" id="jM7-Wi-1y1" userLabel="img">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="66.000000000000028" height="60.000000000000028"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="66" height="60"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="66" id="abZ-EI-tYl"/>
                                                                             </constraints>
@@ -117,7 +117,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="melhorAmigo" translatesAutoresizingMaskIntoConstraints="NO" id="lqs-OB-Fzb" userLabel="img">
-                                                                            <rect key="frame" x="266" y="0.0" width="66.000000000000028" height="60.000000000000028"/>
+                                                                            <rect key="frame" x="266" y="0.0" width="66" height="60"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="66" id="oVO-fd-nnZ"/>
                                                                             </constraints>
