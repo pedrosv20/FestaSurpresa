@@ -21,6 +21,7 @@ class AllCardsViewController: UIViewController {
     var showClicked = false
     var messageSend = false
     var hostSend = false
+    var requestHelpPopUp: RequestHelpPopUp!
     let colors = Colors()
     
     
@@ -67,6 +68,14 @@ class AllCardsViewController: UIViewController {
                 self.iniciarRodadaButton.isEnabled = true
                 print("voce é o lider")
             }
+        }
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "comecando rodada"), object: nil, queue: nil) { (Notification) in
+            
+            let storyboard = UIStoryboard(name: "RequestHelpPopUp", bundle: nil)
+            let controller  = storyboard.instantiateInitialViewController()!
+            controller.modalPresentationStyle = .overFullScreen
+            self.present(controller, animated: false, completion: nil)
+            
         }
         
             

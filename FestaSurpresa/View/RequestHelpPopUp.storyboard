@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pFC-jo-ncC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="iGn-HA-Cem">
+            <objects>
+                <viewController id="pFC-jo-ncC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xhl-fo-gwr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="hyZ-8Q-WMX" customClass="RequestHelpPopUp" customModule="FestaSurpresa" customModuleProvider="target">
+                                <rect key="frame" x="7" y="341" width="400" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8k-DN-TaU">
+                                        <rect key="frame" x="15" y="5" width="360" height="75.5"/>
+                                        <string key="text">Os escolhidos para engradar os barris de chop foram 
+Matheus, Pedrinho e você.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksI-dh-gGy">
+                                        <rect key="frame" x="20" y="135.5" width="140" height="28"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
+                                        <state key="normal" title="Ajudar">
+                                            <color key="titleColor" red="0.66666666669999997" green="0.98823529409999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2v-gK-2S8">
+                                        <rect key="frame" x="240" y="135.5" width="140" height="28"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
+                                        <state key="normal" title="Atrapalhar">
+                                            <color key="titleColor" red="0.83137254900000002" green="0.36862745099999999" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.92549019610000005" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="S8k-DN-TaU" firstAttribute="leading" secondItem="gX9-f3-FtH" secondAttribute="leading" constant="15" id="A6S-K5-cVt"/>
+                                    <constraint firstItem="f2v-gK-2S8" firstAttribute="width" secondItem="hyZ-8Q-WMX" secondAttribute="width" multiplier="0.35" id="Dbn-cO-fjo"/>
+                                    <constraint firstItem="ksI-dh-gGy" firstAttribute="width" secondItem="hyZ-8Q-WMX" secondAttribute="width" multiplier="0.35" id="MTY-dy-l1z"/>
+                                    <constraint firstItem="S8k-DN-TaU" firstAttribute="width" secondItem="hyZ-8Q-WMX" secondAttribute="width" multiplier="0.9" id="Okj-V5-xbc"/>
+                                    <constraint firstItem="ksI-dh-gGy" firstAttribute="leading" secondItem="gX9-f3-FtH" secondAttribute="leading" constant="20" id="QH7-g2-SR7"/>
+                                    <constraint firstItem="gX9-f3-FtH" firstAttribute="trailing" secondItem="f2v-gK-2S8" secondAttribute="trailing" constant="20" id="hVU-aE-Hvb"/>
+                                    <constraint firstItem="S8k-DN-TaU" firstAttribute="top" secondItem="gX9-f3-FtH" secondAttribute="top" constant="5" id="j4e-UI-zst"/>
+                                    <constraint firstItem="ksI-dh-gGy" firstAttribute="top" secondItem="S8k-DN-TaU" secondAttribute="bottom" constant="55" id="nhX-qf-2sl"/>
+                                    <constraint firstItem="f2v-gK-2S8" firstAttribute="top" secondItem="S8k-DN-TaU" secondAttribute="bottom" constant="55" id="yUt-Ib-Dxl"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="gX9-f3-FtH"/>
+                                <connections>
+                                    <outlet property="atrapalharButton" destination="f2v-gK-2S8" id="k3l-Ba-9Vi"/>
+                                    <outlet property="helpButton" destination="ksI-dh-gGy" id="gCY-qv-OmD"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="y3f-Dn-66T"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kiA-nX-0Bl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-149.27536231884059" y="-38.169642857142854"/>
+        </scene>
+    </scenes>
+</document>

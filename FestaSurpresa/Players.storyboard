@@ -233,7 +233,7 @@ barris de chop!</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="feitoButton:" destination="bG3-Ai-Vco" eventType="touchUpInside" id="F28-Ki-rva"/>
+                                    <action selector="feitoButton:" destination="bG3-Ai-Vco" eventType="touchUpInside" id="bdS-we-Lsd"/>
                                 </connections>
                             </button>
                         </subviews>

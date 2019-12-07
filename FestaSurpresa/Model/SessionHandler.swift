@@ -31,6 +31,8 @@ class SessionHandler: NSObject, MCSessionDelegate {
     
     var lider = false
     
+    var playersRodada: [MCPeerID] = []
+    
     private override init() {
         
     }
@@ -88,6 +90,28 @@ class SessionHandler: NSObject, MCSessionDelegate {
                     
                 }
             }
+            
+            if self.host {
+                for i in self.mcSession!.connectedPeers {
+                    if i.displayName == message {
+                        self.playersRodada.append(i)
+                        if self.playersRodada.count == 3 {
+                            for j in self.playersRodada {
+                                self.sendMessage(messageToSend: "comeca rodada", convidado: j)
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            
+            if message == "comeca rodada" {
+                //load xib com o rolezao
+                NotificationCenter.default.post(Notification(name: Notification.Name("comecando rodada")))
+                
+                
+//                fatalError()
+            }
 
             
             if message == "lider" {
@@ -135,6 +159,7 @@ class SessionHandler: NSObject, MCSessionDelegate {
             //            self.chatView.text = self.chatView.text + message + " \n"
         }
     }
+
         
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
         
