@@ -108,6 +108,16 @@ class PlayersViewController: UIViewController {
             }
             
         }
+        else {
+            let contains = selectedPlayersArray.contains(where: { $0 == sender.titleLabel!.text! }) //check if array contains button text, aka if button was already clicked
+            if contains {
+                sender.setTitleColor(UIColorFromRGB(rgbValue: 0x000000), for: .normal)
+                sender.setBackgroundImage(UIImage(named: "Oval Copy 10"), for: .normal)
+                selectedPlayersArray.remove(at: selectedPlayersArray.firstIndex(of: sender.titleLabel!.text!)!)
+                selectedPlayers -= 1
+            }
+            
+        }
         
     }
     
