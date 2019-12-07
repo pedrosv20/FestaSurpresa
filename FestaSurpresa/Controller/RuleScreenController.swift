@@ -20,11 +20,15 @@ class RuleScreenController: UIViewController, UITableViewDelegate,UITableViewDat
             if ((indexCarregado % 2) == 0 && !primeiro){
                 print("esquerda \n")
                 celula = tableView.dequeueReusableCell(withIdentifier: "Celula", for: indexPath) as! Celula
+//                celula.descPoder.isHidden = false
+//                celula.img.isHidden = false
 //                celula.nomeCarta.leadingAnchor.constraint(equalTo:celula.img.trailingAnchor,constant: 10).isActive = true
             }
             else {
                 print("direita \n")
                 celula = tableView.dequeueReusableCell(withIdentifier: "CelulaTipoDois", for: indexPath) as! Celula
+//                celula.descPoder.isHidden = false
+//                celula.img.isHidden = false
 //                celula.nomeCarta.trailingAnchor.constraint(equalTo:celula.img.leadingAnchor,constant: -10).isActive = true
                 
             }
@@ -39,12 +43,15 @@ class RuleScreenController: UIViewController, UITableViewDelegate,UITableViewDat
             if ((indexCarregado % 2) == 0 && !primeiro) {
                 print("esquerda \n")
                 celula = tableView.dequeueReusableCell(withIdentifier: "Celula", for: indexPath) as! Celula
+//                celula.descPoder.isHidden = true
+//                celula.img.isHidden = true
 //                celula.nomeCarta.leadingAnchor.constraint(equalTo:celula.descCarta.leadingAnchor).isActive = true
            }
            else{
                 print("direita \n")
                celula = tableView.dequeueReusableCell(withIdentifier: "CelulaTipoDois", for: indexPath) as! Celula
-   
+//                celula.descPoder.isHidden = true
+//                celula.img.isHidden = true
 //                celula.nomeCarta.trailingAnchor.constraint(equalTo:celula.descCarta.trailingAnchor).isActive = true
            }
             celula.descPoder.isHidden = true
@@ -65,21 +72,13 @@ class RuleScreenController: UIViewController, UITableViewDelegate,UITableViewDat
     @IBOutlet weak var mainView: UIView!
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var sairButton: UIButton!
-    
-    
-    
-    
     @IBAction func sairButton(_ sender: Any) {
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller  = storyboard.instantiateInitialViewController()!
         controller.modalPresentationStyle = .overFullScreen
-        
         DispatchQueue.main.async {
-            
             self.present(controller, animated: false, completion: nil)
         }
-        
     }
     var indexCarregado = 0
     @IBAction func actBtnInstrucao(_ sender: Any) {
@@ -94,7 +93,7 @@ class RuleScreenController: UIViewController, UITableViewDelegate,UITableViewDat
         mainView.layer.borderWidth = 2
     }
     @IBAction func actBtnPersonagem(_ sender: Any) {
-         primeiro = true
+        primeiro = true
         self.tableView.reloadData()
         self.escolhido = 1
         Instrucao.backgroundColor = .clear
@@ -109,12 +108,11 @@ class RuleScreenController: UIViewController, UITableViewDelegate,UITableViewDat
         tableView.dataSource = self
         btnPersonagem.backgroundColor = .black
         btnPersonagem.setTitleColor(.white, for: .normal)
-        btnPersonagem.layer.cornerRadius = 5
+        btnPersonagem.roundCorners(corners: [.topLeft, .bottomLeft], radius: 4.0)
         btnPersonagem.layer.borderWidth = 1
         Instrucao.layer.borderWidth = 1
-        Instrucao.layer.cornerRadius = 5
+        Instrucao.roundCorners(corners: [.topRight, .bottomRight], radius: 4.0)
         contentView.backgroundColor = #colorLiteral(red: 0.9989697337, green: 0.901548326, blue: 0.627599597, alpha: 1)
-//        mainView.layer.borderWidth = 2
         mainView.backgroundColor = .white
         mainView.layer.cornerRadius = 14
         sairButton.layer.cornerRadius = 5
@@ -126,6 +124,12 @@ class Celula:UITableViewCell{
     @IBOutlet weak var nomeCarta: UILabel!
     @IBOutlet weak var descCarta: UILabel!
     @IBOutlet weak var descPoder: UILabel!
-    
 }
-
+extension UIView {
+   func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
+    }
+}
