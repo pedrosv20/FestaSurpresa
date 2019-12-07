@@ -16,38 +16,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WYb-F9-z7c">
-                                <rect key="frame" x="20" y="229" width="374" height="233"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WYb-F9-z7c">
+                                <rect key="frame" x="20" y="318.5" width="374" height="269"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vsa-rg-cMi">
-                                        <rect key="frame" x="44" y="156" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vsa-rg-cMi">
+                                        <rect key="frame" x="35" y="156" width="131" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="Ajudar">
+                                            <color key="titleColor" red="0.39215686274509803" green="0.84313725490196079" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaL-bi-8HU">
-                                        <rect key="frame" x="294" y="156" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaL-bi-8HU">
+                                        <rect key="frame" x="208" y="156" width="131" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="Atrapalhar">
+                                            <color key="titleColor" red="0.83137254901960778" green="0.36862745098039218" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRc-Ha-vdg">
-                                        <rect key="frame" x="93" y="40" width="189" height="82"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">telinha q a mafe vai fazer cobstraibts!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</string>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRc-Ha-vdg">
+                                        <rect key="frame" x="37.5" y="40" width="299" height="61"/>
+                                        <string key="text">Os escolhidos para engradar os barris de chop foram 
+Matheus, Pedrinho e você.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" red="1" green="0.92549019607843142" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="nRc-Ha-vdg" firstAttribute="centerX" secondItem="WYb-F9-z7c" secondAttribute="centerX" id="2a5-Nv-aDs"/>
+                                    <constraint firstItem="Vsa-rg-cMi" firstAttribute="width" secondItem="WYb-F9-z7c" secondAttribute="width" multiplier="0.35" id="5KQ-3F-D6z"/>
+                                    <constraint firstItem="DaL-bi-8HU" firstAttribute="top" secondItem="nRc-Ha-vdg" secondAttribute="bottom" constant="55" id="6VJ-rn-7an"/>
+                                    <constraint firstAttribute="trailing" secondItem="DaL-bi-8HU" secondAttribute="trailing" constant="35" id="8LF-O0-kOW"/>
+                                    <constraint firstItem="Vsa-rg-cMi" firstAttribute="leading" secondItem="WYb-F9-z7c" secondAttribute="leading" constant="35" id="NJp-tW-1xY"/>
+                                    <constraint firstItem="DaL-bi-8HU" firstAttribute="width" secondItem="WYb-F9-z7c" secondAttribute="width" multiplier="0.35" id="Q7E-O6-lEd"/>
+                                    <constraint firstItem="nRc-Ha-vdg" firstAttribute="width" secondItem="WYb-F9-z7c" secondAttribute="width" multiplier="0.8" id="bq8-EM-1Si"/>
+                                    <constraint firstItem="nRc-Ha-vdg" firstAttribute="top" secondItem="WYb-F9-z7c" secondAttribute="top" constant="40" id="cgg-Mw-zT6"/>
+                                    <constraint firstItem="Vsa-rg-cMi" firstAttribute="top" secondItem="nRc-Ha-vdg" secondAttribute="bottom" constant="55" id="vUD-ks-Hv3"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WYb-F9-z7c" firstAttribute="centerX" secondItem="y3f-Dn-66T" secondAttribute="centerX" id="0dK-03-hwX"/>
+                            <constraint firstItem="WYb-F9-z7c" firstAttribute="width" secondItem="Xhl-fo-gwr" secondAttribute="width" multiplier="0.903382" id="Plb-RN-LhZ"/>
+                            <constraint firstItem="WYb-F9-z7c" firstAttribute="centerY" secondItem="y3f-Dn-66T" secondAttribute="centerY" id="Soc-FP-Kqg"/>
+                            <constraint firstItem="WYb-F9-z7c" firstAttribute="height" secondItem="Xhl-fo-gwr" secondAttribute="height" multiplier="0.3" id="nJA-3n-CF4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="y3f-Dn-66T"/>
                     </view>
                     <connections>
                         <outlet property="atrapalharButton" destination="DaL-bi-8HU" id="vfW-2P-SIh"/>
                         <outlet property="helpButton" destination="Vsa-rg-cMi" id="6I2-e9-waQ"/>
+                        <outlet property="popUpView" destination="WYb-F9-z7c" id="9Yg-IE-LOw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kiA-nX-0Bl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
