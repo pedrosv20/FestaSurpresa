@@ -35,7 +35,7 @@ class WinScene: SKScene {
         dark_purple   = childNode(withName: "dark_purple") as? SKEmitterNode
         funnel         = childNode(withName: "funnel") as? SKSpriteNode
         
-        setUp(FunnelName: "Organizer")
+//        setUp(FunnelName: "Organizer")
         
         
         //        light_red?.advanceSimulationTime(60)
@@ -51,7 +51,7 @@ class WinScene: SKScene {
     
     func touchDown(atPoint pos : CGPoint) {
         
-        timer()
+//        timer()
 //        if control == 1 {
 //            light_red.particleBirthRate     = 70.0
 //            light_red.particleBirthRate     = 70.0

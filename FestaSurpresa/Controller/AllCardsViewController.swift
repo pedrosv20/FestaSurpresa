@@ -94,6 +94,7 @@ class AllCardsViewController: UIViewController {
             DispatchQueue.main.async {
                 // notifica host q acabou
                 SessionHandler.shared.sendMessage(messageToSend: "deixou de ser lider", convidado: Model.shared.players[SessionHandler.shared.rodada].peerID)
+                
                 if SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].sucesso == 3 {
                     // tela de vitoria dos cornos
                     let storyboard = UIStoryboard(name: "Win", bundle: nil)
