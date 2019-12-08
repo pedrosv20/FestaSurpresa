@@ -20,7 +20,7 @@ class SessionHandler: NSObject, MCSessionDelegate {
     var carta: Carta?
     var host = false
     var peerChuncho: String!
-    var controller: AllCardsViewController!
+    var controller: UIViewController!
     
     var cardTouched: Carta!
     var sawCard = false

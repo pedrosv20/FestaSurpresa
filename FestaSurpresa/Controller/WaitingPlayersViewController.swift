@@ -29,7 +29,7 @@ class WaitingPlayersViewController: UIViewController {
         super.viewDidLoad()
         self.view.endEditing(true)
          
-
+        SessionHandler.shared.controller = self
         if let scene = SKScene(fileNamed: "WaitingRoom"){
             scene.scaleMode = .aspectFill
             wait = scene as! WaitingRoom
