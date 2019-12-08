@@ -71,6 +71,7 @@ class AllCardsViewController: UIViewController {
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "inicia lider"), object: nil, queue: nil) { (Notification) in
             if SessionHandler.shared.lider {
                 // instancia view lider
+                SessionHandler.shared.lider = true
                 self.iniciarRodadaButton.isHidden = false
                 self.iniciarRodadaButton.isEnabled = true
                 print("voce é o lider")

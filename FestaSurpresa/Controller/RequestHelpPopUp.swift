@@ -54,7 +54,7 @@ class RequestHelpPopUp: UIViewController {
         print("SOU VIADO", SessionHandler.shared.mcSession?.connectedPeers.first!)
         SessionHandler.shared.sendMessage(messageToSend: "ajudou missao", convidado: ((SessionHandler.shared.listaPlayers.first!)))
         
-        dismiss(animated: false, completion: nil)
+//        dismiss(animated: false, completion: nil)
         
     }
     
@@ -75,7 +75,7 @@ class RequestHelpPopUp: UIViewController {
             return
         }
         SessionHandler.shared.sendMessage(messageToSend: "falhou missao", convidado: ((SessionHandler.shared.listaPlayers.first!)))
-        dismiss(animated: false, completion: nil)
+//        dismiss(animated: false, completion: nil)
     }
     
 
