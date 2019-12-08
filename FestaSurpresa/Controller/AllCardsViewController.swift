@@ -285,7 +285,11 @@ class AllCardsViewController: UIViewController {
         let storyboard = UIStoryboard(name: "ResultPopUp", bundle: nil)
         let controller  = storyboard.instantiateInitialViewController()!
         controller.modalPresentationStyle = .overFullScreen
-        self.present(controller, animated: false, completion: {NotificationCenter.default.post(Notification(name: Notification.Name(message)))})
+        DispatchQueue.main.async {
+            self.present(controller, animated: false, completion: {NotificationCenter.default.post(Notification(name: Notification.Name(message)))})
+        }
+        
+        
         NotificationCenter.default.post(Notification(name: Notification.Name("fim  rodada")))
         
     }
