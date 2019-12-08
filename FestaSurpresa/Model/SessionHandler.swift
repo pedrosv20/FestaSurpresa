@@ -20,7 +20,7 @@ class SessionHandler: NSObject, MCSessionDelegate {
     var carta: Carta?
     var host = false
     var peerChuncho: String!
-    var controller: UIViewController!
+    var controller: AllCardsViewController!
     
     var cardTouched: Carta!
     var sawCard = false
@@ -110,6 +110,7 @@ class SessionHandler: NSObject, MCSessionDelegate {
                 let controller  = storyboard.instantiateInitialViewController()!
                 controller.modalPresentationStyle = .overFullScreen
                 DispatchQueue.main.async {
+                    print(self.controller)
                     self.controller.present(controller, animated: false, completion: {NotificationCenter.default.post(Notification(name: Notification.Name(message)))})
                 }
 

@@ -53,7 +53,7 @@ class CardViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        SessionHandler.shared.controller = self
+        
         roleTitleLabel.text = SessionHandler.shared.cardTouched!.nome
         descricao.text = SessionHandler.shared.cardTouched!.descricao
         poder.text = SessionHandler.shared.cardTouched!.poder

@@ -31,7 +31,7 @@ class PlayersViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        SessionHandler.shared.controller = self
+        
         
         
         for index in 0...playerButton.count-1 {

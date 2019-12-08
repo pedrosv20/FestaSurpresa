@@ -41,7 +41,7 @@ class WaitingPlayersViewController: UIViewController {
             skViewHorizontal.presentScene(scene)
         }
         
-        SessionHandler.shared.controller = self
+        
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "joinPlayer"), object: nil, queue: nil) { (Notification) in
             print("funcionou")
             DispatchQueue.main.async {
@@ -87,7 +87,7 @@ class WaitingPlayersViewController: UIViewController {
         let int = (SessionHandler.shared.mcSession?.connectedPeers.count)! + 1
 
         numeroPlayers.text = String(int)
-        SessionHandler.shared.controller = self
+        
     }
     
     @IBAction func comecar(_ sender: Any) {
