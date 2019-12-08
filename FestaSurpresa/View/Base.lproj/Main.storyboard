@@ -27,7 +27,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxL-Y1-eJf">
-                                <rect key="frame" x="122" y="784" width="170" height="31"/>
+                                <rect key="frame" x="122" y="784" width="170" height="68"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <inset key="contentEdgeInsets" minX="50" minY="5" maxX="50" maxY="5"/>
@@ -114,6 +114,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="pSq-dD-wHo" secondAttribute="leading" constant="45" id="aku-dk-umK"/>
                             <constraint firstItem="oxL-Y1-eJf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aql-Wh-4cB"/>
                             <constraint firstItem="Ntb-Hf-Rfw" firstAttribute="top" secondItem="1x9-Tb-EB6" secondAttribute="top" id="cow-ct-kPT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oxL-Y1-eJf" secondAttribute="bottom" constant="10" id="hxd-yO-kfE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f8K-zI-w9F" secondAttribute="trailing" id="jWd-H7-1vf"/>
                             <constraint firstItem="f8K-zI-w9F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oPc-A8-O0Z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="Rkm-6O-5t8" secondAttribute="leading" constant="45" id="pVt-UH-uhN"/>
