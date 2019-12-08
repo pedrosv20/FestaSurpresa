@@ -28,6 +28,10 @@ class AllCardsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if !SessionHandler.shared.host {
+            (SessionHandler.shared.mcSession?.connectedPeers.sorted{ $0.displayName < $1.displayName})!
+        }
         self.navigationController?.navigationBar.isHidden = true
         if let scene = SKScene(fileNamed: "VerticalScene"){
             scene.scaleMode = .aspectFill
@@ -101,7 +105,7 @@ class AllCardsViewController: UIViewController {
                 if SessionHandler.shared.host {
                     NotificationCenter.default.post(name: NSNotification.Name("Inicia Jogo"), object: nil)
                 } else {
-                    SessionHandler.shared.sendMessage(messageToSend: "envia inico jogo host", convidado: (SessionHandler.shared.mcSession?.connectedPeers.first!)!)
+                    SessionHandler.shared.sendMessage(messageToSend: "envia inico jogo host", convidado: SessionHandler.shared.listaPlayers.first!)
                 }
             }
             

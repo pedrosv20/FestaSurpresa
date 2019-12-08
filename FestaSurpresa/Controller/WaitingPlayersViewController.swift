@@ -28,7 +28,10 @@ class WaitingPlayersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.endEditing(true)
-        
+         
+        if !SessionHandler.shared.host {
+            (SessionHandler.shared.mcSession?.connectedPeers.sorted{ $0.displayName < $1.displayName})!
+        }
         if let scene = SKScene(fileNamed: "WaitingRoom"){
             scene.scaleMode = .aspectFill
             wait = scene as! WaitingRoom
@@ -52,23 +55,6 @@ class WaitingPlayersViewController: UIViewController {
                 
             }
             self.attNumberPlayers()
-            
-            NotificationCenter.default.addObserver(forName: UIApplication.willTerminateNotification, object: nil, queue: nil) { (notification) in
-            
-                    let message = "hostSaiu".data(using: String.Encoding.utf8, allowLossyConversion: false)
-                     DispatchQueue.main.async {
-                        do {
-                            
-                            try SessionHandler.shared.mcSession!.send(message!, toPeers: [SessionHandler.shared.mcSession!.connectedPeers.first!], with: .unreliable)
-                        }
-                        catch {
-                            print("Error sending message")
-                            }
-                        
-                    }
-                    
-                // run your code here (or whatever)
-            }
             
         }
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "joinedPlayer"), object: nil, queue: nil) { (Notification) in

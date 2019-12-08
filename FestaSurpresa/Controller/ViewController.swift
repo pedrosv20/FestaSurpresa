@@ -278,9 +278,8 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     func browserViewControllerDidFinish(_ browserViewController: MCBrowserViewController) {
         print("clicou done")
         
-        SessionHandler.shared.mcSession?.connectedPeers.sorted{ $0.displayName < $1.displayName}
-        print(SessionHandler.shared.mcSession?.connectedPeers.map{$0.displayName})
-        sendMessage(messageToSend: "conectei", convidado: SessionHandler.shared.mcSession!.connectedPeers.first!)
+        
+        sendMessage(messageToSend: "conectei", convidado: SessionHandler.shared.listaPlayers.first!)
         
         dismiss(animated: true)
         

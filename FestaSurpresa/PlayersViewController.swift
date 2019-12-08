@@ -22,7 +22,9 @@ class PlayersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        if !SessionHandler.shared.host {
+            (SessionHandler.shared.mcSession?.connectedPeers.sorted{ $0.displayName < $1.displayName})!
+        }
         readyButton.layer.cornerRadius = 15.0
         
         roundTitleLabel.layer.borderColor = UIColor.black.cgColor

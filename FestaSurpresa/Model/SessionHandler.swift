@@ -43,6 +43,9 @@ class SessionHandler: NSObject, MCSessionDelegate {
                                   Rodada(numero: 6, sucesso: 0, ajuda: 0, falha: 0),
                                   Rodada(numero: 7, sucesso: 0, ajuda: 0, falha: 0)]
     
+    var listaPlayers: [MCPeerID] {
+        (mcSession!.connectedPeers.sorted {$0.displayName < $1.displayName})
+    }
     private override init() {
         
     }

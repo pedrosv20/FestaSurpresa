@@ -17,7 +17,9 @@ class RequestHelpPopUp: UIViewController {
     
     
     override func viewDidLoad() {
-    
+        if !SessionHandler.shared.host {
+            (SessionHandler.shared.mcSession?.connectedPeers.sorted{ $0.displayName < $1.displayName})!
+        }
         helpButton.layer.cornerRadius = 15.5
         atrapalharButton.layer.cornerRadius = 15.5
         
@@ -52,7 +54,7 @@ class RequestHelpPopUp: UIViewController {
             }
         }
         print("SOU VIADO", SessionHandler.shared.mcSession?.connectedPeers.first!)
-        SessionHandler.shared.sendMessage(messageToSend: "ajudou missao", convidado: ((SessionHandler.shared.mcSession?.connectedPeers.first!)!))
+        SessionHandler.shared.sendMessage(messageToSend: "ajudou missao", convidado: ((SessionHandler.shared.listaPlayers.first!)))
         
         dismiss(animated: false, completion: nil)
         
@@ -74,7 +76,7 @@ class RequestHelpPopUp: UIViewController {
             dismiss(animated: false, completion: nil)
             return
         }
-        SessionHandler.shared.sendMessage(messageToSend: "falhou missao", convidado: ((SessionHandler.shared.mcSession?.connectedPeers.first!)!))
+        SessionHandler.shared.sendMessage(messageToSend: "falhou missao", convidado: ((SessionHandler.shared.listaPlayers.first!)))
         dismiss(animated: false, completion: nil)
     }
     
