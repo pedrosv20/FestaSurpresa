@@ -38,7 +38,7 @@ class CardViewController: UIViewController {
         backgroundLayer!.frame = view.frame
         view.layer.insertSublayer(backgroundLayer!, at: 0)
         
-        hideCardButton.layer.cornerRadius = 15.0
+        hideCardButton.layer.cornerRadius = 10.0
         
 //        blurView.effect.
 //

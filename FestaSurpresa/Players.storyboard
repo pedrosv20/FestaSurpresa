@@ -20,20 +20,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="179"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xB4-ma-Ap8">
-                                        <rect key="frame" x="41.5" y="77.5" width="331" height="71.5"/>
+                                        <rect key="frame" x="62" y="70" width="290" height="54"/>
                                         <string key="text">Ajude a engradar os
 barris de chop!</string>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="xB4-ma-Ap8" firstAttribute="height" secondItem="8E7-l4-hmT" secondAttribute="height" multiplier="0.4" id="0ZJ-AU-5nM"/>
+                                    <constraint firstItem="xB4-ma-Ap8" firstAttribute="height" secondItem="8E7-l4-hmT" secondAttribute="height" multiplier="0.3" id="0ZJ-AU-5nM"/>
                                     <constraint firstItem="xB4-ma-Ap8" firstAttribute="centerX" secondItem="8E7-l4-hmT" secondAttribute="centerX" id="9ds-Sj-Bsg"/>
-                                    <constraint firstItem="xB4-ma-Ap8" firstAttribute="width" secondItem="8E7-l4-hmT" secondAttribute="width" multiplier="0.8" id="BXz-UG-jpp"/>
-                                    <constraint firstAttribute="bottom" secondItem="xB4-ma-Ap8" secondAttribute="bottom" constant="30" id="Sne-fA-Sla"/>
+                                    <constraint firstItem="xB4-ma-Ap8" firstAttribute="width" secondItem="8E7-l4-hmT" secondAttribute="width" multiplier="0.7" id="BXz-UG-jpp"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0v8-2p-VHO">
@@ -225,7 +224,7 @@ barris de chop!</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOI-Np-lJp">
-                                <rect key="frame" x="149.5" y="814" width="115" height="38"/>
+                                <rect key="frame" x="103.5" y="815.5" width="207" height="40.5"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="10" maxX="40" maxY="10"/>
@@ -239,13 +238,16 @@ barris de chop!</string>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.92549019607843142" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="yOI-Np-lJp" firstAttribute="height" secondItem="xq7-9F-3LI" secondAttribute="height" multiplier="0.045" id="3AU-11-qGe"/>
+                            <constraint firstItem="yOI-Np-lJp" firstAttribute="width" secondItem="xq7-9F-3LI" secondAttribute="width" multiplier="0.5" id="570-7I-sxW"/>
+                            <constraint firstItem="xB4-ma-Ap8" firstAttribute="top" secondItem="8E7-l4-hmT" secondAttribute="top" constant="70" id="5gK-3T-NL4"/>
                             <constraint firstItem="0v8-2p-VHO" firstAttribute="top" secondItem="8E7-l4-hmT" secondAttribute="bottom" id="9zM-nU-dyN"/>
                             <constraint firstItem="0v8-2p-VHO" firstAttribute="trailing" secondItem="B3e-hV-CcV" secondAttribute="trailing" id="CSe-Mb-d9j"/>
                             <constraint firstItem="0v8-2p-VHO" firstAttribute="leading" secondItem="B3e-hV-CcV" secondAttribute="leading" id="EiA-Ao-dMm"/>
                             <constraint firstItem="8E7-l4-hmT" firstAttribute="top" secondItem="xq7-9F-3LI" secondAttribute="top" id="FWJ-d3-g3q"/>
                             <constraint firstItem="8E7-l4-hmT" firstAttribute="height" secondItem="xq7-9F-3LI" secondAttribute="height" multiplier="0.2" id="WLm-TX-Aev"/>
-                            <constraint firstItem="yOI-Np-lJp" firstAttribute="centerX" secondItem="B3e-hV-CcV" secondAttribute="centerX" id="XI9-LK-GoY"/>
-                            <constraint firstItem="B3e-hV-CcV" firstAttribute="bottom" secondItem="yOI-Np-lJp" secondAttribute="bottom" constant="10" id="bU1-Ed-s9O"/>
+                            <constraint firstItem="yOI-Np-lJp" firstAttribute="centerX" secondItem="xq7-9F-3LI" secondAttribute="centerX" id="XI9-LK-GoY"/>
+                            <constraint firstAttribute="bottom" secondItem="yOI-Np-lJp" secondAttribute="bottom" constant="40" id="bU1-Ed-s9O"/>
                             <constraint firstItem="8E7-l4-hmT" firstAttribute="leading" secondItem="B3e-hV-CcV" secondAttribute="leading" id="gqq-eD-by0"/>
                             <constraint firstItem="8E7-l4-hmT" firstAttribute="trailing" secondItem="B3e-hV-CcV" secondAttribute="trailing" id="q3j-sT-3wp"/>
                             <constraint firstItem="0v8-2p-VHO" firstAttribute="height" secondItem="xq7-9F-3LI" secondAttribute="height" multiplier="0.7" id="qpi-en-KRh"/>
