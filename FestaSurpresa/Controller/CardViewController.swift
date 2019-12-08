@@ -25,9 +25,7 @@ class CardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if !SessionHandler.shared.host {
-            (SessionHandler.shared.mcSession?.connectedPeers.sorted{ $0.displayName < $1.displayName})!
-        }
+
         if let scene = SKScene(fileNamed: "VerticalScene") {
             scene.scaleMode = .aspectFill
             skView.presentScene(scene)

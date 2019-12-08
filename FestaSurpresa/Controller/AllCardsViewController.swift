@@ -29,9 +29,7 @@ class AllCardsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if !SessionHandler.shared.host {
-            (SessionHandler.shared.mcSession?.connectedPeers.sorted{ $0.displayName < $1.displayName})!
-        }
+ 
         self.navigationController?.navigationBar.isHidden = true
         if let scene = SKScene(fileNamed: "VerticalScene"){
             scene.scaleMode = .aspectFill
@@ -253,17 +251,17 @@ class AllCardsViewController: UIViewController {
         DispatchQueue.main.async{
             do{
                 try SessionHandler.shared.mcSession?.send(message1!, toPeers: SessionHandler.shared.mcSession!.connectedPeers, with: .unreliable)
-                let storyboard = UIStoryboard(name: "ResultPopUp", bundle: nil)
-                let controller  = storyboard.instantiateInitialViewController()!
-                controller.modalPresentationStyle = .overFullScreen
-                self.present(controller, animated: false, completion: {NotificationCenter.default.post(Notification(name: Notification.Name(message)))})
+                
                 
                 
             } catch {
                 print("deu ruim")
             }
         }
-        
+        let storyboard = UIStoryboard(name: "ResultPopUp", bundle: nil)
+        let controller  = storyboard.instantiateInitialViewController()!
+        controller.modalPresentationStyle = .overFullScreen
+        self.present(controller, animated: false, completion: {NotificationCenter.default.post(Notification(name: Notification.Name(message)))})
         NotificationCenter.default.post(Notification(name: Notification.Name("fim  rodada")))
         
     }

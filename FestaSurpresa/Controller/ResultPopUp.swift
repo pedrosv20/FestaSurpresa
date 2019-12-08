@@ -17,9 +17,7 @@ class ResultPopUp: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if !SessionHandler.shared.host {
-            (SessionHandler.shared.mcSession?.connectedPeers.sorted{ $0.displayName < $1.displayName})!
-        }
+
         okButton.layer.cornerRadius = 15.0
         popUpView.layer.cornerRadius = 10.0
     

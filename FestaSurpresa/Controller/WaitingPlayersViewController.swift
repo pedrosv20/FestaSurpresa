@@ -29,9 +29,7 @@ class WaitingPlayersViewController: UIViewController {
         super.viewDidLoad()
         self.view.endEditing(true)
          
-        if !SessionHandler.shared.host {
-            (SessionHandler.shared.mcSession?.connectedPeers.sorted{ $0.displayName < $1.displayName})!
-        }
+
         if let scene = SKScene(fileNamed: "WaitingRoom"){
             scene.scaleMode = .aspectFill
             wait = scene as! WaitingRoom

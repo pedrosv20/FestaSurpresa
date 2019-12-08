@@ -17,9 +17,7 @@ class RequestHelpPopUp: UIViewController {
     
     
     override func viewDidLoad() {
-        if !SessionHandler.shared.host {
-            (SessionHandler.shared.mcSession?.connectedPeers.sorted{ $0.displayName < $1.displayName})!
-        }
+
         helpButton.layer.cornerRadius = 15.5
         atrapalharButton.layer.cornerRadius = 15.5
         
