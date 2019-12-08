@@ -43,11 +43,13 @@ class RequestHelpPopUp: UIViewController {
                 
                 NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "popUp")))
                 
-            }
+            }else {
             
             dismiss(animated: false, completion: nil)
             
-            return
+                return
+                
+            }
         }
         print("SOU VIADO", SessionHandler.shared.mcSession?.connectedPeers.first!)
         SessionHandler.shared.sendMessage(messageToSend: "ajudou missao", convidado: ((SessionHandler.shared.mcSession?.connectedPeers.first!)!))
