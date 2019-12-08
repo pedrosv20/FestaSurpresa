@@ -24,6 +24,12 @@ class RequestHelpPopUp: UIViewController {
         popUpView.layer.cornerRadius = 10.0
         
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        SessionHandler.shared.lider = false
+        
+    }
+    
     @IBAction func ajudar(_ sender: Any) {
         //manda message host
         if SessionHandler.shared.host {
@@ -33,7 +39,9 @@ class RequestHelpPopUp: UIViewController {
             
             if SessionHandler.shared.pessoasNaMissao == 3{
                 //notificacao fim missao
-                NotificationCenter.default.post(Notification(name: Notification.Name("fim  rodada")))
+                // aumenta sucesso
+                
+                NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "popUp")))
                 
             }
             
@@ -42,9 +50,13 @@ class RequestHelpPopUp: UIViewController {
             return
         }
         SessionHandler.shared.sendMessage(messageToSend: "ajudou missao", convidado: ((SessionHandler.shared.mcSession?.connectedPeers.first!)!))
+        
         dismiss(animated: false, completion: nil)
         
     }
+    
+   
+    
     @IBAction func atrapalhar(_ sender: Any) {
         if SessionHandler.shared.host{
             //atrapalha ++
@@ -53,7 +65,7 @@ class RequestHelpPopUp: UIViewController {
             
             if SessionHandler.shared.pessoasNaMissao == 3 {
                 //notificacao fim missao
-                NotificationCenter.default.post(Notification(name: Notification.Name("fim  rodada")))
+                NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "popUp")))
             }
             
             dismiss(animated: false, completion: nil)

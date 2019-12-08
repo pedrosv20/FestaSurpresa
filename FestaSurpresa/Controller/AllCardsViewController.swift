@@ -59,7 +59,9 @@ class AllCardsViewController: UIViewController {
                 }
                
                 // decide lider e enviar mensagem pra aparecer botao
-                SessionHandler.shared.sendMessage(messageToSend: "lider", convidado: Model.shared.players[SessionHandler.shared.rodada].peerID)
+                if Model.shared.players[SessionHandler.shared.rodada] != nil {
+                    SessionHandler.shared.sendMessage(messageToSend: "lider", convidado: Model.shared.players[SessionHandler.shared.rodada].peerID)
+                }
             }
              
         }
@@ -82,14 +84,20 @@ class AllCardsViewController: UIViewController {
             
         }
         
-        //Notification observer fim missao (selecionar novo lider, muda SessionHandler.shared.rodada e envia notificacao Inicia jogo)
+        //Notification observer fim missao (selecionar novo lider, muda SessionHandler.shared.rodada e envia notificacao Inicia jogo) "deixou de ser lider"
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "fim  rodada"), object: nil, queue: nil) { (Notification) in
             DispatchQueue.main.async {
+                // notifica host q acabou
+                SessionHandler.shared.sendMessage(messageToSend: "deixou de ser lider", convidado: Model.shared.players[SessionHandler.shared.rodada].peerID)
                 SessionHandler.shared.rodada += 1
                 SessionHandler.shared.lider = false
                 SessionHandler.shared.pessoasNaMissao = 0
                 self.iniciarRodadaButton.isHidden = true
                 self.iniciarRodadaButton.isEnabled = false
+                // aparece tela de fim de rodada e volta pra ca
+                
+                
+                
                 if SessionHandler.shared.host {
                     NotificationCenter.default.post(name: NSNotification.Name("Inicia Jogo"), object: nil)
                 } else {
@@ -98,8 +106,35 @@ class AllCardsViewController: UIViewController {
             }
             
         }
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "deixou de ser lider"), object: nil, queue: nil) { (Notification) in
+                   DispatchQueue.main.async {
+                    self.iniciarRodadaButton.isHidden = true
+                    self.iniciarRodadaButton.isEnabled = false
+        
+            }
+        }
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "popUp"), object: nil, queue: nil) { (Notification) in
+            
+                if SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].falha == 0 {
+                    self.fimRodada(message: "sucesso total")
+                }
+                else if SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].falha == 1 {
+                    self.fimRodada(message: "1falha")
+                }
+                else if SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].falha == 2 {
+                    self.fimRodada(message: "2falha")
+                }
+                else if SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].falha == 3 {
+                    self.fimRodada(message: "3falha")
+                }
+                
+            
+        }
+        
+        
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         SessionHandler.shared.controller = self
         Model.shared.players.map{print($0.nome)}
@@ -205,6 +240,28 @@ class AllCardsViewController: UIViewController {
         DispatchQueue.main.async {
             self.present(controller, animated: false, completion: nil)
         }
+    }
+    
+    func fimRodada(message: String) {
+        var message1 : Data!
+        //                        NotificationCenter.default.post(Notification(name: Notification.Name("fim  rodada")))
+        message1 = message.data(using: .utf8)
+        DispatchQueue.main.async{
+            do{
+                try SessionHandler.shared.mcSession?.send(message1!, toPeers: SessionHandler.shared.mcSession!.connectedPeers, with: .unreliable)
+                let storyboard = UIStoryboard(name: "ResultPopUp", bundle: nil)
+                let controller  = storyboard.instantiateInitialViewController()!
+                controller.modalPresentationStyle = .overFullScreen
+                self.present(controller, animated: false, completion: nil)
+                NotificationCenter.default.post(Notification(name: Notification.Name(message)))
+                
+            } catch {
+                print("deu ruim")
+            }
+        }
+        
+        NotificationCenter.default.post(Notification(name: Notification.Name("fim  rodada")))
+        
     }
     
     

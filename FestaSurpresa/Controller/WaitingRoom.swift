@@ -77,7 +77,7 @@ class WaitingRoom: SKScene {
     }
     
     func touchUp(atPoint pos : CGPoint) {
-        createCircle(name: "Teste")
+        createCircle(name: "")
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
