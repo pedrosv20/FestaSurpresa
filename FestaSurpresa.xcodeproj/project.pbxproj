@@ -16,6 +16,7 @@
 		073C841B23914C8D00B02366 /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C841A23914C8D00B02366 /* SessionHandler.swift */; };
 		073C841F2391590300B02366 /* Carta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C841E2391590300B02366 /* Carta.swift */; };
 		07455DC9239C28C700BAA49A /* Rodada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07455DC8239C28C700BAA49A /* Rodada.swift */; };
+		075983A5239D6C660027CB21 /* ResultPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 075983A4239D6C650027CB21 /* ResultPopUp.storyboard */; };
 		0781C31D239971CD00D0C9E0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C841C239158F500B02366 /* Model.swift */; };
 		0781C31E239971DB00D0C9E0 /* Instrucao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C2BCED23992B6200D13927 /* Instrucao.swift */; };
 		0781C320239971F100D0C9E0 /* Tarefa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781C31F239971F100D0C9E0 /* Tarefa.swift */; };
@@ -25,7 +26,6 @@
 		07A41B1C238FEDF00024AA60 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A41B1B238FEDF00024AA60 /* Player.swift */; };
 		07B0DF82239953AF00BF267B /* ConfeteVert.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07B0DF7A239953AE00BF267B /* ConfeteVert.sks */; };
 		07B0DF83239953AF00BF267B /* WaitingRoom.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07B0DF7B239953AE00BF267B /* WaitingRoom.sks */; };
-		07B0DF84239953AF00BF267B /* ResultPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07B0DF7C239953AE00BF267B /* ResultPopUp.xib */; };
 		07B0DF85239953AF00BF267B /* VerticalScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07B0DF7D239953AE00BF267B /* VerticalScene.sks */; };
 		07B0DF86239953AF00BF267B /* HorizontalScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07B0DF7E239953AE00BF267B /* HorizontalScene.sks */; };
 		07B0DF87239953AF00BF267B /* AllCards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07B0DF7F239953AE00BF267B /* AllCards.storyboard */; };
@@ -61,13 +61,13 @@
 		073C842423915E3D00B02366 /* Card 2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Card 2.storyboard"; sourceTree = "<group>"; };
 		073C842823915ED700B02366 /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		07455DC8239C28C700BAA49A /* Rodada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rodada.swift; sourceTree = "<group>"; };
+		075983A4239D6C650027CB21 /* ResultPopUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ResultPopUp.storyboard; sourceTree = "<group>"; };
 		0781C31F239971F100D0C9E0 /* Tarefa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tarefa.swift; sourceTree = "<group>"; };
 		0781C323239A770B00D0C9E0 /* Players.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Players.storyboard; path = FestaSurpresa/Players.storyboard; sourceTree = SOURCE_ROOT; };
 		0781C327239A77E100D0C9E0 /* PlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayersViewController.swift; path = FestaSurpresa/PlayersViewController.swift; sourceTree = SOURCE_ROOT; };
 		07A41B1B238FEDF00024AA60 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = FestaSurpresa/Player.swift; sourceTree = SOURCE_ROOT; };
 		07B0DF7A239953AE00BF267B /* ConfeteVert.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ConfeteVert.sks; sourceTree = "<group>"; };
 		07B0DF7B239953AE00BF267B /* WaitingRoom.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WaitingRoom.sks; sourceTree = "<group>"; };
-		07B0DF7C239953AE00BF267B /* ResultPopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultPopUp.xib; sourceTree = "<group>"; };
 		07B0DF7D239953AE00BF267B /* VerticalScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = VerticalScene.sks; sourceTree = "<group>"; };
 		07B0DF7E239953AE00BF267B /* HorizontalScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HorizontalScene.sks; sourceTree = "<group>"; };
 		07B0DF7F239953AE00BF267B /* AllCards.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AllCards.storyboard; sourceTree = "<group>"; };
@@ -130,12 +130,11 @@
 				07B0DF7F239953AE00BF267B /* AllCards.storyboard */,
 				07B0DF7A239953AE00BF267B /* ConfeteVert.sks */,
 				07B0DF7E239953AE00BF267B /* HorizontalScene.sks */,
-				07B0DF7C239953AE00BF267B /* ResultPopUp.xib */,
+				075983A4239D6C650027CB21 /* ResultPopUp.storyboard */,
 				07B0DF7D239953AE00BF267B /* VerticalScene.sks */,
 				07B0DF81239953AF00BF267B /* WaitingPlayers.storyboard */,
 				0781C323239A770B00D0C9E0 /* Players.storyboard */,
 				07B0DF7B239953AE00BF267B /* WaitingRoom.sks */,
-				07229F9A239BEFFB00F8E251 /* RequestHelpPopUp.swift */,
 				07229F9E239BFB8D00F8E251 /* RequestHelpPopUp.storyboard */,
 			);
 			path = View;
@@ -151,6 +150,7 @@
 				073C842823915ED700B02366 /* CardViewController.swift */,
 				07B0DF8C239953EA00BF267B /* AllCardsViewController.swift */,
 				07B0DF8F239953EA00BF267B /* ResultPopUp.swift */,
+				07229F9A239BEFFB00F8E251 /* RequestHelpPopUp.swift */,
 				07B0DF8E239953EA00BF267B /* VerticalScene.swift */,
 				0781C327239A77E100D0C9E0 /* PlayersViewController.swift */,
 				07B0DF8D239953EA00BF267B /* WaitingPlayersViewController.swift */,
@@ -262,9 +262,9 @@
 				07B0DF82239953AF00BF267B /* ConfeteVert.sks in Resources */,
 				88E7913E239A84B70056CEAF /* WinScene.sks in Resources */,
 				07B0DF83239953AF00BF267B /* WaitingRoom.sks in Resources */,
-				07B0DF84239953AF00BF267B /* ResultPopUp.xib in Resources */,
 				0781C322239973BD00D0C9E0 /* Card 2.storyboard in Resources */,
 				88E7913F239A84B70056CEAF /* Win.storyboard in Resources */,
+				075983A5239D6C660027CB21 /* ResultPopUp.storyboard in Resources */,
 				07229F98239A9A7E00F8E251 /* Players.storyboard in Resources */,
 				07B0DF89239953AF00BF267B /* WaitingPlayers.storyboard in Resources */,
 				A489801A228F49E800852716 /* LaunchScreen.storyboard in Resources */,

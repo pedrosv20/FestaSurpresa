@@ -10,7 +10,7 @@ import Foundation
 import MultipeerConnectivity
 
 class SessionHandler: NSObject, MCSessionDelegate {
-
+    
     static let shared = SessionHandler()
     
     var peerID: MCPeerID!
@@ -36,12 +36,12 @@ class SessionHandler: NSObject, MCSessionDelegate {
     var pessoasNaMissao = 0
     
     var rodadasArray: [Rodada] = [Rodada(numero: 1, sucesso: 0, ajuda: 0, falha: 0),
-                                   Rodada(numero: 2, sucesso: 0, ajuda: 0, falha: 0),
-                                   Rodada(numero: 3, sucesso: 0, ajuda: 0, falha: 0),
-                                   Rodada(numero: 4, sucesso: 0, ajuda: 0, falha: 0),
-                                   Rodada(numero: 5, sucesso: 0, ajuda: 0, falha: 0),
-                                   Rodada(numero: 6, sucesso: 0, ajuda: 0, falha: 0),
-                                   Rodada(numero: 7, sucesso: 0, ajuda: 0, falha: 0)]
+                                  Rodada(numero: 2, sucesso: 0, ajuda: 0, falha: 0),
+                                  Rodada(numero: 3, sucesso: 0, ajuda: 0, falha: 0),
+                                  Rodada(numero: 4, sucesso: 0, ajuda: 0, falha: 0),
+                                  Rodada(numero: 5, sucesso: 0, ajuda: 0, falha: 0),
+                                  Rodada(numero: 6, sucesso: 0, ajuda: 0, falha: 0),
+                                  Rodada(numero: 7, sucesso: 0, ajuda: 0, falha: 0)]
     
     private override init() {
         
@@ -74,7 +74,7 @@ class SessionHandler: NSObject, MCSessionDelegate {
         case .notConnected:
             print("Not Connected: \(peerID.displayName)")
             
-
+            
             
         @unknown default:
             print("fatal error")
@@ -100,10 +100,29 @@ class SessionHandler: NSObject, MCSessionDelegate {
                     
                 }
             }
+            
+            
+            if message == "sucesso total" || message == "1falha" || message == "2falha" || message == "3falha" {
+                let storyboard = UIStoryboard(name: "ResultPopUp", bundle: nil)
+                let controller  = storyboard.instantiateInitialViewController()!
+                controller.modalPresentationStyle = .overFullScreen
+                self.controller.present(controller, animated: false, completion: nil)
+                DispatchQueue.main.async{
+                    NotificationCenter.default.post(Notification(name: Notification.Name(message)))
+                }
+                
+                
+            }
+            
             if self.host {
                 if message == "envia inico jogo host" {
                     NotificationCenter.default.post(Notification(name: Notification.Name("Inicia Jogo")))
                 }
+            }
+            
+            if message == "deixou de ser lider" {
+                NotificationCenter.default.post(Notification(name: Notification.Name("deixou de ser lider")))
+                
             }
             
             if self.host {
@@ -120,85 +139,86 @@ class SessionHandler: NSObject, MCSessionDelegate {
                 }
                 
                 if message == "ajudou missao" {
+                    
                     self.pessoasNaMissao += 1
                     SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].ajuda += 1
                     
                     if SessionHandler.shared.pessoasNaMissao == 3 {
-                        NotificationCenter.default.post(Notification(name: Notification.Name("fim  rodada")))
+                        NotificationCenter.default.post(Notification(name: Notification.Name("popUp")))
+                        //verificar ajudou e falhou da rodada atual e verifica se ja chegou em quatro
+                        
+                        
                     }
-                    //verificar ajudou e falhou da rodada atual e verifica se ja chegou em quatro
-                    
-                    
                 }
-                if message  == "falhou missao" {
-                    self.pessoasNaMissao += 1
-                    SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].falha += 1
-                    
-                    if SessionHandler.shared.pessoasNaMissao == 3 {
-                        //notificacao fim missao
-                        NotificationCenter.default.post(Notification(name: Notification.Name("fim  rodada")))
-                    }
-                    
-                }
-            }
-            
-            if message == "comeca rodada" {
-                //load xib com o rolezao
-//                fatalError()
-                NotificationCenter.default.post(Notification(name: Notification.Name("comecando rodada")))
-                
-                
-//                fatalError()
-            }
-
-            
-            if message == "lider" {
-                self.lider = true
-                NotificationCenter.default.post(Notification(name: Notification.Name("inicia lider")))
-            }
-            if message == "hostSaiu" {
-                self.controller.dismiss(animated: false, completion: nil)
-                let mensagem = "playerAvisaHostSaiu".data(using: String.Encoding.utf8, allowLossyConversion: false)
-                do {
-                    
-                    try SessionHandler.shared.mcSession!.send(mensagem!, toPeers: self.mcSession!.connectedPeers, with: .unreliable)
-                }
-                catch {
-                    print("Error sending message")
-                }
-                return
-            }
-            if message == "playerAvisaHostSaiu" {
-                self.controller.dismiss(animated: false, completion: nil)
-            }
-                
-            if message == "novoConectado" {
-                NotificationCenter.default.post(Notification(name: Notification.Name("joinedPlayer")))
-                return
-            }
-                
-            if message == "conectei" {
-                NotificationCenter.default.post(Notification(name: Notification.Name("joinPlayer")))
-                return
-            }
-            
-            if self.host {
-                if message == "visualizou carta" {
-                    self.playersConfirmed += 1
-                    print(self.playersConfirmed,  "confirmados")
-                    if self.playersConfirmed == (self.mcSession?.connectedPeers.count)! + 1 {
-                        NotificationCenter.default.post(Notification(name:Notification.Name("Inicia Jogo")))
+                    if message  == "falhou missao" {
+                        self.pessoasNaMissao += 1
+                        SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].falha += 1
+                        
+                        if SessionHandler.shared.pessoasNaMissao == 3 {
+                            NotificationCenter.default.post(Notification(name: Notification.Name("popUp")))
+                            
                         }
+                    }
                 }
-            }
-            
-            
-            //TODO: Busca no singleton e referencia os roles do player
-            //            self.chatView.text = self.chatView.text + message + " \n"
-        }
+                    
+                    if message == "comeca rodada" {
+                        //load xib com o rolezao
+                        //                fatalError()
+                        NotificationCenter.default.post(Notification(name: Notification.Name("comecando rodada")))
+                        
+                        
+                        //                fatalError()
+                    }
+                    
+                    
+                    if message == "lider" {
+                        self.lider = true
+                        NotificationCenter.default.post(Notification(name: Notification.Name("inicia lider")))
+                    }
+                    if message == "hostSaiu" {
+                        self.controller.dismiss(animated: false, completion: nil)
+                        let mensagem = "playerAvisaHostSaiu".data(using: String.Encoding.utf8, allowLossyConversion: false)
+                        do {
+                            
+                            try SessionHandler.shared.mcSession!.send(mensagem!, toPeers: self.mcSession!.connectedPeers, with: .unreliable)
+                        }
+                        catch {
+                            print("Error sending message")
+                        }
+                        return
+                    }
+                    if message == "playerAvisaHostSaiu" {
+                        self.controller.dismiss(animated: false, completion: nil)
+                    }
+                    
+                    if message == "novoConectado" {
+                        NotificationCenter.default.post(Notification(name: Notification.Name("joinedPlayer")))
+                        return
+                    }
+                    
+                    if message == "conectei" {
+                        NotificationCenter.default.post(Notification(name: Notification.Name("joinPlayer")))
+                        return
+                    }
+                    
+                    if self.host {
+                        if message == "visualizou carta" {
+                            self.playersConfirmed += 1
+                            print(self.playersConfirmed,  "confirmados")
+                            if self.playersConfirmed == (self.mcSession?.connectedPeers.count)! + 1 {
+                                NotificationCenter.default.post(Notification(name:Notification.Name("Inicia Jogo")))
+                            }
+                        }
+                    }
+                    
+                    
+                    //TODO: Busca no singleton e referencia os roles do player
+                    //            self.chatView.text = self.chatView.text + message + " \n"
+                }
     }
-
-        
+    
+    
+    
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
         
     }
@@ -210,9 +230,9 @@ class SessionHandler: NSObject, MCSessionDelegate {
     func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL?, withError error: Error?) {
         
     }
-        
-        
-        
+    
+    
+    
 }
 
 

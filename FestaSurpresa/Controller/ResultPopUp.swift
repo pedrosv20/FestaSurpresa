@@ -9,7 +9,7 @@
 import UIKit
 
 class ResultPopUp: UIViewController {
-
+    
     
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var okButton: UIButton!
@@ -17,14 +17,32 @@ class ResultPopUp: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         okButton.layer.cornerRadius = 15.0
         popUpView.layer.cornerRadius = 10.0
-    }
-
-
-    @IBAction func didPressOkButton(_ sender: Any) {
+    
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "sucesso total"), object: nil, queue: nil) { (Notification) in
+            self.resultLabel.text! += "sucesso total"
+        }
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "1falha"), object: nil, queue: nil) { (Notification) in
+            self.resultLabel.text! += "1falha"
+        }
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "2falha"), object: nil, queue: nil) { (Notification) in
+            self.resultLabel.text! += "2falha"
+        }
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "3falha"), object: nil, queue: nil) { (Notification) in
+            self.resultLabel.text! += "3falha"
+        }
+    
+        
+        
     }
     
-
+    
+    
+    @IBAction func didPressOkButton(_ sender: Any) {
+        dismiss(animated: false, completion: nil)
+    }
+    
+    
 }
