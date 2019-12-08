@@ -61,9 +61,11 @@ class AllCardsViewController: UIViewController {
                 }
                
                 // decide lider e enviar mensagem pra aparecer botao
-                if Model.shared.players[SessionHandler.shared.rodada] != nil {
-                    SessionHandler.shared.sendMessage(messageToSend: "lider", convidado: Model.shared.players[SessionHandler.shared.rodada].peerID)
+                if SessionHandler.shared.rodada >= Model.shared.players.count {
+                    SessionHandler.shared.rodada = 0
                 }
+                 SessionHandler.shared.sendMessage(messageToSend: "lider", convidado: Model.shared.players[SessionHandler.shared.rodada].peerID)
+                
             }
              
         }
@@ -92,11 +94,23 @@ class AllCardsViewController: UIViewController {
             DispatchQueue.main.async {
                 // notifica host q acabou
                 SessionHandler.shared.sendMessage(messageToSend: "deixou de ser lider", convidado: Model.shared.players[SessionHandler.shared.rodada].peerID)
+                if SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].sucesso == 3 {
+                    // tela de vitoria dos cornos
+                    let storyboard = UIStoryboard(name: "Win", bundle: nil)
+                    let controller  = storyboard.instantiateInitialViewController()!
+                    controller.modalPresentationStyle = .overFullScreen
+                    self.present(controller, animated: false, completion: nil)
+                    
+                }
+                else if SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].fracasso == 3 {
+                    //tela derrota
+                }
                 SessionHandler.shared.rodada += 1
                 SessionHandler.shared.lider = false
                 SessionHandler.shared.pessoasNaMissao = 0
                 self.iniciarRodadaButton.isHidden = true
                 self.iniciarRodadaButton.isEnabled = false
+                
                 // aparece tela de fim de rodada e volta pra ca
                 
                 
@@ -122,14 +136,18 @@ class AllCardsViewController: UIViewController {
             
                 if SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].falha == 0 {
                     self.fimRodada(message: "sucesso total")
+                    SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].sucesso += 1
                 }
                 else if SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].falha == 1 {
                     self.fimRodada(message: "1falha")
+                    SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].fracasso += 1
                 }
                 else if SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].falha == 2 {
                     self.fimRodada(message: "2falha")
+                    SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].fracasso += 1
                 }
                 else if SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].falha == 3 {
+                    SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].fracasso += 1
                     self.fimRodada(message: "3falha")
                 }
                 

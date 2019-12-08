@@ -21,25 +21,32 @@ class WinViewController: UIViewController {
     let colorPartyPooper = UIColor(red: 105.0 / 255.0, green: 68.0 / 255.0, blue: 200.0 / 255.0, alpha: 1.0)
     let colorClown = UIColor(red: 14.0 / 255.0, green: 55.0 / 255.0, blue: 100.0 / 255.0, alpha: 1.0)
     var winner: String!
+    var winScene: WinScene!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Organizer"), object: nil, queue: nil) { (Notification) in
+            self.winner = "Organizer"
+        }
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "PartyPooper"), object: nil, queue: nil) { (Notification) in
+            self.winner = "PartyPooper"
+        }
         if let scene = SKScene(fileNamed: "WinScene"){
             scene.scaleMode = .aspectFill
+            winScene = scene as! WinScene
             skView.presentScene(scene)
         }
         self.navigationController?.navigationBar.isHidden = true
         
-        winner = "Organizer"
+        
         if winner == "Organizer"{
             self.view.backgroundColor = colorOrganizer
             self.roundStoryLabel.text = "The Organizers have won!"
+            winScene.setUp(FunnelName: winner)
         }else if winner == "PartyPooper"{
             self.view.backgroundColor = colorPartyPooper
             self.roundStoryLabel.text = "The party pooper have won!"
-        }else if winner == "The Clown have won!"{
-            self.view.backgroundColor = colorClown
         }
         roundStoryLabel.layer.borderColor = UIColor.white.cgColor
         roundStoryLabel.layer.borderWidth = 2.0
