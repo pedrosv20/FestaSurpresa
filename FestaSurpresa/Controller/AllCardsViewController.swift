@@ -99,11 +99,16 @@ class AllCardsViewController: UIViewController {
                     let storyboard = UIStoryboard(name: "Win", bundle: nil)
                     let controller  = storyboard.instantiateInitialViewController()!
                     controller.modalPresentationStyle = .overFullScreen
-                    self.present(controller, animated: false, completion: nil)
+                    self.present(controller, animated: false, completion: {NotificationCenter.default.post(name: NSNotification.Name("Organizer"), object: nil)})
+                    
                     
                 }
                 else if SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].fracasso == 3 {
                     //tela derrota
+                    let storyboard = UIStoryboard(name: "Win", bundle: nil)
+                    let controller  = storyboard.instantiateInitialViewController()!
+                    controller.modalPresentationStyle = .overFullScreen
+                    self.present(controller, animated: false, completion: {NotificationCenter.default.post(name: NSNotification.Name("PartyPooper"), object: nil)})
                 }
                 SessionHandler.shared.rodada += 1
                 SessionHandler.shared.lider = false
