@@ -110,6 +110,7 @@ class SessionHandler: NSObject, MCSessionDelegate {
                 let controller  = storyboard.instantiateInitialViewController()!
                 controller.modalPresentationStyle = .overFullScreen
                 self.controller.present(controller, animated: false, completion: nil)
+                print("apresentou popup controller")
                 DispatchQueue.main.async{
                     NotificationCenter.default.post(Notification(name: Notification.Name(message)))
                 }
