@@ -48,6 +48,8 @@ class PlayersViewController: UIViewController {
             playerButton[index+1].isEnabled = true
         }
         
+        roundTitleLabel.text = Model.shared.tarefas[SessionHandler.shared.rodada].tituloTarefa
+        
     }
     
     @IBAction func feitoButton(_ sender: Any) {
