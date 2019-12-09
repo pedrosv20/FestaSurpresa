@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T04-gR-iLV">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,7 +29,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miF-7A-PxI">
-                                        <rect key="frame" x="119" y="152" width="176" height="38"/>
+                                        <rect key="frame" x="119" y="117" width="176" height="38"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <inset key="contentEdgeInsets" minX="40" minY="10" maxX="40" maxY="10"/>
@@ -61,7 +60,7 @@
                                     <constraint firstItem="TPY-ns-uKG" firstAttribute="centerX" secondItem="GGY-Kc-4BG" secondAttribute="centerX" id="ZqW-Lf-jpb"/>
                                     <constraint firstItem="miF-7A-PxI" firstAttribute="centerX" secondItem="GGY-Kc-4BG" secondAttribute="centerX" id="fqW-cH-lsi"/>
                                     <constraint firstAttribute="trailing" secondItem="meX-pV-x0U" secondAttribute="trailing" constant="8" id="srw-7H-ZYQ"/>
-                                    <constraint firstItem="miF-7A-PxI" firstAttribute="top" secondItem="TPY-ns-uKG" secondAttribute="bottom" constant="15" id="yAt-3V-nFK"/>
+                                    <constraint firstItem="miF-7A-PxI" firstAttribute="top" secondItem="TPY-ns-uKG" secondAttribute="bottom" constant="-20" id="yAt-3V-nFK"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ztw-fQ-vwS">

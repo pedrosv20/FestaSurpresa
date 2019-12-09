@@ -37,12 +37,12 @@ class WinViewController: UIViewController {
         
         if winner == "Organizer"{
             self.view.backgroundColor = colorOrganizer
-            self.roundStoryLabel.text = "The Organizers have won!"
+            self.roundStoryLabel.text = "A festa foi muito top biiixo, mas ninguém lembra de nada!"
             winScene.setUp(FunnelName: winner)
             
         }else if winner == "PartyPooper"{
             self.view.backgroundColor = colorPartyPooper
-            self.roundStoryLabel.text = "The party pooper have won!"
+            self.roundStoryLabel.text = "A festa pegou fogo, forte abraaaaaço!"
             winScene.setUp(FunnelName: winner)
         }
         roundStoryLabel.layer.borderColor = UIColor.white.cgColor
