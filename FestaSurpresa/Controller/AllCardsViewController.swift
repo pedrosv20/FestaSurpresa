@@ -61,7 +61,7 @@ class AllCardsViewController: UIViewController {
                     return
                     
                 }
-               
+               //147369
                 // decide lider e enviar mensagem pra aparecer botao
                 
                  SessionHandler.shared.sendMessage(messageToSend: "lider", convidado: Model.shared.players[SessionHandler.shared.rodada].peerID)
@@ -244,43 +244,7 @@ class AllCardsViewController: UIViewController {
                 self.performSegue(withIdentifier: "showCard", sender: Any?.self)
             }
         }
-//        if SessionHandler.shared.host {
-//            SessionHandler.shared.cardTouched = SessionHandler.shared.carta!
-//            SessionHandler.shared.sawCard = true
-//
-//            if showClicked == true && sender.titleLabel!.text! == SessionHandler.shared.carta!.nome &&  hostSend == false{
-//                SessionHandler.shared.playersConfirmed += 1
-//                hostSend = true
-//                if (SessionHandler.shared.mcSession?.connectedPeers.count)! + 1 == SessionHandler.shared.playersConfirmed {
-//                    NotificationCenter.default.post(Notification(name: Notification.Name("Inicia Jogo")))
-//                }
-//            }
-//            self.performSegue(withIdentifier: "showCard", sender: Any?.self)
-//            return
-//        }
-//
-//        if showClicked == true && sender.titleLabel!.text! == SessionHandler.shared.carta!.nome  && messageSend == false{
-//
-//            SessionHandler.shared.cardTouched = SessionHandler.shared.carta!
-//            SessionHandler.shared.sawCard = true
-//            //manda mensagem pro host de ok
-//            print("visualizou carta", SessionHandler.shared.mcSession?.connectedPeers.first!.displayName)
-//
-//            let message = "visualizou carta".data(using: .utf8)
-//            DispatchQueue.main.async {
-//                do {
-//                    try SessionHandler.shared.mcSession?.send(message!, toPeers: [(SessionHandler.shared.mcSession?.connectedPeers.first)!], with: .unreliable)
-//                    self.messageSend = true
-//                } catch {
-//                    print("error sending visualizou message")
-//                }
-//            }
-//
-//
-//            self.performSegue(withIdentifier: "showCard", sender: Any?.self)
-//            return
-//        }
-        
+
         
         
         
@@ -300,16 +264,15 @@ class AllCardsViewController: UIViewController {
         var message1 : Data!
         //                        NotificationCenter.default.post(Notification(name: Notification.Name("fim  rodada")))
         message1 = message.data(using: .utf8)
-        DispatchQueue.main.async{
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
             do{
                 try SessionHandler.shared.mcSession?.send(message1!, toPeers: SessionHandler.shared.mcSession!.connectedPeers, with: .unreliable)
-                
-                
                 
             } catch {
                 print("deu ruim")
             }
-        }
+        })
+        
         let storyboard = UIStoryboard(name: "ResultPopUp", bundle: nil)
         let controller  = storyboard.instantiateInitialViewController()!
         controller.modalPresentationStyle = .overFullScreen
