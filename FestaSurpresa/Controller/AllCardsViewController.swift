@@ -95,7 +95,7 @@ class AllCardsViewController: UIViewController {
                 // notifica host q acabou
                 SessionHandler.shared.sendMessage(messageToSend: "deixou de ser lider", convidado: Model.shared.players[SessionHandler.shared.rodada].peerID)
                 
-                if SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].sucesso == 3 {
+                if SessionHandler.shared.sucessoRodadas == 3 {
                     // tela de vitoria dos cornos
                     let storyboard = UIStoryboard(name: "Win", bundle: nil)
                     let controller  = storyboard.instantiateInitialViewController()!
@@ -104,7 +104,7 @@ class AllCardsViewController: UIViewController {
                     
                     
                 }
-                else if SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].fracasso == 3 {
+                else if SessionHandler.shared.fracassoRodadas == 3 {
                     //tela derrota
                     let storyboard = UIStoryboard(name: "Win", bundle: nil)
                     let controller  = storyboard.instantiateInitialViewController()!
@@ -142,18 +142,22 @@ class AllCardsViewController: UIViewController {
             
                 if SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].falha == 0 {
                     self.fimRodada(message: "sucesso total")
+                    SessionHandler.shared.sucessoRodadas += 1
                     SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].sucesso += 1
                 }
                 else if SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].falha == 1 {
                     self.fimRodada(message: "1falha")
+                    SessionHandler.shared.fracassoRodadas += 1
                     SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].fracasso += 1
                 }
                 else if SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].falha == 2 {
                     self.fimRodada(message: "2falha")
+                    SessionHandler.shared.fracassoRodadas += 1
                     SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].fracasso += 1
                 }
                 else if SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].falha == 3 {
                     SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].fracasso += 1
+                    SessionHandler.shared.fracassoRodadas += 1
                     self.fimRodada(message: "3falha")
                 }
                 
