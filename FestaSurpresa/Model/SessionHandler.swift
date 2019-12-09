@@ -136,6 +136,7 @@ class SessionHandler: NSObject, MCSessionDelegate {
                 
                 let storyboard = UIStoryboard(name: "Win", bundle: nil)
                 let controller  = storyboard.instantiateInitialViewController() as WinViewController?
+                
                 if self.controller.presentedViewController != nil {
                     self.controller.presentedViewController?.dismiss(animated: false) {
                         DispatchQueue.main.async(execute: {
