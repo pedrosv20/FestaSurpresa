@@ -47,7 +47,9 @@ class AllCardsViewController: UIViewController {
         roundStoryLabel.layer.cornerRadius = 20.0
         showCardButton.layer.cornerRadius = 15.0
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Inicia Jogo"), object: nil, queue: nil) { (Notification) in
-            
+            if SessionHandler.shared.rodada >= Model.shared.players.count {
+                SessionHandler.shared.rodada = 0
+            }
             if SessionHandler.shared.host {
                 if SessionHandler.shared.rodada == 0 {
                 
@@ -61,9 +63,7 @@ class AllCardsViewController: UIViewController {
                 }
                
                 // decide lider e enviar mensagem pra aparecer botao
-                if SessionHandler.shared.rodada >= Model.shared.players.count {
-                    SessionHandler.shared.rodada = 0
-                }
+                
                  SessionHandler.shared.sendMessage(messageToSend: "lider", convidado: Model.shared.players[SessionHandler.shared.rodada].peerID)
                 print(Model.shared.players[SessionHandler.shared.rodada].peerID)
                 
