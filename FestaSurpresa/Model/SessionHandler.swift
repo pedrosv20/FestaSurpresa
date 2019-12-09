@@ -124,7 +124,7 @@ class SessionHandler: NSObject, MCSessionDelegate {
                 
                 } else {
                     DispatchQueue.main.async(execute: {
-                    controller!.modalPresentationStyle = .overFullScreen
+                        controller!.modalPresentationStyle = .overFullScreen
                         controller?.winner = "Organizer"
                         self.controller.present(controller!, animated: false, completion: nil)
                     })
@@ -136,14 +136,22 @@ class SessionHandler: NSObject, MCSessionDelegate {
                 
                 let storyboard = UIStoryboard(name: "Win", bundle: nil)
                 let controller  = storyboard.instantiateInitialViewController() as WinViewController?
-                if self.controller.presentingViewController!.isBeingPresented {
-                    self.controller.presentingViewController?.dismiss(animated: false) {
-                        DispatchQueue.main.async {
+                if self.controller.presentedViewController != nil {
+                    self.controller.presentedViewController?.dismiss(animated: false) {
+                        DispatchQueue.main.async(execute: {
                             controller!.modalPresentationStyle = .overFullScreen
-                            controller?.winner = "Party Pooper"
-                            self.controller.present(controller!, animated: false, completion: nil)
-                        }
+                                controller?.winner = "Party Pooper"
+                                self.controller.present(controller!, animated: false, completion: nil)
+                            })
+                          return
                     }
+                
+                } else {
+                    DispatchQueue.main.async(execute: {
+                        controller!.modalPresentationStyle = .overFullScreen
+                        controller?.winner = "Party Pooper"
+                        self.controller.present(controller!, animated: false, completion: nil)
+                    })
                 }
             }
 
