@@ -45,7 +45,7 @@ class WinScene: SKScene {
         //        dark_tiffany?.advanceSimulationTime(60)
         //        dark_purple?.advanceSimulationTime(60)
         //alterado
-        timer()
+        
     }
     
     
@@ -170,6 +170,7 @@ class WinScene: SKScene {
         
         self.backgroundColor            = UIColor.clear
         
+        timer()
         timer()
     }
     

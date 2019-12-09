@@ -65,6 +65,7 @@ class AllCardsViewController: UIViewController {
                     SessionHandler.shared.rodada = 0
                 }
                  SessionHandler.shared.sendMessage(messageToSend: "lider", convidado: Model.shared.players[SessionHandler.shared.rodada].peerID)
+                print(Model.shared.players[SessionHandler.shared.rodada].peerID)
                 
             }
              
@@ -97,15 +98,18 @@ class AllCardsViewController: UIViewController {
                 
                 if SessionHandler.shared.sucessoRodadas == 3 {
                     // tela de vitoria dos cornos
+                    self.presentingViewController?.dismiss(animated: false, completion: nil)
                     let storyboard = UIStoryboard(name: "Win", bundle: nil)
                     let controller  = storyboard.instantiateInitialViewController()!
                     controller.modalPresentationStyle = .overFullScreen
                     self.present(controller, animated: false, completion: {NotificationCenter.default.post(name: NSNotification.Name("Organizer"), object: nil)})
+                    //send message to others
                     
                     
                 }
                 else if SessionHandler.shared.fracassoRodadas == 3 {
                     //tela derrota
+                    self.presentingViewController?.dismiss(animated: false, completion: nil)
                     let storyboard = UIStoryboard(name: "Win", bundle: nil)
                     let controller  = storyboard.instantiateInitialViewController()!
                     controller.modalPresentationStyle = .overFullScreen
