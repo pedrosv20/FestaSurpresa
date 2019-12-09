@@ -103,15 +103,17 @@ class AllCardsViewController: UIViewController {
                     let controller  = storyboard.instantiateInitialViewController() as! WinViewController
                     controller.modalPresentationStyle = .overFullScreen
                     controller.winner = "Organizer"
-                    self.present(controller, animated: false, completion: nil)
-                    //send message to others
                     DispatchQueue.main.async{
                         do{
+                            print("mandei mensagem pros troxa")
                             try SessionHandler.shared.mcSession?.send("vencedores ganham".data(using: .utf8)!, toPeers: (SessionHandler.shared.mcSession?.connectedPeers)!, with: .unreliable)
                         } catch {
                             print("macarrao")
                         }
                     }
+                    self.present(controller, animated: false, completion: nil)
+                    //send message to others
+                    
                     
                     
                 }
