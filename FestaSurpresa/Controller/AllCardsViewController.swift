@@ -74,6 +74,7 @@ class AllCardsViewController: UIViewController {
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "inicia lider"), object: nil, queue: nil) { (Notification) in
             if SessionHandler.shared.lider {
                 // instancia view lider
+                self.roundStoryLabel.text = "Você é o lider"
                 SessionHandler.shared.lider = true
                 self.iniciarRodadaButton.isHidden = false
                 self.iniciarRodadaButton.isEnabled = true
@@ -140,7 +141,7 @@ class AllCardsViewController: UIViewController {
                 SessionHandler.shared.pessoasNaMissao = 0
                 self.iniciarRodadaButton.isHidden = true
                 self.iniciarRodadaButton.isEnabled = false
-                
+                self.roundStoryLabel.text = "Aguarde o líder..."
                 // aparece tela de fim de rodada e volta pra ca
                 
                 
@@ -156,6 +157,7 @@ class AllCardsViewController: UIViewController {
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "deixou de ser lider"), object: nil, queue: nil) { (Notification) in
                    DispatchQueue.main.async {
+                    self.roundStoryLabel.text = "Aguarde o lider"
                     self.iniciarRodadaButton.isHidden = true
                     self.iniciarRodadaButton.isEnabled = false
         
