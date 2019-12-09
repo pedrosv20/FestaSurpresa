@@ -41,7 +41,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meX-pV-x0U">
-                                        <rect key="frame" x="366" y="83" width="40" height="40"/>
+                                        <rect key="frame" x="366" y="83.5" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="HMN-uw-wgk"/>
                                             <constraint firstAttribute="width" constant="40" id="aZr-Vg-IOe"/>
@@ -54,6 +54,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="meX-pV-x0U" firstAttribute="centerY" secondItem="TPY-ns-uKG" secondAttribute="centerY" id="7ud-Sn-SUr"/>
                                     <constraint firstItem="TPY-ns-uKG" firstAttribute="height" secondItem="GGY-Kc-4BG" secondAttribute="height" multiplier="0.3" id="AUi-93-PQu"/>
                                     <constraint firstItem="TPY-ns-uKG" firstAttribute="width" secondItem="GGY-Kc-4BG" secondAttribute="width" multiplier="0.7" id="ElS-lz-Ptn"/>
                                     <constraint firstItem="TPY-ns-uKG" firstAttribute="top" secondItem="GGY-Kc-4BG" secondAttribute="top" constant="70" id="MCX-ga-aLx"/>
@@ -238,7 +239,6 @@
                             <constraint firstItem="GGY-Kc-4BG" firstAttribute="height" secondItem="GEn-nw-myF" secondAttribute="height" multiplier="0.25" id="bVe-R1-naH"/>
                             <constraint firstItem="ztw-fQ-vwS" firstAttribute="trailing" secondItem="NVr-pQ-bVx" secondAttribute="trailing" id="dFl-lf-AuJ"/>
                             <constraint firstItem="rK9-HQ-27S" firstAttribute="height" secondItem="GEn-nw-myF" secondAttribute="height" multiplier="0.045" id="dXs-Kz-e7i"/>
-                            <constraint firstItem="NVr-pQ-bVx" firstAttribute="top" secondItem="meX-pV-x0U" secondAttribute="top" constant="5" id="f9Z-xd-8T2"/>
                             <constraint firstItem="rK9-HQ-27S" firstAttribute="width" secondItem="GEn-nw-myF" secondAttribute="width" multiplier="0.5" id="fZx-nG-KB9"/>
                             <constraint firstItem="5rr-ua-ffd" firstAttribute="centerY" secondItem="GEn-nw-myF" secondAttribute="centerY" id="hnh-lq-EDr"/>
                             <constraint firstItem="GGY-Kc-4BG" firstAttribute="leading" secondItem="NVr-pQ-bVx" secondAttribute="leading" id="r0d-xu-Ssx"/>
@@ -304,7 +304,7 @@
         <image name="distraído" width="100" height="100"/>
         <image name="instrucao" width="60" height="60"/>
         <image name="mae" width="100" height="100"/>
-        <image name="namorado" width="103" height="103"/>
+        <image name="namorado" width="100" height="100"/>
         <image name="pai" width="100" height="100"/>
         <image name="penetra" width="100" height="100"/>
     </resources>
