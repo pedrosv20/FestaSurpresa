@@ -58,12 +58,9 @@ class RuleScreenController: UIViewController, UITableViewDelegate,UITableViewDat
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var sairButton: UIButton!
     @IBAction func sairButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller  = storyboard.instantiateInitialViewController()!
-        controller.modalPresentationStyle = .overFullScreen
-        DispatchQueue.main.async {
-            self.present(controller, animated: false, completion: nil)
-        }
+        print("cabosse")
+        self.dismiss(animated: false, completion: nil)
+        
     }
     @IBAction func actBtnInstrucao(_ sender: Any) {
         primeiro = true
