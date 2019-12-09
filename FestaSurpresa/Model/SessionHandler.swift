@@ -113,14 +113,14 @@ class SessionHandler: NSObject, MCSessionDelegate {
                 let storyboard = UIStoryboard(name: "Win", bundle: nil)
                 let controller  = storyboard.instantiateInitialViewController() as WinViewController?
                 if self.controller.presentedViewController != nil {
-                    self.controller.presentedViewController?.dismiss(animated: false) {
+                    self.controller.presentedViewController?.dismiss(animated: false,completion: {
                         DispatchQueue.main.async(execute: {
                             controller!.modalPresentationStyle = .overFullScreen
                                 controller?.winner = "Organizer"
                                 self.controller.present(controller!, animated: false, completion: nil)
                             })
                           return
-                    }
+                    })
                 
                 } else {
                     DispatchQueue.main.async(execute: {
@@ -138,14 +138,14 @@ class SessionHandler: NSObject, MCSessionDelegate {
                 let controller  = storyboard.instantiateInitialViewController() as WinViewController?
                 
                 if self.controller.presentedViewController != nil {
-                    self.controller.presentedViewController?.dismiss(animated: false) {
+                    self.controller.presentedViewController?.dismiss(animated: false, completion: {
                         DispatchQueue.main.async(execute: {
                             controller!.modalPresentationStyle = .overFullScreen
                                 controller?.winner = "Party Pooper"
                                 self.controller.present(controller!, animated: false, completion: nil)
                             })
                           return
-                    }
+                    })
                 
                 } else {
                     DispatchQueue.main.async(execute: {
