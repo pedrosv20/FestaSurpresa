@@ -114,6 +114,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     
     //TODO: extension de MCPeerID com atributo do tipo da carta, enum
     @IBAction func regras(_ sender: Any) {
+        
         let storyboard = UIStoryboard(name: "RulesScreen", bundle: nil)
         let controller  = storyboard.instantiateInitialViewController()!
         controller.modalPresentationStyle = .overFullScreen

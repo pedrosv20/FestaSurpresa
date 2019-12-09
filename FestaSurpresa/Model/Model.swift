@@ -18,21 +18,21 @@ class Model {
     var players: [Player] = []
     
     var cartas = [
-        Carta(nome: "Namorado", descricao: "Chegou a hora de mostrar todo seu amor. Você está no comando da organização e o sucesso dessa festa (e consequentemente a felicidade do(a) seu amado(a)) dependem de você.", doBem: true, poder: "Trocar de papel com qualquer jogador, em dado momento da festa.", icone: UIImage(named:"namorado")),
+        Carta(nome: "Namorado", descricao: "Chegou a hora de mostrar todo seu amor. Você está no comando da organização e o sucesso dessa festa (e consequentemente a felicidade do(a) seu amado(a)) dependem de você.", doBem: true, poder: "", icone: UIImage(named:"namorado")),
 
-        Carta(nome: "Melhor amigo", descricao: "Você sabe o quanto seu amigo sempre desejou uma festa dessas. Não vamos decepcioná-lo, né?", doBem: true, poder: "Olhar o papel de qualquer outro jogador, em dado momento da festa", icone: UIImage(named:"amigo")),
+        Carta(nome: "Melhor amigo", descricao: "Você sabe o quanto seu amigo sempre desejou uma festa dessas. Não vamos decepcioná-lo, né?", doBem: true, poder: "", icone: UIImage(named:"amigo")),
 
-        Carta(nome: "Penetra", descricao: "Você já veio para a festa sem ser convidado. O mínimo que pode fazer é ajudar", doBem: true, poder: "Caso os organizadores façam 4 pontos, você pode ver a identidade do bêbado", icone: UIImage(named:"penetra")),
+        Carta(nome: "Penetra", descricao: "Você já veio para a festa sem ser convidado. O mínimo que pode fazer é ajudar", doBem: true, poder: "", icone: UIImage(named:"penetra")),
 
-        Carta(nome: "Pai", descricao: "Você precisa controlar a organização da festa para que a festa dê certo e, mais importante, sua casa não termine destruída.", doBem: true, poder: "Jogador extra. Nenhum.", icone: UIImage(named:"pai")),
+        Carta(nome: "Pai", descricao: "Você precisa controlar a organização da festa para que a festa dê certo e, mais importante, sua casa não termine destruída.", doBem: true, poder: "", icone: UIImage(named:"pai")),
 
-        Carta(nome: "Mãe", descricao: "É necessário organizar a festa e nós sabemos como os convidados são desajeitados. Vamos manter tudo em ordem!", doBem: true, poder: "Jogador extra. Nenhum.", icone: UIImage(named:"mae")),
+        Carta(nome: "Mãe", descricao: "É necessário organizar a festa e nós sabemos como os convidados são desajeitados. Vamos manter tudo em ordem!", doBem: true, poder: "", icone: UIImage(named:"mae")),
 
-        Carta(nome: "Distraído", descricao: "Você quer ajudar, mas não consegue manter a boca fechada. Será que você vai acabar estragando a surpresa?", doBem: false, poder: "Caso os desorganizadores façam 3 pontos, poderá trocar de papel com o palhaço.", icone: UIImage(named:"distraído")),
+        Carta(nome: "Distraído", descricao: "Você quer ajudar, mas não consegue manter a boca fechada. Será que você vai acabar estragando a surpresa?", doBem: false, poder: "", icone: UIImage(named:"distraído")),
 
-        Carta(nome: "Bêbado", descricao: "Você nem sabe o que está acontecendo, mas o importante é que estamos numa festa. Certo?", doBem: false, poder: "Você está tão bêbado que mal consegue andar. Quanto mais ter um poder.", icone: UIImage(named:"bebado")),
+        Carta(nome: "Bêbado", descricao: "Você nem sabe o que está acontecendo, mas o importante é que estamos numa festa. Certo?", doBem: false, poder: "", icone: UIImage(named:"bebado")),
 
-        Carta(nome: "Palhaço", descricao: "Você foi contratado para animar a festa, mas quem disse que é isso que você vai fazer? Cada um por si.", doBem: false, poder: "Você não tem um poder, mas você não precisa disso", icone: UIImage(named:"emojione-monotone:joker") )
+        Carta(nome: "Vizinho", descricao: "Você foi convidado para ajudar a festa, então dê o seu máximo para ajudar seus querido vizinho", doBem: false, poder: "", icone: UIImage(named:"VizinhoIcone") )
 
     ]
 
