@@ -16,7 +16,7 @@ class WaitingRoom: SKScene {
 
     override func didMove(to view: SKView) {
         
-        view.showsNodeCount = true
+//        view.showsNodeCount = true
         self.backgroundColor = UIColor.clear
 //        let circle = childNode(withName: "circle") as? SKSpriteNode
         let circlePath = UIBezierPath(arcCenter: CGPoint(x: 0, y: 0), radius: CGFloat(300), startAngle: CGFloat(0),
