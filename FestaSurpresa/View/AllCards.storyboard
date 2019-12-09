@@ -167,7 +167,7 @@
                                                     <constraint firstAttribute="height" constant="90" id="NXM-VB-VOW"/>
                                                     <constraint firstAttribute="width" constant="90" id="e13-7E-7Tv"/>
                                                 </constraints>
-                                                <state key="normal" title="Palhaço" image="emojione-monotone:joker"/>
+                                                <state key="normal" title="Palhaço" image="VizinhoIcone"/>
                                                 <connections>
                                                     <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="UL0-xp-pkN"/>
                                                 </connections>
@@ -299,10 +299,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="VizinhoIcone" width="100" height="100"/>
         <image name="amigo" width="100" height="100"/>
         <image name="bebado" width="100" height="100"/>
         <image name="distraído" width="100" height="100"/>
-        <image name="emojione-monotone:joker" width="100" height="100"/>
         <image name="instrucao" width="60" height="60"/>
         <image name="mae" width="100" height="100"/>
         <image name="namorado" width="103" height="103"/>
