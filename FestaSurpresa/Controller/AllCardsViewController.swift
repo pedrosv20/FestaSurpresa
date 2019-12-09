@@ -96,7 +96,7 @@ class AllCardsViewController: UIViewController {
                 // notifica host q acabou
                 SessionHandler.shared.sendMessage(messageToSend: "deixou de ser lider", convidado: Model.shared.players[SessionHandler.shared.rodada].peerID)
                 
-                if SessionHandler.shared.sucessoRodadas == 3 {
+                if SessionHandler.shared.sucessoRodadas == 4 {
                     // tela de vitoria dos cornos
                     self.presentingViewController?.dismiss(animated: false, completion: nil)
                     let storyboard = UIStoryboard(name: "Win", bundle: nil)
@@ -117,7 +117,7 @@ class AllCardsViewController: UIViewController {
                     return
                     
                 }
-                else if SessionHandler.shared.fracassoRodadas == 3 {
+                else if SessionHandler.shared.fracassoRodadas == 4 {
                     //tela derrota
                     self.presentingViewController?.dismiss(animated: false, completion: nil)
                     let storyboard = UIStoryboard(name: "Win", bundle: nil)
