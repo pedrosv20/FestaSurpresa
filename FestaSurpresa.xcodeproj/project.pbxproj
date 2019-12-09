@@ -121,19 +121,19 @@
 		073521FA238EBF3A003CB5AF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				88E7913D239A84B70056CEAF /* Win.storyboard */,
-				88E7913C239A84B70056CEAF /* WinScene.sks */,
 				A4898013228F49E700852716 /* Main.storyboard */,
-				A4898018228F49E800852716 /* LaunchScreen.storyboard */,
 				01AF2EE72394614900207522 /* RulesScreen.storyboard */,
 				073C842423915E3D00B02366 /* Card 2.storyboard */,
+				07B0DF81239953AF00BF267B /* WaitingPlayers.storyboard */,
+				0781C323239A770B00D0C9E0 /* Players.storyboard */,
 				07B0DF7F239953AE00BF267B /* AllCards.storyboard */,
+				88E7913D239A84B70056CEAF /* Win.storyboard */,
+				88E7913C239A84B70056CEAF /* WinScene.sks */,
+				A4898018228F49E800852716 /* LaunchScreen.storyboard */,
 				07B0DF7A239953AE00BF267B /* ConfeteVert.sks */,
 				07B0DF7E239953AE00BF267B /* HorizontalScene.sks */,
 				075983A4239D6C650027CB21 /* ResultPopUp.storyboard */,
 				07B0DF7D239953AE00BF267B /* VerticalScene.sks */,
-				07B0DF81239953AF00BF267B /* WaitingPlayers.storyboard */,
-				0781C323239A770B00D0C9E0 /* Players.storyboard */,
 				07B0DF7B239953AE00BF267B /* WaitingRoom.sks */,
 				07229F9E239BFB8D00F8E251 /* RequestHelpPopUp.storyboard */,
 			);
@@ -452,7 +452,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZSLUMCNRNL;
+				DEVELOPMENT_TEAM = 8GN6S9CHL7;
 				INFOPLIST_FILE = FestaSurpresa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -470,7 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZSLUMCNRNL;
+				DEVELOPMENT_TEAM = 8GN6S9CHL7;
 				INFOPLIST_FILE = FestaSurpresa/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

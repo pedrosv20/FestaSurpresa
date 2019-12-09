@@ -51,7 +51,7 @@ class WinViewController: UIViewController {
         }
         roundStoryLabel.layer.borderColor = UIColor.white.cgColor
         roundStoryLabel.layer.borderWidth = 2.0
-        roundStoryLabel.layer.cornerRadius = 20.0
+        roundStoryLabel.layer.cornerRadius = 10.0
         playAgain.alpha = 0.0
         playAgain.layer.cornerRadius = 10.0
         animate()

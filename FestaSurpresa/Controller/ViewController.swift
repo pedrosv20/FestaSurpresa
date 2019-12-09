@@ -41,7 +41,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         
         nome?.delegate = self
         
-        startSessionButton.layer.cornerRadius = 15.0
+        startSessionButton.layer.cornerRadius = 10.0
         startSessionButton.isEnabled = false
         startSessionButton.alpha = 0.7
         
