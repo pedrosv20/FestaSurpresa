@@ -26,12 +26,7 @@ class WinViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Organizer"), object: nil, queue: nil) { (Notification) in
-            self.winner = "Organizer"
-        }
-        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "PartyPooper"), object: nil, queue: nil) { (Notification) in
-            self.winner = "PartyPooper"
-        }
+        
         if let scene = SKScene(fileNamed: "WinScene"){
             scene.scaleMode = .aspectFill
             winScene = scene as! WinScene
@@ -60,6 +55,9 @@ class WinViewController: UIViewController {
         
     }
     
+    @IBAction func playagain(_ sender: Any) {
+        print("lenis")
+    }
     func animate(){
         UIView.animate(withDuration: 4.0){
             

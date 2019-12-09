@@ -100,10 +100,18 @@ class AllCardsViewController: UIViewController {
                     // tela de vitoria dos cornos
                     self.presentingViewController?.dismiss(animated: false, completion: nil)
                     let storyboard = UIStoryboard(name: "Win", bundle: nil)
-                    let controller  = storyboard.instantiateInitialViewController()!
+                    let controller  = storyboard.instantiateInitialViewController() as! WinViewController
                     controller.modalPresentationStyle = .overFullScreen
-                    self.present(controller, animated: false, completion: {NotificationCenter.default.post(name: NSNotification.Name("Organizer"), object: nil)})
+                    controller.winner = "Organizer"
+                    self.present(controller, animated: false, completion: nil)
                     //send message to others
+                    DispatchQueue.main.async{
+                        do{
+                            try SessionHandler.shared.mcSession?.send("vencedores ganham".data(using: .utf8)!, toPeers: (SessionHandler.shared.mcSession?.connectedPeers)!, with: .unreliable)
+                        } catch {
+                            print("macarrao")
+                        }
+                    }
                     
                     
                 }
@@ -111,9 +119,18 @@ class AllCardsViewController: UIViewController {
                     //tela derrota
                     self.presentingViewController?.dismiss(animated: false, completion: nil)
                     let storyboard = UIStoryboard(name: "Win", bundle: nil)
-                    let controller  = storyboard.instantiateInitialViewController()!
+                    let controller  = storyboard.instantiateInitialViewController() as! WinViewController
                     controller.modalPresentationStyle = .overFullScreen
-                    self.present(controller, animated: false, completion: {NotificationCenter.default.post(name: NSNotification.Name("PartyPooper"), object: nil)})
+                    controller.winner = "PartyPooper"
+                    self.present(controller, animated: false, completion: nil)
+                    DispatchQueue.main.async{
+                        do{
+                            try SessionHandler.shared.mcSession?.send("perdedores ganham".data(using: .utf8)!, toPeers: (SessionHandler.shared.mcSession?.connectedPeers)!, with: .unreliable)
+                        } catch {
+                            print("macarrao")
+                        }
+                    }
+                    //send message to others
                 }
                 SessionHandler.shared.rodada += 1
                 SessionHandler.shared.lider = false
@@ -164,10 +181,7 @@ class AllCardsViewController: UIViewController {
                     SessionHandler.shared.fracassoRodadas += 1
                     self.fimRodada(message: "3falha")
                 }
-                
-            
         }
-        
         
     }
     override func viewWillAppear(_ animated: Bool) {

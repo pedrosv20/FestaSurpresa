@@ -9,6 +9,7 @@
 import Foundation
 import MultipeerConnectivity
 
+
 class SessionHandler: NSObject, MCSessionDelegate {
     
     static let shared = SessionHandler()
@@ -48,7 +49,7 @@ class SessionHandler: NSObject, MCSessionDelegate {
     }
     
     var fracassoRodadas = 0
-    var sucessoRodadas = 0
+    var sucessoRodadas = 2
     private override init() {
         
     }
@@ -107,6 +108,27 @@ class SessionHandler: NSObject, MCSessionDelegate {
                 }
             }
             
+            if message == "vencedores ganham" {
+                let storyboard = UIStoryboard(name: "Win", bundle: nil)
+                let controller  = storyboard.instantiateInitialViewController() as WinViewController?
+                controller!.modalPresentationStyle = .overFullScreen
+                controller?.winner = "Organizer"
+                DispatchQueue.main.async {
+                    self.controller.present(controller!, animated: false, completion: nil)
+                }
+            }
+            
+            if message == "perdedores ganham" {
+                let storyboard = UIStoryboard(name: "Win", bundle: nil)
+                let controller  = storyboard.instantiateInitialViewController() as WinViewController?
+                controller!.modalPresentationStyle = .overFullScreen
+                controller?.winner = "Party Pooper"
+                DispatchQueue.main.async {
+                    self.controller.present(controller!, animated: false, completion: nil)
+                }
+            }
+
+            
             
             if message == "sucesso total" || message == "1falha" || message == "2falha" || message == "3falha" {
                 let storyboard = UIStoryboard(name: "ResultPopUp", bundle: nil)
@@ -117,8 +139,6 @@ class SessionHandler: NSObject, MCSessionDelegate {
                     self.controller.present(controller, animated: false, completion: {NotificationCenter.default.post(Notification(name: Notification.Name(message)))})
                 }
 
-                
-                
             }
             
             if self.host {
