@@ -25,11 +25,11 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="291-Mv-wgy">
-                                <rect key="frame" x="62" y="70" width="290" height="79"/>
+                                <rect key="frame" x="41.5" y="70" width="331" height="79"/>
                                 <string key="text">
   Aguardando jogadores  
 </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -58,7 +58,7 @@
                             <constraint firstItem="291-Mv-wgy" firstAttribute="centerX" secondItem="8Z7-kW-0SZ" secondAttribute="centerX" id="UXz-vB-dE9"/>
                             <constraint firstItem="291-Mv-wgy" firstAttribute="height" secondItem="8Z7-kW-0SZ" secondAttribute="height" multiplier="0.0881696" id="Uiz-E5-Agx"/>
                             <constraint firstItem="hp6-eS-9dz" firstAttribute="width" secondItem="8Z7-kW-0SZ" secondAttribute="width" multiplier="0.5" id="Zge-VJ-fIe"/>
-                            <constraint firstItem="291-Mv-wgy" firstAttribute="width" secondItem="8Z7-kW-0SZ" secondAttribute="width" multiplier="0.7" id="cHh-aY-dE4"/>
+                            <constraint firstItem="291-Mv-wgy" firstAttribute="width" secondItem="8Z7-kW-0SZ" secondAttribute="width" multiplier="0.8" id="cHh-aY-dE4"/>
                             <constraint firstAttribute="bottom" secondItem="XaF-Go-7ac" secondAttribute="bottom" multiplier="1.1" id="g9x-pY-6BL"/>
                             <constraint firstItem="XaF-Go-7ac" firstAttribute="centerX" secondItem="8Z7-kW-0SZ" secondAttribute="centerX" id="wPE-NF-EZU"/>
                             <constraint firstItem="291-Mv-wgy" firstAttribute="top" secondItem="8Z7-kW-0SZ" secondAttribute="top" constant="70" id="yT6-vM-mz8"/>

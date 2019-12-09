@@ -33,6 +33,8 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Model.shared.tarefas.shuffle()
+        
         if let scene = SKScene(fileNamed: "HorizontalScene"){
             scene.scaleMode = .aspectFill
             skView.presentScene(scene)

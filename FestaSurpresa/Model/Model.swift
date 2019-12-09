@@ -46,27 +46,27 @@ class Model {
     ]
     
     var tarefas = [
-        Tarefa(tituloTarefa: "O bolo precisa ser encomendado. Líder, escolha 3 jogadores para te ajudarem a escolher o sabor.", numeroTarefa: 1),
-        Tarefa(tituloTarefa: "Os 37 barris de chopp chegaram. Líder, escolha 3 pessoas para ajudar a descarregar a bebida sem derramar nem uma gota.", numeroTarefa: 2),
+        Tarefa(tituloTarefa: "O bolo precisa ser encomendado. Escolha 3 jogadores para te ajudarem a escolher o sabor.", numeroTarefa: 1),
+        Tarefa(tituloTarefa: "Os 37 barris de chopp chegaram. Escolha 3 pessoas para ajudar a descarregar a bebida sem derramar nem uma gota.", numeroTarefa: 2),
         Tarefa(tituloTarefa: "A cama elástica é a principal atração. Líder, escolha 3 pessoas para te ajudarem a montar o brinquedo", numeroTarefa: 3),
-        Tarefa(tituloTarefa: "o ambiente tem que estar perfeito. Líder, escolha X jogadores para te ajudarem a encher os balões.", numeroTarefa: 4),
-        Tarefa(tituloTarefa: "Os vegetarianos também precisam comer. Líder, escolha 3 jogadores para te ajudem a lavar a  alface.", numeroTarefa: 5),
-        Tarefa(tituloTarefa: "As crianças precisam brincar. Líder, escolha 3 jogadores para encher a piscina de bolinhas.", numeroTarefa: 6),
-        Tarefa(tituloTarefa: "Os convidados chegaram. Líder, escolha 3 jogadores para ajudar a estacionar os carros. ", numeroTarefa: 7),
-        Tarefa(tituloTarefa: "As mesas precisam ser arrumadas. Líder, escolha 3 jogadores para ajudar a arrumar as mesas. ", numeroTarefa: 8),
-        Tarefa(tituloTarefa: "As comidas chegaram. Líder, escolha 3 jogadores para ajudar a organizar as comidas.", numeroTarefa: 9),
-        Tarefa(tituloTarefa: "Os convidados estão com sede. Líder, escolha 3 jogadores para ajudar a servir bebida.", numeroTarefa: 10),
-        Tarefa(tituloTarefa: "O aniversariante está preso no banheiro. Líder, escolha 3 jogadores para ajudar a soltar o aniversariante.", numeroTarefa: 11),
+        Tarefa(tituloTarefa: "O ambiente tem que estar perfeito. Escolha X jogadores para te ajudarem a encher os balões.", numeroTarefa: 4),
+        Tarefa(tituloTarefa: "Os vegetarianos também precisam comer. Escolha 3 jogadores para te ajudem a lavar a  alface.", numeroTarefa: 5),
+        Tarefa(tituloTarefa: "As crianças precisam brincar. Escolha 3 jogadores para encher a piscina de bolinhas.", numeroTarefa: 6),
+        Tarefa(tituloTarefa: "Os convidados chegaram. Escolha 3 jogadores para ajudar a estacionar os carros.", numeroTarefa: 7),
+        Tarefa(tituloTarefa: "As mesas precisam ser arrumadas. Escolha 3 jogadores para ajudar a arrumar as mesas.", numeroTarefa: 8),
+        Tarefa(tituloTarefa: "A comida chegou. Escolha 3 jogadores para ajudar a servir.", numeroTarefa: 9),
+        Tarefa(tituloTarefa: "Os convidados estão com sede. Escolha 3 jogadores para preparaem shots.", numeroTarefa: 10),
+        Tarefa(tituloTarefa: "O aniversariante está preso no banheiro. Escolha 3 jogadores para ajudar a soltar o aniversariante.", numeroTarefa: 11),
         Tarefa(tituloTarefa: "As cadeiras estão sujas. Líder, escolha 3 jogadores para limpar as cadeiras.", numeroTarefa: 12),
-        Tarefa(tituloTarefa: "Ninguém sabe onde está a comida. Líder, escolha 3 jogadores para ajudar a encontrar a comida.", numeroTarefa: 13),
-        Tarefa(tituloTarefa: "As garrafas de Refrigerante estão quentes. Líder, escolha 3 jogadores para colocar o refrigerante na geladeira", numeroTarefa: 14),
-        Tarefa(tituloTarefa: "Os salgadinhos estão acabando. Líder, escolha 3 jogadores para comprar mais salgadinhos", numeroTarefa: 15),
-        Tarefa(tituloTarefa: "A roupa do aniversariante sujou. Líder, escolha 3 jogadores para ajudar o aniversariante", numeroTarefa: 16),
-        Tarefa(tituloTarefa: "A cozinha está pegando fogo. Líder, escolha 3 jogadores para apagar o fogo", numeroTarefa: 17),
-        Tarefa(tituloTarefa: "O banheiro entupiu. Líder, escolha 3 jogadores para limpar o banheiro ", numeroTarefa: 18),
-        Tarefa(tituloTarefa: "A luz caiu. Líder, escolha 3 jogadores para religar o disjuntor ", numeroTarefa: 19),
-        Tarefa(tituloTarefa: "A música parou. Líder, escolha 3 jogadores para colocar uma música ", numeroTarefa: 20),
-        Tarefa(tituloTarefa: "Os convidados estão odiando a musica. Líder, escolha 3 jogadores para trocar a música ", numeroTarefa: 21)
+        Tarefa(tituloTarefa: "Ninguém sabe onde está a comida. Escolha 3 jogadores para ajudar a encontrar a comida.", numeroTarefa: 13),
+        Tarefa(tituloTarefa: "Os refrigerantes estão quentes. Escolha 3 jogadores para comprar gelo.", numeroTarefa: 14),
+        Tarefa(tituloTarefa: "Os salgadinhos estão acabando. Escolha 3 jogadores para assar mais salgadinhos.", numeroTarefa: 15),
+        Tarefa(tituloTarefa: "O aniversariante caiu numa poça de lama. Escolha 3 jogadores para dar banho no aniversariante.", numeroTarefa: 16),
+        Tarefa(tituloTarefa: "A cozinha está pegando fogo. Escolha 3 jogadores para controlar o incêndio.", numeroTarefa: 17),
+        Tarefa(tituloTarefa: "O banheiro entupiu. Escolha 3 jogadores para limpar o banheiro ", numeroTarefa: 18),
+        Tarefa(tituloTarefa: "A luz caiu. Escolha 3 jogadores para religar o disjuntor ", numeroTarefa: 19),
+        Tarefa(tituloTarefa: "A música parou. Escolha 3 jogadores para derem DJs.", numeroTarefa: 20),
+        Tarefa(tituloTarefa: "Os convidados estão odiando a musica e destruíndo a casa. Escolha 3 jogadores para trocar a playlist.", numeroTarefa: 21)
     ]
     
     
