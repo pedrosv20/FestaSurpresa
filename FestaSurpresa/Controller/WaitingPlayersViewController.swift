@@ -84,7 +84,7 @@ class WaitingPlayersViewController: UIViewController {
        
         let int = (SessionHandler.shared.mcSession?.connectedPeers.count)! + 1
 
-        numeroPlayers.text = String(int)
+//        numeroPlayers.text = String(int)
         
     }
     
