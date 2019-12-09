@@ -160,13 +160,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIq-in-nCR">
                                         <rect key="frame" x="0.0" y="349.5" width="414" height="174.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLK-Rf-Q1S" userLabel="Palhaço">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLK-Rf-Q1S">
                                                 <rect key="frame" x="51" y="42.5" width="90" height="90"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="90" id="NXM-VB-VOW"/>
                                                     <constraint firstAttribute="width" constant="90" id="e13-7E-7Tv"/>
                                                 </constraints>
-                                                <state key="normal" title="Palhaço" image="VizinhoIcone"/>
+                                                <state key="normal" title="Vizinho" image="VizinhoIcone"/>
                                                 <connections>
                                                     <action selector="cardButton:" destination="n3a-UX-6ON" eventType="touchUpInside" id="UL0-xp-pkN"/>
                                                 </connections>
