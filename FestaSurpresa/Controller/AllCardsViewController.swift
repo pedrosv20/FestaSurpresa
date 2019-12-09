@@ -114,7 +114,7 @@ class AllCardsViewController: UIViewController {
                     self.present(controller, animated: false, completion: nil)
                     //send message to others
                     
-                    
+                    return
                     
                 }
                 else if SessionHandler.shared.fracassoRodadas == 3 {
@@ -132,6 +132,7 @@ class AllCardsViewController: UIViewController {
                             print("macarrao")
                         }
                     }
+                    return
                     //send message to others
                 }
                 SessionHandler.shared.rodada += 1
