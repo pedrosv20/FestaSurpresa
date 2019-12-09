@@ -28,10 +28,10 @@ class ResultPopUp: UIViewController {
             self.resultLabel.text! = "A etapa teve 1 voto de falha."
         }
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "2falha"), object: nil, queue: nil) { (Notification) in
-            self.resultLabel.text! = "A etapa teve 1 voto de falha."
+            self.resultLabel.text! = "A etapa teve 2 voto de falha."
         }
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "3falha"), object: nil, queue: nil) { (Notification) in
-            self.resultLabel.text! = "A etapa teve 1 voto de falha."
+            self.resultLabel.text! = "A etapa teve 2 voto de falha."
         }
     
         
