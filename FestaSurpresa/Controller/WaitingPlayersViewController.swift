@@ -58,10 +58,10 @@ class WaitingPlayersViewController: UIViewController {
                    
                    self.attNumberPlayers()
                }
-        wait!.createCircle(name: SessionHandler.shared.nome)
+        wait!.createCircle()
         if (SessionHandler.shared.mcSession?.connectedPeers.count)! > 0 {
             for cont in SessionHandler.shared.mcSession!.connectedPeers {
-                wait!.createCircle(name: cont.displayName)
+                wait!.createCircle()
             }
         }
         
@@ -100,7 +100,8 @@ class WaitingPlayersViewController: UIViewController {
         var cont = SessionHandler.shared.mcSession?.connectedPeers.count
 //        print(SessionHandler.shared.mcSession?.connectedPeers[cont! - 1].displayName)
         print("FFOOOOOOI")
-        wait?.createCircle(name: (SessionHandler.shared.mcSession?.connectedPeers[cont! - 1].displayName)!)
+//        wait?.createCircle(name: (SessionHandler.shared.mcSession?.connectedPeers[cont! - 1].displayName)!)
+        wait?.createCircle()
         // essas duas linhas de cima da pra criar um array
 //        self.numeroPlayers.text = String((SessionHandler.shared.mcSession?.connectedPeers.count)! + 1)
 //        nomePlayersd.text += SessionHandler.shared.nome

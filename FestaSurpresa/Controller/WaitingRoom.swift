@@ -34,12 +34,12 @@ class WaitingRoom: SKScene {
         addChild(circle)
     }
     
-    func createCircle(name: String){
+    func createCircle(){
         var circle = SKShapeNode(circleOfRadius: 50)
-        var namePlayer = SKLabelNode(text: name)
-        namePlayer.fontSize = CGFloat(20)
-        namePlayer.fontName = "SFPro"
-        namePlayer.fontColor = .black
+//        var namePlayer = SKLabelNode(text: name)
+//        namePlayer.fontSize = CGFloat(20)
+//        namePlayer.fontName = "SFPro"
+//        namePlayer.fontColor = .black
         
 //        let circlePath = UIBezierPath(arcCenter: CGPoint(x: 0, y: 0), radius: CGFloat(50),
 //                                      startAngle: CGFloat(0),
@@ -60,7 +60,7 @@ class WaitingRoom: SKScene {
 //        body.applyForce(CGVector(dx: Int.random(in: 500...600), dy: Int.random(in: 30...45)))
         circle.physicsBody = body
         addChild(circle)
-        circle.addChild(namePlayer)
+//        circle.addChild(namePlayer)
         
     }
     
@@ -77,7 +77,7 @@ class WaitingRoom: SKScene {
     }
     
     func touchUp(atPoint pos : CGPoint) {
-        createCircle(name: "")
+        createCircle()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

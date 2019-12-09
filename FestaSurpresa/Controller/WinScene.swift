@@ -35,7 +35,7 @@ class WinScene: SKScene {
         dark_purple   = childNode(withName: "dark_purple") as? SKEmitterNode
         funnel         = childNode(withName: "funnel") as? SKSpriteNode
         
-//        setUp(FunnelName: "Organizer")
+        //        setUp(FunnelName: "Organizer")
         
         
         //        light_red?.advanceSimulationTime(60)
@@ -51,27 +51,27 @@ class WinScene: SKScene {
     
     func touchDown(atPoint pos : CGPoint) {
         
-//        timer()
-//        if control == 1 {
-//            light_red.particleBirthRate     = 70.0
-//            light_red.particleBirthRate     = 70.0
-//            light_tiffany.particleBirthRate = 70.0
-//            light_purple.particleBirthRate  = 70.0
-//            dark_red.particleBirthRate      = 70.0
-//            dark_tiffany.particleBirthRate  = 70.0
-//            dark_purple.particleBirthRate   = 70.0
-//            control                         = 0
-//        } else {
-//
-//            light_red.particleBirthRate     = 0.0
-//            light_red.particleBirthRate     = 0.0
-//            light_tiffany.particleBirthRate = 0.0
-//            light_purple.particleBirthRate  = 0.0
-//            dark_red.particleBirthRate      = 0.0
-//            dark_tiffany.particleBirthRate  = 0.0
-//            dark_purple.particleBirthRate   = 0.0
-//            control                         = 1
-//        }
+        //        timer()
+        //        if control == 1 {
+        //            light_red.particleBirthRate     = 70.0
+        //            light_red.particleBirthRate     = 70.0
+        //            light_tiffany.particleBirthRate = 70.0
+        //            light_purple.particleBirthRate  = 70.0
+        //            dark_red.particleBirthRate      = 70.0
+        //            dark_tiffany.particleBirthRate  = 70.0
+        //            dark_purple.particleBirthRate   = 70.0
+        //            control                         = 0
+        //        } else {
+        //
+        //            light_red.particleBirthRate     = 0.0
+        //            light_red.particleBirthRate     = 0.0
+        //            light_tiffany.particleBirthRate = 0.0
+        //            light_purple.particleBirthRate  = 0.0
+        //            dark_red.particleBirthRate      = 0.0
+        //            dark_tiffany.particleBirthRate  = 0.0
+        //            dark_purple.particleBirthRate   = 0.0
+        //            control                         = 1
+        //        }
         
         
     }
@@ -107,8 +107,8 @@ class WinScene: SKScene {
     }
     
     func setUp(FunnelName: String) {
-
-//        winView.playAgain!.alpha = 0.0
+        
+        //        winView.playAgain!.alpha = 0.0
         
         if FunnelName == "Organizer"{
             funnelName = "FunilVermelho"
@@ -116,11 +116,11 @@ class WinScene: SKScene {
         } else if FunnelName == "PartyPooper"{
             funnelName = "FunilRoxo"
             funnel.texture = SKTexture(imageNamed: funnelName + "3.pdf")
-
+            
         } else if FunnelName == "Clown"{
             funnelName = "FunilAzul"
             funnel.texture                = SKTexture(imageNamed: funnelName + "3.pdf")
-    
+            
             light_red.particleTexture     = SKTexture(imageNamed: "Clown.png")
             light_red.particleTexture     = SKTexture(imageNamed: "Clown.png")
             light_tiffany.particleTexture = SKTexture(imageNamed: "Clown.png")
@@ -128,7 +128,7 @@ class WinScene: SKScene {
             dark_red.particleTexture      = SKTexture(imageNamed: "Clown.png")
             dark_tiffany.particleTexture  = SKTexture(imageNamed: "Clown.png")
             dark_purple.particleTexture   = SKTexture(imageNamed: "Clown.png")
-    
+            
             light_red.particleScale       = 0.6
             light_red.particleScale       = 0.6
             light_tiffany.particleScale   = 0.6
@@ -204,10 +204,10 @@ class WinScene: SKScene {
                 self.initAnimation()
                 self.control = self.control + 1
             } else if self.control == 3 {
-            self.funnel.texture = SKTexture(imageNamed: self.funnelName + "\(self.control).pdf")
-            self.killAnimation()
+                self.funnel.texture = SKTexture(imageNamed: self.funnelName + "\(self.control).pdf")
+                self.killAnimation()
                 self.control = self.control + 1
-//                self.winView.animate()
+                //                self.winView.animate()
             } else {
                 timer.invalidate()
                 self.control = 1
@@ -219,65 +219,4 @@ class WinScene: SKScene {
     }
     
     
-    
-    
-    //MARK: Animaçao com as texturas
-    /*
-    
-    var PartyPooperFrames: [SKTexture] = []   // array de texturas
-    var OrganizerFrames:   [SKTexture] = []
-    var ClownFrames:       [SKTexture] = []
-    let AnimatedAtlas = SKTextureAtlas(named: "assets") // salvar as imagens do arquivo atlas
-    
-    func buildCanoingTexture() {
-        // funçao para construir o array de texturas e atribuir a textura para o player parado
-        var partyPooperFrames:  [SKTexture] = []
-        var organizerFrames:    [SKTexture] = []
-        var clownFrames:        [SKTexture] = []
-        for i in 1...3 {
-            let PartyPooperTexture  = "FunilAzul\(i)"
-            let OrganizerTexture    = "FunilRoxo\(i)"
-            let ClownTexture        = "FunilVermeho\(i)"
-            PartyPooperFrames.append(AnimatedAtlas.textureNamed(PartyPooperTexture))
-            OrganizerFrames.append(AnimatedAtlas.textureNamed(OrganizerTexture))
-            ClownFrames.append(AnimatedAtlas.textureNamed(ClownTexture))
-            
-        }
-        PartyPooperFrames   = partyPooperFrames
-        OrganizerFrames     = organizerFrames
-        ClownFrames         = clownFrames
-//        self.texture = AnimatedAtlas.textureNamed("FunilAzul1")
-//        setUp()
-    }
-    
-    func animatePlayer(direction: Int) {
-        let padling = SKAction.repeatForever(
-            SKAction.animate(with: CanoingFrames,
-                             timePerFrame: 0.2,
-                             resize: false,
-                             restore: true))
-        let padlingRight = SKAction.animate(with: CanoingRight,
-                                            timePerFrame: 0.2,
-                                            resize: false,
-                                            restore: true)
-        let padlingLeft = SKAction.animate(with: CanoingLeft,
-                                           timePerFrame: 0.2,
-                                           resize: false,
-                                           restore: true)
-        // função para a animação do player usando as texturas
-        if direction == 0 {
-            self.run(padling,
-                     withKey:"walkingInPlacePlayer")
-        } else if direction == 1{
-            self.run(SKAction.sequence([padlingRight,padling]))
-        } else if direction == 2 {
-            self.run(SKAction.sequence([padlingLeft,padling]))
-        }
-        self.direction = direction
-    }
-    func ended(){
-        removeAllActions()
-    }
-    
-    */
 }
