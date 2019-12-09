@@ -11,12 +11,10 @@ import SpriteKit
 
 class WaitingPlayersViewController: UIViewController {
 
-    @IBOutlet weak var nomePlayersd: UITextView!
     @IBOutlet weak var skView: SKView!
     @IBOutlet weak var skViewHorizontal: SKView!
     @IBOutlet weak var roundStoryLabel: UILabel!
     
-    @IBOutlet weak var numeroPlayers: UILabel!
     @IBOutlet weak var comecar: UIButton!
     let minPlayers = 2
     let maxPlayer = 8
@@ -69,7 +67,7 @@ class WaitingPlayersViewController: UIViewController {
         
         roundStoryLabel.layer.borderColor = UIColor.black.cgColor
         roundStoryLabel.layer.borderWidth = 2.0
-        roundStoryLabel.layer.cornerRadius = 20.0
+        roundStoryLabel.layer.cornerRadius = 10.0
 
          
         // Do any additional setup after loading the view.
@@ -86,7 +84,7 @@ class WaitingPlayersViewController: UIViewController {
        
         let int = (SessionHandler.shared.mcSession?.connectedPeers.count)! + 1
 
-        numeroPlayers.text = String(int)
+//        numeroPlayers.text = String(int)
         
     }
     
@@ -97,15 +95,15 @@ class WaitingPlayersViewController: UIViewController {
     
     func attNumberPlayers() {
         
-        nomePlayersd.text += SessionHandler.shared.nome + "\n"
-        SessionHandler.shared.mcSession?.connectedPeers.map{nomePlayersd.text += "\($0.displayName) \n"}
+//        nomePlayersd.text += SessionHandler.shared.nome + "\n"
+//        SessionHandler.shared.mcSession?.connectedPeers.map{nomePlayersd.text += "\($0.displayName) \n"}
         var cont = SessionHandler.shared.mcSession?.connectedPeers.count
 //        print(SessionHandler.shared.mcSession?.connectedPeers[cont! - 1].displayName)
         print("FFOOOOOOI")
         wait?.createCircle(name: (SessionHandler.shared.mcSession?.connectedPeers[cont! - 1].displayName)!)
         // essas duas linhas de cima da pra criar um array
-        self.numeroPlayers.text = String((SessionHandler.shared.mcSession?.connectedPeers.count)! + 1)
-        nomePlayersd.text += SessionHandler.shared.nome
+//        self.numeroPlayers.text = String((SessionHandler.shared.mcSession?.connectedPeers.count)! + 1)
+//        nomePlayersd.text += SessionHandler.shared.nome
         if (SessionHandler.shared.mcSession?.connectedPeers.count)! + 1 >= minPlayers && (SessionHandler.shared.mcSession?.connectedPeers.count)! + 1 < maxPlayer {
             if SessionHandler.shared.host {
                 comecar.isEnabled = true

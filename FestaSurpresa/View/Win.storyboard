@@ -39,8 +39,9 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OR-YA-Xbp">
-                                <rect key="frame" x="145" y="430.5" width="124" height="45"/>
+                                <rect key="frame" x="103.5" y="428" width="207" height="40"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="Play Again">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -49,17 +50,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="oeg-Jh-nCp" firstAttribute="width" secondItem="9Il-MR-1ZP" secondAttribute="width" id="0JY-IV-DQl"/>
-                            <constraint firstItem="6OR-YA-Xbp" firstAttribute="width" secondItem="9Il-MR-1ZP" secondAttribute="width" multiplier="0.3" id="89J-7P-LAW"/>
+                            <constraint firstItem="6OR-YA-Xbp" firstAttribute="width" secondItem="9Il-MR-1ZP" secondAttribute="width" multiplier="0.5" id="89J-7P-LAW"/>
                             <constraint firstItem="7iI-sy-Ae3" firstAttribute="top" secondItem="oeg-Jh-nCp" secondAttribute="top" id="BZz-jj-bNM"/>
                             <constraint firstItem="7iI-sy-Ae3" firstAttribute="centerX" secondItem="oeg-Jh-nCp" secondAttribute="centerX" id="IZi-Z4-fnb"/>
                             <constraint firstItem="6OR-YA-Xbp" firstAttribute="centerX" secondItem="9Il-MR-1ZP" secondAttribute="centerX" id="KFK-gk-aiT"/>
                             <constraint firstItem="oeg-Jh-nCp" firstAttribute="centerY" secondItem="9Il-MR-1ZP" secondAttribute="centerY" id="LCX-5P-Ns9"/>
                             <constraint firstItem="oeg-Jh-nCp" firstAttribute="centerX" secondItem="9Il-MR-1ZP" secondAttribute="centerX" id="MGh-UH-Sob"/>
-                            <constraint firstItem="6OR-YA-Xbp" firstAttribute="height" secondItem="9Il-MR-1ZP" secondAttribute="height" multiplier="0.05" id="Msw-dF-Bzc"/>
+                            <constraint firstItem="6OR-YA-Xbp" firstAttribute="height" secondItem="9Il-MR-1ZP" secondAttribute="height" multiplier="0.045" id="Msw-dF-Bzc"/>
                             <constraint firstItem="oeg-Jh-nCp" firstAttribute="height" secondItem="9Il-MR-1ZP" secondAttribute="height" id="ONW-JT-OXb"/>
                             <constraint firstItem="7iI-sy-Ae3" firstAttribute="width" secondItem="oeg-Jh-nCp" secondAttribute="width" id="bid-A0-8bY"/>
                             <constraint firstItem="7iI-sy-Ae3" firstAttribute="height" secondItem="oeg-Jh-nCp" secondAttribute="height" multiplier="0.25" id="oXy-g4-ZcW"/>
-                            <constraint firstItem="6OR-YA-Xbp" firstAttribute="centerY" secondItem="9Il-MR-1ZP" secondAttribute="centerY" constant="5" id="wKc-kw-Zlv"/>
+                            <constraint firstItem="6OR-YA-Xbp" firstAttribute="centerY" secondItem="9Il-MR-1ZP" secondAttribute="centerY" id="wKc-kw-Zlv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1BD-1T-Dke"/>
                     </view>

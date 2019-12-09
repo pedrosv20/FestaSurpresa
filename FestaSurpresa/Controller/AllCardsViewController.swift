@@ -42,7 +42,7 @@ class AllCardsViewController: UIViewController {
         view.layer.insertSublayer(backgroundLayer!, at: 0)
         
         roundStoryLabel.layer.borderColor = UIColor.black.cgColor
-        iniciarRodadaButton.layer.cornerRadius = 15.0
+        iniciarRodadaButton.layer.cornerRadius = 10.0
         roundStoryLabel.layer.borderWidth = 2.0
         roundStoryLabel.layer.cornerRadius = 20.0
         showCardButton.layer.cornerRadius = 15.0

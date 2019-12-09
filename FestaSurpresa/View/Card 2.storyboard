@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hTN-65-J2A">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,7 +11,7 @@
         <!--Card View Controller-->
         <scene sceneID="IEj-aF-jp4">
             <objects>
-                <viewController storyboardIdentifier="card" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hTN-65-J2A" customClass="CardViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="card" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hTN-65-J2A" customClass="CardViewController" customModule="FestaSurpresa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5sQ-uM-im1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,7 +126,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPz-OT-uZS">
-                                <rect key="frame" x="134" y="814" width="146" height="38"/>
+                                <rect key="frame" x="103.5" y="818" width="207" height="38"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="10" maxX="40" maxY="10"/>
@@ -142,12 +143,13 @@
                             <constraint firstItem="7Cy-he-t4g" firstAttribute="height" secondItem="5sQ-uM-im1" secondAttribute="height" id="5Af-gU-gi1"/>
                             <constraint firstItem="oMp-uc-PZN" firstAttribute="trailing" secondItem="RDm-Dl-LRq" secondAttribute="trailing" id="6sa-lB-fPf"/>
                             <constraint firstItem="7Cy-he-t4g" firstAttribute="centerX" secondItem="5sQ-uM-im1" secondAttribute="centerX" id="8cF-L4-WlR"/>
+                            <constraint firstAttribute="bottom" secondItem="vPz-OT-uZS" secondAttribute="bottom" constant="40" id="9YM-WF-2EL"/>
                             <constraint firstItem="5OY-dq-GCv" firstAttribute="trailing" secondItem="RDm-Dl-LRq" secondAttribute="trailing" id="DwO-0L-knA"/>
                             <constraint firstItem="5OY-dq-GCv" firstAttribute="top" secondItem="oMp-uc-PZN" secondAttribute="bottom" id="Gzn-hP-t1L"/>
                             <constraint firstItem="5OY-dq-GCv" firstAttribute="height" secondItem="5sQ-uM-im1" secondAttribute="height" multiplier="0.8" id="OFf-Ha-R6P"/>
                             <constraint firstItem="oMp-uc-PZN" firstAttribute="height" secondItem="5sQ-uM-im1" secondAttribute="height" multiplier="0.1" id="Q1P-ZW-ijV"/>
-                            <constraint firstItem="RDm-Dl-LRq" firstAttribute="bottom" secondItem="vPz-OT-uZS" secondAttribute="bottom" constant="10" id="Tew-Di-5Eo"/>
-                            <constraint firstItem="vPz-OT-uZS" firstAttribute="centerX" secondItem="RDm-Dl-LRq" secondAttribute="centerX" id="XkF-su-1au"/>
+                            <constraint firstItem="vPz-OT-uZS" firstAttribute="width" secondItem="5sQ-uM-im1" secondAttribute="width" multiplier="0.5" id="RQy-8a-DPf"/>
+                            <constraint firstItem="vPz-OT-uZS" firstAttribute="centerX" secondItem="5sQ-uM-im1" secondAttribute="centerX" id="XkF-su-1au"/>
                             <constraint firstItem="n2m-Ql-JsU" firstAttribute="centerX" secondItem="5OY-dq-GCv" secondAttribute="centerX" id="aUd-fb-LvD"/>
                             <constraint firstItem="oMp-uc-PZN" firstAttribute="leading" secondItem="RDm-Dl-LRq" secondAttribute="leading" id="aWp-g1-twm"/>
                             <constraint firstItem="7Cy-he-t4g" firstAttribute="centerY" secondItem="5sQ-uM-im1" secondAttribute="centerY" id="fWY-HE-v39"/>
@@ -156,6 +158,7 @@
                             <constraint firstItem="n2m-Ql-JsU" firstAttribute="height" secondItem="5OY-dq-GCv" secondAttribute="height" multiplier="0.799163" id="m5r-2u-Nmp"/>
                             <constraint firstItem="7Cy-he-t4g" firstAttribute="width" secondItem="5sQ-uM-im1" secondAttribute="width" id="qWC-m4-hHU"/>
                             <constraint firstItem="oMp-uc-PZN" firstAttribute="top" secondItem="5sQ-uM-im1" secondAttribute="top" id="siB-vb-O3C"/>
+                            <constraint firstItem="vPz-OT-uZS" firstAttribute="height" secondItem="5sQ-uM-im1" secondAttribute="height" multiplier="0.0424107" id="tRN-e2-66J"/>
                             <constraint firstItem="n2m-Ql-JsU" firstAttribute="width" secondItem="5OY-dq-GCv" secondAttribute="width" multiplier="0.799517" id="uce-vW-jcD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RDm-Dl-LRq"/>

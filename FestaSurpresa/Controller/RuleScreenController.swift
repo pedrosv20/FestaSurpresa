@@ -99,7 +99,7 @@ class RuleScreenController: UIViewController, UITableViewDelegate,UITableViewDat
         contentView.backgroundColor = #colorLiteral(red: 0.9989697337, green: 0.901548326, blue: 0.627599597, alpha: 1)
         mainView.backgroundColor = .white
         mainView.layer.cornerRadius = 14
-        sairButton.layer.cornerRadius = 5
+        sairButton.layer.cornerRadius = 10
         mainView.alpha = 0.8
     }
 }
