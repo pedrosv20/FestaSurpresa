@@ -68,7 +68,7 @@ class WaitingPlayersViewController: UIViewController {
         roundStoryLabel.layer.borderColor = UIColor.black.cgColor
         roundStoryLabel.layer.borderWidth = 2.0
         roundStoryLabel.layer.cornerRadius = 10.0
-
+        comecar.layer.cornerRadius = 15.0
          
         // Do any additional setup after loading the view.
     }
