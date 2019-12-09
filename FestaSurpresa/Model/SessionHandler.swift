@@ -120,21 +120,20 @@ class SessionHandler: NSObject, MCSessionDelegate {
                         }
                     }
                 }
-                
-                
-                
+
             }
             
             if message == "perdedores ganham" {
                 let storyboard = UIStoryboard(name: "Win", bundle: nil)
                 let controller  = storyboard.instantiateInitialViewController() as WinViewController?
-                controller!.modalPresentationStyle = .overFullScreen
                 if self.controller.presentingViewController!.isBeingPresented {
-                    self.controller.presentingViewController?.dismiss(animated: false, completion: nil)
-                }
-                controller?.winner = "Party Pooper"
-                DispatchQueue.main.async {
-                    self.controller.present(controller!, animated: false, completion: nil)
+                    self.controller.presentingViewController?.dismiss(animated: false) {
+                        DispatchQueue.main.async {
+                            controller!.modalPresentationStyle = .overFullScreen
+                            controller?.winner = "Party Pooper"
+                            self.controller.present(controller!, animated: false, completion: nil)
+                        }
+                    }
                 }
             }
 
