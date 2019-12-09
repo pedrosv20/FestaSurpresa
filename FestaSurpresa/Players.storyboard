@@ -20,19 +20,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="179"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xB4-ma-Ap8">
-                                        <rect key="frame" x="62" y="70" width="290" height="54"/>
+                                        <rect key="frame" x="20.5" y="59" width="373" height="102"/>
                                         <string key="text">Ajude a engradar os
 barris de chop!</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="xB4-ma-Ap8" firstAttribute="height" secondItem="8E7-l4-hmT" secondAttribute="height" multiplier="0.3" id="0ZJ-AU-5nM"/>
+                                    <constraint firstItem="xB4-ma-Ap8" firstAttribute="height" secondItem="8E7-l4-hmT" secondAttribute="height" multiplier="0.57" id="0ZJ-AU-5nM"/>
                                     <constraint firstItem="xB4-ma-Ap8" firstAttribute="centerX" secondItem="8E7-l4-hmT" secondAttribute="centerX" id="9ds-Sj-Bsg"/>
-                                    <constraint firstItem="xB4-ma-Ap8" firstAttribute="width" secondItem="8E7-l4-hmT" secondAttribute="width" multiplier="0.7" id="BXz-UG-jpp"/>
+                                    <constraint firstItem="xB4-ma-Ap8" firstAttribute="width" secondItem="8E7-l4-hmT" secondAttribute="width" multiplier="0.9" id="BXz-UG-jpp"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0v8-2p-VHO">
@@ -238,9 +238,9 @@ barris de chop!</string>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.92549019607843142" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="xB4-ma-Ap8" firstAttribute="top" secondItem="B3e-hV-CcV" secondAttribute="top" constant="15" id="1KA-mb-2T8"/>
                             <constraint firstItem="yOI-Np-lJp" firstAttribute="height" secondItem="xq7-9F-3LI" secondAttribute="height" multiplier="0.045" id="3AU-11-qGe"/>
                             <constraint firstItem="yOI-Np-lJp" firstAttribute="width" secondItem="xq7-9F-3LI" secondAttribute="width" multiplier="0.5" id="570-7I-sxW"/>
-                            <constraint firstItem="xB4-ma-Ap8" firstAttribute="top" secondItem="8E7-l4-hmT" secondAttribute="top" constant="70" id="5gK-3T-NL4"/>
                             <constraint firstItem="0v8-2p-VHO" firstAttribute="top" secondItem="8E7-l4-hmT" secondAttribute="bottom" id="9zM-nU-dyN"/>
                             <constraint firstItem="0v8-2p-VHO" firstAttribute="trailing" secondItem="B3e-hV-CcV" secondAttribute="trailing" id="CSe-Mb-d9j"/>
                             <constraint firstItem="0v8-2p-VHO" firstAttribute="leading" secondItem="B3e-hV-CcV" secondAttribute="leading" id="EiA-Ao-dMm"/>
