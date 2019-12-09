@@ -109,21 +109,31 @@ class SessionHandler: NSObject, MCSessionDelegate {
             }
             
             if message == "vencedores ganham" {
+                print("recebi sabosta")
                 let storyboard = UIStoryboard(name: "Win", bundle: nil)
                 let controller  = storyboard.instantiateInitialViewController() as WinViewController?
-                if self.controller.presentingViewController!.isBeingPresented {
-                    self.controller.presentingViewController?.dismiss(animated: false) {
-                        DispatchQueue.main.async {
+                if self.controller.presentedViewController != nil {
+                    self.controller.presentedViewController?.dismiss(animated: false) {
+                        DispatchQueue.main.async(execute: {
                             controller!.modalPresentationStyle = .overFullScreen
-                            controller?.winner = "Organizer"
-                            self.controller.present(controller!, animated: false, completion: nil)
-                        }
+                                controller?.winner = "Organizer"
+                                self.controller.present(controller!, animated: false, completion: nil)
+                            })
+                          return
                     }
+                
+                } else {
+                    DispatchQueue.main.async(execute: {
+                    controller!.modalPresentationStyle = .overFullScreen
+                        controller?.winner = "Organizer"
+                        self.controller.present(controller!, animated: false, completion: nil)
+                    })
                 }
 
             }
             
             if message == "perdedores ganham" {
+                
                 let storyboard = UIStoryboard(name: "Win", bundle: nil)
                 let controller  = storyboard.instantiateInitialViewController() as WinViewController?
                 if self.controller.presentingViewController!.isBeingPresented {
