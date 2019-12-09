@@ -49,7 +49,7 @@ class SessionHandler: NSObject, MCSessionDelegate {
     }
     
     var fracassoRodadas = 0
-    var sucessoRodadas = 2
+    var sucessoRodadas = 0
     private override init() {
         
     }
