@@ -65,7 +65,7 @@ class Model {
         Tarefa(tituloTarefa: "A cozinha está pegando fogo. Escolha 3 jogadores para controlar o incêndio.", numeroTarefa: 17),
         Tarefa(tituloTarefa: "O banheiro entupiu. Escolha 3 jogadores para limpar o banheiro ", numeroTarefa: 18),
         Tarefa(tituloTarefa: "A luz caiu. Escolha 3 jogadores para religar o disjuntor ", numeroTarefa: 19),
-        Tarefa(tituloTarefa: "A música parou. Escolha 3 jogadores para derem DJs.", numeroTarefa: 20),
+        Tarefa(tituloTarefa: "A música parou. Escolha 3 jogadores para serem DJs.", numeroTarefa: 20),
         Tarefa(tituloTarefa: "Os convidados estão odiando a musica e destruíndo a casa. Escolha 3 jogadores para trocar a playlist.", numeroTarefa: 21)
     ]
     
