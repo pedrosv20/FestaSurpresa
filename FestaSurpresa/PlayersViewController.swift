@@ -22,8 +22,8 @@ class PlayersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        readyButton.layer.cornerRadius = 15.0
+        
+        readyButton.layer.cornerRadius = 10.0
         
         roundTitleLabel.layer.borderColor = UIColor.black.cgColor
         roundTitleLabel.layer.borderWidth = 1.0

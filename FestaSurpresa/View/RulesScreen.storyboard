@@ -203,8 +203,9 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBM-nt-HJv" userLabel="sairButton">
-                                <rect key="frame" x="155.5" y="809.5" width="103.5" height="30"/>
+                                <rect key="frame" x="103.5" y="823.5" width="207" height="40.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="Entendido">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -216,10 +217,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="iPG-Ka-lq6" firstAttribute="top" secondItem="6CL-mF-15w" secondAttribute="top" constant="10" id="1Ug-bU-4Ss"/>
+                            <constraint firstAttribute="bottom" secondItem="rBM-nt-HJv" secondAttribute="bottom" constant="32" id="6yW-pZ-MFG"/>
+                            <constraint firstItem="rBM-nt-HJv" firstAttribute="height" secondItem="Sv7-e8-ePh" secondAttribute="height" multiplier="0.045" id="AKu-3S-6Rp"/>
                             <constraint firstItem="Pxh-ke-iX9" firstAttribute="top" secondItem="iPG-Ka-lq6" secondAttribute="bottom" constant="20" id="Nux-17-h9k"/>
-                            <constraint firstItem="rBM-nt-HJv" firstAttribute="width" secondItem="OPI-Q3-GuS" secondAttribute="width" id="bTy-DQ-vQN"/>
-                            <constraint firstItem="rBM-nt-HJv" firstAttribute="centerX" secondItem="iPG-Ka-lq6" secondAttribute="centerX" id="ekZ-TT-Rns"/>
-                            <constraint firstItem="rBM-nt-HJv" firstAttribute="top" secondItem="UPl-ps-JWg" secondAttribute="bottom" constant="10" id="fid-xY-kKS"/>
+                            <constraint firstItem="rBM-nt-HJv" firstAttribute="width" secondItem="Sv7-e8-ePh" secondAttribute="width" multiplier="0.5" id="bTy-DQ-vQN"/>
+                            <constraint firstItem="rBM-nt-HJv" firstAttribute="centerX" secondItem="Sv7-e8-ePh" secondAttribute="centerX" id="ekZ-TT-Rns"/>
                             <constraint firstItem="iPG-Ka-lq6" firstAttribute="width" secondItem="6CL-mF-15w" secondAttribute="width" multiplier="0.5" id="fmG-Np-UOq"/>
                             <constraint firstItem="Pxh-ke-iX9" firstAttribute="centerX" secondItem="6CL-mF-15w" secondAttribute="centerX" id="lvW-tN-eh2"/>
                             <constraint firstItem="Pxh-ke-iX9" firstAttribute="height" secondItem="6CL-mF-15w" secondAttribute="height" multiplier="0.85" id="moB-tv-8OJ"/>
