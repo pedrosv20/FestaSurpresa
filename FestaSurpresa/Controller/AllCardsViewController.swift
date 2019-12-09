@@ -24,6 +24,8 @@ class AllCardsViewController: UIViewController {
     var requestHelpPopUp: RequestHelpPopUp!
     let colors = Colors()
     
+    @IBOutlet weak var lblValorOrganizer: UILabel!
+    @IBOutlet weak var lblValorDesorganizer: UILabel!
     
     
     override func viewDidLoad() {
@@ -89,6 +91,11 @@ class AllCardsViewController: UIViewController {
             controller.modalPresentationStyle = .overFullScreen
             self.present(controller, animated: false, completion: nil)
             
+        }
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "attValorLabel"), object: nil, queue: nil) { (Notification) in
+            self.lblValorOrganizer.text = String(SessionHandler.shared.sucessoRodadas)
+            self.lblValorDesorganizer.text = String(SessionHandler.shared.fracassoRodadas)
         }
         
         //Notification observer fim missao (selecionar novo lider, muda SessionHandler.shared.rodada e envia notificacao Inicia jogo) "deixou de ser lider"
@@ -170,20 +177,24 @@ class AllCardsViewController: UIViewController {
                     self.fimRodada(message: "sucesso total")
                     SessionHandler.shared.sucessoRodadas += 1
                     SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].sucesso += 1
+                    self.lblValorOrganizer.text = String(SessionHandler.shared.sucessoRodadas)
                 }
                 else if SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].falha == 1 {
                     self.fimRodada(message: "1falha")
                     SessionHandler.shared.fracassoRodadas += 1
                     SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].fracasso += 1
+                    self.lblValorDesorganizer.text = String(SessionHandler.shared.fracassoRodadas)
                 }
                 else if SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].falha == 2 {
                     self.fimRodada(message: "2falha")
                     SessionHandler.shared.fracassoRodadas += 1
                     SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].fracasso += 1
+                    self.lblValorDesorganizer.text = String(SessionHandler.shared.fracassoRodadas)
                 }
                 else if SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].falha == 3 {
                     SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].fracasso += 1
                     SessionHandler.shared.fracassoRodadas += 1
+                    self.lblValorDesorganizer.text = String(SessionHandler.shared.fracassoRodadas)
                     self.fimRodada(message: "3falha")
                 }
         }

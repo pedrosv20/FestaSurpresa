@@ -159,11 +159,26 @@ class SessionHandler: NSObject, MCSessionDelegate {
             
             
             if message == "sucesso total" || message == "1falha" || message == "2falha" || message == "3falha" {
+                if message == "sucesso total" {
+                    SessionHandler.shared.sucessoRodadas += 1
+                    NotificationCenter.default.post(Notification(name: Notification.Name("attValorLabel")))
+                }
+                else if message == "1falha" {
+                    SessionHandler.shared.fracassoRodadas += 1
+                    NotificationCenter.default.post(Notification(name: Notification.Name("attValorLabel")))
+                }
+                else if message == "2falha" {
+                    SessionHandler.shared.fracassoRodadas += 1
+                    NotificationCenter.default.post(Notification(name: Notification.Name("attValorLabel")))
+                }
+                else if message  == "3falha" {
+                    SessionHandler.shared.fracassoRodadas += 1
+                    NotificationCenter.default.post(Notification(name: Notification.Name("attValorLabel")))
+                }
                 let storyboard = UIStoryboard(name: "ResultPopUp", bundle: nil)
                 let controller  = storyboard.instantiateInitialViewController()!
                 controller.modalPresentationStyle = .overFullScreen
                 DispatchQueue.main.async {
-                    print(self.controller)
                     self.controller.present(controller, animated: false, completion: {NotificationCenter.default.post(Notification(name: Notification.Name(message)))})
                 }
 
