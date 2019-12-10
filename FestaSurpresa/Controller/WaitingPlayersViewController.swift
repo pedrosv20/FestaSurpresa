@@ -74,6 +74,7 @@ class WaitingPlayersViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.view.endEditing(true)
         
         if SessionHandler.shared.host {
              comecar.isHidden = false

@@ -8,6 +8,7 @@
 
 import UIKit
 import SpriteKit
+import AVFoundation
 
 
 class WinViewController: UIViewController {
@@ -16,6 +17,7 @@ class WinViewController: UIViewController {
     @IBOutlet weak var skView: SKView!
     @IBOutlet weak var roundStoryLabel: UILabel!
     @IBOutlet weak var playAgain: UIButton!
+    var player: AVAudioPlayer?
     
     let colorOrganizer = UIColor(red: 212.0 / 255.0, green: 94.0 / 255.0, blue: 94.0 / 255.0, alpha: 1.0)
     let colorPartyPooper = UIColor(red: 105.0 / 255.0, green: 68.0 / 255.0, blue: 200.0 / 255.0, alpha: 1.0)
@@ -36,6 +38,7 @@ class WinViewController: UIViewController {
         
         
         if winner == "Organizer"{
+            playSoundBem()
             self.view.backgroundColor = colorOrganizer
             self.roundStoryLabel.text = "A festa foi muito sucesso biiixo.\nParabéns por conseguirem organizar a festa!!!"
             winScene.setUp(FunnelName: winner)
@@ -45,6 +48,7 @@ class WinViewController: UIViewController {
             self.roundStoryLabel.text = "A festa pegou fogo, forte abraaaaaço.\nDessa vez vocês arruinaram a festa com maestria!!"
             winScene.setUp(FunnelName: winner)
         }
+        playSoundMal()
         roundStoryLabel.layer.borderColor = UIColor.white.cgColor
         roundStoryLabel.layer.borderWidth = 2.0
         roundStoryLabel.layer.cornerRadius = 10.0
@@ -70,14 +74,48 @@ class WinViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
+    func playSoundBem() {
+        guard let url = Bundle.main.url(forResource: "bem", withExtension: "wav") else { return }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+
+            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+
+            /* iOS 10 and earlier require the following line:
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+
+            guard let player = player else { return }
+
+            player.play()
+
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
-    */
+    
+    func playSoundMal() {
+        guard let url = Bundle.main.url(forResource: "mal", withExtension: "wav") else { return }
+
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+
+            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+
+            /* iOS 10 and earlier require the following line:
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+
+            guard let player = player else { return }
+
+            player.play()
+
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
 
 }
