@@ -221,17 +221,17 @@ class SessionHandler: NSObject, MCSessionDelegate {
                         
                     }
                 }
-                    if message  == "falhou missao" {
-                        self.pessoasNaMissao += 1
-                        SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].falha += 1
+                if message  == "falhou missao" {
+                    self.pessoasNaMissao += 1
+                    SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].falha += 1
+                    
+                    if SessionHandler.shared.pessoasNaMissao == 3 {
+                        NotificationCenter.default.post(Notification(name: Notification.Name("popUp")))
                         
-                        if SessionHandler.shared.pessoasNaMissao == 3 {
-                            NotificationCenter.default.post(Notification(name: Notification.Name("popUp")))
-                            
-                        }
                     }
                 }
-                    
+            }
+            
                     if message == "comeca rodada" {
                         //load xib com o rolezao
                         //                fatalError()

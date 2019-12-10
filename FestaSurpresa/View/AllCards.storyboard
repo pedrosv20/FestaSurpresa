@@ -51,7 +51,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meX-pV-x0U">
-                                        <rect key="frame" x="366" y="150.5" width="40" height="40"/>
+                                        <rect key="frame" x="366" y="46.5" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="HMN-uw-wgk"/>
                                             <constraint firstAttribute="width" constant="40" id="aZr-Vg-IOe"/>
@@ -91,7 +91,7 @@
                                     <constraint firstItem="TPY-ns-uKG" firstAttribute="top" secondItem="qVl-TW-rJN" secondAttribute="bottom" constant="6" id="01d-8c-zpC"/>
                                     <constraint firstItem="HF3-Bt-vpX" firstAttribute="height" secondItem="tPo-Be-peV" secondAttribute="height" id="4F8-S3-zlc"/>
                                     <constraint firstItem="HF3-Bt-vpX" firstAttribute="centerY" secondItem="tPo-Be-peV" secondAttribute="centerY" id="5js-gt-8r6"/>
-                                    <constraint firstItem="meX-pV-x0U" firstAttribute="centerY" secondItem="TPY-ns-uKG" secondAttribute="centerY" id="7ud-Sn-SUr"/>
+                                    <constraint firstItem="meX-pV-x0U" firstAttribute="centerY" secondItem="TaW-MW-thG" secondAttribute="centerY" id="7ud-Sn-SUr"/>
                                     <constraint firstItem="TPY-ns-uKG" firstAttribute="height" secondItem="GGY-Kc-4BG" secondAttribute="height" multiplier="0.3" id="AUi-93-PQu"/>
                                     <constraint firstItem="HF3-Bt-vpX" firstAttribute="width" secondItem="tPo-Be-peV" secondAttribute="width" id="AVa-b8-duf"/>
                                     <constraint firstItem="TPY-ns-uKG" firstAttribute="width" secondItem="GGY-Kc-4BG" secondAttribute="width" multiplier="0.7" id="ElS-lz-Ptn"/>

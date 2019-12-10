@@ -181,7 +181,7 @@ class AllCardsViewController: UIViewController {
         }
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "popUp"), object: nil, queue: nil) { (Notification) in
-            
+            if SessionHandler.shared.pessoasNaMissao == 3{
                 if SessionHandler.shared.rodadasArray[SessionHandler.shared.rodada].falha == 0 {
                     self.fimRodada(message: "sucesso total")
                     SessionHandler.shared.sucessoRodadas += 1
@@ -206,6 +206,8 @@ class AllCardsViewController: UIViewController {
                     self.lblValorDesorganizer.text = String(SessionHandler.shared.fracassoRodadas)
                     self.fimRodada(message: "3falha")
                 }
+            }
+            
         }
         
     }

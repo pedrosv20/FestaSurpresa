@@ -44,11 +44,12 @@ class WinViewController: UIViewController {
             winScene.setUp(FunnelName: winner)
             
         }else if winner == "Party Pooper"{
+            playSoundMal()
             self.view.backgroundColor = colorPartyPooper
             self.roundStoryLabel.text = "A festa pegou fogo, forte abraaaaaço.\nDessa vez vocês arruinaram a festa com maestria!!"
             winScene.setUp(FunnelName: winner)
         }
-        playSoundMal()
+        
         roundStoryLabel.layer.borderColor = UIColor.white.cgColor
         roundStoryLabel.layer.borderWidth = 2.0
         roundStoryLabel.layer.cornerRadius = 10.0

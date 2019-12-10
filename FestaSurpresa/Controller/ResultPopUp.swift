@@ -42,6 +42,7 @@ class ResultPopUp: UIViewController {
     
     
     @IBAction func didPressOkButton(_ sender: Any) {
+
         if SessionHandler.shared.sucessoRodadas == 4 {
             
             let storyboard = UIStoryboard(name: "Win", bundle: nil)
