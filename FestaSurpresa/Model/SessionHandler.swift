@@ -117,6 +117,7 @@ class SessionHandler: NSObject, MCSessionDelegate {
                         DispatchQueue.main.async(execute: {
                             controller!.modalPresentationStyle = .overFullScreen
                                 controller?.winner = "Organizer"
+                            //qulquercoisa vai segue
                                 self.controller.present(controller!, animated: false, completion: nil)
                             })
                           return
@@ -141,7 +142,7 @@ class SessionHandler: NSObject, MCSessionDelegate {
                     self.controller.presentedViewController?.dismiss(animated: false, completion: {
                         DispatchQueue.main.async(execute: {
                             controller!.modalPresentationStyle = .overFullScreen
-                                controller?.winner = "Party Pooper"
+                                controller!.winner = "Party Pooper"
                                 self.controller.present(controller!, animated: false, completion: nil)
                             })
                           return
@@ -150,7 +151,7 @@ class SessionHandler: NSObject, MCSessionDelegate {
                 } else {
                     DispatchQueue.main.async(execute: {
                         controller!.modalPresentationStyle = .overFullScreen
-                        controller?.winner = "Party Pooper"
+                        controller!.winner = "Party Pooper"
                         self.controller.present(controller!, animated: false, completion: nil)
                     })
                 }

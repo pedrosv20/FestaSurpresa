@@ -48,7 +48,7 @@ class PlayersViewController: UIViewController {
             playerButton[index+1].isEnabled = true
         }
         
-        roundTitleLabel.text = "Leia a missão em voz alta para todos. \n" + Model.shared.tarefas[SessionHandler.shared.rodada].tituloTarefa
+        roundTitleLabel.text = Model.shared.tarefas[SessionHandler.shared.rodada].tituloTarefa
         
     }
     

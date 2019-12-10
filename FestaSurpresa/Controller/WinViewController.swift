@@ -37,12 +37,12 @@ class WinViewController: UIViewController {
         
         if winner == "Organizer"{
             self.view.backgroundColor = colorOrganizer
-            self.roundStoryLabel.text = "A festa foi muito top biiixo, mas ninguém lembra de nada!"
+            self.roundStoryLabel.text = "A festa foi muito sucesso biiixo.\nParabéns por conseguirem organizar a festa!!!"
             winScene.setUp(FunnelName: winner)
             
-        }else if winner == "PartyPooper"{
+        }else if winner == "Party Pooper"{
             self.view.backgroundColor = colorPartyPooper
-            self.roundStoryLabel.text = "A festa pegou fogo, forte abraaaaaço!"
+            self.roundStoryLabel.text = "A festa pegou fogo, forte abraaaaaço.\nDessa vez vocês arruinaram a festa com maestria!!"
             winScene.setUp(FunnelName: winner)
         }
         roundStoryLabel.layer.borderColor = UIColor.white.cgColor
@@ -57,6 +57,9 @@ class WinViewController: UIViewController {
     
     @IBAction func playagain(_ sender: Any) {
         print("lenis")
+        //reset all things
+        self.presentingViewController?.presentingViewController?.presentingViewController?.dismiss(animated: false, completion: nil)
+        
     }
     func animate(){
         UIView.animate(withDuration: 4.0){

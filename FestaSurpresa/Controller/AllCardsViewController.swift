@@ -102,7 +102,12 @@ class AllCardsViewController: UIViewController {
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "fim  rodada"), object: nil, queue: nil) { (Notification) in
             DispatchQueue.main.async {
                 // notifica host q acabou
+                if SessionHandler.shared.rodada == 0 {
+                    
+                } else {
+                    print("SessionHandler.shared.rodada \(SessionHandler.shared.rodada)")
                 SessionHandler.shared.sendMessage(messageToSend: "deixou de ser lider", convidado: Model.shared.players[SessionHandler.shared.rodada].peerID)
+                }
                 
                 if SessionHandler.shared.sucessoRodadas == 4 {
                     // tela de vitoria dos cornos
@@ -111,13 +116,15 @@ class AllCardsViewController: UIViewController {
                     let controller  = storyboard.instantiateInitialViewController() as! WinViewController
                     controller.modalPresentationStyle = .overFullScreen
                     controller.winner = "Organizer"
-                    DispatchQueue.main.async{
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        
                         do{
                             print("mandei mensagem pros troxa")
                             try SessionHandler.shared.mcSession?.send("vencedores ganham".data(using: .utf8)!, toPeers: (SessionHandler.shared.mcSession?.connectedPeers)!, with: .unreliable)
                         } catch {
                             print("macarrao")
                         }
+                        
                     }
                     self.present(controller, animated: false, completion: nil)
                     //send message to others
@@ -131,14 +138,16 @@ class AllCardsViewController: UIViewController {
                     let storyboard = UIStoryboard(name: "Win", bundle: nil)
                     let controller  = storyboard.instantiateInitialViewController() as! WinViewController
                     controller.modalPresentationStyle = .overFullScreen
-                    controller.winner = "PartyPooper"
+                    controller.winner = "Party Pooper"
                     self.present(controller, animated: false, completion: nil)
-                    DispatchQueue.main.async{
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        
                         do{
                             try SessionHandler.shared.mcSession?.send("perdedores ganham".data(using: .utf8)!, toPeers: (SessionHandler.shared.mcSession?.connectedPeers)!, with: .unreliable)
                         } catch {
                             print("macarrao")
                         }
+                        
                     }
                     return
                     //send message to others
@@ -283,6 +292,7 @@ class AllCardsViewController: UIViewController {
                 print("deu ruim")
             }
         })
+        
         
         let storyboard = UIStoryboard(name: "ResultPopUp", bundle: nil)
         let controller  = storyboard.instantiateInitialViewController()!

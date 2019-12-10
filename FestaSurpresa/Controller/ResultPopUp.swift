@@ -23,16 +23,17 @@ class ResultPopUp: UIViewController {
     
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "sucesso total"), object: nil, queue: nil) { (Notification) in
             self.resultLabel.text! = "A etapa foi um sucesso total."
-        }
+                    }
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "1falha"), object: nil, queue: nil) { (Notification) in
             self.resultLabel.text! = "A etapa teve 1 voto de falha."
         }
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "2falha"), object: nil, queue: nil) { (Notification) in
-            self.resultLabel.text! = "A etapa teve 2 voto de falha."
+            self.resultLabel.text! = "A etapa teve 2 votos de falha."
         }
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "3falha"), object: nil, queue: nil) { (Notification) in
-            self.resultLabel.text! = "A etapa teve 2 voto de falha."
+            self.resultLabel.text! = "A etapa teve 3 votos de falha."
         }
+        
     
         
         
@@ -41,7 +42,36 @@ class ResultPopUp: UIViewController {
     
     
     @IBAction func didPressOkButton(_ sender: Any) {
-        dismiss(animated: false, completion: nil)
+        if SessionHandler.shared.sucessoRodadas == 4 {
+            
+            let storyboard = UIStoryboard(name: "Win", bundle: nil)
+            let controller  = storyboard.instantiateInitialViewController() as WinViewController?
+            
+            dismiss(animated: false, completion: {
+                DispatchQueue.main.async(execute: {
+                    controller!.modalPresentationStyle = .overFullScreen
+                    controller?.winner = "Organizer"
+                    SessionHandler.shared.controller.present(controller!, animated: false, completion: nil)
+                })})
+            
+            
+        }
+        else if SessionHandler.shared.fracassoRodadas == 4 {
+            let storyboard = UIStoryboard(name: "Win", bundle: nil)
+            let controller  = storyboard.instantiateInitialViewController() as WinViewController?
+            
+            dismiss(animated: false, completion: {
+                DispatchQueue.main.async(execute: {
+                    controller!.modalPresentationStyle = .overFullScreen
+                    controller?.winner = "Party Pooper"
+                    SessionHandler.shared.controller.present(controller!, animated: false, completion: nil)
+                })})
+        }
+        else {
+            dismiss(animated: false, completion: nil)
+        }
+        
+        
     }
     
     

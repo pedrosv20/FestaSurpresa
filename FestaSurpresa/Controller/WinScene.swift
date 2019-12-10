@@ -113,7 +113,7 @@ class WinScene: SKScene {
         if FunnelName == "Organizer"{
             funnelName = "FunilVermelho"
             funnel.texture = SKTexture(imageNamed: funnelName + "3.pdf")
-        } else if FunnelName == "PartyPooper"{
+        } else if FunnelName == "Party Pooper"{
             funnelName = "FunilRoxo"
             funnel.texture = SKTexture(imageNamed: funnelName + "3.pdf")
             
